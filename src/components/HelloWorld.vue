@@ -88,7 +88,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '我的第一个VUE项目'
+      msg: '我的第一个VUE项目1!'
     }
   }
 }
