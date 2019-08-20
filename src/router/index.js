@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import VueDes from '@/components/VueDes'
 import VModel from '@/components/VModel'
+import IFElse from '@/components/IFElse'
+import For from '@/components/For'
 
 Vue.use(Router)
 
@@ -22,6 +24,16 @@ export default new Router({
       path: '/VModel',
       name: 'VModel',
       component: VModel
+    },
+    {
+      path: '/IF',
+      name: 'IF',
+      component: IFElse
+    },
+    {
+      path: '/For',
+      name: 'For',
+      component: For
     }
   ]
 })
