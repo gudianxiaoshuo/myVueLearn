@@ -1,6 +1,16 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+
+    <h2>各种button</h2>
+    <el-row class="flex1 margin-left10">
+      <el-col :span="3"><el-button>默认按钮</el-button></el-col>
+      <el-col :span="3"><el-button type="primary">主要按钮</el-button></el-col>
+      <el-col :span="3"><el-button type="success">成功按钮</el-button></el-col>
+      <el-col :span="3"><el-button type="warning">警告按钮</el-button></el-col>
+      <el-col :span="3"><el-button plain>默认按钮</el-button></el-col>
+      <el-col :span="3"><el-button round>默认按钮</el-button></el-col>
+    </el-row>
+      <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
       <li>

@@ -5,6 +5,7 @@ import VueDes from '@/components/VueDes'
 import VModel from '@/components/VModel'
 import IFElse from '@/components/IFElse'
 import For from '@/components/For'
+import Ajax from '@/components/Ajax'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/For',
       name: 'For',
       component: For
+    },
+    {
+      path: '/Ajax',
+      name: 'Ajax',
+      component: Ajax
     }
   ]
 })

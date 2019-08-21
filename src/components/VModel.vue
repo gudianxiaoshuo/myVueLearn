@@ -40,12 +40,12 @@
 
 <!--3、表达式-->
 <!--&lt;!&ndash; 表达式 Vue.js 都提供了完全的 JavaScript 表达式支持&ndash;&gt;-->
-<!--<div id="app">-->
-<!--    {{5+5}}<br>-->
-<!--    {{ok? 'YES':'NO'}}<br>-->
-<!--    {{message.split('').reverse().join('')}}-->
-<!--    <div v-bind:id="'list-'+subId">菜鸟教程</div>-->
-<!--</div>-->
+<div id="app">
+    {{5+5}}<br>
+    {{ok? 'YES':'NO'}}<br>
+    {{message.split('').reverse().join('')}}
+    <div v-bind:id="'list-'+subId">菜鸟教程</div>
+</div>
 
 
 
