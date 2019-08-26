@@ -1,0 +1,116 @@
+.guide_title {
+	height: 60px;
+	line-height: 60px;
+}
+
+.guideMenuItem {
+	@extend %mainLeftNavStyle;
+}
+.guideTitle {
+	height: 80px;
+	line-height: 80px;
+	border-bottom: 1px dashed #eee;
+	margin-bottom: 20px;
+}
+
+.guide_item {
+	width: 570px;
+	float: right;
+	background-color: #fff;
+	border-radius: 5px;
+	padding:20px;
+}
+.paletteList {
+	.paletteItem {
+		width: 640px;
+		margin-left: 8px;
+		.colorItem {
+			width: 150px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			float: left;
+			margin: 0 10px 10px 0;
+		}
+		span {
+			display: block;
+			height: 30px;
+			line-height: 30px;
+			padding: 0 10px;
+			border-radius: 4px;
+		}
+	}
+}
+
+
+.icon_list {
+	.icon_item {
+		height: 40px;
+		line-height: 40px;
+		float: left;
+		width:240px;
+		margin: 0 22px 10px;
+		border-bottom: 1px solid $lightLineGray;
+		i {
+			font-size: 24px;
+			line-height: 40px;
+		}
+	}
+	.icon_span {
+		float: left;
+		height: 40px;
+	}
+	.code_span {
+		float: right;
+	}
+}
+
+.button_list {
+	.list_item {
+		padding: 20px;
+		margin-bottom: 20px;
+		width: 530px;
+		background-color: $lightGrayBg;
+		border: 1px solid $borderGray;
+		@include border-radius(4px);
+		p {
+			color: $blue;
+			position: relative;
+			height: 30px;
+			line-height: 30px;
+			a {
+				@include abs-pos(0, 0, auto, auto);
+			}
+		}
+		pre {
+			border: 1px solid $lineGray;
+			background-color: #fff;
+			@include border-radius(2px);
+			height: 30px;
+			line-height: 30px;
+			margin: 30px auto 10px;
+			position: relative;
+			.language_markup {
+				font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+				white-space: nowrap;
+				@include abs-pos(0, auto, auto, 10px);
+				line-height: 30px;
+				span {
+					line-height: 30px;
+				}
+			}
+			.tag_name {
+				color: #E590C2;
+			}
+			.attr_name {
+				color: #B6DD49;
+			}
+			.attr_value {
+				color: #4F98ED;
+			}
+			.tag_token {
+				color: $grayFontColor;
+			}
+		}
+	}
+}

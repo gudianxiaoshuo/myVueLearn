@@ -1,0 +1,266 @@
+// =============================================================================
+// Mixins
+// =============================================================================
+
+// Vendor Prefixing
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+/// Convert angle
+/// @author Chris Eppstein
+/// @param {Number} $value - Value to convert
+/// @param {String} $unit - Unit to convert to
+/// @return {Number} Converted angle
+@function convert-angle($value, $unit) {
+  $convertable-units: deg grad turn rad;
+  $conversion-factors: 1 (10grad/9deg) (1turn/360deg) (3.1415926rad/180deg);
+  @if index($convertable-units, unit($value)) and index($convertable-units, $unit) {
+    @return $value
+             / nth($conversion-factors, index($convertable-units, unit($value)))
+             * nth($conversion-factors, index($convertable-units, $unit));
+  }
+
+  @warn "Cannot convert `#{unit($value)}` to `#{$unit}`.";
+}
+
+/// Test if `$value` is an angle
+/// @param {*} $value - Value to test
+/// @return {Bool}
+@function is-direction($value) {
+  $is-direction: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+  $is-angle: type-of($value) == 'number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+
+  @return $is-direction or $is-angle;
+}
+
+/// Convert a direction to legacy syntax
+/// @param {Keyword | Angle} $value - Value to convert
+/// @require {function} is-direction
+/// @require {function} convert-angle
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+    @warn "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be an angle or a direction";
+  }
+
+  $conversion-map: (
+    to top          : bottom,
+    to top right    : bottom left,
+    to right top    : left bottom,
+    to right        : left,
+    to bottom right : top left,
+    to right bottom : left top,
+    to bottom       : top,
+    to bottom left  : top right,
+    to left bottom  : right top,
+    to left         : right,
+    to left top     : right bottom,
+    to top left     : bottom right
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - convert-angle($value, 'deg');
+}
+
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {String | List | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+  @if is-direction($direction) == false {
+    $color-stops: ($direction, $color-stops);
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+// Tests
+// .test-1 {
+//   @include linear-gradient(#31B7D7, #EDAC7D);
+// }
+//
+// .test-2 {
+//   @include linear-gradient(to right, #E47D7D 0%, #C195D3 50%, #4FB4E8 100%);
+// }
+//
+// .test-3 {
+//   @include linear-gradient(42deg, #B58234 0%, #D2B545 50%, #D7C04D 50.01%, #FFFFFF 100%);
+// }
+
+// @usage
+// input {
+//   @include placeholder {
+//     font-size: 14px;
+//     color: #B38B00;
+//   }
+// }
+@mixin placeholder {
+    &.placeholder {@content}
+    &:placeholder {@content}
+    &::-moz-placeholder {@content}
+    &:-ms-input-placeholder {@content}
+    &::-webkit-input-placeholder {@content}
+}
+
+// @usage
+// .element {
+//     @include prefix((transform: rotate(45deg)))
+//     @include prefix((transform: translate(-20%, -50%)), webkit ms moz);
+// }
+@mixin prefix($map, $vendors: webkit moz ms o) {
+    @each $prop, $value in $map {
+        @if $vendors {
+            @each $vendor in $vendors {
+                #{"-" + $vendor + "-" + $prop}: #{$value};
+            }
+        }
+
+        // Dump regular property anyway
+        #{$prop}: #{$value};
+    }
+}
+
+// @usage
+// .element {
+//     @include transform(rotate(45deg));
+// }
+@mixin transform($value) {
+    @include prefix(transform, $value, webkit ms moz o);
+}
+
+// Opacity
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Absolute Positioned
+@mixin abs-pos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+
+// Relative Positioned
+@mixin rel-pos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: relative;
+}
+
+// Fixed Positioned
+@mixin fix-pos($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: fixed;
+}
+
+// Text Overflow
+@mixin text-truncate($overflow: ellipsis) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+// Border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: border-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Center-align a block level element
+@mixin center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+//box-shadow
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin block-text-overflow($lines-to-show) {
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin transition($property, $duration: 0.3s, $timingFunction: ease, $delay: 0s) {
+    transition: $property $duration $timingFunction $delay;
+    -ms-transition: $property $duration $timingFunction $delay;
+    -webkit-transition: $property $duration $timingFunction $delay;
+    -o-transition: $property $duration $timingFunction $delay;
+    -moz-transition: $property $duration $timingFunction $delay;
+}
+
+@mixin animation($keyframes, $duration: .3s, $loop: 1) {
+    animation: $keyframes $duration $loop;
+    -ms-animation: $keyframes $duration $loop;
+    -webkit-animation: $keyframes $duration $loop;
+    -o-animation: $keyframes $duration $loop;
+    -moz-animation: $keyframes $duration $loop;
+}
+
+@mixin bg_with_retina($file_name, $file_extension, $file_url) {
+    $image-url-1x: url("#{$file_url}#{$file_name}.#{$file_extension}?#{$imgVer}");
+    $image-url-2x: url("#{$file_url}#{$file_name}@2x.#{$file_extension}?#{$imgVer}");
+    $image-set : #{$image-url-1x} 1x,#{$image-url-2x} 2x;
+    background: $image-url-1x;
+    background-repeat: no-repeat;
+    background-image: -webkit-image-set($image-set);
+    background-image: -moz-image-set($image-set);
+    background-image: -o-image-set($image-set);
+    background-image: -ms-image-set($image-set);
+}
+
+/// Clamps, aka truncates, multi-line text. Note that non-webkit browsers will
+/// not see the ellipsis ¯\_(ツ)_/¯
+/// @param {Value}          $font-size     - Font size of the text
+/// @param {Unitless Value} $line-height   - Line height of the text; **must be a unitless value**
+/// @param {Number}         $lines-to-show - Number of lines to show
+/// @example scss
+/// p {
+///   @include line-clamp($font-size: 16px, $line-height: 1.5, $lines-to-show: 3);
+/// }
+@mixin line-clamp(
+  $font-size,
+  $line-height,
+  $lines-to-show
+) {
+  @if unitless($line-height) == false {
+    $line-height: create-unitless-line-height($font-size, $line-height);
+  }
+
+  display: block; // Fallback for non-webkit browsers
+  display: -webkit-box;
+  font-size: $font-size;
+  height: ($font-size * $line-height * $lines-to-show); // Fallback for non-webkit browsers
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines-to-show;
+}

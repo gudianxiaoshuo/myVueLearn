@@ -1,0 +1,16 @@
+//系统消息弹层
+#new_system_info_layer {
+    .system_msg {
+        margin: 10px 20px;
+        .system_box {
+            width: 510px;
+        }
+    }
+    .no_news {
+        padding:20px;
+    }
+    .privacy_message{
+        padding: 0;
+        position: static;
+    }
+}

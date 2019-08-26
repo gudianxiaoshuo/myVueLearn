@@ -1,0 +1,428 @@
+/*群内调查问卷样式表*/
+.questionnaire {
+    background-color: #fff;
+    margin: 87px auto 0;
+    min-height: 600px;
+    .backToPrevPage {
+        @include abs-pos(-34px, auto, auto, 0);
+        .backToPrevBtn {
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+                .backIcon {
+                    color: $orangeFontColor;
+                }
+            }
+            .backIcon {
+                @include rel-pos($top: 2px);
+                margin-right: 4px;
+                font-size: 14px;
+            }
+        }
+    }
+    .questionTitle {
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        font-weight: normal;
+        font-family: $specialFontFamily;
+        padding-left: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .questionContainer {
+        padding: 20px 30px 0;
+    }
+    .questionTip {
+        line-height: 34px;
+    }
+    .titleInput {
+        display: block;
+        height: 28px;
+        width: 414px;
+        padding: 0 8px;
+        margin-top: 14px;
+        @include border-radius(2px);
+        border: 1px solid #eee;
+    }
+    .addQuestionBtn {
+        margin-top: 30px;
+    }
+    .errMsg {
+        font-size: 12px;
+        line-height: 12px;
+        margin-top: 10px;
+        color: $darkOrangeFontColor;
+    }
+    .draftContainer {
+        padding: 20px 30px 0;
+        .draftItem {
+            line-height: 34px;
+        }
+    }
+    .questionLeft {
+        width: 160px;
+        float: left;
+        .questionType {
+            margin-top: 20px;
+        }
+        .typeTitle {
+            line-height: 34px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: normal;
+        }
+        .typeItem {
+            margin-bottom: 20px;
+        }
+        .typeBtn {
+            width: 98px;
+            height: 24px;
+            line-height: 24px;
+            display: block;
+            margin: 0 auto;
+            font-size: 12px;
+            color: $lightBlackFontColor;
+            text-align: center;
+            border: 1px solid #ddd;
+            @include border-radius(2px);
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .questionRight {
+        float: left;
+        width: 779px;
+        border-left: 1px solid #eee;
+        min-height: 600px;
+        .questionName {
+            margin: 30px auto 28px;
+            width: 720px;
+            height: 40px;
+            font-size: 16px;
+            font-weight: normal;
+            .nameInput {
+                width: 710px;
+                padding: 0 4px;
+                height: 38px;
+                text-align: center;
+                border: 1px solid #ddd;
+                @include border-radius(2px);
+                &:hover {
+                    background-color: #FFFDF8;
+                    border: 1px solid #FEEED4;
+                }
+            }
+        }
+        .addQuestionTip {
+            text-align: center;
+            padding: 60px;
+            line-height: 34px;
+            color: $lightBlackFontColor;
+        }
+        .qCardContainer {
+            position: relative;
+        }
+        .typeCard {
+            padding: 10px 30px 52px;
+            margin: 20px auto;
+            width: 658px;
+            border: 1px solid #ddd;
+            @include border-radius(2px);
+            position: relative;
+        }
+        .qTextContainer {
+            height: 34px;
+            line-height: 34px;
+        }
+        .qFlag {
+            color: $darkOrangeFontColor;
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 34px;
+        }
+        .qText {
+            height: 28px;
+            width: 560px;
+            padding: 0 4px;
+            margin-left: 10px;
+            border: 1px solid #eee;
+            background-color: #f8f8f8;
+            @include border-radius(2px);
+            &:hover {
+                background-color: #FFFDF8;
+                border: 1px solid #FEEED4;
+            }
+        }
+        .questionItem {
+            line-height: 34px;
+            padding-left: 54px;
+            .questionLable {
+                float: left;
+            }
+            &:hover {
+                .qItemOper {
+                    display: block;
+                }
+            }
+        }
+        .typeInput {
+            margin-right: 5px;
+        }
+        .qItemText {
+            width: 465px;
+            padding: 0 4px;
+            height: 20px;
+            font-size: 12px;
+            border: 1px solid #eee;
+            background-color: #f8f8f8;
+            @include border-radius(2px);
+            &:hover {
+                background-color: #FFFDF8;
+                border: 1px solid #FEEED4;
+            }
+        }
+        .qItemOper {
+            float: left;
+            display: none;
+            &.hide {
+                display: none;
+            }
+            .operItem {
+                display: inline-block;
+                margin-left: 20px;
+                &.hide {
+                    visibility: hidden;
+                }
+                &:hover {
+                    .operIcon {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+            .operIcon {
+                font-size: 12px;
+            }
+        }
+        .addLabelBtn {
+            line-height: 30px;
+            margin-top: 10px;
+            margin-left: 54px;
+            clear: left;
+            &:hover {
+                .addIcon {
+                    color: $orangeFontColor;
+                }
+            }
+            .addIcon {
+                color: $blueFontColor;
+                font-size: 12px;
+                margin-right: 5px;
+            }
+        }
+        .cardOper {
+            line-height: 32px;
+            text-align: right;
+            @include abs-pos(auto, 30px, 10px, 0);
+            .operItem {
+                display: inline-block;
+                margin-left: 20px;
+                &:hover {
+                    .operIcon {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+            .operIcon {
+                font-size: 12px;
+            }
+        }
+        .pubContainer {
+            width: 720px;
+            margin: 0 auto;
+            .activitySharedWrap {
+                h2 {
+                    color: #333333;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 7px;
+                }
+                .myGroupListWrap {
+                    width: 100%;
+                }
+            }
+        }
+        .timeTip {
+            color: $lightBlackFontColor;
+        }
+        .timeInfo {
+            margin: 40px 0 30px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+        .timeInput {
+            width: 120px;
+            height: 24px;
+            padding: 0 4px;
+            margin-left: 10px;
+            border: 1px solid #eee;
+            cursor: pointer;
+            @include border-radius(2px);
+        }
+        .pubInfo {
+            padding: 30px 0;
+            text-align: center;
+            position: relative;
+            border-top: 1px solid #eee;
+            button {
+                margin: 0 16px;
+            }
+        }
+        .rtCheckbox {
+            @include abs-pos(auto, auto, 30px, 0);
+        }
+        .rtInput {
+            margin-right: 10px;
+        }
+    }
+}
+
+.questionnaireDetail {
+    background-color: #fff;
+    min-height: 600px;
+    .detailPageNav {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 30px;
+        border-bottom: 1px solid #eee;
+    }
+    .questionTitle {
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 42px;
+        text-align: center;
+    }
+    .questionCount {
+        line-height: 32px;
+        color: $grayFontColor;
+        margin-bottom: 8px;
+    }
+    .questionList {
+        padding-bottom: 16px;
+    }
+    .questionItem {
+        margin-bottom: 24px;
+        border: 1px solid #eee;
+        @include border-radius(2px);
+        .itemTitle {
+            line-height: 30px;
+            padding: 0 20px;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            .itemFlag {
+                color: $darkOrangeFontColor;
+                @include abs-pos(0, auto, auto, 10px);
+            }
+            &.noBoderBottom {
+                border: none;
+            }
+        }
+        .itemContent {
+            padding: 10px 0;
+        }
+        .errMsg {
+            font-size: 12px;
+            line-height: 12px;
+            color: $darkOrangeFontColor;
+            padding-left: 20px;
+        }
+        .viewMoreInfo {
+            font-size: 12px;
+            padding-left: 44px;
+            line-height: 32px;
+        }
+        .itemUserInfo {
+            height: 26px;
+            position: relative;
+            .infoText {
+                padding: 0 10px;
+                color: #fff;
+                font-size: 12px;
+                height: 26px;
+                line-height: 26px;
+                display: inline-block;
+                background-color: #86CAFB;
+                @include rel-pos($left: -10px);
+                @include border-radius(0 100px 100px 0);
+                z-index: 1;
+            }
+            .infoFlag {
+                width: 0;
+                height: 0;
+                border-width: 4px 9px;
+                border-style: solid;
+                border-color: transparent #4F98ED transparent transparent;
+                @include abs-pos(auto, auto, -4px, -19px);
+            }
+        }
+        .contentItem {
+            padding-left: 44px;
+            padding-right: 20px;
+            font-size: 12px;
+            line-height: 32px;
+        }
+        .typeInput {
+            margin-right: 10px;
+        }
+        .percentInfo {
+            color: $grayFontColor;
+            font-size: 12px;
+            line-height: 24px;
+            padding-left: 26px;
+            @include rel-pos($top: -5px);
+        }
+        .emptyInput {
+            width: 780px;
+            padding: 0 5px;
+            height: 30px;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #eee;
+            @include border-radius(2px);
+        }
+        .typeTextarea {
+            width: 780px;
+            padding: 5px;
+            height: 90px;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #eee;
+            resize: none;
+            @include border-radius(2px);
+        }
+    }
+    .submitQuestion {
+        padding: 20px 0 10px;
+        text-align: center;
+    }
+    .answerCount {
+        font-size: 12px;
+        line-height: 32px;
+        color: $grayFontColor;
+    }
+    .currentQuestion {
+        line-height: 46px;
+        margin-bottom: 14px;
+    }
+    .answerItem {
+        font-size: 12px;
+        line-height: 32px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        border: 1px solid #eee;
+        @include border-radius(2px);
+        .answerTime {
+            color: $grayFontColor;
+        }
+    }
+}

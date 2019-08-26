@@ -1,0 +1,599 @@
+@charset "UTF-8";
+
+.qunHeader {
+    width: 940px;
+    margin: 20px auto;
+    background-color: #FFF;
+    font-family: $specialFontFamily;
+    position: relative;
+    &.noImgHeader {
+        margin-top: 44px; //浮动主导航44px
+        padding-left: 116px;
+        width: 824px;
+        height: 112px;
+        background-color: #FFF;
+        background-color: rgba(245, 245, 245, .6);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .19);
+        -webkit-transition: all .3s ease-in-out 0s;
+        -o-transition: all .3s ease-in-out 0s;
+        -moz-transition: all .3s ease-in-out 0s;
+        transition: all .3s ease-in-out 0s;
+        .qunName {
+            background: none;
+            height: 100%;
+            position: relative;
+        }
+        .cqunName {
+            color: $blackFontColor;
+            font-size: 24px;
+            height: 112px;
+            line-height: 112px;
+            text-align: left;
+            .changeGroupBtn {
+                .triangleIcon {
+                    color: $blackFontColor;
+                }
+            }
+        }
+        .cqunLink {
+            font-size: 12px;
+            height: 16px;
+            line-height: 16px;
+            display: block;
+            @include abs-pos(auto, auto, 16px, 0);
+            .link {
+                color: $blackFontColor;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .cqunParentName {
+            font-size: 12px;
+            height: 24px;
+            line-height: 24px;
+            width: auto;
+            left: 0;
+        }
+        .cqunParentLink {
+            color: $blackFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        //巨人学校特殊需求
+        &.giant {
+            height: 86px;
+            padding-top: 4px;
+            .qun_parent_title {
+                display: none;
+            }
+            .qun_name_title {
+                line-height: 50px;
+            }
+            .classSN {
+                color: $blackFontColor;
+            }
+            .addressAndTime {
+                line-height: 20px;
+                color: $blackFontColor;
+            }
+        }
+    }
+    .qunIconImg {
+        height: 80px;
+        width: 80px;
+        cursor: default;
+        @include abs-pos(16px, auto, auto, 16px);
+        -webkit-transition: all .3s ease-in-out 0s;
+        -o-transition: all .3s ease-in-out 0s;
+        -moz-transition: all .3s ease-in-out 0s;
+        transition: all .3s ease-in-out 0s;
+        .iconImg {
+            height: 100%;
+            width: 100%;
+        }
+        .allow_join_status {
+            display: block;
+            height: 20px;
+            width: 20px;
+            background-color: #F8EA3E;
+            text-align: center;
+            @include border-radius(20px);
+            @include abs-pos(auto, 4px, 4px, auto);
+            i {
+                color: $blackFontColor;
+            }
+        }
+    }
+    .headerImg {
+        height: 300px;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+            position: relative;
+        }
+    }
+    .qunName {
+        width: 100%;
+        height: 198px;
+        @include bg_with_retina(qun_header_bg, png, $versionImgPath);
+        background-repeat: repeat-x;
+        @include abs-pos(auto, auto, 0, 0);
+        .changeGroupBtn {
+            padding: 0 4px;
+            &:hover {
+                .triangleIcon {
+                    color: #orangeFontColor;
+                }
+            }
+        }
+        .cqunGroupContainer {
+            display: inline-block;
+            position: relative;
+        }
+        .redDot {
+            @include abs-pos(50%, auto, auto, 0);
+            @include border-radius(10px);
+            background: $darkOrange;
+            border: 1px solid #fff;
+            width: 6px;
+            height: 6px;
+            z-index: 5;
+            margin-top: -15px;
+        }
+        .triangleIcon {
+            font-size: 22px;
+            color: #fff;
+        }
+    }
+    .cqunGroupContainer {
+        display: inline-block;
+    }
+    .discussionGroup {
+        width: 172px;
+        font-size: 12px;
+        font-weight: normal;
+        font-family: $baseFontFamily;
+        margin-left: -172px;
+        @include abs-pos(0, 0, auto, auto);
+        background-color: #f8f8f8;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+        z-index: 5;
+        .groupItem {
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+            padding-left: 48px;
+            position: relative;
+            &.titleItem {
+                padding-left: 10px;
+                color: $grayFontColor;
+            }
+            &.cqunItem {
+                background-color: #fff;
+            }
+            &.creatGroupItem {
+                text-align: center;
+                padding: 0;
+                background-color: #fff;
+            }
+            &.creatBtnLine {
+                border-top: 1px solid #ddd;
+            }
+            &.current {
+                .currentIcon {
+                    display: inline-block;
+                }
+            }
+            .groupName {
+                color: $blackFontColor;
+                display: inline-block;
+                max-width: 96px;
+                float: left;
+                @include text-truncate();
+            }
+            .newMsg {
+                height: 16px;
+                line-height: 16px;
+                font-size: 12px;
+                background-color: #FF5500;
+                color: #FFFFFF !important;
+                padding: 0 5px;
+                margin: 0;
+                float: left;
+                @include border-radius(16px);
+                white-space: nowrap;
+            }
+            .currentIcon {
+                display: none;
+                color: #66AA1C;
+                @include abs-pos(12px, auto, auto, 20px);
+            }
+        }
+        .creatGroupBtn {
+            width: 70px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            display: inline-block;
+            color: $blackFontColor;
+            background-color: #f8f8f8;
+            border: 1px solid #eee;
+            @include border-radius(2px);
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .cqunName {
+        font-size: 28px;
+        font-weight: normal;
+        color: #fff;
+        width: 100%;
+        height: 176px;
+        line-height: 176px;
+        text-align: center;
+    }
+
+    .cqunLink {
+        display: none;
+    }
+    .cqunParentName {
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        @include abs-pos(16px, auto, auto, 0);
+    }
+    .cqunParentLink {
+        color: #fff;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .waterMarkName {
+        color: #fff;
+        @include abs-pos(25px, auto, auto, 30px);
+        .cqunParentLink {
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(255, 255,255, .7);
+            display: inline-block;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+        }
+        .cqunName {
+            font-size: 18px;
+            line-height: 28px;
+            display: inline-block;
+            height: auto;
+            color: rgba(255, 255,255, .7);
+            text-align: left;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+            .cqunGroupContainer {
+                position: relative;
+            }
+            .redDot {
+                @include abs-pos(50%, auto, auto, 0);
+                @include border-radius(10px);
+                background: $darkOrange;
+                border: 1px solid #fff;
+                width: 6px;
+                height: 6px;
+                z-index: 5;
+                margin-top: -15px;
+            }
+        }
+        .triangleIcon {
+            color: #fff;
+        }
+    }
+    .searchInHeader {
+        @include abs-pos(16px, 20px, auto, auto);
+        .searchInput {
+            width: 162px;
+            height: 28px;
+            border: 1px solid #ddd;
+            padding-left: 36px;
+            @include border-radius(5px);
+        }
+        .searchBtn {
+            border: none;
+            cursor: pointer;
+            height: 16px;
+            width: 16px;
+            @include bg_with_retina(xnw-icons, png, $baseXnwImgPath);
+            background-position: -640px 0;
+            @include abs-pos(7px, auto, auto, 10px);
+        }
+    }
+    &.noImgHeaderFixed {
+        left: 50%;
+        width: 880px;
+        height: 50px;
+        padding-left: 60px;
+        margin-left: -470px;
+        background-color: rgba(255, 255, 255, 1);
+        -webkit-transition: all .1s ease-in-out 0s;
+        -o-transition: all .1s ease-in-out 0s;
+        -moz-transition: all .1s ease-in-out 0s;
+        transition: all .1s ease-in-out 0s;
+        .qunIconImg {
+            -webkit-transition: all .1s ease-in-out 0s;
+            -o-transition: all .1s ease-in-out 0s;
+            -moz-transition: all .1s ease-in-out 0s;
+            transition: all .1s ease-in-out 0s;
+
+            top: 7px;
+            left: 7px;
+            width: 36px;
+            height: 36px;
+        }
+        .cqunName {
+            height: 50px;
+            font-size: 14px;
+            line-height: 50px;
+            img {
+                vertical-align: middle;
+            }
+        }
+        .cqunParentName {
+            display: none;
+        }
+        .cqunLink {
+            display: none;
+        }
+        .searchInHeader {
+            display: none;
+        }
+        .noQunImgNav {
+            height: 35px;
+            margin-top: -38px;
+            line-height: 35px;
+        }
+    }
+}
+.qunMainNav {
+    width: 940px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-family: $specialFontFamily;
+    margin: -68px auto 0;
+    position: relative;
+    z-index: 3;
+    &.noQunImgNav {
+        width: 400px;
+        margin-top: -48px;
+        padding-right: 144px;
+        text-align: right;
+        float: right;
+        .navItem {
+            color: $blackFontColor;
+            width: auto;
+            margin: 0 15px;
+            font-size: 14px;
+            &.on {
+                .currentFlag {
+                    display: none;
+                }
+            }
+            .newMsgTip {
+                right: auto;
+                left: 100%;
+                margin-left: 4px;
+                &.dot {
+                    right: auto;
+                    left: 100%;
+                    margin-left: 4px;
+                }
+            }
+        }
+        .navIcon {
+            right: 10px;
+            .itemIcon {
+                color: $lightBlackFontColor;
+            }
+        }
+    }
+    &.fixedQunNav {
+        z-index: 10;
+        position: fixed;
+        left: 50%;
+        margin-left: -470px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .19);
+        -webkit-transition: all .1s ease-in-out 0s;
+        -o-transition: all .1s ease-in-out 0s;
+        -moz-transition: all .1s ease-in-out 0s;
+        transition: all .1s ease-in-out 0s;
+        .navItem {
+            color: $blackFontColor;
+        }
+        .navIcon {
+            .itemIcon {
+                color: $lightBlackFontColor;
+            }
+        }
+    }
+    .navItem {
+        display: inline-block;
+        width: 100px;
+        font-size: 16px;
+        text-align: center;
+        margin: 0 10px;
+        color: #fff;
+        position: relative;
+        &:hover {
+            color: $orangeFontColor;
+        }
+        &.on {
+            color: $orangeFontColor;
+            .currentFlag{
+                display: block;
+            }
+        }
+        .newMsgTip {
+            height: 16px;
+            line-height: 16px;
+            font-size: 12px;
+            background-color: #FF5500;
+            color: #FFFFFF !important;
+            padding: 0 5px;
+            margin: 0;
+            @include abs-pos(8px, 4px, auto, auto);
+            @include border-radius(16px);
+            white-space: nowrap;
+            &.dot {
+                height: 6px;
+                width: 6px;
+                @include border-radius(6px);
+                padding: 0;
+                @include abs-pos(16px ,12px, auto, auto);
+            }
+        }
+        .currentFlag {
+            width: 100%;
+            height: 2px;
+            display: none;
+            background-color: #ffaa33;
+            @include abs-pos(auto, auto, 4px, 0);
+        }
+    }
+    .navIcon {
+        @include abs-pos(auto, 20px, 0, auto);
+        .iconItem {
+            margin: 0 10px;
+            &:hover {
+                .itemIcon {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .itemIcon {
+            color: #fff;
+            @include rel-pos($top: 2px);
+        }
+    }
+    .utilitiesList {
+        width: 184px;
+        background-color: #fff;
+        padding: 5px 0;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .19);
+        @include abs-pos(100%, auto, auto, auto);
+        .utilitiesListInner {
+            max-height: 224px;
+            overflow: auto;
+        }
+        .listItem {
+            height: 45px;
+            line-height: 45px;
+            padding-left: 20px;
+            color: $lightBlackFontColor;
+            text-align: left;
+            font-weight: normal;
+            display: block;
+            font-family: $baseFontFamily;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+        }
+        .triangleFlagUp {
+            width: 0;
+            border-style: solid;
+            border-width: 10px;
+            border-color: transparent transparent #fff transparent;
+            margin-right: -10px;
+            @include abs-pos(auto, 92px, 100%, auto);
+        }
+        .utilityIcon {
+            color: $blackFontColor;
+            margin-right: 12px;
+            @include rel-pos($top: 2px);
+        }
+    }
+}
+.functionContainer {
+    z-index: 1;
+    padding: 10px 5px;
+    background-color: #fff;
+    @include border-radius(4px);
+    @include abs-pos(auto, 50px, 100%, auto);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .19);
+    .funItem {
+        margin: 0 9px;
+        height: 32px;
+        line-height: 32px;
+        padding-top: 46px;
+        font-size: 12px;
+        color: $blackFontColor;
+        text-align: center;
+        float: left;
+        min-width: 50px;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .addQuestionnaire {
+        @include bg_with_retina(add-questionnaire, png, $versionImgPath);
+        background-position: center 10px;
+    }
+    .addVote {
+        @include bg_with_retina(add-vote, png, $versionImgPath);
+        background-position: center 10px;
+    }
+    .addActivities {
+        @include bg_with_retina(add-activities, png, $versionImgPath);
+        background-position: center 10px;
+    }
+    .addExamReport {
+        @include bg_with_retina(add-exam-report, png, $versionImgPath);
+        background-position: center 10px;
+    }
+    .addHomework {
+        @include bg_with_retina(add-homework, png, $versionImgPath);
+        background-position: center 10px;
+    }
+    .addLog {
+        @include bg_with_retina(add-log, png, $versionImgPath);
+        background-position: center 10px;
+    }
+    .addNotice {
+        @include bg_with_retina(add-notice, png, $versionImgPath);
+        background-position: center 10px;
+    }
+    .triangleFlag {
+        width: 0;
+        border-style: solid;
+        border-width: 10px;
+        border-color: #fff transparent transparent transparent;
+        @include abs-pos(100%, 100px, auto, auto);
+    }
+    .triangleFlagUp {
+        width: 0;
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent transparent #fff transparent;
+        @include abs-pos(auto, 100px, 100%, auto);
+    }
+}
+.discussion_guide_layer {
+    width: 208px;
+    height: 135px;
+    position: relative;
+    @include bg_with_retina(discussion_qun_guide, png, $versionImgPath);
+    .closeGuideBtn {
+        width: 76px;
+        height: 38px;
+        text-indent: -200px;
+        overflow: hidden;
+        background: none;
+        border: none;
+        @include abs-pos(auto, auto, 0, 84px);
+    }
+}

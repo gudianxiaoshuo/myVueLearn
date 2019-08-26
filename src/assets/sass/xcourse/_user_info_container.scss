@@ -1,0 +1,173 @@
+.userInfoContainer {
+    padding: 30px 20px;
+    position: relative;
+    .userInfoTitle {
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: normal;
+        margin: 10px 0 30px;
+        position: relative;
+        border-bottom: 1px dashed #e8e8e8;
+        &.extraInfoTitle {
+            margin-top: 30px;
+        }
+        span {
+            line-height: 32px;
+            background-color: #fff;
+            @include abs-pos(-16px, auto, auto, 0);
+        }
+        .info {
+            color: #F61313;
+        }
+    }
+    .infoContainer {
+        position: relative;
+        .userIconItem {
+            top: 96px;
+        }
+    }
+    .userIconItem {
+        @include abs-pos(140px, auto, auto, 60px);
+        width: 100px;
+        text-align: center;
+        .userIcon {
+            width: 100px;
+            height: 124px;
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .iconImg {
+            width: 100px;
+            height: 124px;
+            cursor: pointer;
+        }
+        .errMsg {
+            color: $darkRed;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+    .userInfoItem {
+        line-height: 30px;
+        margin-bottom: 22px;
+        padding-left: 200px;
+        .itemTitle {
+            display: inline-block;
+            width: 82px;
+            text-align: right;
+            margin-right: 10px;
+            i {
+                color: $darkOrangeFontColor;
+                margin-right: 5px;
+            }
+        }
+        .infoInput {
+            height: 28px;
+            border: 1px solid #e8e8e8;
+            @include border-radius(2px);
+            width: 300px;
+            padding: 0 4px;
+            &.genderInput {
+                width: 14px;
+                height: 14px;
+                margin-right: 10px;
+                @include border-radius(14px);
+                cursor: pointer;
+            }
+            &.femaleInput {
+                margin-left: 60px;
+            }
+            &.addressInput {
+                margin-top: 15px;
+                margin-left: 96px;
+            }
+            &[readonly] {
+                border: none;
+            }
+            &.editable {
+                cursor: pointer;
+            }
+        }
+        .genderListBox,
+        .dateSelector {
+            display: inline-block;
+            &.hide {
+                display: none;
+            }
+        }
+        .dateSelector {
+            .chosen-container a {
+                width: 40px;
+            }
+            .chosen-drop {
+                width: 60px;
+            }
+        }
+        .provinceCitySelection {
+            .chosen-container {
+                width: 105px !important;
+                a {
+                    width: 80px;
+                }
+            }
+        }
+        .nationSelector {
+            display: inline-block;
+            &.hide {
+                display: none;
+            }
+            .chosen-container {
+                width: 145px !important;
+                a {
+                    width: 80px;
+                }
+            }
+            .chosen-drop {
+                width: 105px;
+            }
+        }
+        .errMsg {
+            color: $darkRed;
+            font-size: 12px;
+            line-height: 20px;
+            padding-left: 96px;
+        }
+    }
+    .btnArea{
+        border-top: 1px dashed #e8e8e8;
+        padding: 40px 0;
+        text-align: center;
+        .friendTip {
+            float: left;
+            .flag {
+                color: $darkOrangeFontColor;
+            }
+        }
+        .saveUserInfo,
+        .modifyUserInfoBtn,
+        .cancelModify {
+            width: 78px;
+            height: 28px;
+            line-height: 28px;
+            display: inline-block;
+            @include border-radius(2px);
+            text-align: center;
+            background-color: #ffaa33;
+            color: #fff;
+            margin: 0 15px;
+            &.hide {
+                display: none;
+            }
+        }
+        .saveUserInfo {
+            &.disabled {
+                background-color: #ccc;
+            }
+        }
+        .cancelModify {
+            background-color: #ccc;
+        }
+    }
+}

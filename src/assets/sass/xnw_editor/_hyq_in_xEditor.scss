@@ -1,0 +1,123 @@
+.hyq_group_container {
+    float: right;
+    margin-right: 16px;
+    .hyq_group_label {
+        cursor: pointer;
+        color: $grayFontColor;
+        &:hover {
+            color: $darkOrangeFontColor;
+            .hyq_group_name {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .hyq_group_name {
+        color: #678DA1;
+        font-size: 12px;
+    }
+    input {
+        @include rel-pos(2px, auto, auto, auto);
+    }
+    .show_hyq_group {
+        cursor: pointer;
+        &:hover {
+            .hyq_group_name {
+                color: #406B81;
+            }
+            i {
+                color: #406B81;
+            }
+        }
+        i {
+            @include rel-pos($top: 2px);
+            color: #678DA1;
+        }
+    }
+}
+.weiboPublicity {
+    position: relative;
+    float: right;
+    margin-right: 16px;
+    margin-left: 16px;
+    .publicity {
+        color: #678DA1;
+        font-size: 12px;
+    }
+    input {
+        position: absolute;
+        top: 14px;
+        left: -16px;
+    }
+}
+.hyq_group {
+    z-index: 9;
+    width: 232px;
+    height: 210px;
+    background-color: #fff;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.4);
+    @include abs-pos(auto, auto, auto ,auto);
+    display: none;
+    .hyq_group_list {
+        height: 174px;
+        overflow-y: auto;
+    }
+    .hyq_group_title {
+        height: 34px;
+        line-height: 34px;
+        border-bottom: 1px solid $lightLineGray;
+        border-top: 1px solid #fff;
+        font-weight: normal;
+        position: relative;
+        padding-left: 8px;
+        .cancel {
+            height: 24px;
+            line-height: 24px;
+            width: 60px;
+            @include border-radius(5px);
+            display: block;
+            background-color: $grayFontColor;
+            @include abs-pos(5px, 10px, auto, auto);
+            text-align: center;
+            color: #fff;
+        }
+    }
+    .group_item {
+        position: relative;
+        &.selected {
+            .selected_flag {
+                @include abs-pos(0, 0 ,auto, auto);
+                display: block;
+                width: 30px;
+                text-align: center;
+                line-height: 34px;
+                cursor: pointer;
+                i {
+                    color: $green;
+                }
+            }
+        }
+        a {
+            height: 34px;
+            line-height: 34px;
+            display: block;
+            cursor: pointer;
+            color: $grayFontColor;
+            padding-right: 30px;
+            @include text-truncate();
+            &:hover {
+                background-color: $lightGrayBg;
+            }
+        }
+        .group_icon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin: 0 12px 0 10px;
+            @include border-radius(8px);
+            @include rel-pos(1px, auto, auto, auto);
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,286 @@
+#halfCardWeiboList {
+    border-top: 1px solid #EEE;
+   .oneArticle {
+       padding: 10px 0 4px;
+       border-bottom: 1px dashed #EDEAE4;
+       position:relative;
+       &.asideMode {
+           padding: 10px 0;
+       }
+       .pubInfo {
+           margin-bottom:10px;
+           .profile {
+               width: 24px;
+               height: 24px;
+               display: inline-block;
+               float:left;
+               img {
+                  width: 24px;
+                  height: 24px;
+                  @include border-radius(100%);
+               }
+           }
+           .name {
+               float: left;
+               display: inline-block;
+               color: $blackFontColor;
+               margin: auto 12px auto 10px;
+               &:hover {
+                   color: $orangeFontColor;
+               }
+           }
+           .from {
+               font-size: 12px;
+               color: $grayFontColor;
+               .sourceName {
+                   color: $blackFontColor;
+                   &:hover {
+                       color: $orangeFontColor;
+                   }
+               }
+           }
+           .time {
+               float: right;
+               color: $grayFontColor;
+               font-size: 12px;
+               display: inline-block;
+           }
+       }
+       h3 {
+           color: $blackFontColor;
+           font-size: 16px;
+           height: 22px;
+           line-height: 22px;
+           margin-bottom: 2px;
+           @include text-truncate();
+           -webkit-line-clamp: 1;
+       }
+       .aside {
+           width: 160px;
+           height: 96px;
+           margin: -4px auto auto 30px;
+           float: right;
+           background-size: cover;
+           background-position: center;
+           position: relative;
+           img {
+               width: 160px;
+               height:96px;
+           }
+           .videoIcon {
+               font-size: 50px;
+               color: #FFF;
+               text-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+               @include abs-pos(23px, auto, auto, 55px);
+           }
+       }
+       .up {
+           font-size: 12px;
+           display:inline-block;
+           width: 36px;
+           height: 18px;
+           line-height: 18px;
+           background: #08A1ED;
+           color: #FFF;
+           text-align: center;
+           font-weight: normal;
+           margin-right: 3px;
+           @include border-radius(2px);
+       }
+       .mainContent {
+           color: $lightBlackFontColor;
+           line-height: 22px;
+           display: -webkit-box;
+           -webkit-box-orient: vertical;
+           -webkit-line-clamp: 3;
+           overflow: hidden;
+           &.haveTitle {
+               -webkit-line-clamp: 2;
+           }
+           .rt, .rtFrom, .rtContent {
+               display: inline-block;
+               vertical-align: middle;
+           }
+           .rt {
+               max-width: 640px;
+               @include text-truncate();
+               &.haveAside {
+                   max-width: 380px;
+               }
+           }
+           .rtFrom {
+               color: $blueFontColor;
+               max-width: 140px;
+               @include text-truncate();
+           }
+           i {
+               vertical-align: middle;
+           }
+       }
+       .bottomArea {
+           padding-top: 5px;
+           font-size: 12px;
+           color: #979FA4;
+           &.asideMode {
+               @include abs-pos(auto, auto, 3px, auto);
+           }
+           span {
+               padding-right: 13px;
+           }
+           i {
+               padding-right: 3px;
+               font-size: 12px;
+               &.faved {
+                   color: $orangeFontColor;
+               }
+           }
+       }
+
+       .activityListWrap .bottomArea span {
+           padding-right: 1px;
+       }
+       .voteTip {
+           @extend %typeTip;
+           background-color: #FB7E81;
+       }
+       .questionnaireTip {
+           @extend %typeTip;
+           background-color: #67C597;
+       }
+   }
+}
+#oneLineWeiboList {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    .oneWeibo {
+        color: $grayFontColor;
+        font-size: 12px;
+        height: 14px;
+        line-height: 14px;
+        padding: 14px 0;
+        position: relative;
+        .privateIcon {
+            float: left;
+            padding-right: 5px;
+        }
+        &:not(:last-child) {
+            border-bottom: 1px dashed $lineGray;
+        }
+        .main {
+            display: inline-block;
+            width: calc(100% - 160px - 22px); // 减去.rightOper右侧操作区和左侧加密图标宽度
+            &.short {
+                width: calc(100% - 260px - 22px); // .rightOper操作区有"发表于"
+            }
+
+            .content {
+                color: $blackFontColor;
+                display: inline-block;
+                max-width: calc(100% - 145px); // 减去.statistics括号内容的最大宽度
+                font-size: 14px;
+                @include text-truncate();
+                i {
+                    vertical-align: middle;
+                    color: $lightBlackFontColor;
+                }
+            }
+            .statistics {
+                display: inline-block;
+                vertical-align: top;
+                color: $grayFontColor;
+                max-width: 145px;
+                @include text-truncate();
+            }
+            &:hover {
+                .content {
+                    color: $orangeFontColor;
+                    i {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+        }
+        .rightOper {
+            float: right;
+            display: inline-block;
+            @include abs-pos(auto, 0, auto, auto);
+            .from {
+                margin: auto 15px auto auto;
+                display: inline-block;
+                .sourceName {
+                    width: 60px;
+                    vertical-align: top;
+                    display: inline-block;
+                    @include text-truncate();
+                    &:hover {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+            .moreOper {
+                color: $grayFontColor;
+                padding: 2px 0;
+                i {
+                    font-size: 12px;
+                    color: $orangeFontColor;
+                }
+                &:hover {
+                    color: $blackFontColor;
+                }
+            }
+        }
+    }
+    .show_more {
+        position: absolute;
+        background-color: #FFF;
+        z-index: 100;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4);
+        padding: 5px 0;
+        a {
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+            color: $blackFontColor;
+            text-decoration: none;
+            display: block;
+            width: 90px;
+            padding: 0 0 0 15px;
+            text-align: left;
+            cursor: pointer;
+            &:hover,
+            &.on {
+                background-color: #ffaa33;
+                color: #fff;
+            }
+        }
+    }
+}
+.weiboPerfect {
+    @extend %markedTip;
+    color: #FB7E81;
+    border: 1px solid #FB7E81;
+    &:before {
+        content: '荐';
+    }
+}
+.essenceTip {
+    @extend %markedTip;
+    color: $orangeFontColor;
+    border: 1px solid $orangeFontColor;
+    &:before {
+        content: '精';
+    }
+    &.hide {
+        display: none;
+    }
+}
+/*综评标识*/
+.evaluationTip {
+    @extend %markedTip;
+    color: #86CAFB;
+    border: 1px solid #86CAFB;
+    &:before {
+        content: '综';
+    }
+}

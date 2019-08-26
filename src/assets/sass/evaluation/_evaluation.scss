@@ -1,0 +1,1298 @@
+//综合评价
+.littleCrumbs {
+    color: $blackFontColor;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+    position: relative;
+    &.noBorder {
+        border-bottom: none;
+    }
+    &.material {
+        line-height: 30px;
+        padding: 20px 0;
+        height: auto;
+    }
+    &.isStudent {
+        padding-right: 100px;
+    }
+    a {
+        color: $blueFontColor;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .addEvaluation {
+        color: $blue;
+        margin-left: 20px;
+    }
+    .historyEvaluation {
+        float: right;
+        color: $grayFontColor;
+    }
+    .identity {
+        float: right;
+        font-size: 12px;
+        color: $lightBlackFontColor;
+    }
+    .time {
+        float: right;
+        color: $grayFontColor;
+    }
+    .materialNav {
+        color: $grayFontColor;
+        margin-right: 20px;
+        display: inline-block;
+        &:hover,
+        &.on {
+            color: $orangeFontColor;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .onlyMyself {
+        margin-left: 20px;
+    }
+    .uploadMaterial {
+        @include abs-pos(20px, 0, auto, auto);
+    }
+    .xnwbtn-gray {
+        cursor: default;
+    }
+    .xnw_upload_container {
+        color: #fff;
+        vertical-align: middle;
+        &:hover {
+            color: #fff;
+        }
+    }
+    .primary-btn {
+        color: #fff;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+.evaluationItem {
+    position: relative;
+    height: 90px;
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    @extend %friendsAndBlackCard;
+    .status0,
+    .status1,
+    .status2,
+    .status3 {
+        @include bg_with_retina(evaluation_status, png, $evaluationImgPath);
+        @include abs-pos(-1px, auto, auto, -1px);
+        width: 46px;
+        height: 38px;
+        z-index: 1;
+    }
+    .status0 {
+        background-position: 0 0;
+    }
+    .status1 {
+        background-position: -46px 0;
+    }
+    .status2 {
+        background-position: -92px 0;
+    }
+    .status3 {
+        background-position: -138px 0;
+    }
+    .name {
+        line-height: 40px;
+        color: $blackFontColor;
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        padding-right: 10px;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .grade,
+    .time {
+        line-height: 24px;
+        font-size: 12px;
+        color: $grayFontColor;
+    }
+    .modifyBtn {
+        margin-left: 10px;
+        font-size: 12px;
+        display: inline-block;
+        &:hover {
+            color: $orangeFontColor;
+        }
+        &.hide {
+            display: none;
+        }
+    }
+    .operation {
+        color: $grayFontColor;
+        font-size: 12px;
+        @include abs-pos(10px, 10px, auto, auto);
+        i {
+            @include rel-pos(2px, auto, auto, auto);
+            color: $orangeFontColor;
+        }
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .operationArea {
+        @include abs-pos(35px, 10px, auto, auto);
+        @extend %evaluationOpeationLayer;
+        z-index: 9;
+        .oneItem {
+            width: 65px;
+        }
+    }
+    .gradeList {
+        @include abs-pos(75px, auto, auto, 90px);
+        @extend %evaluationOpeationLayer;
+        overflow-y: auto;
+        z-index: 3;
+        max-height: 312px;
+        .oneItem {
+            width: 105px;
+            input {
+                margin-right: 12px;
+            }
+        }
+    }
+}
+.evaluationContents {
+    margin-top: 20px;
+    background-color: $headerNavBg;
+    .S-main_l {
+        padding-top: 0;
+    }
+    .attendanceContainer,
+    .classPerformance {
+        padding-top: 12px;
+    }
+    .evaluationContentsNav {
+        background-color: $qunNavHover;
+        padding-left: 20px;
+        line-height: 40px;
+    }
+    .addEvaluationIndex {
+        display: block;
+        line-height: 40px;
+        color: $blueFontColor;
+        padding-left: 20px;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .evaluationWay,
+    .premission {
+        color: $grayFontColor;
+        span {
+            margin-right: 30px;
+        }
+    }
+    .evaluationWay {
+        margin-bottom: 20px;
+        .way {
+            position: relative;
+            display: inline-block;
+            color: $blackFontColor;
+            margin-right: 30px;
+            i {
+                color: $orangeFontColor;
+            }
+            .wayTitle {
+                cursor: pointer;
+            }
+            .wayList {
+                display: none;
+                @include abs-pos(25px, auto, auto, 0);
+                z-index: 2;
+                @extend %evaluationOpeationLayer;
+                .oneItem {
+                    width: 65px;
+                }
+            }
+        }
+    }
+    .premission {
+        padding-bottom: 29px;
+        border-bottom: 1px dashed $middleGrayBg;
+    }
+    .saveBtn {
+        margin: 30px auto 20px;
+        display: block;
+        &.xnwbtn-gray {
+            cursor: default;
+        }
+    }
+    .materialBtn {
+        color: $grayFontColor;
+        padding: 0 16px;
+        float: right;
+        font-size: 12px;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .pretrial {
+        margin-bottom: 20px;
+        display: inline-block;
+        color: $grayFontColor;
+        input {
+            margin-right: 5px;
+        }
+    }
+}
+/*通过未通过*/
+.passArea {
+    @include bg_with_retina(pass, png, $evaluationImgPath);
+    @include abs-pos($top: 45px, $right: 0);
+    width: 61px;
+    height: 23px;
+    color: #FF7B39;
+    text-align: center;
+    transform: rotate(-30deg);
+    z-index: 9;
+    line-height: 22px;
+    background-color: #fff;
+    &:after {
+        content: attr(data-text);
+        transform: scale(.8);
+        display: block;
+        font-size: 12px;
+    }
+}
+.evaluationIndexNav {
+    position: relative;
+    z-index: 1;
+    .name {
+        line-height: 42px;
+        height: 42px;
+        position: relative;
+        //border-bottom: 1px solid $lightLineGray;
+        font-weight: bold;
+        .folding {
+            padding-left: 65px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .evaluationIndexName {
+            display: block;
+            max-width: 140px;
+            @include text-truncate();
+        }
+        .arrow {
+            @include abs-pos(10px, auto, auto, 20px);
+        }
+        .rightArrow {
+            transform: rotate(-90deg);
+        }
+        .book {
+            @include abs-pos(10px, auto, auto, 38px);
+        }
+        .edit {
+            @include abs-pos(13px, 20px, auto, auto);
+            cursor: pointer;
+            display: none;
+        }
+        &.on {
+            color: $blackFontColor;
+            background-color: $middleGrayBg;
+        }
+
+        &:hover {
+            color: $blackFontColor;
+            background-color: $middleGrayBg;
+            .edit {
+                display: block;
+            }
+        }
+        &.guide {
+            color: $blackFontColor;
+            background-color: $middleGrayBg;
+            .edit {
+                display: block;
+                color: $orangeFontColor;
+            }
+            .guideAddEvaluationPoint {
+                display: block;
+            }
+        }
+        .nameOperation {
+            @include abs-pos(35px, 10px, auto, auto);
+            @extend %evaluationOpeationLayer;
+            z-index: 3;
+            .oneItem {
+                font-weight: normal;
+                width: 65px;
+            }
+        }
+        &.onePoint {
+            padding-left: 65px;
+            height: 44px;
+            line-height: 44px;
+            border-bottom: none;
+            font-weight: normal;
+            a {
+                color: $lightBlackFontColor;
+                display: block;
+                width: 130px;
+                @include text-truncate();
+            }
+            .redDot {
+                @include abs-pos(20px, auto, auto, 46px);
+                @extend %dotTip;
+                background-color: #ff5500;
+            }
+        }
+    }
+    .guideAddEvaluationPoint {
+        @include abs-pos(45px, auto, auto, 160px);
+        @include bg_with_retina(guide_evaluation_point, png, $evaluationImgPath);
+        width: 130px;
+        height: 70px;
+        display: none;
+    }
+}
+.evaluationIndexContent {
+    border: 1px solid $borderOrange;
+    background: $bgOrange;
+    color: $darkBrownFontColor;
+    margin-bottom: 20px;
+    .subjectConflict {
+        padding: 20px;
+        color: $darkOrangeFontColor;
+    }
+    .evaluationSet {
+        position: relative;
+        padding-top: 20px;
+        border-bottom: 1px dashed #FEEED4;
+        &.noBorder {
+            border-bottom: none;
+        }
+        &.course {
+            padding-top: 15px;
+            padding-left: 98px;
+            width: auto !important;
+        }
+        &.history {
+            .nameText,
+            .score {
+                cursor: default !important;
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        .classify{
+            @include abs-pos($top: 20px, $left: 20px);
+        }
+        input {
+            line-height: 26px;
+            height: 26px;
+            border: 1px solid #FEEED4;
+            background: #fff;
+            width: 76px;
+            text-align: center;
+            margin-left: 10px;
+            //margin-right: 50px;
+            color: $darkBrownFontColor;
+            &.last {
+                margin-right: 0;
+            }
+            &.error {
+                border: 1px solid #F63330;
+            }
+        }
+        .initialValue {
+            line-height: 28px;
+            height: 28px;
+            margin-bottom: 14px;
+            display: inline-block;
+            padding: 0 20px;
+            &.good {
+                padding-left: 28px;
+            }
+            &.attendance {
+                padding: 0 0 0 20px;
+            }
+            .rating {
+                width: 200px;
+                display: inline-block;
+            }
+
+        }
+        .line {
+            border-top: 1px dashed #FEEED4;
+            margin-bottom: 14px;
+            height: 1px;
+        }
+        .courseName {
+            line-height: 28px;
+        }
+        .subject {
+            .nameText {
+                width: 216px;
+                line-height: 28px;
+                padding: 7px 10px;
+                display: inline-block;
+                text-align: left;
+                margin-right: 14px;
+                cursor: pointer;
+            }
+            .score {
+                width: 78px;
+                text-align: center;
+                display: inline-block;
+                margin-right: 14px;
+                cursor: pointer;
+            }
+            .specificStudentInput {
+                width: 14px;
+                margin: 0 20px 0 6px;
+                @include rel-pos($top: 6px);
+            }
+            .delSubject {
+                display: none;
+                color: $blue;
+            }
+            &:hover {
+                background: #FBF6ED;
+                .delSubject {
+                    display: inline-block;
+                }
+            }
+        }
+        .modifySubject {
+            margin-bottom: 7px;
+            .specificStudentInput {
+                width: 14px;
+                margin: 0 20px 0 6px;
+                @include rel-pos($top: 6px);
+            }
+        }
+        .errorTips {
+            color: #F63330;
+        }
+        .nameInput {
+            width: 216px;
+            padding: 0 10px;
+            margin-left: 0;
+            margin-right: 14px;
+            text-align: left;
+        }
+        .scoreInput {
+            margin-left: 0;
+            margin-right: 18px;
+        }
+        .scoreTip {
+            padding: 0 0 10px 20px;
+            font-size: 12px;
+            color: $grayFontColor;
+        }
+    }
+    .addCourse {
+        display: block;
+        line-height: 28px;
+        height: 28px;
+        margin-bottom: 14px;
+        color: $blueFontColor;
+        width: 70px;
+        padding: 5px 0 0 10px;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .importScore {
+        padding: 40px;
+        text-align: center;
+        color: $lightBlackFontColor;
+        i {
+            color: $orangeFontColor;
+            margin-right: 6px;
+            position: relative;
+            top: 2px;
+        }
+    }
+    .addCourseBox {
+        position: relative;
+    }
+    .zpCourseList {
+        @include abs-pos(35px, auto, auto, 0);
+        @extend %evaluationOpeationLayer;
+        z-index: 3;
+        padding-bottom: 45px;
+        width: 150px;
+        .oneItem {
+            padding: 0 0 0 35px;
+            position: relative;
+            overflow: hidden;
+            input {
+                width: auto;
+                margin-right: 0;
+
+                @include abs-pos(2px, auto, auto, 0);
+            }
+            .subject {
+                width: 100%;
+                display: inline-block;
+                @include text-truncate();
+            }
+        }
+        .schemeSubjectList {
+            max-height: 270px;
+            overflow: auto;
+        }
+        .addCourseInput {
+            padding: 10px 0;
+            background: #fff;
+            @include abs-pos(auto, auto, 0, auto);
+            input {
+                height: 24px;
+                line-height: 24px;
+                @include border-radius(4px);
+                margin-right: 0;
+                width: 118px;
+                border: 1px solid #e9e9e9;
+                text-align: left;
+                padding: 0 5px;
+                font-size: 12px;
+            }
+        }
+    }
+    .note {
+        font-size: 12px;
+        color: $grayFontColor;
+        padding-left: 20px;
+        line-height: 30px;
+        border-top: 1px dashed #FEEED4;
+        em {
+            color: $darkOrangeFontColor;
+            padding-right: 5px;
+        }
+    }
+}
+.nullTips {
+    margin: 140px auto 0;
+    width: 380px;
+    padding: 10px;
+    border: 1px solid $borderOrange;
+    background-color: $yellowBg;
+    text-align: center;
+    p:first-child {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .addAndCopy {
+        position: relative;
+    }
+    .copySubjectEvaluation {
+        display: none;
+        @include abs-pos($top: 30px, $right: -30px);
+        background: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
+        max-height: 240px;
+        overflow-y: auto;
+        a {
+            color: $grayFontColor;
+            height: 30px;
+            line-height: 30px;
+            padding: 5px 15px;
+            display: block;
+            max-width: 260px;
+            @include text-truncate();
+            &:hover {
+                color: $blackFontColor;
+                background-color: $lightGrayBg;
+            }
+        }
+    }
+    .steps {
+        padding-left: 60px;
+        color: $grayFontColor;
+        text-align: left;
+        line-height: 30px;
+    }
+}
+.historyEvaluation {
+    padding-bottom: 20px;
+    .littleCrumbs {
+        margin: 0 20px;
+        span {
+            margin-left: 12px;
+            color: $grayFontColor;
+        }
+    }
+    .evaluationItem {
+        width: 640px;
+        margin: 20px auto 0;
+    }
+}
+//学校管理选学校层
+#chooseManageSchoolLayer {
+    .tips {
+        color: $grayFontColor;
+        line-height: 20px;
+        margin: 0 20px;
+    }
+    .ItemList {
+        margin: 20px;
+        .oneItem {
+            color: $blackFontColor;
+            max-width: 300px;
+            line-height: 24px;
+            display: block;
+            @include text-truncate();
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}
+.historyScheme {
+    .evaluationSet {
+        input {
+            background-color: #FFFBF4;
+            border: 1px solid #FFFBF4;
+        }
+        .subject {
+            &:hover {
+                background-color: #FFFBF4;
+            }
+        }
+    }
+}
+.evaluationList {
+    @include abs-pos(50px, auto, auto, 60px);
+    @extend %evaluationOpeationLayer;
+    max-height: 256px;
+    overflow-y: auto;
+    z-index: 3;
+    .oneItem {
+        max-width: 220px;
+        span {
+            padding-right: 20px;
+            display: block;
+            @include text-truncate();
+        }
+    }
+    .preset {
+        position: relative;
+        span {
+            float: left;
+            width: 160px;
+            padding-right: 0;
+        }
+        .roleFlag {
+            float: left;
+            width: 36px;
+            height: 16px;
+            margin-top: 6px;
+            line-height: 16px;
+            font-size: 12px;
+            text-align: center;
+            color: #009FEE;
+            background-color: #E6F7FF;
+            border-radius: 100px;
+        }
+    }
+}
+/*学生老师综评样式*/
+.navBack {
+    width: 940px;
+    min-height:24px;
+    margin: 30px auto 20px;
+    position: relative;
+    .back {
+        color: $blackFontColor;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .showReportBtn {
+        float: right;
+        display: inline-block;
+    }
+    .showTime {
+        margin-left: 10px;
+        i {
+            color: $orangeFontColor;
+        }
+    }
+    .showTimeLayer {
+        width: 80px;
+        @include abs-pos(auto, 0, auto, auto);
+        @extend %evaluationOpeationLayer;
+    }
+}
+.downTemplate {
+    margin-left: 10px;
+}
+/*导入评分*/
+.gradeTable{
+    @extend %baseTableStyle;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    th {
+        text-align: center;
+    }
+    tr {
+        line-height: 20px;
+        padding: 10px 0;
+    }
+    td {
+        text-indent: 0;
+    }
+    .gradeName {
+        color: #AE9B85;
+        word-wrap: break-word;
+        word-break: break-all;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    &.studentName {
+       th,td {
+           &:first-child {
+               width: 100px;
+           }
+       }
+    }
+}
+.individualReportHeader {
+    width: 940px;
+    margin: 24px auto;
+    .topTitle {
+        margin-bottom: 20px;
+        .title {
+            text-align: center;
+            font-size: 16px;
+            .light {
+                color: $orangeFontColor;
+            }
+        }
+        .duration {
+            text-align: center;
+            color: #999;
+        }
+    }
+
+    .courseTab {
+        ul {
+            width: 100%;
+            overflow: auto;
+            li {
+                padding: 0;
+                margin-right: 10px;
+                border: none;
+                font-size: 16px;
+                float: left;
+            }
+            .item {
+                font-size: 14px;
+                display: inline-block;
+                padding: 0 20px;
+                border: 1px solid #E3E3E3;
+                border-radius: 2px;
+                margin-right: 14px;
+                margin-bottom: 14px;
+                height: 24px;
+                line-height: 24px;
+                &:hover {
+                    cursor: pointer;
+                }
+                a {
+                    color: $blackFontColor;
+                }
+            }
+            .on {
+                border: none;
+                background: #FFAA33;
+                a {
+                    color: #FFF;
+                }
+            }
+        }
+        .score {
+            text-align: center;
+            font-size: 20px;
+            margin: 20px 0;
+        }
+    }
+}
+.reportPageNav {
+    text-align: center;
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+    width: 940px;
+    margin: 20px auto;
+    .totalScore {
+        color: $grayFontColor;
+        margin-left: 30px;
+    }
+    .scoreValue {
+        color: $orangeFontColor;
+    }
+}
+.showReportArea {
+    width: 940px;
+    margin: 20px auto;
+    overflow: auto;
+    &.allStudentReport {
+        box-shadow: 0 2px 4px 0 rgba(106, 106, 106, .19);
+        .schemeList {
+            box-shadow: none;
+        }
+        .tipTetx {
+            height: 52px;
+            line-height: 52px;
+            padding-left: 20px;
+            background-color: #fff;
+            .schemeTip {
+                padding-top: 0;
+            }
+        }
+    }
+    .categoryItem {
+        margin-bottom: 35px;
+        .categoryTitle {
+            height: 24px;
+            line-height: 24px;
+            padding-left: 12px;
+            border-left: 4px solid #ffaa33;
+            margin-bottom: 10px;
+        }
+    }
+    .schemeList {
+        margin: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(106, 106, 106, .19);
+        .schemeItem {
+            height: 108px;
+            line-height: 108px;
+            border-bottom: 1px solid #eee;
+        }
+        .itemName {
+            width: 130px;
+            color: $blackFontColor;
+            overflow: hidden;
+            text-align: center;
+            padding: 0 5px;
+            height: 108px;
+            line-height: 108px;
+            font-size: 0;
+            border-right: 1px solid #eee;
+            float: left;
+            .nameContent {
+                font-size: 14px;
+                line-height: 24px;
+                display: inline-block;
+                vertical-align: middle;
+                max-height: 72px;
+                overflow: hidden;
+            }
+            .noScore {
+                color: #FF3E43;
+            }
+        }
+        .itemDetail {
+            width: 720px;
+            height: 100%;
+            padding-left: 28px;
+            padding-right: 50px;
+            float: left;
+            position: relative;
+        }
+        .countList {
+            color: $lightBlackFontColor;
+            line-height: 22px;
+            @include abs-pos(auto, 0, 10px, 25px);
+            em {
+                margin-right: 26px;
+            }
+        }
+        .itemScore {
+            width: 100%;
+            height: 100%;
+            color: $lightBlackFontColor;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+        }
+        .percentScoreLine {
+            height: 10px;
+            display: inline-block;
+            background-color: #e8e8e8;
+            @include border-radius(100px);
+            background-image: -webkit-linear-gradient(to left, #49BEEB, #31D9B4);
+            background-image: linear-gradient(to left, #49BEEB, #31D9B4);
+            @include abs-pos(49px, auto, auto, 60px);
+            cursor: default;
+            &.hasLinkLine {
+                cursor: pointer;
+            }
+        }
+        .scoreLine {
+            width: 600px;
+            height: 10px;
+            display: inline-block;
+            background-color: #e8e8e8;
+            @include border-radius(100px);
+            cursor: default;
+            &.hasLinkLine {
+                cursor: pointer;
+            }
+        }
+        .minScoreInfo {
+            @include abs-pos(auto, auto, auto ,0);
+        }
+        .maxScoreInfo {
+            @include abs-pos(auto, 0, auto ,auto);
+        }
+        .currentScore {
+            font-size: 12px;
+            height: 18px;
+            line-height: 18px;
+            background-color: #37D2C2;
+            padding: 0 5px;
+            color: #fff;
+            margin-left: 45px;
+            @include border-radius(2px);
+            @include abs-pos(20px, auto, auto ,auto);
+            &.fullScore {
+                background-color: #ffaa33;
+                &:after {
+                    border-color: #FFAA33 transparent transparent transparent;
+                }
+            }
+            &:after {
+                content: '';
+                width: 0;
+                height: 0;
+                display: block;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #37D2C2 transparent transparent transparent;
+                @include abs-pos(100%, auto, auto, 6px);
+            }
+        }
+        .additionalScore {
+            font-size: 12px;
+            line-height: 22px;
+            color: #FFBD35;
+            @include abs-pos(auto, 0, 20px, auto);
+        }
+        .arrow {
+            line-height: 48px;
+            margin-top: -24px;
+            @include abs-pos(50%, 25px, auto, auto);
+            i {
+                color: $grayFontColor;
+                position: relative;
+                top: 2px;
+            }
+            &:hover {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+    .schemeTip {
+        padding-top: 20px;
+        font-size: 12px;
+        color: $grayFontColor;
+    }
+    .commentContainer {
+        margin: 0;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(106, 106, 106, .19);
+        .commentContent {
+            width: 878px;
+            height: 68px;
+            padding: 10px;
+            resize: none;
+            border: 1px solid #eee;
+            @include border-radius(2px);
+            &[readonly] {
+                &:focus {
+                    border: 1px solid #eee;
+                }
+            }
+            &:focus {
+                border: 1px solid #ffaa33;
+            }
+        }
+        .btnArea {
+            font-size: 12px;
+            color: $grayFontColor;
+            line-height: 26px;
+            margin-top: 20px;
+        }
+        .saveComment {
+            float: right;
+        }
+        .commentText {
+            width: 900px;
+            margin-left: -20px;
+            padding: 10px 20px 30px 20px;
+            line-height: 20px;
+            border-bottom: 1px solid #eee;
+            &.defaultText {
+                color: $grayFontColor;
+            }
+        }
+    }
+}
+
+/*筛选已评，未评，*/
+.chooseArea{
+    padding-bottom: 20px;
+    text-align: right;
+    position: relative;
+    .getStudentList {
+        float: left;
+        .triangleIcon {
+            color: $orangeFontColor;
+            @include rel-pos($top: 2px);
+        }
+    }
+    .markedLabel {
+        color: $grayFontColor;
+        margin: 0 20px;
+        position: relative;
+        &.current {
+            color: $orangeFontColor;
+        }
+        &:last-child {
+            margin-right: 0;
+            &:after {
+                content: '';
+            }
+        }
+        &:after {
+            content: '|';
+            color: #eee;
+            line-height: 14px;
+            @include abs-pos(0, -20px, auto, auto);
+        }
+        .getURLJump {
+            width: 14px;
+            height: 14px;
+            margin-right: 6px;
+        }
+    }
+    a {
+        font-size: 14px;
+        color: $blackFontColor;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+}
+
+.highlight {
+    color: $orangeFontColor;
+}
+/*管理员综评头部*/
+.masterEvaluationHeader {
+    width: 940px;
+    color: $grayFontColor;
+    line-height: 30px;
+    margin: 0 auto;
+    .evaluationName {
+        font-weight: 500;
+        font-size: 18px;
+        color: $blackFontColor;
+    }
+    .baseInfo {
+        color: $orangeFontColor;
+        font-size: 14px;
+    }
+    .littleCrumbs {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
+/* 科目列表 */
+.subjectsList {
+    width: 890px;
+    margin: 20px auto;
+    padding-left: 50px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    &:before {
+        content: '科目：';
+        line-height: 24px;
+        @include abs-pos($left: 0);
+        font-weight: 500;
+    }
+    .item {
+        height: 24px;
+        line-height: 24px;
+        padding: 0 20px;
+        margin: 0 0 5px 5px;
+        flex: 0 0 auto;
+        @include border-radius(2px);
+        border: 1px solid #E3E3E3;
+        display: inline-block;
+        color: $blackFontColor;
+        &.current {
+            color: #fff;
+            background-color: $orangeFontColor;
+            border: 1px solid $orangeFontColor;
+        }
+    }
+}
+/* 测评内容 */
+.subjectScore {
+    display: flex;
+    height: 42px;
+    line-height: 42px;
+    background-color: #f2f2f2;
+    padding: 0 20px;
+    .item {
+        flex: 0 0 auto;
+        &:first-child {
+            margin-right: auto;
+        }
+        &:nth-child(2) {
+            margin-right: 20px;
+        }
+    }
+}
+/*学生老师添加总评切换*/
+.schemeBox {
+    position: relative;
+
+    .evaluationList {
+        display: none;
+        top: 25px;
+        left: 0;
+        max-height: 210px;
+        .oneItem {
+            max-width: 300px;
+            @include text-truncate();
+        }
+    }
+}
+.nonAdminHeader {
+    width: 900px;
+    margin: 20px auto;
+    @include bg_with_retina(evaluation-header-bg, png, $evaluationImgPath);
+    padding: 15px 20px;
+    height: 40px;
+    display: flex;
+    .schemeInfo {
+        color: #fff;
+        position: relative;
+        z-index: 2;
+        &:hover {
+            .schemeList {
+                display: block;
+            }
+        }
+        .currentScheme {
+            cursor: pointer;
+            &.noPointer {
+                cursor: default;
+            }
+            i {
+                position: relative;
+                top: 2px;
+                color: #fff;
+            }
+            .time {
+                font-size: 12px;
+                color: #fff;
+                display: block;
+            }
+        }
+        .schemeList {
+            display: none;
+            max-height: 280px;
+            overflow-y: auto;
+            @include abs-pos($top: 30px, $left: 0);
+            width: 300px;
+            background: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+            .oneItem {
+                padding: 10px 10px 0 20px;
+                display: block;
+                &:hover,
+                &.current {
+                    background-color: $lightGrayBg;
+                }
+            }
+            .name {
+                color: $blackFontColor;
+                max-width: 280px;
+                @include text-truncate();
+            }
+            .time {
+                color: $grayFontColor;
+                font-size: 12px;
+            }
+        }
+    }
+    .viewReport {
+        flex: 0 0 auto;
+        margin-left: auto;
+        line-height: 40px;
+        color: #fff;
+        display: inline-block;
+    }
+    .childrenBox {
+        position: relative;
+        flex: 0 0 auto;
+        margin-left: auto;
+        i {
+            color: #fffaa33;
+            cursor: pointer;
+        }
+        .child {
+            margin-right: 50px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        em {
+            cursor: pointer;
+        }
+    }
+    .childrenList {
+        @include abs-pos(25px, auto, auto, 60px);
+        @extend %evaluationOpeationLayer;
+        max-height: 100px;
+        overflow-y: auto;
+        z-index: 3;
+        .oneItem {
+            max-width: 200px;
+        }
+    }
+}
+/*设置科目满分*/
+#setSubjectScore {
+    width: 400px;
+    .privacy_message {
+        min-height: 40px;
+        padding-bottom: 0;
+    }
+    input {
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+        margin: 20px 0 20px 20px;
+        @extend %input;
+    }
+}

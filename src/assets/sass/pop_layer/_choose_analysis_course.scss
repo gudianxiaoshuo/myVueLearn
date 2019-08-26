@@ -1,0 +1,50 @@
+#chooseAnalysisCourse {
+    width: 438px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 50px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+        .tipText {
+            color: $grayFontColor;
+            font-size: 12px;
+            @include abs-pos(auto, auto, auto, 20px);
+            .tipFlag {
+                color: $darkOrangeFontColor;
+                margin-right: 4px;
+            }
+        }
+        .confirmChooseBtn {
+            margin-left: 14px;
+        }
+    }
+    .courseListContainer {
+        padding: 20px 10px 0;
+        max-height: 354px;
+        overflow: auto;
+        .oneCourseItem {
+            margin: 5px;
+            display: inline-block;
+            max-width: 400px;
+            @include text-truncate();
+        }
+        .courseItem {
+            margin-left: 6px;
+        }
+    }
+}

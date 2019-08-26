@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+@import "global/_variables.scss";
+@import "global/_mixins.scss";
+@import "global/_font_style.scss";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.75;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+.wcpayContainer {
+    margin: 1.5rem auto;
+    width: 100%;
+    text-align: center;
+    .hide {
+        display: none;
+    }
+    .wcpayBtn {
+        color: #FFF;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: .4rem 2.2rem;
+        background-color: $lightRed;
+        @include border-radius(.3rem);
+        box-shadow: 0 4px 8px 2px rgba(0, 0, 0, .19);
+        @include linear-gradient($pinkRed, $lightRed);
+    }
+}

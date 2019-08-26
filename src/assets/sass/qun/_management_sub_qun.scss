@@ -1,0 +1,269 @@
+.managementSubQun {
+    background-color: #fff;
+    padding: 0 20px;
+    min-height: 800px;
+    @include border-radius(5px);
+    .managementNav {
+        height: 54px;
+        line-height: 54px;
+        margin-bottom: 10px;
+        color: $grayFontColor;
+        .navItem {
+            color: $grayFontColor;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+            &:after {
+                content: '>';
+                color: $grayFontColor;
+                cursor: default;
+                margin-left: 4px;
+                &:hover {
+                    color: $grayFontColor;
+                }
+            }
+        }
+        .currentItem {
+            color: $blackFontColor;
+        }
+    }
+    .subQunContainer {
+        //width: 880px;
+        margin: 20px auto 0;
+        padding-bottom: 20px;
+        color: $yellowFontColor;
+        .addSubQunContainer {
+            background-color: $bgOrange;
+        }
+        .addBtnRow {
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            margin-bottom: 10px;
+            &.classBtnRow {
+                border-bottom: 1px dashed $borderGray;
+                padding-bottom: 8px;
+            }
+        }
+        .addClassBtn,
+        .addGradeBtn {
+            display: inline-block;
+            background: none;
+            border: none;
+            color: $blue;
+            height: 30px;
+            width: 100px;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .subClassBox {
+        max-height: 460px;
+        overflow-y: scroll;
+    }
+    .gradeItem {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 0 0 20px;
+        position: relative;
+        .dropdownBox {
+            width: 138px;
+            @include abs-pos(40px, auto, auto, 98px);
+            @extend %yearDropListStyle;
+            &.gradeListBox {
+                left: 340px;
+            }
+        }
+        @extend %chosenContainerStyle;
+        .chosen-drop {
+            &.autocomplete {
+                left: 110px;
+            }
+        }
+        .readonlyItem {
+            font-weight: bold;
+            color: $yellowTitle;
+            em {
+                margin-right: 40px;
+            }
+        }
+        span {
+            display: inline-block;
+            margin-right: 50px;
+            &.hide {
+                display: none;
+            }
+        }
+        input {
+            height: 28px;
+            width: 120px;
+            padding: 0 10px;
+            border: 1px solid $lightLineGray;
+            background-color: #fff;
+            margin-left: 6px;
+            @include border-radius(2px);
+            &.num {
+                width: 60px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .classItem {
+        height: 46px;
+        line-height: 46px;
+        padding: 0 0 0 10px;
+        &.current {
+            background-color: #FFFAF0;
+        }
+        .classInputInfo {
+            margin-right: 26px;
+        }
+        .readonlyItemInfo {
+            display: inline-block;
+            width: 212px;
+            padding-left: 10px;
+            &.headTeacherInfo {
+                width: 164px;
+            }
+            i {
+                margin-left: 10px;
+            }
+        }
+        input {
+            height: 28px;
+            width: 160px;
+            padding: 0 10px;
+            border: 1px solid $lightLineGray;
+            background-color: #fff;
+            margin-left: 6px;
+            margin-right: 15px;
+            @include border-radius(2px);
+            &[readonly] {
+                border: none;
+                background-color: $bgOrange;
+                color: $yellowFontColor;
+            }
+            &.classInput {
+                margin-right: 4px;
+                width: 70px;
+            }
+            &.nameInput {
+                width: 60px;
+            }
+            &.telInput {
+                width: 90px;
+            }
+            &.classNameInput {
+                width: 110px;
+                background: #f5f5f5;
+            }
+        }
+        .delBtn {
+            margin-left: 10px;
+            color: $darkRed;
+            //width: 50px;
+            text-align: right;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+        }
+    }
+    .subQunNav {
+        @extend %tabNavStyle;
+    }
+    .subContainerTitle {
+        height: 44px;
+        line-height: 44px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: $blackFontColor;
+        position: relative;
+        .creatClassQun {
+            @include abs-pos(12px, 0, auto, auto);
+        }
+    }
+    .yearTagContainer {
+        .yearTagItem {
+            float: left;
+            margin: 0 20px 20px 0;
+        }
+        .yearTag {
+            @extend %tag_item;
+            margin: 0;
+            opacity: .6;
+            &.on {
+                opacity: 1;
+            }
+            .tag_icon {
+                @include bg_with_retina(o-tag, png, $versionImgPath);
+                z-index: 3;
+                position: relative;
+            }
+            .tag_name {
+                background-color: $orange;
+                border: 1px solid $orange;
+                color: #fff;
+                @include text-truncate;
+                z-index: 3;
+                position: relative;
+            }
+        }
+    }
+    .classQunTable {
+        width: 880px;
+        margin: 0 auto;
+        background-color: $yellowBg;
+        @extend %baseTableStyle ;
+        .className {
+            max-width: 232px;
+            @include text-truncate();
+        }
+        .teacherAccount {
+            max-width: 168px;
+            @include text-truncate();
+        }
+    }
+    .subNormalQunList,
+    .sunSchoolQunList {
+        margin-top: 20px;
+        @extend %qunCardListStyle;
+    }
+    .subNormalQunList {
+        .little_qun_item .allow_join_status {
+            @include abs-pos(4px, 34px, auto, auto);
+        }
+        .showIndependentBtn {
+            display: block;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            @include abs-pos(4px, 4px, auto, auto);
+        }
+        .independentBtn {
+            height: 24px;
+            line-height: 24px;
+            color: $blackFontColor;
+            width: 100px;
+            text-align: center;
+            @include abs-pos(28px, 4px, auto, auto);
+            background-color: #fff;
+            box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .4);
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+
+    .littleProfileNav {
+        text-align: center;
+        .text {
+            font-size: 16px;
+            line-height: 70px;
+            border-bottom: 1px solid #ffaa33;
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+    }
+}

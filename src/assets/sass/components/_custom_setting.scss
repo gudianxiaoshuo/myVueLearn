@@ -1,0 +1,337 @@
+@charset "UTF-8";
+
+.setting_content {
+    min-height: 450px;
+    background: #fff;
+    padding: 30px 0;
+}
+.table_personal_info {
+    width: 100%;
+    th,
+    td {
+        padding: 10px 5px;
+        color: $grayFontColor;
+        font-weight: 400;
+        vertical-align: top;
+    }
+    th {
+        width: 160px;
+        text-align: right;
+        &.w_100 {
+            width: 100px;
+        }
+    }
+    label {
+        display:inline-block;
+        &.padding_R_30 {
+            padding-right: 30px;
+        }
+    }
+    select {
+        border: solid 1px $borderGray;
+        color: $grayFontColor;
+        height: 25px;
+        width: 110px;
+        @include border-radius(3px);
+        &.same_line {
+            margin-top: 10px;
+        }
+        &.w_70 {
+            width: 70px;
+        }
+        &.w_80 {
+            width: 100px;
+        }
+        &.w_90 {
+            width: 90px;
+        }
+    }
+    .w_130 {
+        width: 130px;
+    }
+    .w_180 {
+        width: 180px;
+    }
+    .w_60 {
+        width: 60px;
+    }
+    .dsc_textarea {
+        width: 281px;
+        border: solid 1px $borderGray;
+        height: 85px;
+        padding: 5px;
+        color: $grayFontColor;
+        line-height: 1.75;
+        font-size: 12px;
+        @include border-radius(5px);
+        resize: none;
+    }
+    .dsc_charcounter {
+        color: $darkOrangeFontColor;
+    }
+    .relationItem {
+        .childName {
+            display: inline-block;
+            width: 260px;
+        }
+        .operItem {
+            margin-left: 40px;
+        }
+    }
+    .changeUserAccount {
+        margin-left: 20px;
+    }
+    .areaCityTip {
+        margin-left: 6px;
+        margin-right: 20px;
+    }
+}
+.setting_submit_box {
+    border-top: solid 1px $lightLineGray;
+    padding-top: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+.eidt_icon_box {
+    width: 440px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.img_upload {
+    width: 302px;
+    float: left;
+    button {
+        vertical-align: middle;
+    }
+    img {
+        vertical-align: middle;
+        display: none;
+    }
+    .up_img {
+        background: #f5f5f5 none repeat scroll 0 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        height: 300px;
+        position: relative;
+        width: 300px;
+    }
+    .select_btn {
+        padding-top: 100px;
+        text-align: center;
+    }
+    .chooseIconImg {
+        background-color: transparent;
+        &:hover {
+            background-color: #ffaa33;
+        }
+    }
+    .hint {
+        color: $grayFontColor;
+    }
+    .add_img {
+        &.hide {
+            display: none;
+        }
+    }
+}
+.areaSelectBox {
+    background: #fafafa url(/images/setting_bg.jpg) no-repeat center 60px;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    @include border-radius(5px);
+    span {
+        padding-top: 210px;
+        display: inline-block;
+        font-size: 14px;
+        color: $borderGray;
+    }
+}
+.select_img_box {
+    padding: 20px 0 0 0;
+    position: relative;
+    text-align: center;
+    p {
+        font-size:12px;
+        color: $grayFontColor;
+        text-align: left;
+    }
+    .reselectImg {
+        margin: 0 15px;
+    }
+    .saveIconInfo {
+        vertical-align: top;
+        margin: 0 15px;
+        &.hide {
+            display: none;
+        }
+    }
+}
+.previewUserIconContainer {
+    width: 102px;
+    float: right;
+    div {
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+        @include border-radius(50px);
+        border: 1px solid $lineGray;
+        img {
+            width: 100px;
+            height: 100px;
+            max-width: none;
+        }
+    }
+    .iconTip {
+        width: 100px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 40px;
+        color: $grayFontColor;
+    }
+}
+.user_account_edit {
+    position: relative;
+    input {
+        border: solid 1px $borderGray;
+        width: 200px;
+        height: 26px;
+        color: $grayFontColor;
+        padding-left: 5px;
+        padding-right: 25px;
+        @include border-radius(3px);
+        &.no_border{
+            border: 0px;
+            width: 165px;
+            cursor: default;
+        }
+    }
+    a {
+        margin-right: 7px;
+        cursor: pointer;
+        &.in_input {
+            cursor: pointer;
+            @include rel-pos(3px, 0, 0, -28px);
+        }
+    }
+    .onlyMyself {
+        margin-left: 10px;
+    }
+}
+
+.hint {
+    color: $darkOrangeFontColor;
+}
+
+.up_container {
+    z-index: 2;
+    width: 80px;
+    height: 30px;
+    overflow: hidden;
+    @include opacity(0);
+    @include abs-pos(0, auto, auto, 0);
+    .up_but {
+        @include abs-pos(8px, auto, auto, 0px);
+        z-index: 1;
+    }
+    input {
+        float: right;
+        cursor: pointer;
+        height: 40px;
+    }
+}
+
+.userAccountInfo {
+    .userAccountItem {
+        line-height: 46px;
+    }
+    .itemName {
+        display: inline-block;
+        width: 160px;
+        padding: 0 5px;
+        text-align: right;
+        color: $grayFontColor;
+    }
+    .itemValue {
+        display: inline-block;
+        width: 200px;
+        &.emptyValue {
+            color: $grayFontColor;
+        }
+    }
+
+    .closeAccount {
+        color: $orangeFontColor;
+    }
+
+    .itemOper {
+        margin-right: 30px;
+    }
+}
+
+.personalRemindSetting {
+    .settingName {
+        width: 160px;
+        text-align: right;
+    }
+    .settingName,
+    .settingContent {
+        padding: 10px 5px;
+        color: #9B9B9B;
+        display: block;
+        float: left;
+    }
+    .settingOptions {
+        width: 130px;
+        display: inline-block;
+    }
+    .useMarkdown {
+        width: 300px;
+        display: inline-block;
+        span {
+            color: $borderGray;
+        }
+    }
+    .qunListBox {
+        width: 460px;
+        max-height: 260px;
+        overflow: auto;
+        margin: 20px 0 0 0;
+    }
+    .oneQunInfo {
+        width: 180px;
+        height: 44px;
+        position: relative;
+        padding-left: 20px;
+        margin: 0 20px 20px 0;
+        float: left;
+        .checkBoxInput {
+            @include abs-pos(16px, auto, auto, 0);
+        }
+        .qunIcon {
+            width: 44px;
+            height: 44px;
+            display: block;
+            float: left;
+            img {
+                width: 44px;
+                height: 44px;
+            }
+        }
+        .qunName {
+            width: 130px;
+            height: 44px;
+            background: #f5f5f5;
+            color: $lightBlackFontColor;
+            line-height: 44px;
+            display: block;
+            float: left;
+            padding-left: 5px;
+            @include text-truncate();
+        }
+    }
+}

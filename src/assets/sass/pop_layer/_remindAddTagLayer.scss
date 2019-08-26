@@ -1,0 +1,30 @@
+#_remindAddTagLayer {
+    width: 438px;
+    .layer_content {
+        padding: 0;
+    }
+    .remindLabel {
+        @include abs-pos(0, auto, auto, 20px);
+        input {
+            margin-right: 6px;
+        }
+    }
+    .addTagTip {
+        padding: 20px;
+        line-height: 34px;
+        font-size: 14px;
+    }
+    .btn_area {
+        position: relative;
+        background-color: $lightGrayBg;
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        margin: 0;
+        clear: left;
+        padding-right: 20px;
+        .getTagLayer {
+            margin-right: 8px;
+        }
+    }
+}

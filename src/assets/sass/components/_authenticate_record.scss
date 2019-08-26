@@ -1,0 +1,91 @@
+.authenticateTip {
+    padding: 14px 10px;
+    font-size: 12px;
+    line-height: 24px;
+    .cUserName {
+        margin-right: 4px;
+    }
+}
+.recordTable,
+.authenticateGuide {
+    .title {
+        font-size: 16px;
+        line-height: 36px;
+        font-family: $genericFontFamily;
+        font-weight: normal;
+    }
+    .guideContent {
+        padding: 16px 0 20px 20px;
+        .guideItem {
+            line-height: 30px;
+            font-size: 12px;
+            list-style: disc;
+            color: $grayFontColor;
+        }
+    }
+    .guideImg {
+        padding: 30px 0 32px 0;
+        text-align: center;
+        width: 464px;
+        height: 136px;
+        margin: 0 auto;
+        img {
+            width: 464px;
+            height: 136px;
+            @include bg_with_retina(guide_img, png, $schoolAuthenticateImgPath);
+        }
+    }
+    .text_orange {
+        color: $labelOrange;
+        padding: 0 3px;
+    }
+}
+
+.recordTable {
+    padding: 0 10px;
+    &.noSchoolAuthList {
+        width: 600px;
+        margin: 0 auto;
+    }
+    table {
+        border: 1px solid $lineGray;
+        width: 100%;
+        td {
+            border: 1px solid $lineGray;
+        }
+    }
+    .recordItem {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: $grayFontColor;
+    }
+    .recordStatus {
+        width: 150px;
+        border: 1px solid $lineGray;
+        .passStatus {
+            color: $statusGreen;
+        }
+    }
+    .recordOper {
+        width: 200px;
+        a {
+            color: $orangeFontColor;
+        }
+    }
+    .title {
+        text-align: left;
+    }
+    .guideButton {
+        text-align: center;
+    }
+}
+.creatQunBtn {
+    text-align: center;
+    margin-top: 40px;
+    .tip {
+        text-align: center;
+        font-size: 12px;
+        color: $grayFontColor;
+    }
+}

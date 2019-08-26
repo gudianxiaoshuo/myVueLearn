@@ -1,0 +1,52 @@
+.courseListLayer {
+    width: 252px;
+    padding: 5px 4px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .09);
+    z-index: 1;
+    position: relative;
+    .currentList {
+        max-height: 210px;
+        overflow: auto;
+    }
+    .listTitle {
+        line-height: 22px;
+        font-size: 12px;
+        margin-left: 6px;
+    }
+    .courseItem {
+        display: inline-block;
+        float: left;
+        margin: 0 6px;
+        font-size: 12px;
+        line-height: 22px;
+        color: $grayFontColor;
+    }
+    .viewHistoryList {
+        font-size: 12px;
+        line-height: 22px;
+        float: right;
+    }
+    .hCourseList {
+        border-top: 1px solid #e8e8e8;
+        padding-top: 5px;
+        margin-top: 5px;
+    }
+    .layerPointer {
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #e4e4e4 transparent transparent transparent;
+        @include abs-pos( auto, auto, -20px, 50%);
+        margin-left: -5px;
+        .pointer {
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-style: solid;
+            border-color: #fff transparent transparent transparent;
+            @include abs-pos(-11px, auto, auto, -10px);
+        }
+    }
+}

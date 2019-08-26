@@ -1,0 +1,54 @@
+.emai_register_hint {
+    width: 880px;
+    padding: 10px 30px;
+    background: #FFFFFF url(/images/email_hint_bg.png) no-repeat 0 100%;
+    border: solid 1px #CCCCCC;
+    margin: 20px auto;
+
+    .header_hint {
+        border-bottom: solid 2px #FF5500;
+        padding: 10px 0;
+        position: relative;
+        .logoImg {
+            width: 140px;
+        }
+        .title {
+            font-size: 20px;
+            color: #FF5500;
+            position: absolute;
+            right: 0;
+            top: 25px;
+        }
+    }
+    .hint_content {
+        padding: 0 10px 230px 10px;
+
+        h2 {
+            font-size: 20px;
+            padding: 40px 0 10px 0;
+        }
+        p {
+            color: #9B9B9B;
+            padding: 8px 0;
+        }
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+            padding: 0 4px;
+        }
+        span {
+            color: #FF8B00;
+            margin: 0 4px;
+        }
+        .v_line {
+            width: 5px;
+            display: inline-block;
+            margin-right: 8px;
+            position: relative;
+            top: 3px;
+            height: 15px;
+            background: #FF5500;
+            border-radius: 3px;
+        }
+    }
+}

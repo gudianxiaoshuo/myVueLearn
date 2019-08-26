@@ -1,0 +1,1120 @@
+@charset "UTF-8";
+
+.attendanceNav,
+.classPerformanceNav {
+    .navItem {
+        float: left;
+        width: auto;
+        text-align: center;
+        position: relative;
+        margin-right: 30px;
+        &:last-child {
+            .currentFlag {
+                width: 100%;
+            }
+        }
+        &.on {
+            a {
+                color: $orangeFontColor;
+            }
+            .currentFlag {
+                background-color: $orangeFontColor;
+            }
+        }
+        a {
+            color: $blackFontColor;
+        }
+        .currentFlag {
+            height: 2px;
+            width: 70px;
+            display: block;
+            background-color: transparent;
+            @include abs-pos(auto, auto, 2px, 0);
+        }
+    }
+    .callNameBtn {
+        float: right;
+        margin-top: 6px;
+    }
+}
+
+.addAttendanceRecord,
+.addClassPerformanceRecord,
+.attendanceRecord,
+.radarAttendanceRecord,
+.classPerformanceRecord,
+.modifyAttendance,
+.modifyClassPerformance {
+    padding-bottom: 20px;
+    min-height: 600px;
+    .dataInfo,
+    .subjectBox,
+    .dateInfo {
+        float: left;
+    }
+    .subjectBox {
+        margin-left: 10px;
+    }
+    .markZp {
+        position: relative;
+        top: 7px;
+        left: 35px;
+        &.disabled {
+            color: $grayFontColor;
+        }
+    }
+    .dataInfo {
+        margin-right: 45px;
+    }
+    .downIcon,
+    .dateIcon {
+        @include rel-pos($top: 2px, $left: -25px);
+    }
+    .dataInput,
+    .subjectInput,
+    .weekInput {
+        border: 1px solid #eee;
+        @include border-radius(2px);
+        height: 28px;
+        width: 150px;
+        padding: 0 4px;
+        background: none;
+        color: $blackFontColor;
+        cursor: pointer;
+    }
+    input {
+        @include placeholder {
+            color: $grayFontColor;
+        }
+    }
+    .exportAttendance {
+        color: $blueFontColor;
+        @include abs-pos(auto, 0, 10px, auto);
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .showOperTip {
+        width: 160px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(49, 49, 49, .8);
+        @include border-radius(2px);
+        .downIcon {
+            font-size: 20px;
+            margin-top: -8px;
+            margin-left: -10px;
+            @include abs-pos(100%, auto, auto, 50%);
+            color: rgba(49, 49, 49, .8);
+        }
+    }
+    .childList {
+        float: right;
+        height: 30px;
+        line-height: 30px;
+        .childItem {
+            margin: 0 10px 0 20px;
+        }
+    }
+}
+
+.attendanceInfo,
+.classPerformanceInfo,
+.modifyAttendance,
+.modifyClassPerformance {
+    line-height: 14px;
+    color: $blackFontColor;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    a {
+        color: $blackFontColor;
+    }
+    .subject {
+        margin-left: 50px;
+        float: left;
+        display: inline-block;
+        padding-bottom: 10px;
+        &:hover {
+            color: $blackFontColor;
+        }
+        i {
+            padding-right: 10px;
+        }
+    }
+    .subjectBox {
+        position: relative;
+    }
+    .downIcon {
+        cursor: pointer;
+    }
+    .filterList {
+        @include abs-pos(30px, auto, auto, 47px);
+        @extend %evaluationOpeationLayer;
+        max-height: 256px;
+        width: 208px;
+        overflow-y: auto;
+        z-index: 3;
+        .filterItem {
+            font-size: 12px;
+            line-height: 30px;
+            padding-left: 56px;
+            cursor: pointer;
+            position: relative;
+            &.filterAll {
+                line-height: 40px;
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 4px;
+            }
+            &:hover {
+                background-color: #f5f5f5;
+            }
+        }
+        .okIcon {
+            color: #66AA1C;
+            margin-top: -10px;
+            @include abs-pos(50%, auto, auto, 20px);
+        }
+    }
+    .subjectList {
+        @include abs-pos(30px, auto, auto, 44px);
+        @extend %evaluationOpeationLayer;
+        max-height: 256px;
+        width: 208px;
+        overflow-y: auto;
+        z-index: 3;
+        .addCourseInput {
+            margin-top: 10px;
+            padding: 0 10px;
+            input {
+                height: 24px;
+                line-height: 24px;
+                @include border-radius(4px);
+                margin-right: 0;
+                width: 98px;
+                border: 1px solid #e9e9e9;
+                padding: 0 5px;
+                font-size: 12px;
+            }
+        }
+        .oneItem {
+            max-width: 200px;
+            padding: 0 10px;
+            position: relative;
+            @include text-truncate();
+            .delBtn {
+                display: none;
+                color: #ccc;
+                @include abs-pos(8px,5px,auto,auto);
+            }
+            .subjectItem {
+                margin-left: 30px;
+                margin-right:15px;
+            }
+            &:hover {
+                background-color: #f5f5f5;
+                .subjectItem {
+                    display: block;
+                }
+                .delBtn {
+                    display: block;
+                    &:hover {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+            .okIcon {
+                color: #66AA1C;
+                margin-top: -10px;
+                @include abs-pos(50%, auto, auto, 10px);
+                &.hide {
+                    display: none;
+                }
+            }
+        }
+    }
+    .sortItem {
+        cursor: pointer;
+    }
+}
+
+.classStatus {
+    line-height: 44px;
+    .studentCount {
+        margin-right: 20px;
+    }
+    .studentStatus {
+        font-size: 12px;
+        color: $lightBlackFontColor;
+        margin-right: 15px;
+    }
+}
+
+.attendanceStatus,
+.viewOnlineStatus,
+.classPerformanceStatus {
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.modifyClassPerformance .classPerformanceStatus {
+    height: 232px;
+    overflow: auto;
+}
+
+.viewOnlineContainer {
+    margin-top: 4px;
+    min-height: 600px;
+    padding-bottom: 30px;
+}
+
+.attendanceItem,
+.classPerformanceItem {
+    width: 70px;
+    height: 32px;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #ECECEC;
+    background-color: #FFFFFF;
+    @include border-radius(2px);
+    padding: 10px 6px 10px 52px;
+    float: left;
+    .userIcon {
+        height: 34px;
+        width: 34px;
+        display: block;
+        cursor: default;
+        @include abs-pos(10px, auto, auto, 10px);
+        .userIconImg {
+            height: 34px;
+            width: 34px;
+            @include border-radius(34px);
+        }
+    }
+    .userAccount {
+        font-size: 14px;
+        color: $blackFontColor;
+        @include text-truncate;
+        display: block;
+    }
+}
+
+.saveButtonArea {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.attendanceRecord,
+.radarAttendanceRecord,
+.classPerformanceRecord,
+.schoolAttendanceStatistic {
+    min-height: 600px;
+    margin: 0 auto;
+    table {
+        @extend %baseTableStyle;
+        &.wideTable {
+            td {
+                white-space: nowrap;
+                position: relative;
+            }
+            .level {
+                display: block;
+                max-width: 120px;
+                margin: 0 auto;
+                @include text-truncate();
+            }
+        }
+        .noRecordTip {
+            height: 138px;
+            line-height: 138px;
+        }
+        th {
+            text-align: center;
+            text-indent: 0;
+        }
+        td {
+            text-align: center;
+            text-indent: 0;
+            font-size: 12px;
+            word-break: break-all;
+            word-wrap: break-word;
+            &.studentStatus {
+                position: relative;
+            }
+            .subjectName {
+                display: inline-block;
+                line-height: 24px;
+                vertical-align: middle;
+            }
+            .num {
+                padding: 0 4px;
+            }
+            .editRecord {
+                padding: 0 5px;
+            }
+            .studentStatusDetail {
+                width: 320px;
+                margin-left: -160px;
+                @include border-radius(8px);
+                @include abs-pos(auto, auto, 100%, 50%);
+                background-color: #fff;
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .2);
+                z-index: 10;
+                .detailList {
+                    padding: 8px 0;
+                    max-height: 260px;
+                    overflow: auto;
+                }
+                .downIcon {
+                    font-size: 22px;
+                    margin-top: -10px;
+                    margin-left: -10px;
+                    color: #fff;
+                    @include abs-pos(100%, auto, auto, 50%);
+                }
+            }
+            .detailItem {
+                padding:  4px 30px 0 20px;
+                font-size: 12px;
+                line-height: 28px;
+                text-align: left;
+                &:last-child {
+                    .detailInfo {
+                        border: none;
+                    }
+                }
+            }
+            .detailTitle {
+                color: $blackFontColor;
+            }
+            .titleFlag {
+                height: 12px;
+                width: 12px;
+                background-color: #FB7E81;
+                margin-right: 10px;
+                @include border-radius(2px);
+                @include rel-pos($top: 1px);
+                display: inline-block;
+            }
+            .detailInfo {
+                padding-bottom: 6px;
+                color: $lightBlackFontColor;
+                margin: 0 0 0 22px;
+                border-bottom: 1px dashed #ddd;
+            }
+            .classItem {
+                float: left;
+                display: inline-block;
+                max-width: 236px;
+                @include text-truncate();
+                clear: left;
+            }
+            .userItem {
+                float: left;
+                display: inline-block;
+                max-width: 236px;
+                @include text-truncate();
+                &:after {
+                    content: '，';
+                }
+                &:last-child {
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+
+.attendanceItem {
+    .statusFlag {
+        @include abs-pos(0, 0, auto, auto);
+        display: block;
+        height: 28px;
+        width: 34px;
+        @include bg_with_retina(xnw-img, png, $versionImgPath);
+        &.flag0 {
+            background-position: 0 0;
+        }
+        &.flag1 {
+            background-position: 0 -89px;
+        }
+        &.flag2 {
+            background-position: 0 -178px;
+        }
+        &.flag3 {
+            background-position: 0 -267px;
+        }
+    }
+}
+
+#modifyAttendance,
+#modifyPerformance {
+    width: 778px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    position: relative;
+    z-index: 10;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 50px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+        .saveAttendanceInfo,
+        .savePerformanceBtn {
+            margin-left: 16px;
+        }
+    }
+    .modifyAttendance,
+    .modifyClassPerformance {
+        min-height: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .attendanceInfo,
+    .classStatus,
+    .attendanceStatus,
+    .classPerformanceInfo,
+    .classStatus,
+    .classPerformanceStatus {
+        margin: 0 70px;
+    }
+}
+
+#replyAttendanceLayer {
+    width: 478px;
+    .close_layer {
+        display: none;
+    }
+    .privacy_message {
+        padding: 0;
+    }
+    .secondsLimit {
+        @include abs-pos(-34px, 20px, auto, auto);
+        i {
+            color: $orangeFontColor;
+            margin-right: 4px;
+        }
+    }
+    p {
+        text-align: center;
+        padding-top: 30px;
+        height: 50px;
+        i {
+            color: $orangeFontColor;
+            margin-right: 4px;
+            @include rel-pos($top: 2px);
+        }
+    }
+}
+
+.schoolAttendanceStatistic {
+    .nav {
+        span {
+            color: $grayFontColor;
+        }
+        a {
+            color: $lightBlackFontColor;
+        }
+    }
+    .header {
+        height: 30px;
+        line-height: 30px;
+        .settingContainer {
+            float: right;
+        }
+        .searchContainer {
+            width: 180px;
+            height: 28px;
+            position: relative;
+            background-color: #FFF;
+        }
+        form {
+            vertical-align: middle;
+            border: 1px solid $lineGray;
+            @include border-radius(40px);
+            .searchInput {
+                border: 0;
+                width: 140px;
+                height: 30px;
+                font-size: 12px;
+                background: none;
+                padding-left: 30px;
+                color: $grayFontColor;
+                @include border-radius(40px);
+            }
+            .searchBtn {
+                width: 30px;
+                height: 30px;
+                border: none;
+                line-height: 30px;
+                background: transparent;
+                @include abs-pos($top: 4px, $left: 2px, $bottom: -4px);
+                i {
+                    color: $borderGray;
+                }
+            }
+        }
+    }
+    .body {
+        margin: 20px auto 0;
+        padding-bottom: 50px;
+        p {
+            color: $grayFontColor;
+            a {
+                color: inherit;
+            }
+            span {
+                color: $blackFontColor;
+            }
+        }
+        .linkTxt,
+        .searchUserAttendanceForm {
+            float: right;
+        }
+        .txt {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        form {
+            label {
+                margin-right: 30px;
+                span {
+                    margin-right: 12px;
+                }
+            }
+        }
+        @extend %chosenContainerStyle;
+    }
+    .bottom {
+        .item {
+            width: 45%;
+            padding: 2%;
+            max-width: 46%;
+            cursor: pointer;
+            overflow: hidden;
+            min-height: 280px;
+            position: relative;
+            display: inline-block;
+            .title {
+                .txt {
+                    font-size: 12px;
+                    color: $lightBlackFontColor;
+                }
+                .icon {
+                    width: 4px;
+                    height: 4px;
+                    display: inline-block;
+                    border: 3px solid #E59927;
+                    @include border-radius(100%);
+                }
+            }
+            .container {
+                margin: auto;
+                @include abs-pos(30px, 0, 30px, 0);
+                font-weight: 600;
+                a {
+                    color: $orangeFontColor;
+                }
+                .txt {
+                    display: block;
+                    height: 50px;
+                    margin: auto;
+                    text-align: center;
+                    line-height: 50px;
+                    color: $orangeFontColor;
+                    @include abs-pos(20px, 0, 0, 0);
+                    .highlite {
+                        font-size: 50px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .grid {
+            height: auto;
+            padding: 2%;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            background-color: #FFF;
+            @include border-radius(5px);
+        }
+        .left {
+            margin-right: 1%;
+            background: rgba(249, 249, 249, .5);
+        }
+        .right {
+            float: right;
+            background: rgba(249, 249, 249, .5);
+            .grid {
+                margin: 4% 2%;
+                width: 41%;
+                max-width: 50%;
+                min-height: 70px;
+                a {
+                    padding: 4%;
+                }
+            }
+        }
+        .presentBg {
+            @include abs-pos(0, 0, 0, 0);
+            @include bg_with_retina(present-bg, png, $schoolAttendancePath);
+            background-size: cover;
+            background-color: #FFF;
+            background-position: 0 center;
+        }
+        .lateBg {
+            @include bg_with_retina(late-bg, png, $schoolAttendancePath);
+            @include abs-pos(0, 0, 0, 0);
+            background-size: cover;
+            background-color: #FFF;
+            background-position: 0 center;
+        }
+        .leaveBg {
+            @include bg_with_retina(leave-bg, png, $schoolAttendancePath);
+            @include abs-pos(0, 0, 0, 0);
+            background-size: cover;
+            background-color: #FFF;
+            background-position: 0 center;
+        }
+        .absentBg {
+            @include bg_with_retina(absent-bg, png, $schoolAttendancePath);
+            @include abs-pos(0, 0, 0, 0);
+            background-size: cover;
+            background-color: #FFF;
+            background-position: 0 center;
+        }
+        .attendanceBg {
+            margin: 5%;
+            @include bg_with_retina(statistics-bg, png, $schoolAttendancePath);
+            @include abs-pos(0, 0, 0, 0);
+            background-size: cover;
+            background-color: #FFF;
+            background-position: 0 center;
+        }
+    }
+    .detailContainer {
+        table {
+            tr {
+                height: 40px;
+                line-height: 40px;
+                &.emptyData {
+                    height: 140px;
+                    line-height: 140px;
+                }
+                th {
+                    height: 20px;
+                    line-height: 20px;
+                }
+            }
+            td {
+                width: 14%;
+                font-size: 14px;
+            }
+        }
+        .name,
+        .data {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            display: inline-block;
+        }
+        .txt {
+            text-align: center;
+            &.data {
+                font-size: 12px;
+                font-weight: 400;
+            }
+            &.rate {
+                &:after {
+                    content: '|';
+                    margin-left: 4px;
+                    color: $grayFontColor;
+                }
+            }
+        }
+    }
+    .userListContainer {
+        padding: 20px;
+        background: #F9F9F9;
+        .grid {
+            display: inline-block;
+            max-width: 280px;
+            width: 275px;
+            margin: 10px;
+            overflow: hidden;
+            background: #FFF;
+            @include box-shadow(0 4px 8px 0 rgba(140, 140, 140, .06));
+            border: 1px solid rgba(255, 255, 255, .5);
+            &:hover {
+                border-color: $orangeFontColor;
+            }
+            .iconBox {
+                width: 60px;
+                height: 60px;
+                display: block;
+                float: left;
+                margin: 30px 10px 30px 30px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: middle;
+                    @include border-radius(100%);
+                }
+            }
+            .nameBox {
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                margin: 40px 0;
+                .txt {
+                    font-size: 12px;
+                    color: $grayFontColor;
+                    display: block;
+                    line-height: 20px;
+                    &.name {
+                        color: #000;
+                        font-size: 14px;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#setAttendanceAlertLayer {
+    .layer_content {
+        padding: 0;
+    }
+    .setAttendanceAlertLayer {
+        padding: 10px;
+        .top {
+            padding: 0 20px 10px;
+            border-bottom: 1px dashed #EEE;
+            span {
+                margin-right: 1em;
+            }
+            label {
+                padding: 0 1em;
+            }
+        }
+        .body {
+            padding: 20px;
+            div {
+                display: block;
+                padding: 10px;
+                input {
+                    height: 24px;
+                    line-height: 24px;
+                    margin-left: 1em;
+                    margin-right: 1em;
+                    padding-left: 10px;
+                    border: 1px solid #E9E9E9;
+                }
+            }
+        }
+        .txt {
+            color: $grayFontColor;
+        }
+    }
+    .newBtnArea {
+        margin: 0;
+    }
+}
+
+.attendanceContainer {
+    .utilityChannelTitle {
+        padding: 0;
+        margin: 0;
+        .currentFlag {
+            height: 4px;
+            @include rel-pos($bottom: 3px);
+        }
+    }
+    .callNameBtn {
+        float: right;
+        @include rel-pos($bottom: -6px);
+    }
+}
+
+.attendanceNav {
+    &.littleCrumbs {
+        height: 38px;
+        margin-top: 20px;
+        line-height: 38px;
+        padding-bottom: 0;
+        .currentFlag {
+            @include abs-pos($bottom: 0);
+        }
+    }
+}
+
+.radarAttendanceRecord {
+    .delBtn {
+        color: #F00;
+    }
+    .attendanceInfo {
+        margin-bottom: 0;
+        .dateInfo {
+            float: none;
+            width: 100%;
+            form {
+                display: inline-block;
+            }
+            @extend %chosenContainerStyle;
+        }
+        .txt {
+            color: #999;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        .searchContainer {
+            width: 180px;
+            height: 28px;
+            float: right;
+            position: relative;
+            background-color: #FFF;
+            vertical-align: middle;
+            form {
+                display: block;
+                border: 1px solid $lineGray;
+                @include border-radius(40px);
+            }
+            .searchInput {
+                border: 0;
+                width: 140px;
+                height: 30px;
+                font-size: 12px;
+                background: none;
+                padding-left: 30px;
+                color: $grayFontColor;
+                @include border-radius(40px);
+            }
+            .searchBtn {
+                width: 30px;
+                height: 30px;
+                border: none;
+                line-height: 30px;
+                background: transparent;
+                @include abs-pos($top: 4px, $left: 2px, $bottom: -4px);
+                i {
+                    color: $borderGray;
+                }
+            }
+        }
+    }
+    .attendanceTitle {
+        padding: 15px 0 0;
+        text-align: center;
+        &.titleContainer {
+            margin-bottom: 20px;
+        }
+        span {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    .goBack {
+        margin-right: 10px;
+    }
+    .linkContainer {
+        float: right;
+        @include rel-pos($top: -24px);
+    }
+    .nav {
+        a {
+            color: $grayFontColor;
+        }
+    }
+    .header {
+        height: 30px;
+        line-height: 30px;
+        .settingContainer {
+            float: right;
+            .xicon {
+                cursor: pointer;
+            }
+        }
+        .searchContainer {
+            width: 180px;
+            height: 28px;
+            position: relative;
+            background-color: #FFF;
+        }
+        form {
+            vertical-align: middle;
+            border: 1px solid $lineGray;
+            @include border-radius(40px);
+            .searchInput {
+                border: 0;
+                width: 140px;
+                height: 30px;
+                font-size: 12px;
+                background: none;
+                padding-left: 30px;
+                color: $grayFontColor;
+                @include border-radius(40px);
+            }
+            .searchBtn {
+                width: 30px;
+                height: 30px;
+                border: none;
+                line-height: 30px;
+                background: transparent;
+                @include abs-pos($top: 4px, $left: 2px);
+                i {
+                    color: $borderGray;
+                }
+            }
+        }
+    }
+    .body {
+        margin: 20px auto 40px;
+        p {
+            color: $grayFontColor;
+            a {
+                color: inherit;
+            }
+            span {
+                color: $blackFontColor;
+            }
+        }
+        .txt {
+            font-weight: 600;
+        }
+        .searchUserAttendanceForm {
+            float: right;
+        }
+    }
+    .bottom {
+        .item {
+            width: 45%;
+            padding: 2%;
+            max-width: 46%;
+            cursor: pointer;
+            overflow: hidden;
+            min-height: 250px;
+            position: relative;
+            display: inline-block;
+            .title {
+                a {
+                    color: #000;
+                }
+                .icon {
+                    width: 6px;
+                    height: 6px;
+                    display: inline-block;
+                    border: 3px solid $orangeFontColor;
+                    @include border-radius(100%);
+                }
+            }
+            .container {
+                margin: auto;
+                @include abs-pos(30px, 0, 30px, 0);
+                font-weight: 600;
+                a {
+                    color: $orangeFontColor;
+                }
+                .txt {
+                    @include abs-pos(0, 0, 0, 0);
+                    display: block;
+                    margin: auto;
+                    text-align: center;
+                    line-height: 50px;
+                    color: $orangeFontColor;
+                    height: 50px;
+                    .highlite {
+                        font-size: 50px;
+                    }
+                }
+            }
+            .grid {
+                width: 45%;
+                padding: 2%;
+                max-width: 46%;
+                overflow: hidden;
+                position: relative;
+                display: inline-block;
+                min-height: 108px;
+                background: rgba(111, 94, 77, .2);
+                &:nth-child(2) {
+                    background: rgba(211, 124, 177, .2);
+                }
+            }
+        }
+        .left {
+            margin-right: 1%;
+            background: rgba(150, 150, 150, .2);
+        }
+        .right {
+            float: right;
+            background: rgba(250, 100, 200, .2);
+        }
+    }
+    .userListContainer {
+        padding: 20px;
+        background: #F9F9F9;
+        .grid {
+            display: inline-block;
+            max-width: 280px;
+            width: 275px;
+            margin: 10px;
+            overflow: hidden;
+            background: #FFF;
+            @include box-shadow(0 4px 8px 0 rgba(140, 140, 140, .06));
+            border: 1px solid rgba(255, 255, 255, .5);
+            &:hover {
+                border-color: $orangeFontColor;
+            }
+            .iconBox {
+                width: 60px;
+                height: 60px;
+                display: block;
+                float: left;
+                margin: 30px 10px 30px 30px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: middle;
+                    @include border-radius(100%);
+                }
+            }
+            .nameBox {
+                height: 40px;
+                line-height: 40px;
+                display: block;
+                margin: 40px 0;
+                .txt {
+                    font-size: 12px;
+                    color: $grayFontColor;
+                    display: block;
+                    line-height: 20px;
+                    &.name {
+                        color: #000;
+                        font-size: 14px;
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+}

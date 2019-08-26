@@ -1,0 +1,966 @@
+@charset "UTF-8";
+
+// 新版发成绩样式
+.scoreWrap {
+    background: #FFFFFF !important;
+    padding: 20px;
+    width: 900px;
+    .tableAreaScroll {
+        overflow-x: auto;
+        .distributionLayer {
+            position: absolute;
+            z-index: 10;
+            right: -120px;
+            background: #FFFFFF;
+            border: 1px solid $lightLineGray;
+            @include border-radius(5px);
+            .triangleFlagDown {
+                width: 0;
+                border-style: solid;
+                border-width: 10px;
+                border-color: #FFFFFF transparent transparent transparent;
+                @include abs-pos(auto, 50%, -20px, auto);
+            }
+        }
+    }
+    .reportCardTable {
+        @extend %scoreTableStyle;
+        border: 1px solid $borderOrange;
+        text-align: center;
+        margin: 30px auto;
+        &.errorStudentTable {
+            width: 80%;
+            tr:nth-child(odd) {
+                background-color: #FFFFFF;
+            }
+            tr:nth-child(even) {
+                background-color: #FFFAF0;
+            }
+        }
+        &.space {
+            margin-bottom: 30px;
+        }
+        th {
+            font-weight: 500;
+            white-space: nowrap;
+            padding: 0 5px;
+            position: relative;
+            &.header {
+                cursor: pointer;
+                @include bg_with_retina(rank, png, $versionImgPath);
+            }
+            &.headerSortUp {
+                @include bg_with_retina(rankUp, png, $versionImgPath);
+            }
+            &.headerSortDown {
+                @include bg_with_retina(rankDesc, png, $versionImgPath);
+            }
+            &.header,
+            &.headerSortUp,
+            &.headerSortDown {
+                background-position: center right;
+                background-color: $scoreTableTh;
+                padding-right: 15px;
+            }
+            &.headerSortUp,
+            &.headerSortDown {
+                color: $darkOrangeFontColor;
+            }
+            &.errorStudentTh {
+                background-color: #FFFFFF;
+            }
+        }
+        th,
+        td {
+            text-indent: 0;
+            text-align: center;
+        }
+        tr {
+            line-height: 20px;
+            padding: 10px 0;
+        }
+        td {
+            padding: 0 5px;
+            word-break: break-all;
+            position: relative;
+        }
+        td:first-child {
+            font-weight: normal;
+        }
+        .oneExamCourse {
+            display: inline-block;
+        }
+        .oblique {
+            @extend %oblique;
+            min-width: 80px;
+        }
+        .scoreType {
+            color: $grayFontColor;
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .totalTd {
+            background: #FFFFFF;
+        }
+        .distributionIcon {
+            cursor: default;
+            padding: 3px 10px;
+            @include bg_with_retina(pie, png, $baseImgRootPath);
+        }
+        .lineFeed {
+            white-space: nowrap;
+        }
+    }
+    .studentScore {
+        tr {
+            &:hover {
+                background-color: #FFDD88;
+            }
+            td {
+                cursor: pointer;
+            }
+        }
+    }
+    .scoreNav {
+        &.utilityChannelTitle {
+            height: 38px;
+        }
+        height: 44px;
+        border-bottom: 1px solid $lightLineGray;
+        position: relative;
+        width: 100%;
+        .navItem {
+            line-height: 36px;
+            float: left;
+            padding: 0 10px;
+            margin-right: 10px;
+            cursor: pointer;
+            color: $blackFontColor;
+            &.on {
+                color: $blackFontColor;
+                font-weight: 500;
+                border-bottom: 2px solid #FFAA33;
+            }
+        }
+        .uploadItem {
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .currentItem {
+            color: $lightBlackFontColor;
+        }
+        .onekeyreport {
+            float: right;
+        }
+    }
+    .filter {
+        margin-top: 15px;
+        display: block;
+        i {
+            @include rel-pos($top: 2px, $left: 4px);
+            color: $blue;
+        }
+        &:hover {
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .filterArea {
+        &.scoreTable {
+            margin-top: 15px;
+            border: 1px solid $lightLineGray;
+            padding: 10px 20px;
+            @include border-radius(5px);
+        }
+        &.student {
+            padding: 0;
+            border: none;
+        }
+        .filterTip {
+            color: $lightBlackFontColor;
+            .tipTitle {
+                color: $orangeFontColor;
+            }
+        }
+        .oneItem {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 70px;
+            .itemName {
+                width: 70px;
+                display: inline-block;
+                text-align: right;
+                float: left;
+                @include abs-pos(0, auto, auto, 0);
+                &.courseItem {
+                    line-height: 30px;
+                }
+            }
+            .inputTime {
+                line-height: 26px;
+                height: 26px;
+                border: 1px solid $lineGray;
+                width: 95px;
+                padding: 0 5px;
+                @include border-radius(5px);
+                &.endTime {
+                    margin-left: 10px;
+                }
+                &.startTime {
+                    margin-right: 10px;
+                }
+            }
+            label {
+                display: inline-block;
+                margin-right: 10px;
+                max-width: 510px;
+                @include text-truncate();
+                input {
+                    margin-left: 1px;
+                    margin-right: 4px;
+                }
+            }
+            .courseListContainer {
+                width: 150px;
+                height: 28px;
+                display: inline-block;
+                margin-right: 10px;
+                padding-right: 20px;
+                position: relative;
+                float: left;
+                cursor: pointer;
+                border: 1px solid #DDDDDD;
+                @include border-radius(5px);
+                &.hide {
+                    display: none;
+                }
+                .triangleIcon {
+                    @include abs-pos(6px, 4px, auto, auto);
+                }
+                .currentCourse {
+                    line-height: 28px;
+                    padding-left: 4px;
+                    display: inline-block;
+                    width: 142px;
+                    @include text-truncate();
+                }
+            }
+            .examCourseList {
+                width: 170px;
+                max-height: 180px;
+                padding: 4px 0;
+                background-color: #FFFFFF;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .19);
+                @include abs-pos(30px, auto, auto, 0);
+                z-index: 1;
+                overflow: auto;
+                .examCourse {
+                    padding: 0 15px;
+                    height: 30px;
+                    line-height: 30px;
+                    color: $lightBlackFontColor;
+                    font-size: 12px;
+                    cursor: pointer;
+                    @include text-truncate();
+                    &:hover,
+                    &.on {
+                        color: $blackFontColor;
+                        background-color: #F5F5F5;
+                    }
+                }
+            }
+            .addReportCourse {
+                line-height: 30px;
+            }
+            .reportCourseTip {
+                color: $grayFontColor;
+                font-size: 12px;
+                padding-top: 6px;
+                .tipTitle {
+                    color: $darkOrangeFontColor;
+                }
+            }
+        }
+
+        .sureBtn {
+            width: 100%;
+            text-align: center;
+            padding-top: 15px;
+        }
+    }
+    .chooseAuthor {
+        display: inline-block;
+        &:hover {
+            .memberList {
+                display: block;
+            }
+        }
+    }
+    .memberList {
+        width: 110px;
+        max-height: 180px;
+        padding: 4px 0;
+        overflow: auto;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+        @include abs-pos(auto, auto, auto, 100px);
+        background: #FFFFFF;
+        z-index: 2;
+        display: none;
+        .user_item {
+            padding: 0 15px;
+            height: 30px;
+            line-height: 30px;
+            color: $lightBlackFontColor;
+            font-size: 12px;
+            cursor: pointer;
+            @include text-truncate();
+            &:hover,
+            &.on {
+                color: $blackFontColor;
+                background-color: #F5F5F5;
+            }
+        }
+    }
+    .trendTitle {
+        margin: 30px 0;
+        border-bottom: 1px solid $lightLineGray;
+        position: relative;
+        .titleText {
+            background: #FFFFFF;
+            display: inline-block;
+            padding: 0 5px;
+            position: absolute;
+            top: -12px;
+        }
+    }
+    .trendTips {
+        background: rgba($borderOrange, 0.4);
+        border: 1px solid $borderOrange;
+        padding: 5px;
+        color: $orangeFontColor;
+        text-align: center;
+        span {
+            color: $lightOrange;
+        }
+    }
+    .oneReportCardInfo {
+        height: 54px;
+        line-height: 54px;
+        border-bottom: 1px dashed #EEEEEE;
+        color: $lightBlackFontColor;
+        position: relative;
+        .info {
+            margin-right: 40px;
+        }
+        .zp {
+            position: absolute;
+            right: 150px;
+            &[disabled] {
+                color: $grayFontColor;
+            }
+        }
+        .downloadReportCard {
+            float: right;
+            a {
+                display: inline-block;
+                i {
+                    color: $blueFontColor;
+                }
+                &:hover {
+                    i {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+        }
+    }
+    .oneReportCard {
+        .title {
+            line-height: 20px;
+            margin-bottom: 20px;
+            .count {
+                color: #FF7733;
+            }
+            .ranking {
+                color: $grayFontColor;
+            }
+            .reUploadReport {
+                float: right;
+            }
+            .sendItem {
+                margin-top: 0;
+                float: right;
+            }
+            .studentCount {
+                color: #FFAA33;
+            }
+        }
+        &.maxPreviewHeight {
+            max-height: 480px;
+            overflow: auto;
+        }
+    }
+    .uploadExcelBtn {
+        @include border-radius(3px);
+        background: #FFAA33;
+        width: 100px;
+        height: 26px;
+        line-height: 26px;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+    }
+    .newBtnArea {
+        text-align: center;
+        margin: 30px 0;
+        .xnwbtn-orange {
+            margin-left: 10px;
+            vertical-align: top;
+        }
+    }
+    .reportCardTitle {
+        margin-top: 20px;
+    }
+    .tableAreaScroll {
+        width: 100%;
+    }
+    .tableArea {
+        max-height: 575px;
+        overflow: auto;
+    }
+    .writeTable {
+        @extend %scoreTableStyle;
+        border: 1px solid $borderOrange;
+        text-align: center;
+        th {
+            width: 100px;
+            white-space: nowrap;
+            &:last-child {
+                width: auto;
+            }
+        }
+        td {
+            border: 1px solid $borderOrange;
+            padding: 0 2px;
+            .score {
+                @include border-radius(5px);
+                line-height: 20px;
+                border: 1px solid $lineGray;
+                background-color: #FFFFFF;
+                max-width: 40px;
+                padding: 0 5px;
+                text-align: center;
+                cursor: pointer;
+                &:focus {
+                    border: 1px solid $orangeFontColor;
+                }
+
+            }
+            .errScore {
+                border: 1px red solid !important;
+            }
+            input[readonly] {
+                border: none;
+                background-color: transparent;
+            }
+            &:first-child {
+                font-weight: normal;
+            }
+        }
+        th:nth-child(1),
+        .addCourseTh {
+            width: 100px;
+            padding: 0 5px;
+        }
+        .delColumn {
+            border: none;
+            background: #FFFFFF;
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.075);
+            .scoreTypeSelect {
+                border: 1px solid #EEEEEE;
+            }
+            .complete {
+                background: #FFFFFF;
+            }
+            .scoreTypeSelected {
+                background-color: transparent;
+            }
+        }
+        tr {
+            &:nth-child(1) {
+               .delColumn {
+                    box-shadow: 0px 0px 5px rgba(0,0,0,0.075);
+                    background-color: #FFFFFF;
+                    border: none;
+                    border-bottom: 1px solid #EEEEEE;
+                }
+            }
+            &:nth-last-child(2) {
+                .delColumn {
+                    box-shadow: 0px 2px 5px rgba(0,0,0,0.075);
+                    background-color: #FFFFFF;
+                    border: none;
+                    border-bottom: 1px solid #EEEEEE;
+                    position: relative;
+                }
+            }
+        }
+        .tipTip {
+            position: relative;
+        }
+        .tipInfo {
+            @include abs-pos($top:-20px);
+            @include border-radius(3px);
+            background: #313131;
+            line-height: 20px;
+            font-size: 12px;
+            padding: 2px 4px;
+            left: 50%;
+            margin-left: -64px;
+            color: #FFFFFF;
+            width: 130px;
+            i {
+                @include abs-pos(auto, auto, -10px, 40%);
+                color: $blackFontColor;
+            }
+        }
+        .delTr {
+            font-size: 12px;
+            float: right;
+            margin-right: 5px;
+        }
+    }
+    .addStudent {
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        display: block;
+        border: 1px solid #FEEED4;
+        border-top: none;
+        box-sizing: border-box;
+        i {
+            position: relative;
+            top: 2px;
+            color: $blue;
+        }
+        &:hover {
+            i {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .addStudentTip {
+        font-size: 12px;
+        color: $grayFontColor;
+        em {
+            color: #FFAA33;
+        }
+    }
+    .addScoreCourse {
+        font-weight: normal;
+    }
+    .scoreTypeSelect {
+        max-width: 90px;
+        line-height: 24px;
+        height: 24px;
+        @include border-radius(2px);
+        position: relative;
+        background: #FFFFFF;
+        margin: 10px auto;
+        text-align: left;
+        font-weight: normal;
+        color: $lightBlackFontColor;
+        .scoreTypeSelected {
+            padding:3px 0 3px 5px;
+            height:18px;
+            line-height: 18px;
+            border: none;
+            width: 85px;
+            cursor: pointer;
+        }
+
+        i {
+            @include abs-pos(3px, 3px, auto, auto);
+            cursor: pointer;
+        }
+        .scoreTypeBox {
+            background: #FFFFFF;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+            @include abs-pos(24px, auto, auto, 0);
+            z-index: 2;
+            max-height: 185px;
+            font-weight: normal;
+            .scoreTypeList {
+                overflow: auto;
+                max-height: 160px;
+            }
+            .oneItem {
+                margin: 6px;
+                padding: 0 30px 0 18px;
+                line-height: 20px;
+                cursor: pointer;
+                position: relative;
+                &.courseItem {
+                    max-width: 155px;
+                    @include text-truncate();
+                }
+                &:hover,
+                &.on {
+                    background: $lightGrayBg;
+                }
+                .choosed {
+                    display: none;
+                    font-size: 12px;
+                    @include abs-pos(5px, auto, auto, 3px);
+                }
+                &.on {
+                    .choosed {
+                        display: block;
+                    }
+                }
+                .del {
+                    cursor: pointer;
+                    @include abs-pos(0, -3px, auto, auto);
+                    &:hover {
+                        i {
+                            color: $darkOrangeFontColor;
+                        }
+                    }
+                }
+            }
+            .addScoreType {
+                color: $blue;
+                cursor: pointer;
+                line-height: 20px;
+                display: block;
+                text-align: center;
+                border-top: 1px solid #EEEEEE;
+            }
+        }
+    }
+    .scoreCourseItem {
+        position: relative;
+        padding-top: 10px;
+        &.widthAuto {
+            width: auto;
+        }
+        .delColumnBtn {
+            @include abs-pos(0, 0, auto, auto);
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            cursor: pointer;
+            i {
+                @include abs-pos(0, auto, auto, 0);
+                color: #BBBBBB;
+            }
+            &:hover {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+    .previewTip {
+        margin: 20px;
+        .orange {
+            color: $darkOrangeFontColor;
+        }
+    }
+    .complete {
+        input {
+            border: none;
+            text-align: center;
+            font-weight: bold;
+            color: #8A7762;
+            background-color: #FFF3DF;
+        }
+    }
+    .helpTips {
+        line-height: 30px;
+        .tipText {
+            padding: 20px 0;
+            color: #FF7733;
+            border-top: 1px solid #EEEEEE;
+        }
+        .step {
+            text-indent: 24px;
+            display: block;
+            em {
+                width: 5px;
+                height: 5px;
+                background: #FFAA33;
+                display: inline-block;
+                margin-right: 10px;
+                @include border-radius(5px);
+            }
+            i {
+                color: $orangeFontColor;
+                font-size: 14px;
+            }
+        }
+    }
+    &.previewBox {
+        width: 940px;
+        padding: 0;
+        @include border-radius(5px);
+        .scoreNav,
+        .oneReportCard {
+            width: auto;
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+        .oneReportCardInfo {
+            margin: 0 20px;
+        }
+        .scoreNav {
+            line-height: 40px;
+            i {
+                float: right;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                margin-top: 5px;
+                cursor: pointer;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .newBtnArea {
+            background: #F5F5F5;
+            height: 50px;
+            padding: 0 20px;
+            text-align: right;
+            line-height: 50px;
+            margin: 30px 0 0;
+            @include border-radius(0 0 5px 5px);
+            .closePreviewReport {
+                vertical-align: middle;
+            }
+        }
+    }
+    &.scoreStatistic {
+        .title {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
+.writeExamInfo {
+    padding: 20px 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EEEEEE;
+    .inputText {
+        height: 24px;
+        line-height: 24px;
+        border: 1px solid $lineGray;
+        @include border-radius(2px);
+        color: $grayFontColor;
+        padding: 0 10px;
+        &:focus {
+            border: 1px solid $orange;
+        }
+    }
+    .examTime,
+    .examInfo,
+    .examName {
+        line-height: 26px;
+        padding: 5px 0 10px 90px;
+        position: relative;
+        .examType {
+            width: 90px;
+            display: block;
+            text-align: left;
+            @include abs-pos(auto, auto, auto, 0);
+        }
+        .inputTime {
+            width: 330px;
+        }
+    }
+    .examTypeArea {
+        display: block;
+        .oneExamType {
+            display: inline-block;
+            position: relative;
+            padding: 0 20px 0 18px;
+            float: left;
+            input {
+                margin-right: 5px;
+                @include abs-pos(8px, auto, auto, 0);
+            }
+            .examTypeName {
+                @include text-truncate();
+                max-width: 280px;
+                display: inline-block;
+                float: left;
+            }
+            .customInput {
+                position: relative;
+                padding-left: 0;
+                color: #000000;
+                top: 0;
+                &.noBorder {
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+// 发送给家长的最高分、最低分等
+.sendItem {
+    margin-top: 20px;
+    label {
+        margin-right: 20px;
+    }
+}
+.viewPictureBox {
+    .viewPicture {
+        vertical-align: -1px;
+        color: #FFAA33;
+        font-size: 12px;
+        &:hover {
+            color: #4F98ED;
+        }
+    }
+}
+// 发成绩弹出层
+#_hairPaper {
+    position: relative;
+    width: 480px;
+    .newBtnArea {
+        text-align: center;
+        button {
+            width: 111px;
+        }
+    }
+    .privacy_message {
+        padding-top: 14px;
+        .paperExplain {
+            @include abs-pos(0, auto, auto, 0);
+            height: 36px;
+            width: 100%;
+            background: #FFF8EC;
+            color: #4F98ED;
+            text-align: center;
+            line-height: 36px;
+        }
+    }
+}
+.courseBoxList {
+    margin-top: 36px;
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.reissuePaper {
+    li {
+        line-height: 56px;
+        height: 56px;
+        border-bottom: 1px dashed #EEE;
+        color: #313131;
+        span {
+            float: right;
+            color: #5B5B5B;
+            i {
+                font-size: 12px;
+                color: #7ED321;
+            }
+        }
+        .uploadSend {
+            width: 78px;
+            height: 22px;
+            display: block;
+            text-align: center;
+            border: 1px solid #FFAA33;
+            color: #FFAA33;
+            line-height: 22px;
+            margin-top: 16px;
+            border-radius: 2px;
+            position: relative;
+            input {
+                @include abs-pos(0, auto, auto, 0);
+                opacity: 0;
+                filter: alpha(opacity=0);
+                cursor: pointer;
+                font-size: 0;
+                height: 22px;
+                width: 80px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        .reupLoad {
+            position: relative;
+            input {
+                @include abs-pos(0, auto, auto, 0);
+                opacity: 0;
+                filter: alpha(opacity=0);
+                cursor: pointer;
+                font-size: 0;
+                height: 100%;
+                width: 100%;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .reupLoadtext {
+                color: #0088CC;
+            }
+        }
+    }
+}
+#qun_score_report {
+    width: 460px;
+    .uploadlist {
+        width: auto;
+        display: block;
+        position: static;
+        border: none;
+        margin: 0;
+        box-shadow: none;
+    }
+}
+.uploadScorePic {
+    display: block;
+    font-size: 12px;
+    width: auto;
+    height: 15px;
+    position: relative;
+    color: #FF1212;
+    &:hover {
+        cursor: pointer;
+    }
+    .paperColor {
+        color: #4F98ED;
+        vertical-align: middle;
+        margin-left: 2px;
+    }
+    input {
+        width: 100%;
+        @include abs-pos(0, auto, auto, 0);
+        opacity: 0;
+        filter: alpha(opacity=0);
+        cursor: pointer;
+        font-size: 0px;
+        height: 20px;
+        z-index: 100;
+    }
+    i {
+        font-size: 12px;
+        color: #F56062;
+        display: inline-block;
+        vertical-align: -2px;
+        transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+    }
+}

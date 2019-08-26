@@ -1,0 +1,17 @@
+#view_markdown_blog_source {
+    .markdown_source {
+        width: 550px;
+        max-height: 560px;
+        border:none;
+        padding: 5px;
+        overflow-y: auto;
+    }
+    pre,
+    code {
+        font-family: "Courier New",Courier,monospace;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 0;
+        margin: 0;
+    }
+}

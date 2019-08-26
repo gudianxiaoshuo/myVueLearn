@@ -1,0 +1,65 @@
+#setSpecificStudentLayer {
+    width: 640px;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+    @include abs-pos(24px, auto, auto, 0);
+    z-index: 10;
+    .title {
+        display: none;
+    }
+    .studentList {
+        padding: 14px 0;
+        max-height: 224px;
+        overflow-y: auto;
+    }
+    .oneStudentItem {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        margin: 8px 0 8px 20px;
+    }
+    .selectStudentInput {
+        width: 16px;
+        height: 16px;
+        margin-right: 12px;
+        position: relative;
+        top: -8px;
+    }
+    .studentInfo {
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+    }
+    .studentIcon {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+        @include border-radius(30px);
+    }
+    .studentName {
+        display: inline-block;
+        width: 60px;
+        @include text-truncate;
+        text-align: left;
+    }
+    .newBtnArea {
+        border-top: 1px solid #eee;
+        height: 50px;
+        line-height: 50px;
+        clear: both;
+        padding: 0 20px;
+        text-align: left;
+        .selectAllLabel {
+            margin: 0;
+            .selectAllStudent {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        .submitStudnet {
+            float: right;
+            margin-top: 12px;
+        }
+    }
+}

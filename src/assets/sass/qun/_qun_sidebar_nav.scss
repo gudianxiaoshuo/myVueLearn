@@ -1,0 +1,108 @@
+//群日志侧栏导航的样式
+.qunLogNav {
+    border-right: 1px solid $borderDark;
+    .firstLevelChannelItem {
+        position: relative;
+    }
+    .manualFoldBtn {
+        display: block;
+        width: 26px;
+        height: 30px;
+        text-align: center;
+        @include abs-pos(7px, auto, auto, 0);
+        &:hover {
+            .triangleIcon {
+                color: $orangeFontColor;
+            }
+        }
+        .triangleIcon {
+            @include rel-pos($top: 4px);
+        }
+    }
+    .zpHref {
+        padding-left: 26px;
+        height: 44px;
+        line-height: 44px;
+        display: block;
+        color: $blackFontColor;
+    }
+    .logNavItem {
+        padding-left: 26px;
+        padding-right: 10px;
+        height: 44px;
+        line-height: 44px;
+        display: block;
+        color: $blackFontColor;
+        @include text-truncate;
+        &.utilityNavItem {
+            position: relative;
+        }
+        &:hover,
+        &.on {
+            background-color: $qunNavHover;
+        }
+        &.secLogNavItem {
+            padding-left: 65px;
+            color: $lightBlackFontColor;
+            &.on {
+                color: $blackFontColor;
+            }
+        }
+        &.hide {
+            display: none;
+        }
+        .channelIcon,
+        .utilityIcon {
+            @include rel-pos($top: 2px);
+            color: $blackFontColor;
+            margin-right: 24px;
+        }
+        .channelIcon {
+            margin-right: 8px;
+        }
+        .red_tip {
+            height: 16px;
+            line-height: 16px;
+            font-size: 12px;
+            background-color: #FF5500;
+            color: #FFFFFF !important;
+            padding: 0 5px;
+            margin: 0;
+            @include abs-pos(14px, 12px, auto, auto);
+            @include border-radius(16px);
+            white-space: nowrap;
+        }
+        .getMoreChannel {
+            color: $grayFontColor;
+            float: right;
+            margin-right: 10px;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}
+.utilityManageTitle {
+    font-size: 16px;
+    line-height: 36px;
+    margin-bottom: 10px;
+}
+.utilityChannelTitle {
+    height: 38px;
+    line-height: 38px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    border-bottom: 1px solid #e8e8e8;
+    &.qunXcourseTitle {
+        margin-bottom: 0;
+    }
+    .downloadQunXcourseDetail {
+        float: right;
+    }
+    .addUtilityItem {
+        float: right;
+        margin-top: 6px;
+    }
+}

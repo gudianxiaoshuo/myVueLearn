@@ -1,0 +1,17 @@
+#share_log_to_weibo {
+    &.pop_privacy_mes {
+        width: 680px;
+    }
+    .xnw_say_something {
+        padding: 0;
+        background: none;
+        .talk_area_textarea {
+            width: 630px;
+        }
+    }
+    .long_log_btn,
+    .send_or_save_log_btn {
+        display: none;
+    }
+}
+

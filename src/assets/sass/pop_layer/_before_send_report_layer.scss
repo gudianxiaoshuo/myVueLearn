@@ -1,0 +1,37 @@
+#before_send_report_layer {
+    width: 438px;
+    .content {
+        padding: 0 20px;
+        p {
+            margin: 10px;
+        }
+        select,
+        input[type=text] {
+            height: 30px;
+            line-height: 26px;
+            border-radius: 4px;
+            background-clip: padding-box;
+            padding: 0 0 0 5px;
+            border: 1px solid $borderGray;
+            width: 270px;
+        }
+        .score {
+            float: left;
+        }
+        .report_name {
+            background: $orangeFontColor;
+            line-height: 25px;
+            padding: 5px;
+            color: #fff;
+            float: left;
+            width: 270px;
+            @include border-radius(5px);
+            i {
+                color: #fff;
+                position: relative;
+                top: 2px;
+                margin-right: 3px;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+/*写日志上传网络视频层*/
+#xnw_pop_layer {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0 0;
+    }
+    .cyber_video_layer {
+        padding: 0 20px;
+        p {
+            margin-top: 10px;
+        }
+        input {
+            width: 376px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 10px;
+            border: 1px solid $lineGray;
+        }
+        .orange {
+            color: $lightOrange;
+        }
+        .error {
+            color: $darkOrangeFontColor;
+        }
+    }
+   .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px;
+        margin-top: 20px;
+    }
+}

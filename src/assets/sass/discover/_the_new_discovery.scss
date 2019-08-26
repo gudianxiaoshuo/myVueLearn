@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+.discovery_template {
+    width: 900px;
+    background-color: #FFFFFF;
+    margin: 20px auto 0;   //42px是主导航的高度
+    padding: 0 20px 50px;
+    position:relative;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.4);
+    clear: both;
+}
+.template_container {
+    width: 400px;
+    float: left;
+    margin-right: 80px;
+    border: 1px solid $lineGray;
+}
+.template_nav {
+    padding: 20px 10px;
+    text-align: right;
+    button {
+        margin: 0 10px;
+    }
+}
+.template_title {
+    width: 402px;
+    position: relative;
+    left: -1px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #4A4A4A;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: $genericFontFamily;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.template_item {
+    padding: 14px 15px;
+    position: relative;
+    &.empty_template_item {
+        outline: 1px dashed $lineGray;
+        height: 146px;
+        width: 326px;
+        line-height: 146px;
+        color: #FFFFFF;
+        font-size: 20px;
+        padding: 0;
+        text-align: center;
+    }
+    &:hover {
+        outline: 1px dashed $lineGray;
+        cursor: pointer;
+    }
+}
+.default_template_item {
+    width: 304px;
+    &:hover {
+        &:after {
+            display: block;
+        }
+    }
+    &:after {
+        content: '';
+        border-width: 12px;
+        border-style: solid;
+        height: 0;
+        width: 0;
+        border-color: transparent transparent transparent $borderGray;
+        @include abs-pos($right: -40px, $top:50%);
+        margin-top: -12px;
+        display: none;
+    }
+}
+.template_list {
+    padding: 0 18px;
+    width: 354px;
+    overflow-y: scroll;
+}
+.template_module {
+    width: 152px;
+    height: 152px;
+    float: left;
+}
+%tempelete_style {
+    background-color: $bodyGray;
+    border: 1px solid $lineGray;
+    margin: 3px;
+    float: left;
+}
+.template_one {
+    height: 68px;
+    width: 144px;
+    @extend %tempelete_style;
+}
+.template_two {
+    height: 144px;
+    width: 144px;
+    @extend %tempelete_style;
+}
+.template_three {
+    height: 68px;
+    width: 68px;
+    @extend %tempelete_style;
+}
+.template_four {
+    height: 144px;
+    width: 296px;
+    @extend %tempelete_style;
+}
+
+.preview_container {
+    width: 414px;
+    min-height: 600px;
+    float: left;
+    padding: 28px 0;
+    background-color: #000000;
+    .preview_template_list {
+        padding: 2px 10px;
+        width: 388px;
+        overflow-y: hidden;
+        .hightlight {
+            height: 146px;
+            width: 298px;
+            margin-left: 36px;
+            background-color: #4A4A4A;
+        }
+    }
+}
+.preview_template_item {
+    position: relative;
+    padding: 0 34px;
+    .template_one,
+    .template_two,
+    .template_three,
+    .template_four {
+        z-index: 1;
+        border: 0;
+        .the_title_info {
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: normal;
+            max-height: 50px;
+            line-height: 24px;
+            overflow: hidden;
+            &.align_left {
+                text-align: left;
+            }
+            &.align_right {
+                text-align: right;
+            }
+        }
+    }
+    .template_one {
+        height: 70px;
+        width: 146px;
+        .the_title_info {
+            @include abs-pos($left: 42%, $right: 12px, $top: 10px);
+            text-align: center;
+            line-height: 50px;
+            .title {
+                display: inline-block;
+                line-height: 24px;
+            }
+        }
+    }
+    .template_two {
+        height: 146px;
+        width: 146px;
+        .the_title_info {
+            @include abs-pos($right: 12px, $left: 12px, $bottom: 14px);
+            text-align: right;
+
+        }
+    }
+    .template_three {
+        height: 70px;
+        width: 70px;
+        .the_title_info {
+            @include abs-pos($left: 12px, $right: 12px, $top: 10px);
+            text-align: center;
+            line-height: 50px;
+            .title {
+                display: inline-block;
+                line-height: 24px;
+            }
+        }
+    }
+    .template_four {
+        height: 146px;
+        width: 298px;
+        .the_title_info {
+            @include abs-pos($left: 12px, $right: 12px, $bottom: 14px);
+            text-align: left;
+        }
+    }
+    .line_item {
+        padding: 0 8px;
+        outline: 1px dashed #FFFFFF;
+    }
+    &:hover {
+        outline: none;
+        .move_template_item,
+        .remove_template_item {
+            visibility: visible;
+        }
+    }
+    .move_template_item,
+    .remove_template_item {
+        visibility: hidden;
+        @include abs-pos($left: 0, $top: 0);
+        i {
+            color: #FFFFFF;
+        }
+    }
+    .move_template_item {
+        cursor: move;
+        @include abs-pos($right: 0, $top: 0);
+    }
+}
+.single_preview_template {
+    position: relative;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

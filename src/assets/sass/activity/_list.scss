@@ -1,0 +1,143 @@
+.activityListWrap {
+    .havePic {
+        width: 70%;
+        float: left;
+        a {
+            .mainContent {
+                color: #5B5B5B;
+                line-height: 22px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                .activityTitle {
+                    font-size: 16px;
+                    color: #313131;
+                    line-height: 22px;
+                }
+                .activityTip {
+                    font-size: 12px;
+                    padding: 1px 4px;
+                    @include border-radius(2px);
+                    margin-right: 6px;
+                    font-weight: normal;
+                    position: relative;
+                    color: #fff;
+                    background-color: #FC9B58;
+                }
+            }
+            .activityDate {
+                color: #5B5B5B;
+            }
+        }
+        .bottomArea {
+            position: relative;
+            margin-top: 12px;
+            font-size: 12px;
+            display: table;
+            word-spacing: -4px;
+            padding-bottom: 20px;
+            min-width: 300px;
+            .stickyTip {
+                color: #80C334;
+                border: 1px solid #80C334;
+                text-align: center;
+                line-height: 16px;
+                font-size: 12px;
+                padding: 0 2px;
+                margin-right: 2px;
+                border-radius: 2px;
+                background-clip: border-box;
+                display: inline-block;
+                word-spacing: 0;
+            }
+            .essenceTip {
+                color: #fa3;
+                border: 1px solid #fa3;
+                text-align: center;
+                line-height: 16px;
+                font-size: 12px;
+                padding: 0 2px;
+                margin-right: 2px;
+                border-radius: 2px;
+                background-clip: border-box;
+                display: inline-block;
+                word-spacing: 0;
+            }
+            .essenceTip+.icon {
+                margin-left: 10px;
+            }
+            .icon {
+                margin-right: 15px;
+                i {
+                    color: #5B5B5B;
+                    padding-right: 3px;
+                    position: relative;
+                    top: 3px;
+                    font-size: 14px;
+                }
+            }
+            .activityStatusIcon {
+                color: #FFAA33;
+                position: relative;
+                top: 2px;
+            }
+            .activityStatus {
+                color: #FFAA33;
+                font-size: 12px;
+                margin-right: 20px;
+                margin-left: 5px;
+            }
+            .moreOper {
+                position: relative;
+                display: inline-block;
+                width: 30px;
+                .tip {
+                    color: #9B9B9B;
+                    margin-right: 16px;
+                }
+                .show_more {
+                    top: 17px;
+                    bottom: auto;
+                    right: -76px;
+                    left: auto;
+                    display: none;
+                    position: absolute;
+                    z-index: 100;
+                    background-color: #fff;
+                    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+                    padding: 5px 0;
+                    a {
+                        font-size: 12px;
+                        height: 30px;
+                        line-height: 30px;
+                        color: #9B9B9B;
+                        text-decoration: none;
+                        display: block;
+                        width: 85px;
+                        padding: 0 0 0 15px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .label_list {
+            margin-top: 20px;
+            margin-bottom: 0;
+            a {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .activityCover {
+        float: right;
+        width: 160px;
+        height: 96px;
+        position: relative;
+        top: -3px;
+        .activityPoster {
+            width: 160px;
+            height: 96px;
+        }
+    }
+}

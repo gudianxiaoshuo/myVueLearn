@@ -1,0 +1,97 @@
+#addTeacherlayer,
+#addTrainingStudent,
+#batchImportTipLayer {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    .orange {
+        color: $darkOrangeFontColor;
+        padding-right: 5px;
+    }
+    .tip {
+        color: $grayFontColor;
+        font-size: 12px;
+    }
+    .content {
+        padding: 0px 20px;
+        .info {
+            margin: 10px 0;
+            display: inline-block;
+            .name {
+                width: 70px;
+                text-align: right;
+                display: inline-block;
+            }
+        }
+        .errMsg {
+            color: $darkOrangeFontColor;
+            padding-left: 70px;
+        }
+        .input {
+            line-height: 30px;
+            height: 30px;
+            border: 1px solid #eeeeee;
+            width: 220px;
+            @include border-radius(2px);
+            padding: 0 5px;
+        }
+    }
+    .newBtnArea {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        .tip {
+            float: left;
+            margin-left: 10px;
+        }
+    }
+}
+#addTrainingStudent {
+    .tip {
+        padding-top: 10px;
+    }
+}
+#batchImportTipLayer {
+    .tip {
+        color: $lightBlackFontColor;
+        font-size: 14px;
+        .orange {
+            color: $orangeFontColor;
+        }
+    }
+    .demo {
+        color: $grayFontColor;
+        margin: 15px 0;
+    }
+    .demoTable {
+        @extend %baseTableStyle;
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+        }
+        td {
+            color: #AE9B85;
+        }
+    }
+    .primary-btn {
+        margin-top: 10px;
+    }
+}
+#typeErrorLayer {
+    width: 438px;
+    .privacy_message {
+        padding: 0;
+    }
+    .tips {
+        margin: 30px 20px;
+        color: $grayFontColor;
+    }
+    .xnwbtn-orange {
+        margin-top: 10px;
+    }
+}

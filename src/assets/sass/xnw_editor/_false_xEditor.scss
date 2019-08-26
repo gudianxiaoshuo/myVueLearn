@@ -1,0 +1,53 @@
+.falseXeditor {
+    background-color: #F5FBFF;
+    padding: 5px;
+    margin-bottom: 22px;
+    @include border-radius(2px);
+    .falseTextarea {
+        height: 34px;
+        line-height: 34px;
+        color: #d0d0d0;
+        text-indent: 10px;
+        display: block;
+        border: 1px solid #CCE0ED;
+        background-color: #fff;
+        @include border-radius(2px);
+    }
+}
+
+.writeLongLog {
+    margin-bottom: 14px;
+    color: $lightBlackFontColor;
+    font-size: 12px;
+    line-height: 26px;
+    .notice {
+        font-size: 14px;
+        color: #009FEE;
+        i {
+            float: left;
+            margin-top: 5px;
+            color: #009FEE;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+
+
+    }
+    .getHtmlEditorBtn {
+        font-size: 14px;
+        float: right;
+        margin-right: 10px;
+        color: #009FEE;
+        &:hover {
+            color: #0088CC;
+            .xicon-new-log {
+                color: #0088CC;
+            }
+        }
+    }
+    .xicon-new-log {
+        color:#009FEE;
+        @include rel-pos($top: 2px);
+    }
+}

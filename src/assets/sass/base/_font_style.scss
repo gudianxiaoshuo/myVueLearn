@@ -1,0 +1,370 @@
+
+@font-face {
+	font-family: "xiconfont-web-vue";
+	src: url('~@/assets/fonts/xiconfont-web-vue.eot?');
+	src: url('~@/assets/fonts/xiconfont-web-vue.eot?#iefix') format('eot'),
+		url('~@/assets/fonts/xiconfont-web-vue.woff?') format('woff'),
+		url('~@/assets/fonts/xiconfont-web-vue.ttf?') format('truetype'),
+		url('~@/assets/fonts/xiconfont-web-vue.svg?') format('svg');
+}
+
+@mixin xicon-styles {
+	font-family: "xiconfont-web-vue";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+    line-height: 1;
+}
+
+%xicon {
+	@include xicon-styles;
+}
+
+@function xicon-char($filename) {
+	$char: "";
+
+	@if $filename == allow-chat {
+		$char: "\E001";
+	}
+	@if $filename == attach {
+		$char: "\E002";
+	}
+	@if $filename == circle-arrow-right {
+		$char: "\E003";
+	}
+	@if $filename == circle-h5-pause {
+		$char: "\E004";
+	}
+	@if $filename == circle-h5-play {
+		$char: "\E005";
+	}
+	@if $filename == circle-pause {
+		$char: "\E006";
+	}
+	@if $filename == circle-play {
+		$char: "\E007";
+	}
+	@if $filename == close {
+		$char: "\E008";
+	}
+	@if $filename == course-video {
+		$char: "\E009";
+	}
+	@if $filename == double-arrow-right {
+		$char: "\E00A";
+	}
+	@if $filename == double-arrow-top {
+		$char: "\E00B";
+	}
+	@if $filename == download {
+		$char: "\E00C";
+	}
+	@if $filename == earphone-square {
+		$char: "\E00D";
+	}
+	@if $filename == edit-square {
+		$char: "\E00E";
+	}
+	@if $filename == edit {
+		$char: "\E00F";
+	}
+	@if $filename == full-screen {
+		$char: "\E010";
+	}
+	@if $filename == h5-pause {
+		$char: "\E011";
+	}
+	@if $filename == h5-play {
+		$char: "\E012";
+	}
+	@if $filename == h5-top {
+		$char: "\E013";
+	}
+	@if $filename == host-forbid {
+		$char: "\E014";
+	}
+	@if $filename == host-set {
+		$char: "\E015";
+	}
+	@if $filename == invite-microphone {
+		$char: "\E016";
+	}
+	@if $filename == know {
+		$char: "\E017";
+	}
+	@if $filename == left-arrow {
+		$char: "\E018";
+	}
+	@if $filename == left {
+		$char: "\E019";
+	}
+	@if $filename == leftBg {
+		$char: "\E01A";
+	}
+	@if $filename == live-exercises {
+		$char: "\E01B";
+	}
+	@if $filename == live-in {
+		$char: "\E01C";
+	}
+	@if $filename == live-square {
+		$char: "\E01D";
+	}
+	@if $filename == live {
+		$char: "\E01E";
+	}
+	@if $filename == log-out {
+		$char: "\E01F";
+	}
+	@if $filename == my-class {
+		$char: "\E020";
+	}
+	@if $filename == new-setting {
+		$char: "\E021";
+	}
+	@if $filename == no-chat {
+		$char: "\E022";
+	}
+	@if $filename == no-hand-up {
+		$char: "\E023";
+	}
+	@if $filename == play-square {
+		$char: "\E024";
+	}
+	@if $filename == play {
+		$char: "\E025";
+	}
+	@if $filename == ppt {
+		$char: "\E026";
+	}
+	@if $filename == public {
+		$char: "\E027";
+	}
+	@if $filename == record-square {
+		$char: "\E028";
+	}
+	@if $filename == right {
+		$char: "\E029";
+	}
+	@if $filename == rightBg {
+		$char: "\E02A";
+	}
+	@if $filename == search {
+		$char: "\E02B";
+	}
+	@if $filename == silent {
+		$char: "\E02C";
+	}
+	@if $filename == smile {
+		$char: "\E02D";
+	}
+	@if $filename == sound {
+		$char: "\E02E";
+	}
+	@if $filename == switch-window {
+		$char: "\E02F";
+	}
+	@if $filename == top {
+		$char: "\E030";
+	}
+	@if $filename == trash {
+		$char: "\E031";
+	}
+	@if $filename == v-clock {
+		$char: "\E032";
+	}
+	@if $filename == video {
+		$char: "\E033";
+	}
+	@if $filename == warning {
+		$char: "\E034";
+	}
+	@if $filename == wx {
+		$char: "\E035";
+	}
+
+	@return $char;
+}
+
+@mixin xicon($filename, $insert: before, $extend: true) {
+	& {
+		@if $extend {
+			@extend %xicon;
+		} @else {
+			@include xicon-styles;
+		}
+	}
+	&:#{$insert} {
+		@if $extend {
+			@extend %xicon;
+		} @else {
+			@include xicon-styles;
+		}
+		content: xicon-char($filename);
+	}
+}
+
+.xicon-allow-chat {
+	@include xicon(allow-chat);
+}
+.xicon-attach {
+	@include xicon(attach);
+}
+.xicon-circle-arrow-right {
+	@include xicon(circle-arrow-right);
+}
+.xicon-circle-h5-pause {
+	@include xicon(circle-h5-pause);
+}
+.xicon-circle-h5-play {
+	@include xicon(circle-h5-play);
+}
+.xicon-circle-pause {
+	@include xicon(circle-pause);
+}
+.xicon-circle-play {
+	@include xicon(circle-play);
+}
+.xicon-close {
+	@include xicon(close);
+}
+.xicon-course-video {
+	@include xicon(course-video);
+}
+.xicon-double-arrow-right {
+	@include xicon(double-arrow-right);
+}
+.xicon-double-arrow-top {
+	@include xicon(double-arrow-top);
+}
+.xicon-download {
+	@include xicon(download);
+}
+.xicon-earphone-square {
+	@include xicon(earphone-square);
+}
+.xicon-edit-square {
+	@include xicon(edit-square);
+}
+.xicon-edit {
+	@include xicon(edit);
+}
+.xicon-full-screen {
+	@include xicon(full-screen);
+}
+.xicon-h5-pause {
+	@include xicon(h5-pause);
+}
+.xicon-h5-play {
+	@include xicon(h5-play);
+}
+.xicon-h5-top {
+	@include xicon(h5-top);
+}
+.xicon-host-forbid {
+	@include xicon(host-forbid);
+}
+.xicon-host-set {
+	@include xicon(host-set);
+}
+.xicon-invite-microphone {
+	@include xicon(invite-microphone);
+}
+.xicon-know {
+	@include xicon(know);
+}
+.xicon-left-arrow {
+	@include xicon(left-arrow);
+}
+.xicon-left {
+	@include xicon(left);
+}
+.xicon-leftBg {
+	@include xicon(leftBg);
+}
+.xicon-live-exercises {
+	@include xicon(live-exercises);
+}
+.xicon-live-in {
+	@include xicon(live-in);
+}
+.xicon-live-square {
+	@include xicon(live-square);
+}
+.xicon-live {
+	@include xicon(live);
+}
+.xicon-log-out {
+	@include xicon(log-out);
+}
+.xicon-my-class {
+	@include xicon(my-class);
+}
+.xicon-new-setting {
+	@include xicon(new-setting);
+}
+.xicon-no-chat {
+	@include xicon(no-chat);
+}
+.xicon-no-hand-up {
+	@include xicon(no-hand-up);
+}
+.xicon-play-square {
+	@include xicon(play-square);
+}
+.xicon-play {
+	@include xicon(play);
+}
+.xicon-ppt {
+	@include xicon(ppt);
+}
+.xicon-public {
+	@include xicon(public);
+}
+.xicon-record-square {
+	@include xicon(record-square);
+}
+.xicon-right {
+	@include xicon(right);
+}
+.xicon-rightBg {
+	@include xicon(rightBg);
+}
+.xicon-search {
+	@include xicon(search);
+}
+.xicon-silent {
+	@include xicon(silent);
+}
+.xicon-smile {
+	@include xicon(smile);
+}
+.xicon-sound {
+	@include xicon(sound);
+}
+.xicon-switch-window {
+	@include xicon(switch-window);
+}
+.xicon-top {
+	@include xicon(top);
+}
+.xicon-trash {
+	@include xicon(trash);
+}
+.xicon-v-clock {
+	@include xicon(v-clock);
+}
+.xicon-video {
+	@include xicon(video);
+}
+.xicon-warning {
+	@include xicon(warning);
+}
+.xicon-wx {
+	@include xicon(wx);
+}

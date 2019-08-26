@@ -1,0 +1,35 @@
+.qunXcourseRegister {
+    padding-bottom: 30px;
+    .qunXcourseRegisterTable {
+        @extend %baseTableStyle;
+        tr {
+            height: 50px;
+            line-height: 50px;
+        }
+        th {
+            font-weight: normal;
+        }
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            height: 50px;
+            line-height: 50px;
+            color: #AE9B85;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        .studentName {
+            display: block;
+            line-height: 24px;
+            padding: 0 4px;
+        }
+        .courseNameList {
+            line-height: 24px;
+        }
+        .courseName {
+            font-size: 12px;
+            margin: 0 6px;
+        }
+    }
+}

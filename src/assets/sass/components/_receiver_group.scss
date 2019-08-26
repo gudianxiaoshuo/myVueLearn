@@ -1,0 +1,414 @@
+/*选分组 选群 选人 样式*/
+.receive_dec_box {
+    position: relative;
+}
+.member_source {
+    background-color: #fff;
+    width: 500px;
+    height: 360px;
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    border: solid 1px $borderGray \9;
+    overflow: hidden;
+    .layer_title {
+        color: $blackFontColor;
+        line-height: 40px;
+        border-bottom: 1px solid $lightLineGray;
+        padding: 0 0 0 20px;
+        position: relative;
+        font-weight: bold;
+        i {
+            @include abs-pos(0, 0, auto, auto);
+            font-size: 14px;
+            cursor: pointer;
+            padding: 10px;
+        }
+    }
+    .tab_menu {
+        position: relative;
+        margin: 15px 20px 4px;
+        .line {
+            width: 100%;
+            @include abs-pos(29px, auto, auto, 0);
+            border-bottom: 1px solid $lightOrange;
+            z-index: 1;
+        }
+        .pop_search_qun {
+            @include abs-pos(auto, 0, 3px, auto);
+            height: 26px;
+            width: 160px;
+            border: 1px solid $borderGray;
+            background-color: #fff;
+            vertical-align: middle;
+            box-shadow: 0 4px 2px rgba(0,0,0,0.05) inset;
+            border-radius: 40px;
+            line-height: normal;
+            .contact_search {
+                width: 130px;
+                font-size: 12px;
+                padding: 4px 0 2px 30px;
+                border: 0;
+                height: 20px;
+                line-height: 20px;
+                background: none;
+            }
+            i {
+                @include abs-pos(6px,auto,auto,6px);
+            }
+        }
+    }
+    .choose_btn {
+        float: left;
+        text-align: center;
+        color: $grayFontColor;
+        text-decoration: none;
+        width: 58px;
+        height: 28px;
+        line-height: 28px;
+        -webkit-border-radius: 5px 5px 0 0;
+        border-radius: 5px 5px 0 0;
+        background-clip: border-box;
+        padding: 1px;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        margin-right: 4px;
+        &.on {
+            padding: 0;
+            border: 1px solid $lightOrange;
+            border-bottom: 1px solid #fff;
+            color: $darkOrangeFontColor;
+        }
+    }
+    .choosePanel {
+        margin: 0 0 0 20px;
+        .list_container {
+            height: 270px;
+            overflow: auto;
+        }
+        .item {
+            position: relative;
+            cursor: pointer;
+        }
+        .is_qun_item,
+        .is_people_item,
+        .is_group_item {
+            &:hover {
+                background-color: $lightLineGray;
+            }
+        }
+        .item,
+        .is_qun_item,
+        .is_group_item,
+        .is_people_item {
+            .select_all {
+                @include abs-pos(0, auto, auto, 0);
+                height: 54px;
+                width: 28px;
+                visibility: hidden;
+                i {
+                    @include rel-pos(7px, auto, auto, 5px);
+                }
+            }
+            &.on {
+                .select_all {
+                    visibility: visible;
+                    i {
+                        color: $green;
+                    }
+                }
+            }
+        }
+        .select_all {
+            &.on {
+                visibility: visible;
+                i {
+                    color: $green;
+                }
+            }
+        }
+        .is_qun_item {
+            line-height: 47px;
+            padding: 7px 0 0 68px;
+            width: 392px;
+            position: relative;
+            &:hover {
+                .to_user_panel {
+                    display: block;
+                }
+            }
+            &.bg_on {
+                background: $lightLineGray;
+            }
+            .qun_icon {
+                height: 40px;
+                width: 40px;
+                background-color: #fff;
+                @include abs-pos(7px, auto, auto, 28px);
+                img {
+                    height: 40px;
+                    width: 40px;
+                    vertical-align: baseline;
+                }
+            }
+            .qun_name {
+                position: relative;
+                margin-left: 12px;
+                height: 46px;
+                width: 360px;
+                display: block;
+                border-bottom: 1px solid $bodyGray;
+                .parent_qun_name,
+                .child_qun_name {
+                    width: 300px;
+                    display: inline-block;
+                    @include text-truncate(ellipsis);
+                    line-height: 20px;
+                }
+                .parent_qun_name {
+                   @include abs-pos(0, auto, auto, 0);
+                    display: block;
+                    font-size: 12px;
+                    color: $grayFontColor;
+                }
+                .child_qun_name {
+                    font-size: 14px;
+                    color: $blackFontColor;
+                    position: absolute;
+                    top: 20px;
+                    &.no_parent_qun {
+                        top: 0;
+                        height: 40px;
+                        line-height: 40px;
+                    }
+                }
+            }
+            .to_user_panel {
+                width: 40px;
+                height: 54px;
+                text-align: center;
+                @include abs-pos(0, 0, auto, auto);
+                 i {
+                    position: absolute;
+                    top: 18px;
+                    left: 12px;
+                }
+                &:hover i {
+                    color: $darkOrangeFontColor;
+                }
+            }
+            .count_percentage {
+                height: 18px;
+                line-height: 18px;
+                @include border-radius(40px);
+                padding: 0 6px;
+                display: block;
+                @include abs-pos(17px, 40px, auto, auto);
+                background-color: $orange;
+                color: #fff;
+                font-size: 12px;
+                &.no_selected {
+                    background-color: $borderGray;
+                }
+            }
+        }
+        .choose_qun_member {
+            height: 100%;
+            overflow: hidden;
+            width: 460px;
+        }
+        .is_people_item {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 68px;
+            input {
+                @include abs-pos(10px, auto, auto, 44px);
+            }
+            .people_icon {
+                height: 24px;
+                width: 24px;
+                @include abs-pos(5px, auto, auto, 74px);
+                img {
+                    height: 24px;
+                    width: 24px;
+                    @include border-radius(24px);
+                    vertical-align: baseline;
+                }
+            }
+            .name {
+                position: absolute;
+                top: 0;
+                left: 106px;
+                width: 70%;
+                height: 30px;
+                line-height: 30px;
+                @include text-truncate(ellipsis);
+            }
+        }
+        .is_group_item {
+            height: 40px;
+            line-height: 40px;
+            padding: 7px 0 7px 50px;
+            width: 410px;
+            position: relative;
+            &:hover {
+                background: $lightLineGray;
+            }
+            &.on {
+                .total {
+                    background: $orange;
+                    color: #fff;
+                }
+            }
+            .group_name {
+                display: block;
+                width: 380px;
+                margin-left: 12px;
+                padding-bottom: 6px;
+                border-bottom: 1px solid $lightLineGray;
+                @include text-truncate(ellipsis);
+            }
+            .total {
+                font-size: 12px;
+                padding: 0 7px;
+                height: 20px;
+                line-height: 20px;
+                @include abs-pos(17px, 12px, auto, auto);
+                background-color: $borderGray;
+                @include border-radius(40px);
+                color: #fff;
+                &:hover {
+                    background: $orange;
+                }
+            }
+
+            .group_icon {
+                height: 38px;
+                width: 38px;
+                padding: 1px;
+                border: 1px solid $buttonGray;
+                @include border-radius(4px);
+                @include abs-pos(7px, auto, auto, 7px);
+                &.contactImg4 {
+                    background-color: $lightLineGray;
+                    border: 1px solid #fff;
+                    img {
+                        float: left;
+                        height: 16px;
+                        width: 16px;
+                        margin-left: 2px;
+                        margin-top: 2px;
+                        @include border-radius(8px);
+                    }
+                }
+                &.contactImg3 {
+                    background-color: $lightLineGray;
+                    border: 1px solid #fff;
+                    img {
+                        height: 16px;
+                        width: 16px;
+                        @include border-radius(8px);
+                    }
+                    .img1 {
+                        @include abs-pos(2px, auto, auto, 10px);
+                    }
+                    .img2 {
+                        @include abs-pos(20px, auto, auto, 2px);
+                    }
+                    .img3 {
+                        @include abs-pos(20px, auto, auto, 20px);
+                    }
+                }
+                &.contactImg2 {
+                    background-color: $lightLineGray;
+                    border: 1px solid #fff;
+                    img {
+                        float: left;
+                        height: 16px;
+                        width: 16px;
+                        margin-left: 2px;
+                        margin-top: 11px;
+                        @include border-radius(8px);
+                    }
+                }
+                &.contactImg1 {
+                    background-color: $lightLineGray;
+                    border: 1px solid #fff;
+                    img {
+                        height: 30px;
+                        width: 30px;
+                        margin-left: 4px;
+                        margin-top: 4px;
+                        @include border-radius(15px);
+                    }
+                }
+            }
+        }
+        .panel_button_area {
+            border-top: 1px solid $borderGray;
+            background-color: $lightGrayBg;
+            height: 38px;
+            line-height: 38px;
+            position: relative;
+            p {
+                padding-left: 10px;
+                font-size: 12px;
+            }
+            .cancle_choose {
+                display: inline-block;
+                @include abs-pos(6px, 10px, auto, auto);
+                cursor: pointer;
+            }
+            .selected_count {
+                font-size: 14px;
+                font-weight: bold;
+                padding: 0 4px;
+                .darkorange {
+                    color: $darkOrangeFontColor;
+                }
+            }
+        }
+    }
+    /*最近列表样式*/
+    .latestList {
+        height: 270px;
+        margin: 0 0 0 20px;
+        overflow: auto;
+        .recentGroup {
+            min-height: 32px;
+            padding-top: 6px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            width: 460px;
+            &:hover {
+                background: $lightGrayBg;
+            }
+            .item_list {
+                overflow: hidden;
+                margin: 0;
+                float: left;
+                width: 360px;
+                a {
+                    @extend %one_member_item;
+                }
+            }
+        }
+        .time {
+            float: left;
+            width: 80px;
+            overflow: hidden;
+            color: $grayFontColor;
+            position: relative;
+            padding-left: 16px;
+            i {
+                width: 6px;
+                height: 6px;
+                background: $borderGray;
+                @include border-radius(6px);
+                @include abs-pos(10px, auto, auto, 4px);
+            }
+        }
+    }
+}

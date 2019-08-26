@@ -1,0 +1,80 @@
+#user_login_in {
+    width: 598px;
+    @include border-radius(4px);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    .layer_content {
+        padding: 40px 0 0;
+    }
+    .layer_title_40 {
+        border-bottom: 1px solid #eee;
+    }
+    .accountInput {
+        position: relative;
+        text-align: center;
+        margin-bottom: 20px;
+        .message {
+            padding: 0;
+            margin: 0 15px 0 0;
+            text-align: right;
+            width: 72px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .textInput {
+            padding: 0 4px;
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
+            border: solid 1px #ccc;
+            width: 250px;
+            @include border-radius(4px);
+        }
+    }
+    .remember_me {
+        text-align: center;
+        padding-left: 66px;
+        position: relative;
+        margin-bottom: 40px;
+        .remember_me_label {
+            margin-right: 90px;
+        }
+        .remember_me_checkbox {
+            margin-right: 6px;
+        }
+        .find_passwd {
+            color: #4F98ED;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .button_area {
+        height: 50px;
+        line-height: 50px;
+        border-top: 1px solid #ddd;
+        @include border-radius(0 0 4px 4px);
+        text-align: center;
+        position: relative;
+        .login_submit {
+            color: #fff;
+            height: 30px;
+            width: 80px;
+            text-align: center;
+            background: none;
+            border: none;
+            @include border-radius(2px);
+            background-color: #ffaa33;
+            &:hover {
+                background-color: #fcb859;
+            }
+        }
+        .register_submit {
+            color: #4F98ED;
+            @include abs-pos(0, 132px, auto, auto);
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}

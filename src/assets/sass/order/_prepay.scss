@@ -1,0 +1,442 @@
+.orderPay {
+    width: 878px;
+    border: 1px solid #E0E0E0;
+    margin: 0 auto;
+    background: #FFF;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: none;
+    .orderInfo {
+        height: 198px;
+        border-bottom: 1px dashed #E8E8E8;
+        .topInfo {
+            line-height: 54px;
+            padding-top: 20px;
+            height: 54px;
+            span {
+                margin-right: 30px;
+            }
+        }
+        .bottomInfo {
+            width: 878px;
+            height: 104px;
+            background-color: #F8F8F8;
+            .left {
+                float: left;
+                img {
+                    width: 140px;
+                    height: 84px;
+                    margin: 10px 20px 10px 10px;
+                   
+                }
+            }
+            .right {
+                float: left;
+                a {
+                    display: inline-block;
+                    margin-top: 12px;
+                    font-size: 14px;
+                    color: #313131;
+                    width: 680px;
+                    @include text-truncate();
+                    &:hover {
+                        color: $orangeFontColor;
+                    }
+                }
+                .teacher {
+                    font-size: 12px;
+                    display: block;
+                    color: #9B9B9B;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .orderBy {
+        height: 194px;
+        border-bottom: 1px dashed #E8E8E8;
+        .top {
+            font-size: 14px;
+            color: #5B5B5B;
+            margin-top: 15px;
+            width: 300px;
+            .price {
+                color: #F4373B;
+                font-size: 18px;
+            }
+        }  
+        .bottom {
+            margin-top: 40px;
+            h3 {
+                font-weight: 400;
+                font-size: 14px;
+                color: #313131;
+            }
+            ul {
+                margin-top: 15px;
+                li {
+                    width: 166px;
+                    height: 58px;
+                    border: 1px solid #DDD;
+                    display: inline-block;
+                    margin-right: 30px;
+                    cursor: pointer;
+                    line-height: 58px;
+                    color: #5B5B5B;
+                    font-size: 16px;
+                    img {
+                        vertical-align: top;
+                        margin-top: 15px;
+                        margin-left: 24px;
+                        margin-right: 10px;
+                    }
+                    a {
+                        color: #5B5B5B;
+                        display: inline-block;
+                        width: 166px;
+                    }
+                    &.active {
+                        border: 1px solid $orangeFontColor;
+                        @include bg_with_retina(checkedPay, png, $baseImgRootPath);
+                        background-position: right bottom;
+                    }
+                }
+            }
+        }     
+    }
+    .payCode {
+        height: 350px;
+        .code {
+            border: 1px solid #E0E0E0;
+            @include border-radius(16px);
+            width: 278px;
+            height: 278px;
+            margin-top: 50px;
+            img {
+                width: 236px;
+                height: 236px;
+                margin-top: 22px;
+                margin-left: 22px;
+            }
+        }
+        p {
+            font-size: 14px;
+            color: #5B5B5B;
+            width: 280px;
+            margin-top: 15px;
+            text-align: center;
+        }
+    }
+    .protocol {
+        padding-bottom: 300px;
+        a {
+            cursor: pointer;
+        }
+    }
+
+    .totalPriceWrap {
+        background: #FFFBF4;
+        border-radius: 2px;
+        margin-top: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .tipPrice, .tipPromo {
+            font-size: 14px;
+            color: #9B9B9B;
+            line-height: 14px;
+            margin-left: 44px;
+            margin-bottom: 6px;
+            &.price {
+                display: inline-block;
+                width: 100px;
+                text-align: right;
+            }
+        }
+        .tipTxt {
+            margin-left: 30px;
+            .price {
+                font-size: 16px;
+                color: #F4373B;
+            }
+        }
+    }
+    .hide{
+        display: none;
+    }
+    .publicCode {
+        position: relative;
+        margin: 20px auto;
+        height: 30px;
+        .promoCodeInfo {
+            float: left;
+        }
+        .promoCodeInputWrap {
+            float: left;
+            display: inline-block;
+            .codeInput {
+                width: 172px;
+                padding: 5px 8px;
+                margin: 0 0 30px 16px;
+                @include border-radius(5px);
+                border: 1px solid #DDDDDD;
+            }
+        }
+        .hide {
+            display: none;
+        }
+        .promoCodeValue {
+            float: left;
+            background: #FFFBF4;
+            border: 1px solid #FFAA33;
+            border-radius: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 17px;
+            color: #FFAA33;
+            font-size: 14px;
+            position: relative;
+            .closeCodeVale {
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: -8px;
+                right: -8px;
+                background-color: #FFAA33;
+                color: #FFFFFF;
+                font-size: 14px;
+                border-radius: 16px;
+                line-height: 18px;
+                cursor: pointer;
+            }
+        }
+        
+    }
+    .promoCode {
+        .validate {
+            margin-left: 18px;
+        }
+    }
+    .promoCodeErrorWrap {
+        position: relative;
+        .promoCodeErrorTips {
+            position: absolute;
+            top: -18px;
+            display: none;
+            font-size: 12px;
+            color: #F4373B;
+            left: 125px;
+        }
+    }
+    .totalPriceWrap {
+        background: #FFFBF4;
+        border-radius: 2px;
+        margin-top: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .tipPrice, .tipPromo {
+            font-size: 14px;
+            color: #9B9B9B;
+            line-height: 14px;
+            margin-left: 44px;
+            margin-bottom: 6px;
+            &.price {
+                display: inline-block;
+                width: 100px;
+                text-align: right;
+            }
+        }
+        .tipTxt {
+            margin-left: 30px;
+            .price {
+                font-size: 16px;
+                color: #F4373B;
+            }
+        }
+    }
+}
+
+.orderPrepayContainer {
+    width: 938px;
+    margin: 0 auto;
+    background: #FFF;
+    border: 1px solid #E0E0E0;
+    border-top: none;
+    .chooseStudent {
+        padding: 0 30px;
+        .chooseWho {
+            display: inline-block;
+        }
+        .tips {
+            font-size: 12px;
+            color: #9B9B9B;
+            display: inline-block;
+            margin-left: 10px;
+            margin-bottom: 14px;
+        }
+        .studentList {
+            margin-left: 10px;
+            .studentCard {
+                width: 128px;
+                height: 128px;
+                border: 1px solid #E0E0E0;
+                vertical-align: top;
+                display: inline-block;
+                margin-bottom: 10px;
+                text-align: center;
+                margin-right: 30px;
+                background-color: #F7F7F8;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+                &.other {
+                    line-height: 128px;
+                }
+                &.active {
+                    border: 1px solid #FFAA33;
+                    background-color: #FFFBF4;
+                    @include bg_with_retina(checkedPay, png, $baseImgRootPath);
+                    background-position: right bottom;
+                }
+                &:hover {
+                    border: 1px solid #FFAA33;
+                    background-color: #FFFBF4;
+                }
+                img {
+                    width: 48px;
+                    height: 48px;
+                    margin-top: 24px;
+                    margin-bottom: 13px;
+                    display: inline-block;
+                    @include border-radius(48px);
+                }
+                .txt {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    @include abs-pos(auto, auto, auto, auto);
+                    &:last-child {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .publicCode + .submitBtn {
+        margin-top: 50px;
+    }
+    .submitBtn {
+        padding: 0 30px;
+        margin: 30px auto;
+    }
+    .publicCodeInfo {
+        color: #313131;
+        margin-left: 10px;
+        position: relative;
+        &.infoTitle {
+            &:before {
+                content: '*';
+                color: $darkRed;
+            }
+        }
+        .codeb {
+            position: absolute;
+            font-size: 14px;
+            color: #F4373B;
+            left: -10px;
+            font-weight: 400;
+        }
+    }
+    .publicSelect {
+        margin-left: 34px;
+        padding-left: 10px;
+        width: 160px;
+        height: 30px;
+        cursor: pointer;
+        line-height: 30px;
+        background: #F9F9F9;
+        color: $blackFontColor;
+        border: 1px solid #D6D6D6;
+        @include border-radius(5px);
+        @include abs-pos(-6px, auto, auto, 94px);
+        @include text-truncate();
+        i {
+            @include abs-pos(8px, 8px, auto, auto);
+        }
+        span {
+            width: auto;
+            height: 32px;
+            display: block;
+            max-width: 150px;
+            @include text-truncate();
+        }
+    }
+    .publicOption {
+        z-index: 30;
+        display: none;
+        background: #FFF;
+        max-height: 150px;
+        margin-left: 34px;
+        overflow-y: auto;
+        @include abs-pos(26px, auto, auto, 95px);
+        @include box-shadow( 0 2px 4px 0 rgba(0, 0, 0, .19));
+        li {
+            height: 30px;
+            line-height: 30px;
+            color: #9B9B9B;
+            padding: 0 10px;
+            white-space: nowrap;
+            max-width: 200px;
+            a {
+                font-size: 12px;
+                color: $grayFontColor;
+            }
+        }
+        .hoverSelect {
+            background: $lightGrayBg;
+            color: $blackFontColor;
+        }
+        .on {
+            background: $lightGrayBg;
+            color: $blackFontColor;
+        }
+    }
+}
+
+#xnw_layer_alert_pay {
+    width: 480px;
+    height: 200px;
+    .ui-draggable-handle {
+        color: #313131;
+        font-size: 14px;
+        font-weight: 400;
+        border-bottom: 1px solid #eee;
+        .close_layer {
+            top: 10px;
+        }
+    }
+    .privacy_message {
+        padding: 0;
+        .text {
+            font-size: 14px;
+            color: #313131;
+            line-height: 24px;
+            margin-left: 93px;
+        }
+        .textWarn {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        .newBtnArea { 
+            margin-top: 40px;
+            button {
+                font-size: 12px;
+                &.noCancel{
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}

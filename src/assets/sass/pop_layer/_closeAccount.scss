@@ -1,0 +1,90 @@
+#closeAccount {
+    width: 560px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    @include border-radius(4px);
+    border: 1px solid #ccc;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        @include border-radius(4px 4px 0 0);
+        .closeBtn {
+            padding: 0 12px;
+            margin-right: -12px;
+            float: right;
+            &:hover {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        border-top: 1px solid #eee;
+        background-color: #f5f5f5;
+        @include border-radius(0 0 4px 4px);
+        text-align: right;
+        padding-right: 20px;
+        position: relative;
+    }
+    .closeAccount {
+        margin-left: 16px;
+    }
+    .tipMsg {
+        text-align: center;
+        line-height: 34px;
+        margin: 55px auto 60px;
+    }
+}
+
+#reasonForCloseAccount {
+    width: 560px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    @include border-radius(4px);
+    border: 1px solid #ccc;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        @include border-radius(4px 4px 0 0);
+        .closeBtn {
+            padding: 0 12px;
+            margin-right: -12px;
+            float: right;
+            &:hover {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        border-top: 1px solid #eee;
+        background-color: #f5f5f5;
+        @include border-radius(0 0 4px 4px);
+        text-align: right;
+        padding-right: 20px;
+        position: relative;
+    }
+    .submitClosed {
+        margin-left: 16px;
+    }
+    .reasonList {
+        padding: 24px 30px;
+        .reasonItem {
+            display: block;
+            line-height: 34px;
+        }
+        .reasonInput {
+            margin-right: 10px;
+        }
+    }
+}

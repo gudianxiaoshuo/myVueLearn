@@ -1,0 +1,796 @@
+@charset "UTF-8";
+
+.qunMemberContainer {
+    width: 880px;
+    background-color: #FFF;
+    padding: 0 30px 30px;
+    min-height: 800px;
+    .hilite {
+        background: initial;
+        color: $orangeFontColor;
+        padding: 0;
+    }
+    .imgIcon {
+        @include rel-pos($top: 3px);
+        margin-right: 4px;
+    }
+    .qunMemberNav {
+        font-family: $specialFontFamily;
+        height: 70px;
+        line-height: 70px;
+        border-bottom: 1px solid #e8e8e8;
+        .mNavItem {
+            float: left;
+            margin-right: 30px;
+            color: $lightBlackFontColor;
+            &:hover,
+            &.on {
+                color: $orangeFontColor;
+            }
+        }
+        .mChannelSetting {
+            float: right;
+            color: $orangeFontColor;
+        }
+    }
+    .otherOper,
+    .memberOper,
+    .teacherOper,
+    .studentOper {
+        padding-top: 20px;
+        position: relative;
+        .addQunMemberBtn {
+            width: 96px;
+            height: 30px;
+            line-height: 30px;
+            color: #FFF;
+            text-align: center;
+            display: inline-block;
+            background-color: $orangeFontColor;
+            @include border-radius(2px);
+        }
+        .exportLink,
+        .searchTips {
+            float: right;
+            line-height: 30px;
+            margin-right: 210px;
+        }
+        .exportLink {
+            i {
+                color: #0088CC;
+                margin-right: 5px;
+                position: relative;
+                top: 2px;
+            }
+            &:hover {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+            &.importStudentPassword {
+                margin-right: 0;
+            }
+        }
+    }
+    .studentOper {
+        text-align: right;
+        padding-right: 180px;
+        .exportLink {
+            float: none;
+            margin: 0 20px;
+        }
+        .passwdTable {
+            line-height: 30px;
+        }
+        .managerBtn {
+            float: left;
+        }
+    }
+    .studentListTable,
+    .teacherListTable,
+    .guardianListTable,
+    .otherListTable,
+    .memberListTable {
+        @extend %baseTableStyle;
+        color: #AE9B85;
+        td {
+            text-align: center;
+            text-indent: 0;
+        }
+        .tableTitle {
+            color: #8A7762;
+            font-weight: 500;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #FFF3DF;
+        }
+        .mobileInfo {
+            position: relative;
+            .showFullMobile {
+                font-size: 12px;
+                line-height: 24px;
+                width: 100%;
+                text-align: center;
+                @include abs-pos(auto, auto, 0, 0);
+                &.specialViewType {
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+    .moreOperList {
+        position: relative;
+        .moreOperItem {
+            padding: 0 2px;
+            margin: 0 2px;
+        }
+    }
+    .operForStudent,
+    .operForTeacher,
+    .operForGuardian,
+    .operForOther,
+    .operForMember,
+    .operForBlack {
+        background-color: #FFF;
+        z-index: 2;
+        min-width: 110px;
+        @include abs-pos(100%, 0, auto, auto);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        .operItem {
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 15px;
+            color: $grayFontColor;
+            display: block;
+            text-align: left;
+            &:hover {
+                color: $blackFontColor;
+                background-color: #F5F5F5;
+            }
+            &.hide {
+                display: none;
+            }
+        }
+    }
+    .classQunStudentList {
+        margin-top: 30px;
+        .studentListTable {
+            font-size: 12px;
+            .studentInfo {
+                width: 80px;
+                max-width: 85px;
+                padding: 0 2px;
+                position: relative;
+                &.notAccountInfo {
+                    @include text-truncate();
+                }
+                .closedAccount {
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: $darkOrangeFontColor;
+                    width: 100%;
+                    @include abs-pos(auto, auto, 0, 0);
+                }
+            }
+            .userName,
+            .userId {
+                display: inline-block;
+                width: 80px;
+                height: 46px;
+                line-height: 46px;
+                overflow: hidden;
+                vertical-align: middle;
+                &.inline {
+                    display: inline;
+                }
+            }
+            .userAccount {
+                width: 80px;
+                display: inline-block;
+                @include text-truncate();
+            }
+            .lastLoginTime {
+                line-height: 20px;
+                display: inline-block;
+                vertical-align: middle;
+                white-space: normal;
+            }
+            .relationContainer {
+                height: 40px;
+                line-height: 40px;
+                .relationItem {
+                    border-bottom: 1px solid $borderOrange;
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+            .relationInfo {
+                display: inline-block;
+                border-right: 1px solid $borderOrange;
+                width: 80px;
+                height: 46px;
+                float: left;
+                &.relationMobile {
+                    position: relative;
+                    .showFullMobile {
+                        line-height: 24px;
+                        width: 100%;
+                        text-align: center;
+                        @include abs-pos(auto, auto, 0, 0);
+                    }
+                }
+                &.lastLoginInfo {
+                    border: none;
+                }
+                .lastLoginTime {
+                    line-height: 20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+            .userMobile {
+                display: inline-block;
+            }
+        }
+        .xxbStudentList {
+            .studentInfo {
+                width: 120px;
+                max-width: 120px;
+            }
+            .userName,
+            .userId {
+                width: 120px;
+            }
+            .userAccount {
+                width: 120px;
+            }
+        }
+        .tableWithOper {
+            .studentInfo {
+                width: 75px;
+                max-width: 85px;
+            }
+            .userName,
+            .userId {
+                width: 75px;
+            }
+            .userAccount {
+                width: 75px;
+            }
+            .relationInfo {
+                width: 80px;
+            }
+        }
+    }
+    .friendlyTip {
+        line-height: 34px;
+        padding: 10px 0;
+        color: $grayFontColor;
+        .tipFlag {
+            color: $orangeFontColor;
+            margin-right: 2px;
+        }
+        .showHowToAddRelation {
+            text-decoration: none;
+            margin-left: 4px;
+        }
+        .tipText {
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+    }
+    .classQunTeacherList {
+        margin-top: 30px;
+        .userInfoContent {
+            display: block;
+            width: 174px;
+            height: 46px;
+            line-height: 46px;
+            overflow: hidden;
+            position: relative;
+            .userName {
+                display: inline-block;
+                height: 46px;
+                line-height: 46px;
+                overflow: hidden;
+            }
+            .userAccount {
+                width: 174px;
+                display: inline-block;
+                @include text-truncate();
+            }
+            .closedAccount {
+                font-size: 12px;
+                line-height: 18px;
+                color: $darkOrangeFontColor;
+                width: 100%;
+                @include abs-pos(auto, auto, 0, 0);
+            }
+        }
+        .userMobile {
+            width: 110px;
+            display: inline-block;
+        }
+    }
+    .qunMemberList {
+        margin-top: 30px;
+        .userInfoContent {
+            display: block;
+            width: 180px;
+            height: 46px;
+            line-height: 46px;
+            overflow: hidden;
+            position: relative;
+            .userName {
+                display: inline-block;
+                height: 46px;
+                line-height: 46px;
+                overflow: hidden;
+            }
+            .userAccount {
+                width: 180px;
+                display: inline-block;
+                @include text-truncate();
+            }
+            .closedAccount {
+                font-size: 12px;
+                line-height: 18px;
+                color: $darkOrangeFontColor;
+                width: 100%;
+                @include abs-pos(auto, auto, 0, 0);
+            }
+        }
+    }
+
+    .classQunOtherList {
+        margin-top: 30px;
+        .userInfoContent {
+            display: block;
+            width: 150px;
+            height: 46px;
+            line-height: 46px;
+            overflow: hidden;
+            position: relative;
+            .userName {
+                display: inline-block;
+                height: 46px;
+                line-height: 46px;
+                overflow: hidden;
+            }
+            .userAccount {
+                width: 150px;
+                display: inline-block;
+                @include text-truncate();
+            }
+            .closedAccount {
+                font-size: 12px;
+                line-height: 18px;
+                color: $darkOrangeFontColor;
+                width: 100%;
+                @include abs-pos(auto, auto, 0, 0);
+            }
+        }
+        .specialMobileInfo {
+            width: 120px;
+        }
+    }
+
+    .classQunGuardianList {
+        margin-top: 30px;
+        .userInfoContent {
+            display: block;
+            width: 220px;
+            height: 46px;
+            line-height: 46px;
+            overflow: hidden;
+            position: relative;
+            .userName {
+                display: inline-block;
+                height: 46px;
+                line-height: 46px;
+                overflow: hidden;
+            }
+            .userAccount {
+                width: 220px;
+                display: inline-block;
+                @include text-truncate();
+            }
+            .closedAccount {
+                font-size: 12px;
+                line-height: 18px;
+                color: $darkOrangeFontColor;
+                width: 100%;
+                @include abs-pos(auto, auto, 0, 0);
+            }
+        }
+        .userMobile {
+            width: 220px;
+            display: inline-block;
+        }
+    }
+    .qunBlackList {
+        margin-top: 30px;
+        .blackListTable {
+            @extend %baseTableStyle;
+            border: 1px solid #eee;
+            color: $lightBlackFontColor;
+            tr {
+                background-color: #FDFDFD;
+                &:nth-child(even) {
+                    background-color: #FAFAFA;
+                }
+            }
+            td {
+                text-align: center;
+                text-indent: 0;
+                color: $lightBlackFontColor;
+                border: 1px solid #eee;
+            }
+            .tableTitle {
+                color: $lightBlackFontColor;
+                font-weight: 500;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background-color: #f5f5f5;
+            }
+        }
+        .userInfoContent {
+            display: block;
+            width: 180px;
+            height: 46px;
+            line-height: 46px;
+            @include text-truncate();
+        }
+        .openPchat {
+            color: $orangeFontColor;
+        }
+    }
+    .qunContactsNav {
+        padding-top: 20px;
+        .navItem {
+            background-color: #f8f8f8;
+            border: 1px solid #e8e8e8;
+            font-weight: normal;
+            color: $grayFontColor;
+            text-align: center;
+            line-height: 22px;
+            padding: 0 6px;
+            margin-right: 30px;
+            display: inline-block;
+            @include border-radius(2px);
+            &:last-child {
+                margin-right: 0;
+            }
+            &.on,
+            &:hover {
+                border: 1px solid $orangeFontColor;
+                background-color: $orangeFontColor;
+                color: #FFF;
+            }
+        }
+    }
+    .qunMemberContacts {
+        @extend %baseTableStyle;
+        color: #AE9B85;
+        margin-top: 30px;
+        td {
+            text-align: center;
+            text-indent: 0;
+            border: 1px solid $borderOrange;
+            a {
+                color: #8A7762;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+            .closedAccount {
+                color: $darkOrangeFontColor;
+            }
+        }
+        .mobileInfo {
+            position: relative;
+            .showFullMobile {
+                font-size: 12px;
+                line-height: 24px;
+                width: 100%;
+                text-align: center;
+                @include abs-pos(auto, auto, 0, 0);
+            }
+        }
+        .tableTitle {
+            color: #8A7762;
+            font-weight: 500;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #FFF3DF;
+            a {
+                color: #8A7762;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .userName {
+            position: relative;
+            padding-left: 40px;
+            height: 46px;
+            max-width: 180px;
+            @include text-truncate();
+            .chkbox {
+                height: 14px;
+                width: 14px;
+                @include abs-pos(16px, auto, auto, 20px);
+            }
+        }
+        .contactOperating {
+            position: relative;
+            height: 25px;
+            line-height: 25px;
+            padding: 0;
+            .contactOperMenu {
+                display: none;
+                background: #FFF;
+                z-index: 1;
+                min-width: 110px;
+                @include abs-pos(100%, 0, auto, auto);
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+                .operItem {
+                    font-size: 12px;
+                    height: 30px;
+                    line-height: 30px;
+                    padding: 0 15px;
+                    color: $grayFontColor;
+                    display: block;
+                    text-align: left;
+                    &:hover {
+                        color: $blackFontColor;
+                        background-color: #F5F5F5;
+                    }
+                    &.hide {
+                        display: none;
+                    }
+                }
+            }
+
+            &:hover {
+                .contactOperMenu {
+                    display: block;
+                }
+            }
+        }
+        .activation {
+            color: $orangeFontColor;
+            margin-right: 2px;
+            @include rel-pos($top: 2px);
+        }
+        .checkboxInput {
+            width: 14px;
+            height: 14px;
+        }
+    }
+    .nonMembersContentList {
+        .qunMemberContacts {
+            margin: 0;
+        }
+    }
+    .memberIdentify {
+        line-height: 54px;
+        .identifyItem {
+            color: $grayFontColor;
+            font-weight: normal;
+            margin-right: 24px;
+            &.on {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .invite_btn_area {
+        padding: 30px 0;
+        border-top: 1px solid #eee;
+        text-align: right;
+        margin-top: 30px;
+        .batchDelContact,
+        .exportSeparateContacts {
+            width: 80px;
+            margin-left: 16px;
+        }
+    }
+    .setMemberRole {
+        margin: 0 10px;
+    }
+    .userId,
+    .userName {
+        color: #AE9B85;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .qunApplyList {
+        .applyUserItem {
+            padding-top: 12px;
+            position: relative;
+        }
+        .applyTime {
+            color: $grayFontColor;
+            line-height: 42px;
+        }
+        .applyContent {
+            padding: 12px 16px 0 48px;
+            background-color: #FFFBF4;
+            border: 1px solid #FEEED4;
+            position: relative;
+        }
+        .reminderIcon {
+            color: $orangeFontColor;
+            @include abs-pos(18px, auto, auto, 16px);
+        }
+        .applyOper {
+            text-align: right;
+            padding: 16px 0;
+        }
+        .applyMessage {
+            line-height: 30px;
+            color: $lightBlackFontColor;
+        }
+        .denyJoin {
+            width: 76px;
+            height: 26px;
+            line-height: 26px;
+            display: inline-block;
+            text-align: center;
+            color: #FFF;
+            background-color: #CCC;
+            @include border-radius(2px);
+        }
+        .accessJoin {
+            width: 76px;
+            height: 26px;
+            line-height: 26px;
+            display: inline-block;
+            text-align: center;
+            color: #FFF;
+            margin-left: 14px;
+            background-color: $orangeFontColor;
+            @include border-radius(2px);
+        }
+    }
+    .searchTips {
+        color: #9B9B9B;
+        @include abs-pos(95px, 230px, auto, auto);
+        .count,
+        .back {
+            color: $orangeFontColor;
+        }
+        .back {
+            margin-left: 10px;
+        }
+    }
+    .search_in_page {
+        border: none;
+        background: #f5f5f5;
+        width: 180px;
+        line-height: 30px;
+        height: 30px;
+        @include border-radius(100px);
+        &.master {
+            @include abs-pos(90px, 30px, auto, auto);
+        }
+        &.normal {
+            float: right;
+            margin-top: 20px;
+        }
+        i,
+        button {
+            top: 8px;
+        }
+    }
+    .searchmore {
+        margin-top: 10px;
+    }
+    .tipsTxt {
+        color: $grayFontColor;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+.importStudentContainer {
+    background-color: #FFF;
+    padding: 20px 30px 30px;
+    width: 880px;
+    min-height: 800px;
+    .importExcel {
+        margin-top: 20px;
+        .tipMsg {
+            color: $darkRed;
+        }
+        .importExcelBtn {
+            &.hide {
+                display: none;
+            }
+        }
+    }
+    .studentInfo {
+        background-color: $yellowBg;
+        border: 1px solid $lineYellow;
+        margin-top: 20px;
+        tr {
+            height: 40px;
+            line-height: 40px;
+        }
+        td {
+            text-align: center;
+            color: $yellowFontColor;
+            border: 1px solid $lineYellow;
+            &.tableTitle {
+                color: $yellowTitle;
+                font-weight: bold;
+                background-color: $yellowTitleBg;
+                i {
+                    color: $darkOrangeFontColor;
+                    margin-right: 2px;
+                }
+            }
+            &.studentNum,
+            &.studentName,
+            &.studentTel,
+            &.relationship,
+            &.relationTel {
+                width: 158px;
+            }
+            &.relationContainer {
+                .relationItem {
+                    border-bottom: 1px solid $lineYellow;
+                    &:last-child {
+                        border: none;
+                    }
+                    .item {
+                        width: 147px;
+                        float: left;
+                    }
+                    .relationship {
+                        border-right: 1px solid $lineYellow;
+                    }
+                }
+            }
+            .infoItem {
+                border: 1px solid $lineYellow;
+                height: 28px;
+                width: 80%;
+                padding: 0 4px;
+                text-align: center;
+                &[readonly] {
+                    border-color: $yellowBg;
+                    background-color: inherit;
+                }
+            }
+        }
+        .textBtn {
+            border: 0;
+            line-height: 30px;
+            color: $blue;
+            padding: 0 20px;
+            background-color: $yellowBg;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+            &[disabled] {
+                color: $grayFontColor;
+            }
+        }
+        .errorMsgItem {
+            line-height: 24px;
+            .okMsg i {
+                color: #32C572;
+            }
+            .errorMsg {
+                color: $darkRed;
+            }
+        }
+    }
+}

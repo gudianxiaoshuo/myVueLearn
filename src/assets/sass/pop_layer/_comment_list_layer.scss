@@ -1,0 +1,80 @@
+#reply_comment_layer,
+#modify_weibo_comment,
+#comment_list_layer,
+#homework_comment_layer {
+    .privacy_message {
+        padding: 0;
+    }
+    .publish_comment {
+        padding: 20px;
+        margin-bottom: 0;
+        @include border-radius(0);
+        .submit_box {
+            margin-top: -40px;
+        }
+        .upload_something {
+            width: 540px;
+        }
+    }
+
+    .comment_textarea {
+        height: 98px;
+    }
+    .icon_container {
+        width: 472px;
+    }
+
+}
+#comment_list_layer {
+    .comment_content {
+        border: 0;
+        border-bottom: 1px solid $borderGray;
+    }
+}
+#reply_comment_layer {
+    .comment_content {
+        border: 0;
+    }
+    .one_comment_content {
+        min-width: 74px;
+    }
+    .real_content {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        &.show_all {
+            max-height: 102px;
+        }
+        .btn_show {
+            display: none;
+            padding: 3px 0px 3px 6px;
+            background: $lightGrayBg;
+            @include abs-pos(auto, 0, -1px, auto);
+            em {
+                color: $blackFontColor;
+            }
+        }
+    }
+    .weibo_attach {
+        &:hover {
+            i {
+                color: $grayFontColor;
+            }
+        }
+        a {
+            cursor: auto;
+            color: $blackFontColor;
+            &:hover {
+                color: $blackFontColor;
+            }
+        }
+    }
+    .wb_add_img {
+        .small,
+        .thumbnail_img {
+            &:hover {
+                cursor: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.classQunFeature {
+    @include bg_with_retina(list_page_bg, png, $versionImgPath);
+    background-color: #fff;
+    background-position: 0 bottom;
+    padding-bottom: 50px;
+    .featureTitle {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 20px 30px 10px;
+        color: $lightBlackFontColor;
+    }
+    .featureList {
+        margin: 0 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #eee;
+    }
+    .featureItem {
+        line-height: 42px;
+        @include bg_with_retina(list_style_bg, png, $versionImgPath);
+        background-position: 0 10px;
+        padding-left: 30px;
+        position: relative;
+        .itemNum {
+            color: #86CAFB;
+            width: 20px;
+            text-align: center;
+            @include abs-pos(-1px, auto, auto, 0);
+        }
+    }
+    .operContainer {
+        .operItem {
+            text-align: center;
+        }
+        .creatOper {
+            margin: 30px 0 20px;
+        }
+    }
+}

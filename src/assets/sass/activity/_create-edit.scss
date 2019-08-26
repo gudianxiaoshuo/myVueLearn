@@ -1,0 +1,299 @@
+.creatActivityWrap {
+    width: 100%;
+    background-color: #FFF;
+    .creatActivity {
+        width: 870px;
+        height: 100%;
+        margin: 60px auto 0;
+        .errorTips {
+            font-size: 12px;
+            color: red;
+        }
+        .title {
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 7px;
+            .tips {
+                color: #999;
+                margin-left: 5px;
+                font-weight: 200;
+            }
+        }
+        .left {
+            float: left;
+            width: 380px;
+            position: relative;
+        }
+        .right {
+            float: right;
+            width: 380px;
+        }
+        .titleWrap {
+            overflow: hidden;
+            input {
+                width: 380px;
+                height: 46px;
+                border: 1px solid #E8E8E8;
+                text-indent: 20px;
+                box-sizing: border-box;
+            }
+        }
+        .activityTimeWrap {
+            margin-top: 27px;
+            overflow: hidden;
+            .dateWrap {
+                width: 220px;
+                overflow: hidden;
+                position: relative;
+                height: 46px;
+                display: inline-block;
+                vertical-align: top;
+                .xicon-schedule-icon {
+                    color: #CCC;
+                    position: relative;
+                    top: -33px;
+                    left: 10px;
+                }
+            }
+            .timeWrap {
+                width: 140px;
+                display: inline-block;
+                height: 46px;
+                position: relative;
+                margin-left: 15px;
+                vertical-align: top;
+                .xicon-my-clock {
+                    position: relative;
+                    top: -33px;
+                    left: 10px;
+                    color: #CCC;
+                }
+            }
+            .dateStyle {
+                height: 46px;
+                background-color: #FAFBFB;
+                border: 1px solid #E8E8E8;
+                line-height: 46px;
+                position: relative;
+                cursor: pointer;
+                box-sizing: border-box;
+                color: #4A4A4A;
+            }
+
+            .xicon-boomerang-down {
+                right: 10px;
+                color: #CCC;
+                position: relative;
+                top: -33px;
+                float: right;
+            }
+            .chooseDate {
+                width: 220px;
+                text-indent: 40px;
+
+            }
+            .chooseTime {
+                width: 140px;
+                text-indent: 40px;
+            }
+        }
+        .activityCoverWrap {
+            margin-top: 27px;
+            height: 295px;
+            .left {
+                width: 440px;
+                height: 264px;
+                .coverWrap {
+                    width: 440px;
+                    height: 264px;
+                    overflow: hidden;
+                    .cover {
+                        width: 440px;
+                        height: 264px;
+                    }
+                }
+
+            }
+            .right {
+                margin-top: 83px;
+                .buttonWrap {
+                    .uploadButton {
+                        height: 36px;
+                        line-height: 36px;
+                        i {
+                            color: #FFF;
+                            position: relative;
+                            top: 3px;
+                            left: -6px;
+                        }
+                    }
+                }
+                .uploadTips {
+                    margin-top: 21px;
+                    display: inline-block;
+                    width: 295px;
+                    color: #999;
+                    font-weight: 200;
+                }
+            }
+        }
+
+        .activityInfoWrap {
+            margin-top: 27px;
+            .editorWrap {
+                width: 870px;
+                .simditor-wrapper {
+                    overflow: auto;
+                }
+            }
+        }
+        .activitySubmitWrap {
+            text-align: center;
+            margin-top: 40px;
+            height: 100px;
+            button {
+                height: 36px;
+                line-height: 36px;
+                margin-right: 34px;
+            }
+        }
+
+    }
+}
+.activitySharedWrap {
+    margin-top: 27px;
+    .myGroupListWrap {
+        width: 870px;
+        height: 102px;
+        border: 1px solid #EEE;
+        box-sizing: border-box;
+        .groupListWrap {
+            position: relative;
+            chooseGroup {
+                height: 100px;
+                overflow-y: auto;
+            }
+            .qun_list_filter {
+                top: -350px;
+                position: absolute;
+                z-index: 9;
+            }
+            .chooseGroupList {
+                margin: 10px 0;
+                padding: 10px;
+                border-radius: 2px;
+                background-clip: border-box;
+                background: #FFF;
+                position: absolute;
+                left: 111px;
+                display: inline-block;
+                height: 63px;
+                overflow-y: auto;
+                .target_label {
+                    background-color: #fa3;
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: #FFF;
+                    padding: 0 26px 0 10px;
+                    margin: 0 5px;
+                    max-width: 576px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    border-radius: 40px;
+                    background-clip: border-box;
+                    display: inline-block;
+                    position: relative;
+                    &:hover {
+                        background-color: #f80;
+                        .xicon-x-small {
+                            opacity: 1;
+                        }
+                    }
+                    .del_target {
+                        cursor: pointer;
+                        top: 0;
+                        right: 3px;
+                        bottom: auto;
+                        left: auto;
+                        position: absolute;
+                        i {
+                            color: #FFF;
+                            top: 2px;
+                            right: auto;
+                            bottom: auto;
+                            left: auto;
+                            position: relative;
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
+            .myGroupList {
+                display: inline-block;
+                height: 30px;
+                border: 1px solid #DEE2E5;
+                border-radius: 18px;
+                color: #4A4A4A;
+                text-align: center;
+                line-height: 30px;
+                display: inline-block;
+                padding-left: 20px;
+                padding-right: 20px;
+                background-color: #F0F0F0;
+                font-weight: 300;
+                position: relative;
+                &.active {
+                    color: #FFAA33;
+                    border: 1px solid #FFAA33;
+                    background-color: #FFF;
+                    cursor: pointer;
+                    position: absolute;
+                    top: 19px;
+                    left: 7px;
+                    line-height: 26px;
+                    height: 26px;
+                }
+                .add {
+                    display: inline-block;
+                    font-weight: 400;
+                    margin-right: 5px;
+                    font-size: 20px;
+                    line-height: 20px;
+                }
+                .closed {
+                    position: relative;
+                    left: 10px;
+                    font-size: 12px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .tagBox {
+        height: auto;
+        .already {
+            height: 46px;
+            line-height: 46px;
+            border-bottom: 1px dashed #EDEAE4;
+            padding: 0 20px;
+            .tagTip {
+                color: #999;
+            }
+            .oneTag {
+                margin-top: 10px;
+            }
+            .selectedTagTip {
+                float: left;
+            }
+            .addTag {
+                .xicon-add-channel {
+                    color: #FFAA33;
+                }
+            }
+        }
+        .notSelect {
+            padding: 0 20px;
+        }
+    }
+}

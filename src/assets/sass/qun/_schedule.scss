@@ -1,0 +1,268 @@
+.S-xnw_main {
+    .schedule {
+        width: 660px;
+        padding: 0 20px 20px;
+        font-family: $specialFontFamily;
+    }
+}
+.scheduleContent {
+    margin: 20px auto;
+    width: 100%;
+    @include border-radius(4px);
+    overflow: hidden;
+    table {
+        @extend %baseTableStyle;
+        width: 100%;
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            font-size: 12px;
+            width: 80px;
+            .hide {
+                display: none;
+            }
+            .edit {
+                background: #EEE;
+                padding: 0px 1px;
+                position: absolute;
+                right: 0;
+                bottom: 0px;
+            }
+            .iconPlus {
+                font-size: 36px;
+            }
+        }
+        th {
+            line-height: 20px;
+            padding: 10px 0;
+
+            &:first-child {
+                position: relative;
+                .time {
+                    @include abs-pos(22px, auto, auto, 26px);
+                }
+
+            }
+            &:last-child {
+                position: relative;
+                .time {
+                    @include abs-pos(10px, 26px, auto, auto);
+                }
+            }
+            .day {
+                font-size: 12px;
+                color: #AE9B85;
+                display: block;
+            }
+        }
+        td {
+            position: relative;
+            cursor: pointer;
+            &:first-child,
+            &.student {
+                cursor: default;
+                &:hover {
+                     background-color: initial;
+                }
+            }
+            &:hover {
+                background-color: #FFF6E8;
+            }
+            &.hasTime {
+                line-height: 20px;
+            }
+            .time {
+                color: $grayFontColor;
+                display: block;
+            }
+        }
+        .cellContent {
+            display: inline-block;
+            line-height: 20px;
+            vertical-align: middle;
+            padding: 5px 2px;
+            max-width: 80px;
+            max-height: 44px;
+        }
+        .name {
+            max-width: 75px;
+            display: inline-block;
+            @include text-truncate();
+        }
+        .moreCourse {
+            border-style: solid;
+            border-width: 6px;
+            border-color: transparent transparent #8A7762 transparent;
+            @include abs-pos(-6px, -6px, auto, auto);
+            @include css3(transform, rotate(45deg));
+        }
+        .scheduleCell {
+            &:focus {
+                border-color: $orange;
+            }
+            &[readonly] {
+                border: none;
+                padding: 1px 3px;
+                background-color: transparent;
+                &:focus {
+                    border: none;
+                }
+            }
+            width: 66px;
+            height: 28px;
+            padding: 0 2px;
+            color: $yellowFontColor;
+            text-align: center;
+            font-size: 12px;
+            border: 1px solid $lineYellow;
+            background-color: #fff;
+            @include border-radius(2px);
+            @include text-truncate;
+        }
+        .changeWeek {
+            position: absolute;
+            cursor: pointer;
+            color: #AE9B85;
+            top: 22px;
+            &:hover {
+                color: #ffaa33;
+            }
+            &.left {
+                left: 2px;
+            }
+            &.right {
+                right: 2px;
+            }
+        }
+    }
+    .tip {
+        @include abs-pos(-10px, auto, auto, -20px);
+        width: 120px;
+        height: 26px;
+        line-height: 26px;
+        background-color: $blackFontColor;
+        text-align: center;
+        @include border-radius(2px);
+        color: #fff;
+        font-size: 12px;
+        i {
+            @include abs-pos(18px, 50px);
+            color: $blackFontColor;
+            font-size: 20px;
+        }
+    }
+}
+.semesterBox {
+    position: relative;
+    float: left;
+    .semester {
+        background-color: #FFFAF0;
+        border: 1px solid #FEEED4;
+        line-height: 30px;
+        width: 280px;
+        padding: 0 15px 0 5px;
+        color: #8A7762;
+        margin: 0 0 20px;
+        @include border-radius(2px);
+        position: relative;
+        cursor: pointer;
+        &.week {
+            width: 60px;
+        }
+        i {
+            color: #8A7762;
+            @include abs-pos(6px, 4px, auto, auto);
+            font-size: 20px;
+        }
+    }
+    .semesterList {
+        max-height: 200px;
+        box-shadow: 0 4px 8px 0 rgba($blackFontColor, 0.2);
+        background: #fff;
+        z-index: 2;
+        @include abs-pos($top:40px);
+        overflow-y: auto;
+        a {
+            display: inline-block;
+            color: $grayFontColor;
+            &:hover {
+                color: $blackFontColor;
+            }
+        }
+        .item{
+            line-height: 30px;
+            position: relative;
+            padding: 2px 20px 2px 30px;
+            color: $blackFontColor;
+            display: block;
+            white-space: nowrap;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+            i {
+                @include abs-pos(10px, auto, auto, 10px);
+                font-size: 14px;
+                display: none;
+            }
+            &.on {
+                a {
+                    color: $blackFontColor;
+                }
+                i {
+                    color: #3BC475;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+//课程表修改历史记录
+.scheduleHistory {
+    margin-bottom: 40px;
+    h2 {
+        font-size: 14px;
+        padding-bottom: 10px;
+        margin: 40px 0 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .oneItem {
+        margin: 5px 0;
+        padding-left: 140px;
+        position: relative;
+        .time {
+            @include abs-pos(0, auto, auto, 15px);
+        }
+        .circle {
+            height: 5px;
+            width: 5px;
+            display: inline-block;
+            background-color: #eee;
+            @include border-radius(5px);
+            @include abs-pos(10px, auto, auto, 0);
+        }
+    }
+}
+
+//节次课程信息
+.scheduleCourseInfo {
+    .oneItem {
+        padding-left: 44px;
+        margin: 10px 0;
+        text-indent: -44px;
+    }
+}
+
+// 日程表 选身份
+.chooseIdentify {
+    float: right;
+    font-weight: normal;
+    .oneItem {
+        max-width: 110px;
+        padding-left: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        @include text-truncate();
+    }
+}
+

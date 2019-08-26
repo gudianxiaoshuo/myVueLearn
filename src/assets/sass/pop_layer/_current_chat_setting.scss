@@ -1,0 +1,115 @@
+#current_chat_setting {
+	width: 438px;
+	z-index: 900;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    overflow: hidden;
+    .title {
+        height: 38px;
+        line-height: 38px;
+        padding: 0 20px;
+        border-bottom: 1px solid #EEE;
+		font-size: 14px;
+        .closeBtn {
+            float: right;
+			.xicon-album-close {
+				font-size: 12px;
+			}
+        }
+    }
+    .newBtnArea {
+    	height: 50px;
+        line-height: 50px;
+        background-color: #F5F5F5;
+        padding: 0 20px;
+        text-align: center;
+    }
+	.statusContainer {
+		padding: 20px 82px 0;
+		min-height: 78px;
+		&.pChatStatus {
+			padding: 20px 74px;
+		}
+		&.qChatStatus {
+			padding: 15px 82px 20px;
+		}
+		.statusItem {
+			float: left;
+			clear: left;
+			line-height: 34px;
+		}
+		.statusInput {
+			margin-right: 10px;
+		}
+	}
+	.newStatusContainer {
+		min-height: 56px;
+		width: 398px;
+		border-top: 1px solid #EEEEEE;
+		margin: auto;
+		margin-top: 38px;
+		.statusItem {
+			float: left;
+			line-height: 58px;
+			margin-right: 24px;
+		}
+		.statusInput {
+			margin-right: 10px;
+		}
+	}
+	.settingContainer {
+
+		.settingItem {
+			margin-top: 24px;
+		}
+		.settingTitle {
+			display: inline-block;
+			width: 78px;
+			line-height: 30px;
+			text-align: right;
+			color: #9B9B9B;
+		}
+		.showMyQunName {
+			margin-right: 10px;
+		}
+		.xicon-edit {
+			font-size: 14px;
+		}
+		.edtorMyQunName {
+			display: none;
+		}
+		.settingInput {
+			height: 28px;
+			width: 142px;
+			padding: 0 8px;
+			border: 1px solid #eee;
+			@include border-radius(2px);
+		}
+        .operBtn {
+            margin: 0 5px;
+        }
+		.grayBtn {
+			color: $grayFontColor;
+		}
+		p:nth-child(2) {
+			margin-top: 4px;
+		}
+	}
+	.quitQunBtnWrap {
+		display: block;
+		line-height: 50px;
+		background-color: #F3F3F3;
+		.quitQunBtn {
+			width: 100px;
+			margin-left: -62px;
+		}
+		&.cancelBtn {
+			text-align: center;
+			.quitQunBtn {
+				margin-left: 0;
+			}
+		}
+	}
+}

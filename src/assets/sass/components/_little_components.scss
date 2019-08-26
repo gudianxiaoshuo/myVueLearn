@@ -1,0 +1,920 @@
+@charset "UTF-8";
+
+// 学校认证的图标的样式*/
+.indentitySchool,
+.indentityClass,
+.indentityNormal,
+.normalSchool,
+.normalClass {
+    width: 34px !important;
+    height: 18px !important;
+    @include bg_with_retina(v-qun-icon, png, $versionImgPath);
+    &.smallIcon {
+        width: 22px !important;
+        height: 12px !important;
+        @include bg_with_retina(small-v-qun-icon, png, $versionImgPath);
+    }
+}
+.indentitySchool {
+    background-position: -56px -1px;
+    &.smallIcon {
+        background-position: -56px -1px;
+    }
+}
+.indentityClass {
+    background-position: -1px 0;
+    &.smallIcon {
+        background-position: -1px 0;
+    }
+}
+.indentityNormal {
+    width: 16px !important;
+    height: 16px !important;
+    background-position: -111px 0;
+    &.smallIcon {
+        height: 8px !important;
+        width: 8px !important;
+        background-position: -111px 0;
+    }
+}
+.normalSchool {
+    background-position: -56px -39px;
+    &.smallIcon {
+        background-position: -56px -39px;
+    }
+}
+.normalClass {
+    background-position: -1px -39px;
+    &.smallIcon {
+        background-position: -1px -39px;
+    }
+}
+.person_indentity {
+    width: 16px;
+    height: 16px;
+    @include bg_with_retina(person_v, png, $versionImgPath);
+}
+
+.bigOwerIcon,
+.smallOwerIcon,
+.bigMasterIcon,
+.smallMasterIcon,
+.bigHeadTeacherIcon,
+.smallHeadTeacherIcon {
+    display: inline-block;
+    @include  bg_with_retina(user_identity, png, $versionImgPath);
+}
+.bigOwerIcon {
+    width: 18px;
+    height: 18px;
+    background-position: -1px 0;
+}
+.smallOwerIcon {
+    width: 18px;
+    height: 18px;
+    background-position: -1px -81px;
+}
+.bigHeadTeacherIcon {
+    width: 18px;
+    height: 18px;
+    background-position: -141px 0;
+}
+.smallHeadTeacherIcon {
+    width: 18px;
+    height: 18px;
+    background-position: -141px -81px;
+}
+.bigMasterIcon {
+    width: 18px;
+    height: 18px;
+    background-position: -71px 0;
+}
+.smallMasterIcon {
+    width: 18px;
+    height: 18px;
+    background-position: -71px -81px;
+}
+
+.xnw-search-loading {
+    background: url(#{$baseImgRootPath}load-indicator_m.gif?#{$imgVer}) no-repeat;
+}
+// 页面内小搜索的样式*/
+.search_in_page {
+    width: 138px;
+    height: 26px;
+    border: 1px solid $lineGray;
+    background-color: #FFF;
+    vertical-align: middle;
+    position: relative;
+    @include border-radius(40px);
+    input {
+        border: 0;
+        width: 100%;
+        height: 26px;
+        font-size: 12px;
+        background: none;
+        text-indent: 30px;
+        color: $grayFontColor;
+    }
+    .searchBtn {
+        @include abs-pos(3px, auto, auto, 8px);
+        height: 16px;
+        width: 16px;
+        cursor: pointer;
+        i {
+            color: $borderGray;
+        }
+    }
+    .phTips {
+        line-height: 26px;
+    }
+    // 搜索及时反馈样式*/
+    .feedback_input {
+        @extend %feedback_input;
+    }
+}
+
+// 搜索的提示信息*/
+.searchmsg,
+.searchnomore {
+    margin: 10px 0 20px;
+    color: $grayFontColor;
+    font-size: 14px;
+    font-weight: 200;
+    .search_con {
+        @include text-truncate(ellipsis);
+        @include rel-pos(0, auto, auto, auto);
+        max-width: 300px;
+        overflow: hidden;
+        display: inline-block;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+    .red {
+        font-weight: 700;
+    }
+    .search_total {
+        padding: 0 5px;
+        font-weight: bold;
+        color: $blackFontColor;
+    }
+    .searchmsgall {
+        color: $darkOrangeFontColor;
+        cursor: pointer;
+        padding: 0 5px;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.load_more_weibo,
+.searchnomore,
+.searchmore {
+    margin-bottom: 20px;
+    line-height: 28px;
+    text-align: center;
+    height: 28px;
+    cursor: pointer;
+    color: $grayFontColor;
+    display: block;
+    border: solid 1px $lightLineGray;
+    background: rgba(245, 245, 245, .4);
+    @include border-radius(2px);
+    &:hover {
+        color: $darkOrangeFontColor;
+    }
+    .searchmsgall {
+        color: $grayFontColor;
+        &:hover {
+            color: $darkOrangeFontColor;
+            text-decoration: none;
+        }
+    }
+    .point_loading {
+        vertical-align: middle;
+        margin-left: 6px;
+    }
+}
+.getMoreWeiboList {
+    width: 50px;
+    margin: 20px auto;
+    text-align: center;
+    cursor: pointer;
+    color: $blackFontColor;
+    i {
+        margin-top: 4px;
+        float: right;
+        color: $blackFontColor;
+    }
+    &:hover,
+    &:hover i{
+        color: $orangeFontColor;
+    }
+}
+// 搜索空提示*/
+.noSearchTip {
+    width: 160px;
+    height: 127px;
+    margin: 0 auto;
+    @include bg_with_retina('noSearchTip', png, $versionImgPath);
+    background-position: center;
+}
+.searchKeywords {
+    padding: 0 5px;
+    color: $orangeFontColor;
+}
+.hilite {
+    background: #fe0;
+    padding: 3px 3px;
+}
+/*分页样式*/
+.page_container {
+    width: 100%;
+    text-align: right;
+}
+.page {
+    float: right;
+    padding: 25px 0;
+    .off_prev_page,
+    .off_next_page {
+        display: none;
+    }
+    a {
+        width: 26px;
+        height: 26px;
+        margin-left: 10px;
+        display: inline-block;
+        padding: 0;
+        text-align: center;
+        line-height: 26px;
+        font-size: 12px;
+        color: $lightBlackFontColor;
+        border: 1px solid #E2E7EC;
+        @include border-radius(3px);
+        &.on_next_page,
+        &.on_prev_page{
+            width: 50px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &.on {
+            background: $orangeFontColor;
+            border-color: rgba(0, 0, 0, 0);
+            border-radius: 3px;
+            color: #FFF !important;
+            @include box-shadow(0 2px 6px 0 rgba(255, 170, 51, .4));
+        }
+        &:not(.on):hover,
+        &.on_prev_page:hover,
+        &.on_next_page:hover{
+            background: none;
+            color: $orangeFontColor;
+            border-color: $orangeFontColor;
+            span {
+                background: none;
+                color: $orangeFontColor;
+            }
+        }
+        &.point {
+            &:hover {
+                color: $lightBlackFontColor;
+                border-color: #E2E7EC;
+            }
+        }
+    }
+    .total {
+        margin-left: 15px;
+        font-size: 12px;
+        color: rgba(0, 0, 0, .57);
+    }
+}
+.returnXnwUrl,
+.tastePrevSwitch,
+.tasteBetaSwitch {
+    width: 80px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    color: $lightBlackFontColor;
+    text-align: center;
+    border: 1px solid #d8d8d8;
+    @include border-radius(2px);
+    @include fix-pos(auto, auto, 134px, 50%);
+    margin-left: 498px;
+    &:hover {
+        color: $lightBlackFontColor;
+        background-color: #d8d8d8;
+    }
+    &.notOnlyTasteBeta {
+        bottom: 184px;
+    }
+}
+/*返回顶部*/
+#up_top {
+    width: 54px;
+    height: 54px;
+    margin-left: 590px;
+    cursor: pointer;
+    z-index: 10;
+    @include fix-pos(auto, auto, 60px, 50%);
+    display: none;
+    a {
+        width: 54px;
+        height: 54px;
+        display: block;
+        background-color: rgba(0,0,0,0.20);
+        background-color: #000 \9;
+        filter: alpha(opacity=20) \9;
+        &:hover {
+            background-color: rgba(0,0,0,0.40);
+            background-color: #000 \9;
+            filter: alpha(opacity=40) \9;
+            text-decoration: none;
+        }
+    }
+    img {
+        width: 54px;
+        height: 54px;
+        background: url(#{$versionImgPath}icon_new.png?#{$imgVer});
+    }
+}
+/*小黄签的样式*/
+.instant_message {
+    cursor: move;
+    width: 155px;
+    background: #fffdf0;
+    border: solid 1px #f2daac;
+    padding: 6px 20px 6px 15px;
+    margin-top: 120px;
+    @include fix-pos(0, 0, auto, auto);
+    z-index: 99;
+    letter-spacing: normal;
+    p {
+        font-size: 12px;
+        color: $blackFontColor;
+        span {
+            display: block;
+        }
+    }
+    a {
+        color: $darkOrangeFontColor;
+        padding: 0 6px;
+        cursor: pointer;
+    }
+    .instant_message_del {
+        @include abs-pos(2px, 5px, auto, auto);
+        font-size: 16px;
+        line-height: 10px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 3px;
+    }
+}
+
+/*@人名提示*/
+.support_name {
+    padding: 5px 0;
+    background: #fff;
+    @include abs-pos(25px, auto, auto, 0);
+    z-index: 10005;
+    max-height: 300px;
+    overflow-y: hidden;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .2);
+    .at_name {
+        height: 30px;
+        line-height: 30px;
+        overflow: hidden;
+        padding-right: 8px;
+        color: $grayFontColor;
+        font-size: 12px;
+        display: block;
+        &:hover,
+        &.on {
+            background: #f5f5f5;
+            color: $blackFontColor;
+        }
+    }
+    .at_icon {
+        width: 20px;
+        height: 20px;
+        @include border-radius(20px);
+        float: left;
+        margin: 5px 10px 5px 14px;
+    }
+}
+
+.tx_div {
+    height: 50px;
+    @include abs-pos(29px, auto, auto, 0);
+    width: 100%;
+    font: normal 14px/20px Tahoma, Geneva, sans-serif;
+    padding-left: 4px;
+    letter-spacing: normal;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    span {
+        width: 10;
+        height: 10px;
+        display: inline-block;
+    }
+}
+
+.m_bottom{
+    margin-bottom: 20px;
+}
+
+.my_third_nav {
+    padding-top: 10px;
+    position: relative;
+    min-height:30px;
+    a{
+        color: $blackFontColor;
+        line-height: 2.0;
+    }
+    .on {
+        color: $orangeFontColor;
+        padding-left: 30px;
+    }
+    .search_in_page {
+        @include abs-pos(10px, auto, 0, auto);
+    }
+}
+
+#back_top {
+    height: 32px;  //32px是主导航的高度
+    width: 100%;
+    &.noHeight {
+        height: auto;
+    }
+}
+
+.switching_mode_nav {
+    padding: 0 0 20px;
+    text-align: right;
+    &.logListMode {
+        padding: 0;
+        margin-top: 6px;
+        z-index: 10;
+        border-bottom: 1px solid $lightLineGray;
+        line-height: 24px;
+        position: relative;
+    }
+    .essence {
+        font-size: 12px;
+        color: $blackFontColor;
+        &.on {
+            color: $orangeFontColor;
+            cursor: default;
+        }
+    }
+    .promoteItem {
+        font-size: 12px;
+        color: $blackFontColor;
+        &.on {
+            color: $orangeFontColor;
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .modeItem {
+        margin-left: 20px;
+        i {
+            color: $buttonGray;
+            @include rel-pos($top: 2px);
+            &.slide {
+                font-size: 14px;
+                top: 1px;
+            }
+        }
+        &:hover,
+        &.on {
+            i {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+}
+
+/*日志排序*/
+.weiboSortingBox {
+    position: relative;
+    display: inline-block;
+    margin: 0 20px;
+    &:hover {
+        .weiboSorting {
+            display: block;
+        }
+    }
+    .promoteItem {
+        display: inline-block;
+        padding-right: 20px;
+        cursor: pointer;
+        i {
+            position: relative;
+            top: 4px;
+        }
+        &:on {
+            color: $orangeFontColor;
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}
+.weiboSorting {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    @extend %weiboMenuLayer;
+}
+
+.red_dot {
+    background-color: #FF5500;
+    @include abs-pos(8px, auto, auto, 100%);
+    color: #fff;
+    height: 10px;
+    width: 10px;
+    @include border-radius(10px);
+    padding: 0;
+    display: block;
+}
+
+.xnw_upload_container {
+    position: relative;
+    overflow: hidden;
+    input {
+        @include abs-pos(0, 0);
+        @include opacity(0);
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
+
+.show_complete_btn {
+    margin-right: 20px;
+    cursor: pointer;
+    color: $grayFontColor !important;
+    font-size: 12px;
+    &:hover {
+        color: $darkOrangeFontColor !important;
+        i {
+            color: $darkOrangeFontColor !important;
+        }
+    }
+    i {
+        margin-right: 6px;
+        position: relative;
+        top: 3px;
+        color: $grayFontColor;
+    }
+}
+
+/*查看全部*/
+.show_complete_content {
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    color: $grayFontColor !important;
+    &:hover {
+        color: $darkOrangeFontColor !important;
+    }
+    span {
+        color: $blackFontColor;
+    }
+}
+
+
+/*个人卡片和个人主页更多设置样式*/
+.more_set_up {
+    i {
+        color: #fff;
+    }
+    .set_up_layer {
+        @include abs-pos(35px, 0, auto, auto);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+        border-top: 1px solid $lightLineGray;
+        display: none;
+        width: 143px;
+        background: #fff;
+        padding: 3px 6px;
+        .ok {
+            position: absolute;
+            top: 5px;
+            left: 2px;
+            font-size: 10px;
+            color: $grayFontColor;
+        }
+        .arrow {
+            @include abs-pos(-10px, 0, auto, auto);
+        }
+        .arrow_down {
+            color: $lineGray;
+            @include abs-pos(-11px, 0, auto, auto);
+        }
+        span {
+            color: $grayFontColor;
+            display: block;
+            height: 22px;
+            line-height: 22px;
+            font-size: 12px;
+            color: $blackFontColor;
+            cursor: pointer;
+            padding: 0 3px 0 15px;
+            position:relative;
+            margin: 3px 0;
+            &:hover {
+                background: $lightLineGray;
+            }
+        }
+    }
+}
+
+/*更新小提示*/
+/*返回顶部*/
+.featureGuide {
+    width: 210px;
+    height: 200px;
+    @include fix-pos(135px, auto, auto, 50%);
+    margin-left: -470px;
+    @include bg_with_retina(featureGuide, png, $versionImgPath);
+    .confirm_btn{
+        @include abs-pos(163px, auto, auto, 70px);
+        width: 68px;
+        height: 30px;
+        cursor:pointer;
+        @include border-radius(10px);
+    }
+}
+
+.modifyGuide {
+    width:308px;
+    height: 128px;
+    @include fix-pos(60px, 50%, auto, auto);
+    margin-right: -470px !important;
+    @include bg_with_retina(modifyIconGuide, png, $versionImgPath);
+    .confirm_btn{
+        @include abs-pos(61px, auto, auto, 116px);
+        width: 70px;
+        height: 30px;
+        cursor:pointer;
+        @include border-radius(10px);
+    }
+    .close_btn{
+        @include abs-pos(5px, 5px, auto, auto);
+        width: 25px;
+        height: 20px;
+        cursor:pointer;
+    }
+}
+/*我的学校更新提示*/
+.mySchoolGuide {
+    width: 210px;
+    height: 115px;
+    @include fix-pos(90px, auto, auto, 50%);
+    margin-left: -455px;
+    @include bg_with_retina(mySchoolGuide, png, $versionImgPath);
+    .confirm_btn{
+        @include abs-pos(76px, auto, auto, 70px);
+        width: 68px;
+        height: 30px;
+        cursor:pointer;
+        @include border-radius(10px);
+    }
+}
+/*群内标签设置引导*/
+.channelManageGuide {
+    width:308px;
+    height: 128px;
+    @include abs-pos(60px, 30px, auto, auto);
+    @include bg_with_retina(channel_manage_gudie, png, $versionImgPath);
+    .confirm_btn{
+        @include abs-pos(71px, auto, auto, 116px);
+        width: 70px;
+        height: 30px;
+        cursor:pointer;
+        @include border-radius(10px);
+    }
+    .close_btn{
+        @include abs-pos(5px, 5px, auto, auto);
+        width: 25px;
+        height: 20px;
+        cursor:pointer;
+    }
+}
+
+.pop_infomation {
+    width: 400px;
+    padding: 15px 25px;
+    background: #fdffea;
+    color: #f07400;
+    border: solid 1px #f2daac;
+    @include fix-pos(35%, auto, auto, 37%);
+    @include border-radius(5px);
+    line-height: 25px;
+    z-index: 19999;
+    display: none;
+    .pop_infomation_del {
+        width: 34px;
+        height: 34px;
+        font: normal 34px/36px '';
+        text-align: center;
+        background: #fffdf0;
+        border: solid #f2daac 1px;
+        @include border-radius(17px);
+        color: #f2daac;
+        cursor: pointer;
+        @include abs-pos(-17px, -17px, auto, auto);
+        &:hover {
+            background: #f2daac;
+            border: solid #f2daac 1px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    a {
+        color: #399fd6;
+    }
+    p {
+        line-height: 32px;
+        font-size: 14px;
+        text-align: center;
+        vertical-align: middle;
+        max-width: 96%;
+        margin: 0 auto;
+        position: relative;
+        left: 10px;
+        img {
+            vertical-align: middle;
+            background: url(/images/icon.png) no-repeat;
+            width: 40px;
+            height: 33px;
+            margin-left: -30px;
+            &.success {
+                background-position: 0 -2px;
+            }
+            &.failure {
+                background-position: 0 -37px;
+            }
+            &.warning {
+                background-position: 0 -73px;
+            }
+        }
+        span {
+            vertical-align: middle;
+        }
+        .highLight {
+            color: $blackFontColor;
+            margin: 0 2px;
+        }
+    }
+}
+//我的群快捷入口
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+.myQunQuickEntry {
+    width: 29px;
+    height: 52px;
+    z-index: 10;
+    @include fix-pos(160px, auto, auto, 0);
+    @include bg_with_retina(qunQuickEntry, png, $versionImgPath);
+}
+.myQunQuickEntryBox {
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    padding-bottom: 16px;
+    @extend %qun_list_pop_layer;
+    @include fix-pos(0, auto, auto, 0);
+}
+.qunMenuListCur {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.my_qun_list_scroll {
+    @extend %list_in_qun_list;
+    height: calc(100% - 60px);
+    max-height: none;
+    .loading {
+        text-align: center;
+        margin-top: 20%;
+    }
+    .oneQun {
+        position: relative;
+        &:hover {
+            background-color: $lightGrayBg;
+            cursor: pointer;
+        }
+    }
+    .list_item {
+        display: block;
+        margin-right: 30px;
+        .red_dot {
+            @include abs-pos(2px, auto, auto, 50px);
+            z-index: 1;
+        }
+        .qun_name_block {
+            width: 210px;
+            height: 48px;
+            display: block;
+        }
+    }
+    .trends {
+        @include abs-pos(0, auto, auto, 42px);
+        @include border-radius(100%);
+        background-color: #FF5500;
+        color: #fff;
+        display: inline-block;
+        font-size: 12px;
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+        width: 16px;
+        z-index: 1;
+        &.hide {
+            display: none;
+        }
+    }
+}
+.noContentTip {
+    width: 236px;
+    height: 280px;
+    margin: 0 auto;
+    padding-top: 340px;
+    text-align: center;
+    @include bg_with_retina('noContentTip', png, $versionImgPath);
+    background-position: 0 120px;
+}
+/*综评标识*/
+.zpTips {
+    display: block;
+    transform: scale(.8, .8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    .bg {
+        border-left-color: #fa3;
+        border-top: 0;
+        border-right: 0;
+        border-bottom-color: transparent;
+        border-bottom-width: 32px;
+        border-left-width: 40px;
+        display: block;
+        position: absolute;
+        border-style: solid;
+        top: 0;
+        left: 0;
+        color: #333;
+    }
+    &:after {
+        content: '综评';
+        color: #fff;
+        font-size: 12px;
+        display: block;
+        width: 28px;
+        transform: rotate(-35deg);
+        display: inline-block;
+        text-indent: 0;
+        @include abs-pos($top: 2px, $left: -2px);
+    }
+    &.zp {
+        &:after {
+            top: -11px;
+        }
+    }
+}

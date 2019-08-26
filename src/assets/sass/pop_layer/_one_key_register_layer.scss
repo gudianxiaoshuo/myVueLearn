@@ -1,0 +1,33 @@
+#oneKeyRegisterLayer {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    .registerTip {
+        color: $grayFontColor;
+        margin:10px 20px;
+    }
+    .sampleMsg {
+        margin: 0 20px;
+        padding: 10px;
+        background: $lightGrayBg;
+    }
+    .registerHint {
+        margin: 0 20px;
+        font-size: 12px;
+        color: $grayFontColor;
+        line-height: 34px;
+    }
+    .newBtnArea {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+        button {
+            margin-left: 20px;
+        }
+    }
+}

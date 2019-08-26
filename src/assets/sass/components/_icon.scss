@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+.icon_attach_B, .icon_search_G, .icon_talker_G, .icon_setting_B, .icon_owner, .icon_right_G, .icon_right_W, .icon_male, .icon_female, .icon_left_arrow_O {
+    position: relative;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    @include bg_with_retina(xnw-icons, png, $baseXnwImgPath);
+}
+
+.icon_owner {
+    background-position: -360px -120px
+}
+
+.icon_attach_B {
+    background-position: -120px -40px
+}
+
+.icon_search_G {
+    background-position: -640px 0
+}
+
+.icon_talker_G {
+    background-position: -840px 0
+}
+
+.icon_L_turn_B {
+    background-position: -1000px -40px
+}
+
+.icon_setting_B {
+    background-position: -1160px -40px
+}
+
+.icon_right_G {
+    background-position: -1240px 0
+}
+
+.icon_right_W {
+    background-position: -1240px -80px
+}
+
+.icon_male {
+    background-position: -900px -160px
+}
+
+.icon_female {
+    background-position: -900px -200px
+}
+
+.icon_left_arrow_O {
+    background-position: -860px -200px
+}
+
+.icon_U_arrow_G {
+    width: 28px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    @include bg_with_retina(xnw-icons, png, $baseXnwImgPath);
+}
+
+.customServiceHotLine {
+    position: relative;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    @include bg_with_retina(little_icon, png, $baseXnwImgPath);
+}
+

@@ -1,0 +1,49 @@
+.confirmContainer {
+    width: 940px;
+    padding: 0;
+    .xContainer {
+        @extend %mainContainerStyle;
+    }
+    .confirmTitle {
+        height: 70px;
+        line-height: 70px;
+        margin: 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .confirmContent {
+        padding: 30px 20px;
+    }
+    .oneCourse {
+        border: 1px solid #ffeed4;
+        background-color: #FFFBF4;
+        padding: 20px;
+        margin-bottom: 30px;
+        .coursePoster {
+            top: 20px;
+        }
+        .courseInfo.courseClassInfo {
+            width: 580px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+    .information {
+        border-top: 1px solid #e8e8e8;
+        padding: 20px 0 10px;
+    }
+    .infoContent {
+        height: 28px;
+        width: 280px;
+        padding: 0 5px;
+        border: 1px solid #e8e8e8;
+        @include border-radius(2px);
+    }
+    .confirmTable {
+        @extend %baseTableStyle;
+    }
+    .confirmArea {
+        text-align: right;
+        padding-right: 20px;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+
+//主页或群头部个人信息
+
+.header_user_infomation {
+    position: relative;
+    top: -102px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-clip: border-box;
+}
+.commonAddFriendBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 34px;
+    .add_friend,
+    .btn_black {
+        @include abs-pos(0, 163px, auto, auto);
+        width: 80px;
+        height: 34px;
+        font-size: 14px;
+        line-height: 34px;
+        background: $orangeFontColor;
+        box-shadow: 0 1px 3px 0 rgba(84, 49, 0, 0.46);
+        @include border-radius(2px);
+        color: #fff;
+        text-align: center;
+        &.double {
+            width: 94px;
+        }
+        i {
+            color: #fff;
+            position: relative;
+            top: 3px;
+        }
+        a {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .go_chat {
+        @include abs-pos(0, 66px, auto, auto);
+        width: 80px;
+        height: 34px;
+        font-size: 14px;
+        line-height: 34px;
+        background: $orangeFontColor;
+        @include box-shadow(0 1px 3px 0 rgba(84, 49, 0, 0.46));
+        @include border-radius(2px);
+        color: #fff;
+        text-align: center;
+    }
+    .operation_list {
+        position: absolute;
+        z-index: 1;
+        width: 86px;
+        top: 35px;
+        left: -3px;
+        padding: 3px 6px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.3);
+        background-color: #fff;
+        a {
+            display: block;
+            height: 22px;
+            line-height: 22px;
+            font-size: 12px;
+            color: $blackFontColor;
+            cursor: pointer;
+            padding: 0 6px;
+            position:relative;
+            margin: 3px 0;
+            &:hover {
+                background: $lightLineGray;
+            }
+            &:last {
+                border-bottom: 0;
+            }
+            i {
+                font-size: 10px;
+            }
+            .boomerang-right {
+                @include abs-pos(6px, 0px, auto, auto);
+                font-weight: bold;
+            }
+        }
+    }
+    .more_set_up {
+        @include abs-pos(0, 10px, auto, auto);
+        width: 40px;
+        height: 34px;
+        font-size: 16px;
+        line-height: 38px;
+        background: $orangeFontColor;
+        box-shadow: 0 1px 3px 0 rgba(84, 49, 0, 0.46);
+        @include border-radius(2px);
+        text-align: center;
+        .set_up_layer {
+            width: 134px;
+            left: 0;
+            z-index: 1;
+            text-align: left;
+            &>i {
+                display: none;
+            }
+            span {
+                color: $grayFontColor;
+                &:hover {
+                    background: #eee;
+                }
+            }
+        }
+    }
+}
+.home_header_infomation {
+    width: 256px;
+    top: 204px;
+    left: 50%;
+    margin-left: -128px;
+    padding-left: 0;
+    background: none;
+}
+.home_name_title {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+    top: -68px;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    position: absolute;
+}
+.fansTotal {
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.75);
+    top: -24px;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    position: absolute;
+}

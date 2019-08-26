@@ -1,0 +1,205 @@
+.record_tip {
+    height: 180px;
+    text-align: center;
+    background: url(#{$versionImgPath}record_tip.png?#{$imgVer}) no-repeat center;
+    position: relative;
+    color: #9ebae2;
+    .tip_txt {
+        color: $columnBlue;
+        @include abs-pos(35px, auto, auto, 150px);
+    }
+}
+
+.record_list {
+    padding-bottom: 25px;
+    .one_record {
+        @extend %one_user_item;
+        width: 70px;
+        height: 70px;
+        float: left;
+        margin: 25px 34px 0 0;
+        padding-top: 20px;
+        @include bg_with_retina(record, png, $versionImgPath);
+        .user_icon {
+            padding: 0;
+            margin: 2px auto;
+            border: 1px solid #fff;
+            &:hover {
+                margin: 0 auto;
+            }
+        }
+        .user_name {
+            height: 25px;
+            line-height: 25px;
+            overflow: hidden;
+            @include text-truncate;
+        }
+        &:nth-child(7n) {
+            margin-right: 0;
+        }
+    }
+}
+
+.one_personal_record {
+    .back_record {
+        font-weight: normal;
+        padding-left: 20px;
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 2px solid $orange;
+        background: #fff;
+    }
+    .personal_info {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+        position: relative;
+        .time {
+            @include abs-pos(10px, 20px, auto, auto);
+        }
+        .user_icon{
+            width: 190px;
+            height: 190px;
+            float: left;
+            margin-right: 20px;
+            img {
+                width: 180px;
+                height: 180px;
+                @include border-radius(180px);
+                border: 5px solid $lineGray;
+            }
+        }
+        .user_info {
+            float: left;
+            color: $blackFontColor;
+            .edit,
+            .del {
+                margin-left: 10px;
+                i {
+                    color: $blue;
+                    &:hover {
+                        color: $darkOrangeFontColor;
+                    }
+                }
+            }
+            p {
+                color: $grayFontColor;
+                margin: 5px 0;
+                .darkgray {
+                    color: $blackFontColor;
+                    margin-right: 30px;
+                }
+            }
+            .user_name {
+                font-size: 26px;
+                line-height: 50px;
+                color: $blackFontColor;
+            }
+            .record_dsc {
+                position: relative;
+                .tips_total {
+                    @include abs-pos(-25px, 100px, auto, auto);
+                    display: none;
+                }
+                .dsc_textarea {
+                    width: 540px;
+                    height: 44px;
+                    padding: 5px;
+                    resize: none;
+                    color: $blackFontColor;
+                    border: 1px solid #fff;
+                    margin-right: 20px;
+                    box-shadow: none;
+                    background: #fff;
+                    &.focus {
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+                        border: 1px solid $lineGray;
+                    }
+                }
+                .save {
+                    margin-top: 10px;
+                    display: none;
+                }
+            }
+
+        }
+    }
+    .record_tag{
+        width: 940px;
+        .S-main_l {
+            padding-top: 0;
+        }
+    }
+    .tag_info {
+        background: #fff;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 45px;
+        position: relative;
+        i {
+            @include abs-pos(12px, auto, auto, 20px);
+        }
+        .tag {
+            width: 190px;
+            padding-right: 30px;
+            display: block;
+            float: left;
+        }
+        .total {
+            color: $grayFontColor;
+            padding: 0 10px;
+        }
+        &.fixed {
+            position: fixed;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            z-index: 2;
+            top: 40px;
+            width: 895px;
+        }
+    }
+    .tag_list{
+        a {
+            height: 34px;
+            line-height: 34px;
+            display: block;
+            padding-left: 45px;
+            position: relative;
+            margin: 5px 0;
+            color: $grayFontColor;
+            &.bulid {
+                margin: 0 10px;
+                border: 1px dashed $buttonGray;
+                background: #fff;
+                &:hover {
+                    border: 1px dashed #fff;
+                }
+                i {
+                    color: $grayFontColor;
+                    @include abs-pos(10px, auto, auto, 100px);
+                    display: block
+                }
+            }
+            i {
+                @include abs-pos(9px, auto, auto, 20px);
+                color: $blue;
+                display: none;
+            }
+            &:hover,
+            &.on {
+                color: #fff;
+                background: $tagBlue;
+                i {
+                    color: #fff;
+                }
+            }
+            &:hover {
+                i {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+/*添加科目的分制层*/
+#addCourseTypeLayer {
+    width: 438px;
+    z-index: 8020 !important;
+    .privacy_message {
+        padding: 20px 0 0 0;
+    }
+    .content {
+        color: $grayFontColor;
+    }
+    .errorTips {
+        margin-left: 80px;
+        color: $darkOrangeFontColor;
+    }
+    .courseType {
+        border: 1px solid $lineGray;
+        @include border-radius(5px);
+        margin: 15px 10px 15px 80px;
+        line-height: 27px;
+        width: 223px;
+        padding: 0 12px;
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        padding-right: 20px;
+        margin-top: 20px;
+        text-align: right;
+        background-color: $lightGrayBg;
+        @include border-radius(0 0 4px 4px);
+        button {
+            margin-left: 10px;
+        }
+    }
+}

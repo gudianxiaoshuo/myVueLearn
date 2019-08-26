@@ -1,0 +1,203 @@
+#add_album_layer {
+    width: 558px;
+    font-size: 12px;
+    .privacy_message {
+        padding: 0;
+    }
+
+    .album_upload_box {
+        height: 310px;
+        overflow: hidden;
+        overflow-y: auto;
+        text-align: center;
+        color: $grayFontColor;
+        .upload_bg {
+            min-height: 180px;
+            background: url(/images/version/up_pic.png) no-repeat center
+        }
+        .tip_txt {
+            font-size: 16px;
+            padding: 10px;
+            color: $blackFontColor;
+            text-align: center;
+        }
+    }
+    .uploadAlbumPicListBox {
+        width: 520px;
+        padding: 16px 20px;
+        margin: 0 auto;
+        @include border-radius(5px);
+        .log_one_pic {
+            margin: 15px 12px;
+        }
+        .log_upload_error {
+            .error {
+                position: static;
+                display: inline-block;
+                margin-top: 16px;
+            }
+            .again_upload {
+                position: static;
+            }
+            .delete {
+                &:hover {
+                    .xicon-x-small {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+        }
+    }
+    .block {
+        display: block;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .album_layer_bottom {
+        margin: 10px 20px;
+    }
+    .upload_error {
+        color: $darkRed;
+        @include abs-pos(0, auto, auto, 0);
+        width: 72px;
+        height: 71px;
+        background: #fff;
+        border: 1px solid $darkRed;
+        vertical-align: middle;
+        padding-top: 40px;
+    }
+
+    .continueAddBtn {
+        float: left;
+        height: 80px;
+        width: 80px;
+        margin: 15px 12px;
+        text-align: center;
+        line-height: 80px;
+        background-color: #f5f5f5;
+        &:hover {
+            i {
+                color: $orangeFontColor;
+            }
+        }
+        &.gray {
+            input {
+                cursor: default
+            }
+        }
+        i {
+            font-size: 30px;
+            position: relative;
+            top: 8px;
+            color: $grayFontColor;
+        }
+        input[type=file] {
+            font-size: 80px;
+        }
+    }
+    .pointer {
+        input,
+        label {
+            cursor: pointer;
+        }
+    }
+    .cancel {
+        @include abs-pos(0,0,auto,auto);
+        width: 15px;
+        height: 15px;
+        background: $grayFontColor;
+        display: none;
+        z-index: 9;
+        i {
+            color: #fff;
+            cursor: pointer;
+            @include rel-pos(-2px,0,auto,auto);
+        }
+    }
+    .one_album_list {
+        width: 80px;
+        height: 122px;
+        float: left;
+        margin: 10px 0 0 10px;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .cancel {
+                display: block;
+            }
+        }
+        .progress_bar {
+            @include abs-pos(auto,auto,0,0);
+            height: 5px;
+            background-color: $orange;
+        }
+        button {display: none;}
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px;
+        margin-top: 10px;
+        text-align: right;
+        .red {
+            float: left;
+        }
+        button {
+            margin-left: 10px;
+        }
+    }
+    .add_desc_layer {
+        z-index: 3;
+        display: none;
+        background: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+        border: 1px solid $lightLineGray;
+        @include border-radius(4px);
+        @include abs-pos(63px, auto, auto, -180px);
+        width: 440px;
+        .arrow_top {
+            @include abs-pos(-19px, auto, auto, 205px);
+            font-size: 30px;
+            color:  $lightLineGray;
+        }
+        .arrow_bottom {
+            @include abs-pos(-17px, auto, auto, 205px);
+            font-size: 30px;
+            color: #fff;
+        }
+
+        textarea {
+            margin: 20px 20px 10px 20px;
+            width: 378px;
+            @include border-radius(4px);
+            height: 50px;
+            border: 1px solid $lineGray;
+            resize: none;
+            padding: 10px;
+        }
+        .newBtnArea {
+            height: 48px;
+            line-height: 48px;
+            background-color: $lightGrayBg;
+            text-align: right;
+            padding: 0 20px;
+            margin-top: 10px;
+            border-top:  1px solid $lineGray;
+        }
+    }
+    //滚动条样式
+    ::-webkit-scrollbar
+    {
+        width: 10px;
+        height: 6px;
+    }
+    ::-webkit-scrollbar-thumb:vertical
+    {
+        height: 5px;
+        background-color: $grayFontColor;
+        border-radius: 10px;
+    }
+
+}

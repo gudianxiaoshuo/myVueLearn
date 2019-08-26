@@ -1,0 +1,55 @@
+.xnw_say_something {
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+    background-color: $lightGrayBg;
+    @include border-radius(2px);
+    &.is_in_page {
+        padding: 5px;
+        margin-bottom: 22px;
+        border: 0;
+        .talk_area_textarea {
+            height: 60px;
+        }
+    }
+    .talk_area {
+        background-color: #fff;
+        border: 1px solid $lineGray;
+        width: 100%;
+        @include border-radius(2px);
+        &:focus,
+        &.focus {
+            border: 1px solid $orange;
+        }
+    }
+    .talk_area_textarea {
+        width: calc(100% - 24px);
+        padding: 12px;
+        height: 98px;
+        resize: none;
+        background-color: #fff;
+        border: none;
+    }
+    .talkTitle {
+        width: calc(100% - 24px);
+        margin: 0 12px;
+        padding: 8px 0;
+        border: none;
+        border-bottom: 1px dashed #CCE0ED;
+    }
+}
+.blueXeditor {
+    background-color: #F5FBFF;
+    .talk_area {
+        border: 1px solid #CCE0ED;
+        width: 100%;
+        @include border-radius(2px);
+        &:focus,
+        &.focus {
+            border: 1px solid #009FEE;
+        }
+    }
+    .talkTitle {
+        border-bottom: 1px dashed #CCE0ED;
+    }
+}

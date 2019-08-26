@@ -1,0 +1,262 @@
+#addExamItem {
+    width: 780px;
+    background-color: #fff;
+    @include border-radius(4px);
+    overflow: hidden;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+        .closeBtn  {
+            float: right;
+            padding: 0 5px;
+            margin-right: -5px;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        padding: 0 20px;
+        background-color: #f5f5f5;
+        margin-top: 30px;
+        .isOnline {
+            margin-right: 16px;
+            color: $grayFontColor;
+            .onlineCheckbox {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+.addCourseLayer {
+    width: 722px;
+    padding: 30px 20px 0 38px;
+    &.addExamLayer {
+        padding: 0 0 0 12px;
+    }
+    .courseItem {
+        margin-bottom: 20px;
+        position: relative;
+        .addTempBtn {
+            margin-top: 2px;
+            &.hide {
+                display: none;
+            }
+        }
+    }
+    .itemTitle {
+        color: $lightBlackFontColor;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        position: relative;
+        width: 80px;
+        float: left;
+        &.templateQun {
+            text-indent: -24px;
+        }
+        .itemFlag {
+            @include abs-pos(0, auto, auto, -12px);
+            color: $darkOrangeFontColor;
+        }
+    }
+    .cTimeInput,
+    .cNameInput {
+        border: 1px solid #e8e8e8;
+        height: 28px;
+        @include border-radius(2px);
+        width: 630px;
+        padding: 0 4px;
+    }
+    .cTimeInput {
+        width: 196px;
+        margin-right: 6px;
+        cursor: pointer;
+        &.setPoint {
+            width: 470px;
+            margin-right: 0;
+        }
+    }
+    .examTimeInput {
+        //width: 630px;
+        margin-right: 20px;
+        //cursor: text;
+    }
+    .examAmountInput {
+        cursor: text;
+    }
+    .triangleIcon {
+        @include abs-pos(6px, auto, auto, 262px);
+        cursor: pointer;
+        &.setPointIcon {
+            left: 540px;
+        }
+    }
+    .timeIcon {
+        @include rel-pos($top: 2px, $left: -42px);
+        cursor: pointer;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .startDate,
+    .endDate,
+    .paymentEndDate {
+        margin-right: 20px;
+    }
+    .endDate {
+        margin-left: 20px;
+    }
+    .freeCost {
+        margin-left: 12px;
+        .freeCheck {
+            height: 13px;
+            width: 13px;
+            margin-right: 6px;
+        }
+    }
+    .typeItem {
+        margin-right: 20px;
+        font-size: 12px;
+        color: $grayFontColor;
+        cursor: pointer;
+        input {
+            width: 13px;
+            height: 13px;
+            margin-right: 10px;
+            @include border-radius(13px);
+        }
+    }
+    .pointListBox {
+        width: 220px;
+        background-color: #fff;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.18);
+        @include abs-pos(30px, auto, auto, 80px);
+        z-index: 1;
+        .pointList {
+            max-height: 220px;
+            padding: 4px;
+            overflow: auto;
+        }
+        .submitArea {
+            text-align: right;
+            border-top: 1px solid #e8e8e8;
+            height: 38px;
+            line-height: 38px;
+            padding-right: 12px;
+        }
+        .pointListItem {
+            color: $lightBlackFontColor;
+            font-size: 12px;
+            line-height: 22px;
+            display: block;
+            cursor: pointer;
+            @include text-truncate;
+            &:hover {
+                background-color: #f5f5f5;
+            }
+        }
+        .pointItem {
+            margin-right: 6px;
+            cursor: pointer;
+        }
+    }
+    .cDesc {
+        width: 618px;
+        height: 100px;
+        padding: 5px 10px;
+        border: 1px solid #e8e8e8;
+        resize: none;
+        @include border-radius(2px);
+    }
+    .cDescNum {
+        font-size: 12px;
+        color: $grayFontColor;
+        padding-left: 80px;
+        .totalDescCount {
+            color: $orangeFontColor;
+            margin: 0 2px;
+        }
+    }
+    .tip {
+        font-size: 12px;
+        color: $grayFontColor;
+        line-height: 30px;
+        padding-left: 80px;
+        .count {
+            color: $darkOrangeFontColor;
+            margin: 0 2px;
+        }
+    }
+    .courseTemplateQun {
+        width: 122px;
+        height: 40px;
+        position: relative;
+        padding: 6px 6px 6px 56px;
+        @include border-radius(2px);
+        box-shadow: 0 1px 2px 1px rgba(#000, 0.2);
+        float: left;
+        text-indent: 0;
+        .qunInfo {
+            margin: 0;
+        }
+        .qunIcon {
+            @include abs-pos(6px, auto, auto, 6px);
+            width: 40px;
+            height: 40px;
+            img {
+                width: 40px;
+                height: 40px;
+                display: block;
+            }
+        }
+        .del {
+            line-height: 20px;
+            cursor: pointer;
+            @include abs-pos(2px, 2px, auto, auto);
+            &:hover {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .qunName {
+            color: $lightBlackFontColor;
+            @include text-truncate();
+            display: block;
+        }
+        .time {
+            font-size: 12px;
+            color: $grayFontColor;
+        }
+    }
+
+    @extend %chosenContainerStyle;
+    .chosen-container {
+        margin-right: 0;
+    }
+    .chosen-container a {
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+        width: 618px;
+        @include border-radius(2px);
+        div{
+            border: none;
+        }
+    }
+    .chosen-drop {
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+        max-width: 641px;
+        width: 641px;
+    }
+    .chosen-container-active.chosen-with-drop .chosen-single {
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+        div {
+            border: none;
+        }
+    }
+}

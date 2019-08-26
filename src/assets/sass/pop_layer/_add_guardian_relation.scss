@@ -1,0 +1,152 @@
+#addGuardianRelation {
+    width: 558px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .content {
+        padding: 30px 0 0;
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+    }
+    .guardianTip {
+        float: left;
+        color: $grayFontColor;
+    }
+    .cancelModify {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border: none;
+        background: none;
+        background-color: #ccc;
+        @include border-radius(2px);
+    }
+    .saveModify {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border: none;
+        background: none;
+        background-color: #ffaa33;
+        margin-left: 16px;
+        @include border-radius(2px);
+        &.disabled {
+            background-color: #ccc;
+        }
+    }
+    .layer_content {
+        padding: 30px 0 0;
+    }
+    .guardianInfoItem {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+        padding-left: 30px;
+    }
+    .infoInput {
+        height: 28px;
+        border: 1px solid #ddd;
+        width: 150px;
+        padding: 0 4px;
+    }
+    .infoTitle {
+        width: 40px;
+        display: inline-block;
+        text-align: right;
+        color: $grayFontColor;
+        &.mobileTitle {
+            width: 80px;
+            margin-left: 56px;
+        }
+    }
+    .removeGuardianInfo {
+        margin-left: 20px;
+    }
+    .specifiedRelation {
+        display: inline-block;
+        width: 100px;
+        margin-right: 10px;
+    }
+    .relationItem {
+        margin-bottom: 20px;
+        padding-left: 30px;
+    }
+    @extend %chosenContainerStyle;
+    .chosen-drop {
+        &.autocomplete {
+            left: 110px;
+        }
+    }
+}
+#addGuardianInfoItem {
+    width: 558px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .layer_content {
+        padding: 30px 0 0;
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+    }
+    .guardianInfoItem {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    .infoInput {
+        width: 140px;
+        height: 28px;
+        padding: 0 4px;
+        margin-left: 10px;
+        border: 1px solid $lineGray;
+    }
+    .itemTip {
+        color: $grayFontColor;
+        font-size: 12px;
+        line-height: 20px;
+        padding-left: 30px;
+        position: relative;
+        i {
+            color: $darkOrangeFontColor;
+            @include abs-pos($left: 20px);
+        }
+    }
+    @extend %chosenContainerStyle;
+}

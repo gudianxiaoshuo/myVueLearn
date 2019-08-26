@@ -1,0 +1,57 @@
+#setQunRequirement,
+#showQunRequirement {
+    width: 558px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 25px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+        border-top: 1px solid #ddd;
+    }
+}
+#setQunRequirement {
+    .qunRequirement {
+        padding: 20px 20px 0;
+    }
+    .requirementTip {
+        font-size: 12px;
+        line-height: 22px;
+        color: $grayFontColor;
+        .count {
+            color: $orangeFontColor;
+        }
+    }
+    .submitTip {
+        color: $grayFontColor;
+        float: left;
+    }
+    .requirementArea {
+        width: 500px;
+        padding: 8px;
+        height: 92px;
+        resize: none;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        @include border-radius(2px);
+    }
+}
+#showQunRequirement {
+    .requirementText {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,141 @@
+// =============================================================================
+// Button
+// =============================================================================
+$xnwBtnThemes: (
+    'gray': (
+        primary: #BBBBBB,
+        secondary: #CCCCCC
+    ),
+    'orange': (
+        primary: #FFAA33,
+        secondary: #FCB859
+    ),
+    'blue': (
+        primary: #009FEE,
+        secondary: #0088CC
+    ),
+    'line': (
+        primary: #FFFFFF,
+        secondary: #FFAA33,
+        extra: #FFFFFF
+    )
+);
+@each $name, $theme in $xnwBtnThemes {
+    .xnwbtn-#{$name} {
+        @extend %xnwbtn;
+        background-color: map-get($theme, primary);
+        @if(map-get($theme, extra)) {
+            color: $orangeFontColor;
+            border: 1px solid map-get($theme, secondary);
+        }
+        &:hover {
+            background-color: map-get($theme, secondary);
+            @if(map-get($theme, extra)) {
+                color: #ffffff;
+            }
+        }
+        &[disabled],
+        &.disabled {
+            @include opacity(0.5);
+            cursor: default;
+            &:hover {
+                background-color: map-get($theme, primary);
+            }
+        }
+    }
+}
+$buttonThemes: (
+    'darkorange': (
+        primary: $darkOrange,
+        secondary: $lightOrange
+    ),
+    'orange': (
+        primary: $orange,
+        secondary: $orangeFontColor
+    ),
+    'gray': (
+        primary: $buttonGray,
+        secondary: $borderGray
+    ),
+    'darkred': (
+        primary: $darkRed,
+        secondary: $lightRed
+    ),
+    'blue': (
+        primary: $blue,
+        secondary: $blue
+    ),
+    'line': (
+        primary: $darkOrange,
+        secondary: transparent,
+        extra: $lightYellow
+    )
+);
+
+@each $name, $theme in $buttonThemes {
+    .btn-#{$name} {
+        @extend %button;
+        border: 2px solid map-get($theme, primary);
+        @if(map-get($theme, extra)) {
+            background-color: map-get($theme, secondary);
+        } @else {
+            background-color: map-get($theme, primary);
+        }
+        &:hover {
+            @if(map-get($theme, extra)) {
+                border: 2px solid map-get($theme, primary);
+                background-color: map-get($theme, extra);
+            } @else {
+                border: 2px solid map-get($theme, secondary);
+                background-color: map-get($theme, secondary);
+            }
+        }
+        &[disabled] {
+            @include opacity(0.5);
+            cursor: default;
+            &:hover {
+                border: 2px solid map-get($theme, primary);
+                background-color: map-get($theme, primary);
+            }
+        }
+    }
+}
+.btn-line {
+    color: $darkOrangeFontColor;
+    &:hover {
+        color: $darkOrangeFontColor;
+    }
+}
+
+.btn-small {
+    width: 76px;
+    height: 26px;
+}
+
+.btn-smaller {
+    width: 58px;
+    height: 18px;
+    line-height: 18px;
+    border-width: 1px;
+    font-size: 12px;
+    font-weight: normal;
+    &:hover {
+        border-width: 1px;
+    }
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button {
+    &.btn-darkorange,
+    &.btn-orange,
+    &.btn-gray,
+    &.btn-darkred,
+    &.btn-line,
+    &.btn-blue {
+        height: 28px;
+        line-height: 24px;
+    }
+}
+

@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_font_style";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-size: 14px;
+    line-height: 1.75;
+    font-family: $specialFontFamily;
+}
+
+.hide {
+    display: none;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ios {
+    input {
+        @include prefix((appearance: none), webkit moz);
+    }
+}
+
+.diagnosisPage {
+    width: 100%;
+    @include bg_with_retina(h5-diagnosis-bg, png, $baseImgRootPath);
+    background-size: cover;
+    .pageContent {
+        margin: 2em auto;
+        padding: 0;
+        width: 100%;
+        .container {
+            margin: 0 auto;
+            text-align: center;
+            color: #FFF;
+            .head {
+                width: 100%;
+                font-size: 1.5em;
+                margin-bottom: 2em;
+            }
+            .body {
+                .duration {
+                    font-size: 5em;
+                    line-height: 2;
+                }
+                .timer {
+                    font-size: 1.2em;
+                    .xicon {
+                        margin: 5px 0;
+                        &:before {
+                            position: relative;
+                            top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        .infoContainer {
+            margin: 0 auto;
+            color: $grayFontColor;
+            ul.optionList {
+                margin: 4em auto 2em auto;
+                text-align: center;
+                li.option {
+                    display: inline-block;
+                    border-right: 1px solid $borderGray;
+                    padding: 0 4em;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+            ul.tip {
+                width: 70%;
+                margin: 0 auto;
+                font-size: .9em;
+                list-style: none;
+                li {
+                    &:before {
+                        content: '*';
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .buttonContainer {
+            text-align: center;
+            .btn {
+                width: 60px;
+                margin: 0 20px;
+                padding: 10px 30px;
+                display: inline-block;
+                @include border-radius(30px);
+                &.btn-info {
+                    color: #FFF;
+                    background: $orange;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .diagnosisPage {
+        vertical-align: middle;
+        background-size: contain;
+        .pageContent {
+            .buttonContainer {
+                position: absolute;
+                bottom: 1.5em;
+                width: 100%;
+                .btn {
+                    width: 5em;
+                    margin: 0 1.5em;
+                    padding: 10px 2em;
+                    display: inline;
+                    @include border-radius(2em);
+                }
+            }
+        }
+    }
+}
+

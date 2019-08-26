@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+// 贴收藏标签层的样式
+#fav_tag_layer {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    .fav_tag_label {
+        display: inline-block;
+        height: 26px;
+        line-height: 26px;
+        &.label_tip {
+            float: left;
+        }
+    }
+    .favTagList,
+    .fav_tag_content {
+        padding: 0 20px;
+    }
+    .favTagList {
+        margin-bottom: 10px;
+    }
+    .favTagItem {
+        height: 20px;
+        line-height: 20px;
+        padding: 0 4px;
+        font-size: 12px;
+        background-color: #ECECEC;
+        color: #9B9B9B;
+        display: inline-block;
+        margin: 7px;
+        @include border-radius(2px);
+        &:hover {
+            color: #FFFFFF;
+            background-color: #AEAEAE;
+        }
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        border-top: 1px solid $lineGray;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 20px;
+    }
+
+    .tagsinput {
+        border: 1px solid $borderGray;
+        @include border-radius(4px);
+        background: #fff;
+        height: 60px;
+        overflow-y: auto;
+        padding: 5px;
+        margin-top: 8px;
+        .favTagItem {
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            padding: 0 4px;
+            font-size: 12px;
+            background-color: #DBF0FF;
+            color: $lightBlueFontColor;
+            display: inline-block;
+            margin: 7px;
+            @include border-radius(2px);
+            &:hover {
+                color: #FFFFFF;
+                background-color: #3CA9F7;
+                i {
+                    color: #FFFFFF;
+                }
+            }
+            .delCurrentTag {
+            }
+            i {
+                color: $lightBlueFontColor;
+                @include rel-pos($top: 2px);
+            }
+        }
+        input {
+            width: 150px;
+            margin: 0 5px 0 0;
+            border: none;
+            background: transparent;
+            outline: 0;
+            height: 20px;
+        }
+        div {
+            display: block;
+            float: left;
+            margin: 7px;
+        }
+    }
+
+    .tags_clear {
+        clear: both;
+        width: 93%;
+        height: 0;
+        display: none;
+    }
+}
+
+// qun_tag_for_editor是日志列表中贴标签弹层
+#qun_tag_for_editor {
+    width: 556px;
+    .privacy_message {
+        padding: 20px 0 0 0;
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px;
+        margin-top: 10px;
+        text-align: right;
+        .btn-orange {
+            margin-right: 10px;
+        }
+    }
+    .addTagBtn {
+        padding: 8px 20px;
+        i {
+            font-size: 10px;
+            color: $blueFontColor;
+            margin-right: 5px;
+        }
+        &:hover {
+            color: $darkOrangeFontColor;
+            i {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .channel_list_for_selected {
+        min-height: 30px;
+        margin: 0 0 0 20px;
+        padding: 0 20px 10px 0;
+        border-bottom: 1px dashed #eee;
+        position: relative;
+        .placeholderText,
+        .selectedTagTip {
+            float: left;
+            line-height: 22px;
+            margin: 7px 7px 7px 0;
+        }
+        .tagTip {
+            color: $grayFontColor;
+        }
+        .tipFull {
+            color: $darkOrangeFontColor;
+            display: inline-block;
+            padding-top: 4px;
+            float: left;
+        }
+        .oneTag {
+            padding-right: 18px;
+            background-color: #ffaa33;
+            color: #fff;
+            border: 1px solid #ffaa33;
+            &.on {
+                border: 1px solid $orangeFontColor;
+                background-color: $orangeFontColor;
+                color: #fff;
+            }
+            i {
+                color: #fff;
+            }
+        }
+        .remove_channel {
+            @include abs-pos(0, 0, auto, auto);
+            width: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+    .channel_list_for_select {
+        padding: 12px 20px 0 20px;
+        min-height: 20px;
+        .selectedTagTip {
+            float: left;
+            line-height: 22px;
+            margin: 7px 7px 7px 0;
+        }
+        .cQunTagList {
+            float: left;
+            width: 438px;
+            height: auto;
+        }
+    }
+}
+
+// fixedTplSetLabelLayer为首页活动模板选标签弹层
+#fixedTplSetLabelLayer {
+    width: 556px;
+    .privacy_message {
+        padding: 20px 0 0 0;
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px;
+        margin-top: 10px;
+        text-align: right;
+        .btn-orange {
+            margin-right: 10px;
+        }
+    }
+    .channel_list_for_select {
+        padding: 0 20px 20px;
+        min-height: 20px;
+    }
+    .checked {
+        background: $bodyGray;
+        color: $grayFontColor;
+        border: 1px solid $sideBarGray;
+        cursor: auto;
+    }
+}
+

@@ -1,0 +1,98 @@
+/*存档弹层*/
+#archive_weibo_layer {
+    .privacy_message {
+        padding: 20px 0 0 0;
+    }
+    .archive_layer {
+        padding: 0 0 10px 20px ;
+    }
+    .record_list_box {
+        max-height: 270px;
+        overflow: hidden;
+        overflow-y: auto;
+        &.scroll {
+            .record_item{
+                margin: 0 15px 20px 0;
+            }
+        }
+    }
+    .record_item{
+        float: left;
+        margin: 0 20px 20px 0;
+        @extend %one_user_item;
+        .user_name {
+            width: 58px;
+            padding: 5px 2px 0 2px;
+            @include text-truncate();
+        }
+        &:nth-child(7n) {
+            margin-right: 0;
+        }
+        &.on {
+            .user_icon {
+                padding: 0;
+                border: 3px solid $blue;
+            }
+            .user_name {
+                color: $blue;
+            }
+        }
+
+    }
+    .text_tips {
+        margin-bottom: 10px;
+    }
+    .label_list{
+        a {
+            height: 26px;
+            line-height: 26px;
+            color: #fff;
+            text-align: center;
+            min-width: 40px;
+            padding: 0 10px;
+            font-size: 12px;
+            float: left;
+            margin: 10px 10px 0 0;
+            background-color: $tagBlue;
+            span {
+                margin-left: 4px;
+            }
+            &.on {
+                background: $blue;
+            }
+        }
+        .add_label_btn {
+            width: 70px;
+            border: 1px dashed $buttonGray;
+            background: #fff;
+            position: relative;
+            height: 24px;
+            line-height: 24px;
+            &:hover {
+                background: $tagBlue;
+                border: 1px dashed #fff;
+                i {
+                    color: #fff;
+                }
+            }
+            i {
+                color: $grayFontColor;
+                @include abs-pos(5px, auto, auto, 35px);
+                display: block
+            }
+        }
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px;
+        margin-top: 10px;
+        .btn-gray {
+            cursor: default;
+            border: 2px solid $borderGray;
+            background-color: $borderGray;
+        }
+    }
+}

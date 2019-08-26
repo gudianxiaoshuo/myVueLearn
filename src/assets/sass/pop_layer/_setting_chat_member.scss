@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+#setting_chat_member {
+	width: 440px;
+	z-index: 900;
+	.privacy_message {
+		padding: 0;
+	}
+	.user_list_container {
+		border-bottom: 1px solid $borderGray;
+		padding: 15px 5px;
+        max-height: 200px;
+        overflow: hidden;
+        overflow-y: auto;
+		a {
+			float: left;
+			margin: 5px;
+			width: 40px;
+			height: 40px;
+			position: relative;
+			&:hover {
+				.del_chat_member {
+					visibility: visible;
+					cursor: pointer;
+					&:hover {
+						i {
+							color: $darkOrangeFontColor;
+						}
+					}
+				}
+			}
+		}
+		img {
+			height: 38px;
+			width: 38px;
+			@include border-radius(38px);
+			border: 1px solid $borderGray;
+		}
+		.del_chat_member {
+			@include abs-pos(0, -4px, auto, auto);
+			width: 16px;
+			height: 16px;
+			line-height: 16px;
+			text-align: center;
+			background-color: #000;
+			@include opacity(.7);
+			visibility: hidden;
+		}
+		.icon_owner {
+			@include abs-pos(auto, -4px, 0, auto);
+		}
+	}
+	.chat_adress_book {
+		padding-right: 170px;
+		padding-top: 4px;
+		background-color: $lightGrayBg;
+		position: relative;
+		.operate_tip {
+			@include abs-pos(0, 0, auto, auto);
+			width: 168px;
+			height: 100%;
+			border-left: 1px solid $borderGray;
+			border-right: 1px solid $lightGrayBg;
+			p {
+				font-size: 12px;
+				color: $grayFontColor;
+				margin: 40px 16px 0;
+			}
+			img {
+				width: 144px;
+				height: 144px;
+				display: block;
+				margin: 0 auto;
+				@include bg_with_retina(sunglasses, png, $versionImgPath);
+			}
+		}
+
+	}
+	.pop_search_qun {
+		width: 248px;
+		height: 24px;
+		height: 24px;
+		border: 1px solid $borderGray;
+		background-color: #fff;
+		vertical-align: middle;
+		border-radius: 40px;
+		position: relative;
+		margin:  0 auto;
+		.contact_search {
+			font-size: 12px;
+			padding: 4px 0 2px 30px;
+			border: 0;
+			background: 0;
+			width: 216px;
+			height: 20px;
+			line-height: 20px;
+		}
+		i {
+			position: absolute;
+			left: 6px;
+			top: 4px;
+			color: $borderGray;
+		}
+	}
+	.group_list_container {
+		width: 98px;
+		height: 244px;
+		overflow-y: auto;
+		float: left;
+		padding-top: 4px;
+		border-right: 1px solid $borderGray;
+		li {
+			height: 30px;
+			line-height: 30px;
+			padding-left: 32px;
+			overflow: hidden;
+			position: relative;
+			font-size: 12px;
+			cursor: pointer;
+			color: $grayFontColor;
+			&:hover,
+			&.on {
+				background-color: $chatOrange;
+			}
+			span {
+				height: 16px;
+				width: 16px;
+				@include border-radius(4px);
+				display: block;
+				@include abs-pos(7px, auto, auto, 10px);
+			}
+		}
+	}
+	.group_member_item {
+		width: 170px;
+		float: left;
+		height: 244px;
+		padding-top: 4px;
+		overflow-y: auto;
+		li {
+			cursor: pointer;
+			padding: 5px 0 5px 48px;
+			position: relative;
+			font-size: 12px;
+			clear: both;
+			height: 30px;
+			overflow: hidden;
+			&:hover {
+				background-color: $chatOrange;
+				a.contect_user {
+					color: $darkOrangeFontColor;
+				}
+			}
+			img {
+				height: 28px;
+				width: 28px;
+				margin-right: 5px;
+				border-radius: 3px;
+				border: 1px solid $borderGray;
+				@include border-radius(28px);
+			}
+			a.contect_qun {
+				height: 28px;
+				line-height: 28px;
+				overflow: hidden;
+				white-space: nowrap;
+				width: 130px;
+				word-wrap: break-word;
+				text-overflow: ellipsis;
+			}
+			a.contect_img {
+				position: relative;
+				width: 28px;
+				height: 28px;
+				display: block;
+				@include abs-pos(4px, auto, auto, 10px);
+			}
+			a.contect_user {
+				display: block;
+				line-height: 30px;
+				max-width: 120px;
+				color: $blackFontColor;
+				&:hover {
+					color: $darkOrangeFontColor;
+				}
+			}
+		}
+	}
+	.newBtnArea {
+		border-top: 1px solid $borderGray;
+		margin: 0;
+		.submit {
+			margin-left: 10px;
+		}
+	}
+}

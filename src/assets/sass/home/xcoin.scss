@@ -1,0 +1,256 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+@import "_home-reset.scss";
+
+.homeXcoin {
+    .panelInfo {
+        .content {
+            text-align: center;
+            .levelCover {
+                width: 200px;
+                min-height: 115px;
+                margin: 10px auto 0 auto;
+                img {
+                    width: 100%;
+                }
+            }
+            .levelName {
+                margin: 5px 0 10px 0;
+                font-size: 18px;
+                color: $lightBlackFontColor;
+            }
+        }
+        .title {
+            height: 60px;
+            line-height: 1;
+            text-indent: 30px;
+            border-top: 1px solid #E4EAEE;
+            .name {
+                padding: 10px 0;
+                width: calc(100% - 20px);
+                @include text-truncate();
+            }
+            .info {
+                font-size: 12px;
+                color: #6E6D7F;
+                span {
+                    &:nth-child(2) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .content{
+        .xcoinTabs {
+            margin: -10px;
+            li {
+                a {
+                    display: block;
+                    height: 55px;
+                    line-height: 55px;
+                    font-size: 14px;
+                    color: #78868F;
+                    text-indent: 20px;
+                    i {
+                        float: right;
+                        margin: 20px 10px 0 0;
+                    }
+                }
+                &:hover{
+                    a {
+                        background: rgba(245, 248, 250, .3);
+                    }
+                }
+                &.selected {
+                    a {
+                        background: #F5F8FA;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs {
+        margin-bottom: 20px;
+        li {
+            float: left;
+            margin-right: 30px;
+            padding: 5px 3px 3px 3px;
+            font-size: 14px;
+            line-height: 20px;
+            color: $lightBlackFontColor;
+            cursor: pointer;
+            &.selected {
+                color: $orangeFontColor;
+                border-bottom: 2px solid $orangeFontColor;
+            }
+        }
+    }
+    .panelChart {
+        height: 245px;
+        .content {
+            p {
+                font-size: 14px;
+                color: $blackFontColor;
+                a {
+                    color: $blueFontColor;
+                }
+            }
+            .chartBox {
+                position: relative;
+                height: 10px;
+                margin: 180px 60px 0 70px;
+                li {
+                    width: 10px;
+                    height: 50px;
+                    font-size: 12px;
+                    color: $fontGray;
+                    background: $borderDark;
+                    @include border-radius(5px);
+                    @include abs-pos(auto, auto, 20px, 0);
+                    @for $i from 1 through 11 {
+                        &:nth-child(#{$i}) {
+                            left: 70px * ($i - 1);
+                            height: 10px * ($i - 1) + 50px;
+                            .progress {
+                                background-image: linear-gradient(-90deg, rgba(255, 170 - (170 - 85) / 11 * ($i - 1), 51 - (51 - 0) / 11 * ($i - 1), 100) 0%, rgba(255, 170 - (170 - 85) / 11 * ($i), 51 - (51 - 0) / 11 * ($i), 100) 100%);
+                            }
+                        }
+                    }
+                    .score {
+                        display: inline-block;
+                        width: 70px;
+                        text-align: center;
+                        @include abs-pos(-40px, auto, auto, -30px);
+                    }
+                    .level {
+                        display: inline-block;
+                        width: 70px;
+                        text-align: center;
+                        @include abs-pos(auto, auto, -28px, -30px);
+                    }
+                    .progress {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        color: $orangeFontColor;
+                        line-height: 0;
+                        white-space: nowrap;
+                        @include border-radius(5px);
+                        @include abs-pos(auto, auto, 0, auto);
+                        span {
+                            display: block;
+                            padding: 2px 4px;
+                            height: 15px;
+                            background: $darkOrangeFontColor;
+                            font-size: 12px;
+                            line-height: 15px;
+                            color: #FFF;
+                            text-align: left;
+                            z-index: 1;
+                            @include border-radius(4px);
+                            @include abs-pos(3px, auto, auto, 18px);
+                            i {
+                                color: $darkOrangeFontColor;
+                                @include abs-pos(2px, auto, auto, -11px);
+                            }
+                        }
+                    }
+                    &.selected {
+                        .score,
+                        .level {
+                            color: $orangeFontColor;
+                        }
+                    }
+                    &.current {
+                        .score {
+                            color: $fontGray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .panel {
+        &.panelTable {
+            .content {
+                padding: 0;
+                table {
+                    width: 100%;
+                    table-layout: fixed;
+                    text-align: center;
+                    tr {
+                        th {
+                            width: 30%;
+                            height: 36px;
+                            background: #F5F8FA;
+                            font-size: 14px;
+                            font-weight: normal;
+                            color: #78868F;
+                        }
+                        td {
+                            height: 52px;
+                            padding: 0 5px;
+                            border-top: 1px solid #E4EAEE;
+                            font-size: 14px;
+                            color: $blackFontColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .qa {
+        font-size: 14px;
+        .title {
+            color: $blackFontColor;
+            span {
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                margin-right: 8px;
+                color: #FFF;
+                text-align: center;
+                background: $orangeFontColor;
+                @include border-radius(2.4px);
+            }
+        }
+        .content {
+            padding: 5px 0 15px 30px;
+            color: $lightBlackFontColor;
+        }
+    }
+    .panelTableAndUsage {
+        &[data-label="detail"] {
+            .panelDetail {
+                display: block;
+            }
+            .panelUsage {
+                display: none;
+            }
+            .qa {
+                display: none;
+            }
+
+        }
+        &[data-label="usage"] {
+            .panelDetail {
+                display: none;
+            }
+            .panelUsage {
+                display: block;
+            }
+            .qa {
+                display: block;
+            }
+            .remark {
+                display: block;
+                color: $fontGray;
+            }
+            +.page {
+                display: none;
+            }
+        }
+    }
+}

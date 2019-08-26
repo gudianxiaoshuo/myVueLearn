@@ -1,0 +1,146 @@
+.cQunTagList {
+    margin-bottom: 12px;
+    position: relative;
+    .choosedTags {
+        position: relative;
+        min-height: 36px;
+        border-bottom: 1px solid #eee;
+    }
+    .chosenTitle {
+        color: $grayFontColor;
+        @include abs-pos(13px, auto, auto, 0);
+    }
+    .chosenArea {
+        padding: 7px 52px 0 70px;
+        position: relative;
+    }
+    .promoteItem {
+        @include abs-pos(13px, 0, auto, auto);
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .tagItem {
+        float: left;
+        position: relative;
+    }
+    .addTagItem {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin: 7px;
+        display: inline-block;
+        border: 1px dotted #ccc;
+        @include border-radius(20px);
+        .addIcon {
+            font-size: 14px;
+            position: relative;
+            top: 1px;
+        }
+    }
+    .oneTag, .addTag {
+        margin: 7px;
+    }
+
+    .addTag {
+        padding: 0 6px;
+        display: inline-block;
+        .xicon-add-channel {
+            color: $blueFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }   
+    
+    .qunTagList {
+        border-bottom: 1px solid $lightLineGray;
+        padding: 7px 52px 7px 0;
+        position: relative;
+        max-height: 70px;
+        overflow: hidden;
+        .multiTagOper {
+            font-size: 12px;
+            @include abs-pos(13px, 0, auto, auto);
+            &:hover {
+                .up,
+                .down {
+                    color: $orangeFontColor;
+                }
+            }
+            .up,
+            .down {
+                @include rel-pos($top: 2px);
+                color: #08c;
+            }
+        }
+    }
+    .oneTag {
+        &.specialTag {
+            background: none;
+            border: none;
+            font-size: 14px;
+            line-height: 24px;
+            color: $grayFontColor;
+            margin-left: 0;
+            padding-left: 0;
+            &:hover {
+                color: $grayFontColor;
+            }
+        }
+    }
+    .childTagList {
+        display: none;
+        @include abs-pos(30px, auto, auto, 8px);
+        min-width: 100px;
+        max-height: 224px;
+        background-color: #fff;
+        z-index: 10;
+        box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+        overflow-y: auto;
+        .childTagItem {
+            float: none;
+            font-size: 12px;
+            padding: 0 10px;
+            display: block;
+            max-width: 176px;
+            line-height: 28px;
+            color: $blackFontColor;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &.on,
+            &:hover {
+                background-color: $lightLineGray;
+            }
+        }
+    }
+}
+
+.multiTagSelectBox {
+    width: 438px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    @include abs-pos(100%, auto, auto, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    z-index: 15;
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+        @include border-radius(0 0 4px 4px);
+    }
+    .submitSelected {
+        margin-left: 16px;
+    }
+    .qunTagList {
+        padding: 10px;
+    }
+    .tagItem {
+        margin: 10px;
+    }
+}

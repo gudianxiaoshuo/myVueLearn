@@ -1,0 +1,186 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+@import "_home-reset.scss";
+
+.homeWeiboPage {
+    .littleProfileNav {
+        height: 40px;
+        line-height: 34px;
+        &.noBorder {
+            border-bottom: none;
+        }
+        .navItem {
+            &.on {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .writeLongLog .notice {
+        cursor: default;
+        color: $lightBlackFontColor;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .search_in_page {
+        height: 30px;
+        top: -1px;
+        input {
+            height: 30px;
+        }
+        .searchBtn {
+            top: 7px;
+        }
+        .feedback_input {
+            top: 6px;
+        }
+        .loading {
+            top: 0;
+        }
+    }
+    .newComment {
+        .content {
+            ul {
+                li {
+                    &:nth-child(2n-1) {
+                        max-height: 37px;
+                        margin: 10px 0;
+                        font-size: 12px;
+                        line-height: 19px;
+                        color: $lightBlackFontColor;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                    }
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    &:nth-child(2n) {
+                        border-bottom: 1px dashed $middleGrayBg;
+                    }
+                    &:nth-last-child(2) {
+                        margin-bottom: 0;
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                    span {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+    .myComment {
+        .content {
+            ul {
+                li {
+                    &:nth-child(2n-1) {
+                        margin: 10px 0;
+                        font-size: 12px;
+                        line-height: 19px;
+                        color: $lightBlackFontColor;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        span {
+                            float: left;
+                            &:nth-child(1) {
+                                @include opacity(.6);
+                            }
+                            &:nth-child(2) {
+                                max-width: 176px;
+                                @include text-truncate();
+                            }
+                            &:nth-child(3) {
+                                @include opacity(.6);
+                            }
+                        }
+                    }
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    &:nth-child(2n) {
+                        border-bottom: 1px dashed $middleGrayBg;
+                    }
+                    &:nth-last-child(2) {
+                        margin-bottom: 0;
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+    .panelRight {
+        .panel {
+            &>.content {
+                padding: 10px 20px;
+            }
+        }
+    }
+    .panelRightTabs {
+        margin-bottom: 20px;
+        li {
+            a {
+                float: left;
+                margin-right: 60px;
+                padding: 5px 15px;
+                font-size: 14px;
+                line-height: 20px;
+                color: $lightBlackFontColor;
+                cursor: pointer;
+            }
+            &.selected {
+                a {
+                    border-bottom: 2px solid $orangeFontColor;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .submit_box {
+        .qun_list_filter {
+            .search_in_page {
+                width: 276px;
+                height: 26px;
+                border: 1px solid $lineGray;
+                background-color: #FFF;
+                vertical-align: middle;
+                position: relative;
+                @include border-radius(40px);
+
+                input {
+                    border: 0;
+                    @include border-radius(40px);
+                    color: $grayFontColor;
+                    height: 26px;
+                    font-size: 12px;
+                }
+                .searchBtn {
+                    @include abs-pos(3px, auto, auto, 8px);
+                    height: 16px;
+                    width: 16px;
+                    cursor: pointer;
+                    i {
+                        color: $borderGray;
+                    }
+                }
+                .phTips {
+                    line-height: 26px;
+                }
+            }
+
+        }
+    }
+    .panelRightContent {
+        display: none;
+        &.selected {
+            display: block;
+        }
+    }
+}
+

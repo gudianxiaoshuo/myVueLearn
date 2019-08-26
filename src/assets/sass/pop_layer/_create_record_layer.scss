@@ -1,0 +1,85 @@
+#create_record_layer {
+    .lightgray {
+        color: $grayFontColor;
+        font-size: 12px;
+    }
+    .fake_name {
+        color: $blackFontColor;
+    }
+    .privacy_message {
+        padding: 20px 0 0 0;
+    }
+    .record_content {
+        padding: 0 20px;
+    }
+    .file_desc {
+        width: 350px;
+        height: 68px;
+        padding: 5px;
+        border: 1px solid $borderGray;
+        @include border-radius(4px);
+        resize: none;
+    }
+    .record_desc_area,
+    .file_name_input {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .record_total {
+        @include abs-pos(auto, 60px, 0, auto);
+    }
+    .file_name_list {
+        width: 175px;
+        max-height: 130px;
+        overflow-y: auto;
+        @include abs-pos(30px, auto, auto, 80px);
+        z-index: 2;
+        background: #fff;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+        display: none;
+        .blue {
+            margin-bottom: 0;
+            color: $blue;
+            padding: 0 5px;
+        }
+        .no_user {
+            padding: 5px;
+        }
+        a {
+            height: 28px;
+            line-height: 28px;
+            display: block;
+            padding: 0 5px;
+            @include text-truncate();
+            &:hover {
+                background: $lightLineGray;
+            }
+        }
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    select,
+    input {
+        width: 170px;
+        @include border-radius(4px);
+        padding: 0 0 0 5px;
+        border: 1px solid $borderGray;
+    }
+    input {
+        height: 28px;
+        line-height: 28px;
+    }
+    select {
+        height: 30px;
+        line-height: 30px;
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px;
+        margin-top: 10px;
+    }
+}

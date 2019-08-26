@@ -1,0 +1,58 @@
+/*提交课程作业时验证*/
+#improvePersonalInofLayer{
+    width: 498px;
+    .privacy_message {
+        padding: 0;
+    }
+    .content {
+        padding: 20px 20px 0 20px;
+        .tip,
+        .errMsg {
+            color: $darkOrangeFontColor;
+        }
+        .errMsg {
+            margin-left: 80px;
+        }
+        .infoContent {
+            margin: 15px 0;
+            .tip {
+                margin-right: 10px;
+            }
+            .grayFont {
+                color: $grayFontColor;
+            }
+        }
+        .name {
+            width: 70px;
+            display: inline-block;
+            text-align: right;
+            margin-right: 5px;
+        }
+        .input {
+            line-height: 30px;
+            height: 30px;
+            border: 1px solid #eeeeee;
+            width: 220px;
+            @include border-radius(2px);
+            padding: 0 5px;
+        }
+        .radioInput {
+            margin-right: 30px;
+            cursor: pointer;
+            input {
+                cursor: pointer;
+            }
+        }
+        .info {
+            width: 280px;
+            line-height: 30px;
+            height: 30px;
+            @include text-truncate();
+        }
+    }
+    .newBtnArea {
+        .btn-orange {
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+#edit_remark_layer .left_button_tag{margin-top:15px;text-align:right}
+#editremark_layer{
+    width: 438px;
+    font-size: 12px;
+    .privacy_message {
+        padding: 20px 0 0 0;
+    }
+    .remark_content {
+        padding: 0 20px;
+        font-size: 14px;
+        line-height: 30px;
+        a {
+            cursor: pointer;
+        }
+        input {
+            @include border-radius(5px);
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid $borderGray;
+            padding: 0 5px;
+        }
+    }
+    .weibo_tag_content {
+        margin: 15px 0;
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px;
+        margin-top: 10px;
+        text-align: right;
+    }
+}

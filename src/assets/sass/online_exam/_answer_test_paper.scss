@@ -1,0 +1,196 @@
+.studentAnswer {
+    .studentTitle {
+        font-size: 14px;
+        margin: 30px 0;
+        .line {
+            width: 4px;
+            height: 12px;
+            margin-right: 10px;
+            @include border-radius(100px);
+            background-color: $orangeFontColor;
+            display: inline-block;
+        }
+    }
+    .studentInfo {
+        width: 850px;
+        margin: 0 auto;
+        .item {
+            color: $grayFontColor;
+            margin-right: 20px;
+        }
+        .examInfor {
+            color: $grayFontColor;
+            padding: 30px;
+            border: 4px solid $borderOrange;
+            @include border-radius(5px);
+            width: 100%;
+            box-sizing: border-box;
+            margin: 30px 0 20px;
+            .infor {
+                padding-bottom: 10px;
+            }
+            .circle {
+                @include border-radius(100%);
+                border: 2px solid rgba($orangeFontColor, 0.4);
+                display: inline-block;
+                margin-right: 10px;
+                line-height: 0;
+                font-size: 0;
+                vertical-align: middle;
+                .smallCircle {
+                    width: 6px;
+                    height: 6px;
+                    background-color: $orangeFontColor;
+                    display: inline-block;
+                    @include border-radius(100%);
+                }
+            }
+            .explain {
+                padding-left: 20px;
+            }
+        }
+    }
+    .testQuestion {
+        margin: 50px;
+        h2 {
+            text-indent: -24px;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .imgList {
+            margin-top: 20px;
+        }
+        .onePic,
+        .singlePic {
+            margin-bottom: 20px;
+            text-align: center;
+            margin-right: 20px;
+            background-color: $lightGrayBg;
+            position: relative;
+            display: inline-block;
+            img {
+                vertical-align: middle;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        .onePic {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+        }
+        .singlePic {
+            width: 320px;
+            height: 180px;
+            line-height: 180px;
+        }
+        .option {
+            display: block;
+            margin-top: 20px;
+            .hiddenInput {
+                opacity: 0;
+                position: absolute;
+                z-index: -1;
+            }
+            .radio {
+                cursor: pointer;
+                input[type=radio]+em {
+                    display: inline-block;
+                    vertical-align: top;
+                    height: 20px;
+                    width: 20px;
+                    background-color: #fff;
+                    border: 1px solid $borderGray;
+                    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.05);
+                    @include border-radius(100%);
+                    position: relative;
+                    i {
+                        display: none;
+                        color: #fff;
+                        font-size: 14px;
+                        @include abs-pos(4px, auto, auto, 3px);
+                    }
+                }
+                input[type=radio]:checked+em {
+                    background-color: $green;
+                    border: 1px solid $green;
+                    i {
+                        display: block;
+                    }
+                }
+            }
+            .number {
+                margin: 0 20px 0 10px;
+                vertical-align: top;
+            }
+        }
+        .optionImage {
+            width: 320px;
+            height: 180px;
+            background-color: $lightGrayBg;
+            margin-left: 70px;
+            margin-top: 10px;
+            line-height: 180px;
+            text-align: center;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                vertical-align: middle;
+            }
+        }
+        .audioPlay {
+            font-size: 12px;
+            padding: 5px 7px;
+            margin-left: 10px;
+            position: relative;
+            background-color: $lightGrayBg;
+            .audioIcon {
+                @include abs-pos(1px, auto, auto, 32px);
+                .xicon-v-reminder {
+                    font-size: 12px;
+                    color: $blackFontColor;
+                }
+            }
+            .jplayerStart {
+                padding-left: 21px;
+            }
+        }
+        .audio_container {
+            position: relative;
+            margin: 10px 0;
+            line-height: 50px;
+            width: 640px;
+            background: white;
+            .jp-audio {
+                width: 93%;
+                padding: 8px 10px 6px 10px
+            }
+            .jp-type-single {
+                height: 35px;
+            }
+            .jp-progress {
+                width: 323px;
+            }
+            .jp-audio {
+                background-color: $headerNavBg;
+            }
+            .jp-time-holder {
+                @include abs-pos(5px, 6px, auto, auto !important);
+            }
+            .music_voice_ctrol {
+                margin-top: -10px;
+            }
+            .jp-volume-bar {
+                top: 12px;
+            }
+        }
+    }
+    .stepTwo {
+        color: $orange;
+        border: 1px solid $borderOrange;
+        background: $bgOrange;
+        padding: 10px;
+        text-align: center;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,55 @@
+#addTeacher,
+#modifyTeacherInfo,
+#addCourseManager {
+    width: 438px;
+    border: 1px solid #ccc;
+    @include border-radius(4px);
+    background-color: #fff;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #e8e8e8;
+        padding: 0 20px;
+        margin-bottom: 40px;
+        .closeBtn {
+            display: inline-block;
+            padding: 0 5px;
+            margin-right: -5px;
+            float: right;
+        }
+    }
+    .userItem{
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 24px;
+        position: relative;
+        input {
+            height: 28px;
+            width: 190px;
+            padding: 0 5px;
+            border: 1px solid #e8e8e8;
+            @include border-radius(2px);
+            &[readonly] {
+                border: none;
+                width: 200px;
+                padding: 0;
+            }
+        }
+        .waringText {
+            @include abs-pos(100%, auto, auto, 148px);
+            font-size: 12px;
+            line-height: 20px;
+            color: $darkRed;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        padding-right: 20px;
+        margin-top: 20px;
+        text-align: right;
+        background-color: $lightGrayBg;
+        margin-top: 40px;
+    }
+}

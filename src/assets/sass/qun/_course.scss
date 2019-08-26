@@ -1,0 +1,63 @@
+.S-xnw_main {
+    .courseContainer {
+        width: 660px;
+        padding: 0 20px 20px;
+    }
+}
+.courseNav {
+    height: 70px;
+    line-height: 70px;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+    .timeInfo {
+        font-family: $specialFontFamily;
+        float: left;
+    }
+    .downloadCourse {
+        margin: 0 4px 0 15px;
+    }
+}
+.courseContent {
+    margin: 20px auto;
+    width: 100%;
+    @include border-radius(4px);
+    overflow: hidden;
+    table {
+        @extend %baseTableStyle;
+        width: 100%;
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            font-weight: normal;
+            font-size: 12px;
+            width: 80px;
+        }
+        .courseCell {
+            &:focus {
+                border-color: $orange;
+            }
+            &[readonly] {
+                border: none;
+                padding: 1px 3px;
+                background-color: transparent;
+                &:focus {
+                    border: none;
+                }
+            }
+            width: 66px;
+            height: 28px;
+            padding: 0 2px;
+            color: $yellowFontColor;
+            text-align: center;
+            font-size: 12px;
+            border: 1px solid $lineYellow;
+            background-color: #fff;
+            @include border-radius(2px);
+            @include text-truncate;
+        }
+    }
+}
+.saveCourse {
+    text-align: center;
+}

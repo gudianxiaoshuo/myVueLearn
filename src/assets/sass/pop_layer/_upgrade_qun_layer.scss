@@ -1,0 +1,36 @@
+#upgrade_qun_layer {
+    width: 440px;
+    .privacy_message {
+        padding: 0;
+    }
+    .upgrade_container {
+        padding: 10px 30px;
+        margin-bottom: 10px;
+    }
+    .upgrade_title {
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+    .qun_name {
+        width: 296px;
+        height: 28px;
+        padding: 2px 2px 2px 8px;
+        @include border-radius(5px);
+        border: 1px solid $lineGray;
+        margin-right: 16px;
+    }
+    .counter_tip {
+        margin-top: 10px;
+        color: $grayFontColor;
+        line-height: 20px;
+        font-size: 12px;
+    }
+    .qun_name_counter {
+        color: $orange;
+    }
+    .newBtnArea {
+        .submit {
+            margin-left: 10px;
+        }
+    }
+}

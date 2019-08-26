@@ -1,0 +1,23 @@
+#modify_qun_notice_layer {
+    width: 438px;
+    .privacy_message {
+        padding: 0;
+    }
+    .modify_cqun_notice {
+        width: 390px;
+        min-height: 80px;
+        padding: 2px 4px;
+        margin: 20px 20px 0;
+        border: 1px solid $lineGray;
+        @include border-radius(5px);
+        resize: none;
+    }
+    .align_right {
+        margin-left: 20px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    #modify_counter {
+        color: $darkOrangeFontColor;
+    }
+}

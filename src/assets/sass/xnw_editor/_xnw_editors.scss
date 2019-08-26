@@ -1,0 +1,31 @@
+@import "_false_xEditor.scss";
+@import "_xEditor_textarea.scss";
+@import "_icon_in_xEditor.scss";
+@import "_media_in_xeditor.scss";
+@import "_tag_in_xEditor.scss";
+@import "_qun_list_in_xEditor.scss";
+@import "_hyq_in_xEditor.scss";
+@import "_button_in_xEditor.scss";
+@import "_long_xEditor.scss";
+@import "_remind_user_in_xEditors.scss";
+
+// 旧的写日志当前展开icon
+.xnw_say_something {
+    .control_textarea_size {
+        @include abs-pos(2px, 20px, auto, auto);
+        height: 38px;
+        line-height: 38px;
+        display: block;
+        cursor: pointer;
+        &:hover {
+            color: $darkOrangeFontColor;
+            i {
+                color: $darkOrangeFontColor;
+            }
+        }
+        i {
+            font-size: 24px;
+            line-height: 38px;
+        }
+    }
+}

@@ -1,0 +1,333 @@
+/*主导航发通知选群层*/
+#noticeChooseSchoolQun,
+#noticeChooseClassQun,
+#noticeChooseOtherQun,
+#homeworkChooseClassQun {
+    width: 438px;
+    background-color: #fff;
+    @include border-radius(5px);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        background-color: #f5f5f5;
+        @include border-radius(5px 5px 0 0);
+        .closeBtn {
+            float: right;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        border-top: 1px solid #eee;
+        text-align: right;
+        padding-right: 20px;
+        background-color: #f5f5f5;
+        @include border-radius(0 0 5px 5px);
+    }
+    .privacy_message {
+        padding: 0;
+    }
+    .qunList {
+        @extend %list_in_qun_list;
+        height: auto;
+        max-height: 250px;
+        width: 418px;
+        padding: 20px 0 20px 20px;
+        .list_item {
+            display: block;
+            height: 49px;
+            border-bottom: 1px solid $lightLineGray;
+            padding-left: 50px;
+            margin-left: 22px;
+            margin-right: 24px;
+            color: $grayFontColor;
+            cursor: pointer;
+            input {
+                @include abs-pos(20px, auto, auto, -20px);
+            }
+            .qun_logo {
+                left: 0;
+            }
+            .qun_name {
+                color: $grayFontColor;
+            }
+            .qun_name_block {
+                width: 250px;
+                display: inline-block;
+                border: none;
+            }
+            .memeber_count {
+                @include abs-pos(12px, 0, auto, auto);
+            }
+            &.on {
+                .memeber_count {
+                    i {
+                        color: $darkOrangeFontColor;
+                    }
+                }
+            }
+        }
+    }
+    .newBtnArea {
+        border-top: 1px solid $lineGray;
+    }
+}
+#noticeChooseClassQun {
+    /*选班级群样式*/
+    .title {
+        height: 70px;
+        line-height: 70px;
+        border: none;
+        background: none;
+    }
+    .classQunLayer {
+        position: relative;
+        color: $grayFontColor;
+        margin: 0 20px 20px;
+        border: 1px solid $lineGray;
+        .close {
+            @include abs-pos(0, 20px, auto, auto);
+        }
+        .chooseIdentityBtn {
+            height: 38px;
+            line-height: 38px;
+            width: 376px;
+            border-bottom: 1px solid #eee;
+            margin: 0 10px;
+            @include abs-pos(0, auto, auto, 0);
+        }
+        .allItem {
+            @include abs-pos(-32px, auto, auto, 12px);
+            span {
+                padding: 10px;
+            }
+        }
+    }
+    .chooseIdentity {
+        height: 65px;
+        line-height: 65px;
+        @include abs-pos(-80px, auto, auto, 0);
+        span {
+            color: $blackFontColor;
+        }
+        input {
+            margin: 0 3px 0 10px;
+        }
+    }
+    .chooseIdentityBtn {
+        height: 38px;
+        line-height: 38px;
+        border-bottom: 1px solid #eee;
+        margin: 0 10px;
+    }
+    .sendToParent {
+        float: left;
+        padding-left: 20px;
+        color: $grayFontColor;
+    }
+    .qunList {
+        padding: 0 10px;
+        width: 376px;
+        max-height: 280px;
+        position: relative;
+        .list_item {
+            height: 55px;
+            margin-right: 0;
+            &:last-child {
+                border: none;
+            }
+            input {
+                @include abs-pos(21px, auto, auto, -20px);
+            }
+            .qun_logo {
+                left: 0;
+                top: 8px;
+            }
+            .qun_name {
+                color: $grayFontColor;
+            }
+            .qun_name_block {
+                width: 250px;
+                line-height: 55px;
+                display: inline-block;
+                border: none;
+            }
+            .memeber_count {
+                @include abs-pos(15px, 0, auto, auto);
+            }
+        }
+    }
+}
+#noticeChooseOtherQun {
+    .layer_title_40,
+    .title {
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        background: none;
+    }
+    .otherQunLayer {
+        position: relative;
+        color: $grayFontColor;
+    }
+    .tabLabel {
+        position: relative;
+        margin: 0 20px;
+        .line {
+            width: 100%;
+            @include abs-pos(29px, auto, auto, 0);
+            border-bottom: 1px solid $lightOrange;
+            z-index: 1;
+        }
+        .pop_search_qun {
+            @include abs-pos(auto, 0, 3px, auto);
+            height: 26px;
+            width: 160px;
+            border: 1px solid $borderGray;
+            background-color: #fff;
+            vertical-align: middle;
+            box-shadow: 0 4px 2px rgba(0,0,0,0.05) inset;
+            @include border-radius(40px);
+            line-height: normal;
+            .contact_search {
+                width: 130px;
+                font-size: 12px;
+                padding: 4px 0 2px 30px;
+                border: 0;
+                height: 20px;
+                line-height: 20px;
+                background: none;
+            }
+            i {
+                @include abs-pos(6px,auto,auto,6px);
+            }
+        }
+        .chooseLable {
+            float: left;
+            text-align: center;
+            color: $grayFontColor;
+            text-decoration: none;
+            width: 58px;
+            height: 28px;
+            line-height: 28px;
+            @include border-radius(5px 5px 0 0);
+            background-clip: border-box;
+            padding: 1px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            margin-right: 4px;
+            &.on {
+                padding: 0;
+                border: 1px solid $lightOrange;
+                border-bottom: 1px solid #fff;
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .groupList {
+        max-height: 250px;
+        width: 418px;
+        padding: 20px 0 20px 20px;
+        overflow: auto;
+    }
+    .is_group_item {
+        height: 40px;
+        line-height: 40px;
+        padding: 7px 0 7px 70px;
+        width: 328px;
+        position: relative;
+        display: block;
+        border-bottom: 1px solid $lightLineGray;
+        input {
+            @include abs-pos(20px, auto, auto, 0);
+        }
+        &:hover {
+            background: $lightLineGray;
+        }
+        &.on {
+            .total {
+                color: $darkOrangeFontColor;
+            }
+        }
+        .group_name {
+            display: block;
+            width: 280px;
+            margin-left: 12px;
+            padding-bottom: 6px;
+            @include text-truncate(ellipsis);
+        }
+        .total {
+            @include abs-pos(10px, 12px, auto, auto);
+        }
+        .group_icon {
+            height: 38px;
+            width: 38px;
+            padding: 1px;
+            border: 1px solid $buttonGray;
+            @include border-radius(4px);
+            @include abs-pos(7px, auto, auto, 20px);
+            &.contactImg4 {
+                background-color: $lightLineGray;
+                border: 1px solid #fff;
+                img {
+                    float: left;
+                    height: 16px;
+                    width: 16px;
+                    margin-left: 2px;
+                    margin-top: 2px;
+                    @include border-radius(8px);
+                }
+            }
+            &.contactImg3 {
+                background-color: $lightLineGray;
+                border: 1px solid #fff;
+                img {
+                    height: 16px;
+                    width: 16px;
+                    @include border-radius(8px);
+                }
+                .img1 {
+                    @include abs-pos(2px, auto, auto, 10px);
+                }
+                .img2 {
+                    @include abs-pos(20px, auto, auto, 2px);
+                }
+                .img3 {
+                    @include abs-pos(20px, auto, auto, 20px);
+                }
+            }
+            &.contactImg2 {
+                background-color: $lightLineGray;
+                border: 1px solid #fff;
+                img {
+                    float: left;
+                    height: 16px;
+                    width: 16px;
+                    margin-left: 2px;
+                    margin-top: 11px;
+                    @include border-radius(8px);
+                }
+            }
+            &.contactImg1 {
+                background-color: $lightLineGray;
+                border: 1px solid #fff;
+                img {
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 4px;
+                    margin-top: 4px;
+                    @include border-radius(15px);
+                }
+            }
+        }
+    }
+}
+#homeworkChooseClassQun {
+    .newBtnArea label{
+        float: left;
+        margin-left: 20px;
+    }
+}

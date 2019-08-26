@@ -1,0 +1,1135 @@
+@import "global/_variables.scss";
+@import "global/_mixins.scss";
+@import "global/_extends.scss";
+@import "xcourse/_course_extends.scss";
+@import "xcourse/_components.scss";
+
+.mainCourseContainer {
+    .search_in_page {
+        @extend %mainContainerStyle;
+        height: 44px;
+        width: 650px;
+        padding-left: 10px;
+        border: none;
+        input {
+            height: 48px;
+            font-size: 14px;
+        }
+        .searchBtn {
+            @include abs-pos(14px, auto, auto, 20px);
+        }
+    }
+    @extend %chosenContainerStyle;
+    .chosen-container {
+        margin: 0;
+    }
+    .chosen-container a {
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+        width: 102px;
+        @include border-radius(2px);
+        div{
+            border: none;
+        }
+    }
+    .chosen-drop {
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+        width: 125px;
+    }
+    .chosen-container-active.chosen-with-drop .chosen-single {
+        border: 1px solid #e8e8e8;
+        background-color: #fff;
+        div {
+            border: none;
+        }
+    }
+    .studentList {
+        @extend %baseTableStyle;
+        th {
+            white-space: nowrap;
+        }
+    }
+    .schoolInfoContainer {
+        padding-bottom: 20px;
+        min-height: 800px;
+    }
+    .schoolInfoContent {
+        padding: 20px;
+        .infoItem {
+            line-height: 36px;
+        }
+        .infoTitle {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+        }
+        input {
+            height: 28px;
+            width: 170px;
+            padding: 0 5px;
+            border: 1px solid #e8e8e8;
+            margin-right: 30px;
+            @include border-radius(2px);
+            &[readonly] {
+                border: none;
+                padding: 0;
+                width: 182px;
+            }
+        }
+    }
+    .schoolInfoNotes {
+        color: $grayFontColor;
+        border-top: 1px solid #e8e8e8;
+        margin-top: 15px;
+        padding-top: 15px;
+        .icon {
+            color: $orangeFontColor;
+            margin-right: 6px;
+            @include rel-pos($top: 1px);
+        }
+        .serviceIcon {
+            margin: 0 4px;
+        }
+    }
+    .page_container {
+        width: auto;
+        margin: 0 20px;
+    }
+}
+.classStudentList {
+    @extend %mainContainerStyle;
+    width: 940px;
+    padding: 0;
+    margin: 30px auto 0;
+    min-height: 800px;
+    .xTitle {
+        height: 70px;
+        line-height: 70px;
+        margin: 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+        .studentOper {
+            float: right;
+            .operItem {
+                margin-left: 20px;
+            }
+        }
+    }
+    .xContent {
+        padding: 20px;
+        .passwTip {
+            color: $grayFontColor;
+            padding: 20px 0;
+        }
+    }
+    .addStudentBox {
+        line-height: 28px;
+        margin-bottom: 20px;
+        color: $grayFontColor;
+        .batch {
+            vertical-align: top;
+            margin-left: 10px;
+        }
+        .exportBtn {
+            float: right;
+            a {
+                margin-left: 10px;
+            }
+        }
+    }
+    .xTable {
+        @extend %baseTableStyle;
+        @include border-radius(4px 4px 0 0);
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            height: 50px;
+            line-height: 24px;
+        }
+        th {
+            height: 40px;
+            line-height: 40px;
+            background-color: #FFF3DF;
+        }
+        td {
+            .itemContent {
+                display: inline-block;
+                line-height: 24px;
+                overflow: hidden;
+                margin: 4px;
+                vertical-align: middle;
+            }
+        }
+        .emptyTips {
+            line-height: 150px;
+            color: $grayFontColor;
+        }
+    }
+}
+.partnerInforContainer {
+    padding: 0 20px;
+    .partnerInformation {
+        padding-top: 30px;
+    }
+    .infoItem {
+        margin-bottom: 20px;
+        .infoTitle {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            text-align: right;
+            .flag {
+                color: $darkOrangeFontColor;
+                margin-right: 4px;
+            }
+        }
+        .provinceCitySelection {
+            display: inline-block;
+            margin-left: 6px;
+            &.hide {
+                display: none;
+            }
+        }
+        .infoInput {
+            height: 30px;
+            @include border-radius(2px);
+            border: 1px solid #e8e8e8;
+            width: 560px;
+            padding: 0 4px;
+            float: right;
+            &[readonly] {
+                border: none;
+                padding: 0;
+                width: 570px;
+                margin: 0;
+            }
+        }
+        .addressInput {
+            margin-top: 20px;
+        }
+        .infoIntroText {
+            width: 568px;
+            float: right;
+        }
+        .infoIntro {
+            height: 130px;
+            @include border-radius(2px);
+            border: 1px solid #e8e8e8;
+            width: 560px;
+            padding: 4px;
+            resize: none;
+            float: right;
+        }
+    }
+    .partnerFileInfo {
+        margin-bottom: 20px;
+        .fileRadioInput {
+            margin-right: 60px;
+            line-height: 30px;
+            .switchInput {
+                margin-right: 6px;
+            }
+        }
+        .fileInfoTitle {
+            line-height: 30px;
+        }
+        .uploadFileBtn {
+            display: inline-block;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            color: $orangeFontColor;
+            width: 118px;
+            border: 1px solid #ffaa33;
+            @include border-radius(2px);
+            position: relative;
+            cursor: pointer;
+            &.hide {
+                display: none;
+            }
+            .uploadInput {
+                @include abs-pos(0, auto, auto, 0);
+                width: 118px;
+                height: 26px;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+        .applicationFileBox {
+            margin-top: 20px;
+            .log_one_file {
+                margin: 0;
+            }
+        }
+    }
+    .newBtnArea {
+        border-top: 1px dashed #e8e8e8;
+        padding: 40px 0;
+        text-align: center;
+        .saveInfoBtn {
+            &.hide {
+                display: none;
+            }
+        }
+    }
+}
+.regExamInfoContainer {
+    @extend %mainContainerStyle;
+    padding: 0 20px 30px;
+    width: 900px;
+    min-height: 800px;
+    background-color: #fff;
+    margin-top: 60px;
+    .xTitle {
+        @include abs-pos(-40px, auto, auto, 0);
+        font-weight: bold;
+        font-size: 14px;
+        padding-left: 20px;
+        .courseDetailLink {
+            margin-left: 6px;
+        }
+    }
+    .examInfoTitle {
+        height: 70px;
+        line-height: 70px;
+        border-bottom: 1px solid #e8e8e8;
+        .countInfo {
+            margin-left: 6px;
+            color: $grayFontColor;
+        }
+    }
+    .xSortByInfo {
+        height: 70px;
+        line-height: 70px;
+        .sortItem {
+            margin-right: 28px;
+            color: $grayFontColor;
+            position: relative;
+            &.on {
+                color: $orangeFontColor;
+                i {
+                    color: $orangeFontColor;
+                    font-size: 12px;
+                    @include abs-pos(2px, 0, auto, 100%);
+                }
+            }
+        }
+    }
+    .xTable {
+        @extend %baseTableStyle;
+        @include border-radius(4px 4px 0 0);
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            height: 70px;
+            line-height: 70px;
+        }
+        th {
+            height: 40px;
+            line-height: 40px;
+            background-color: #FFF3DF;
+        }
+        td {
+            .itemContent {
+                display: inline-block;
+                line-height: 24px;
+                overflow: hidden;
+                margin: 4px;
+                vertical-align: middle;
+                word-break: break-all;
+            }
+        }
+    }
+}
+
+.coursePartnerList {
+    margin: 0 20px;
+    .partnerItem {
+        .review {
+            color: $orangeFontColor;
+        }
+        .approved {
+            color: #3BC475;
+        }
+        .suspend {
+            color: $grayFontColor;
+        }
+        .reject {
+            color: #FF5500;
+            .helpIcon {
+                font-size: 12px;
+                color: #0088cc;
+                margin-left: 2px;
+            }
+        }
+    }
+}
+.managerContainer{
+    margin: 0 20px;
+}
+.coursePageContainer {
+    width: 940px;
+    padding: 0;
+    .xTitle {
+        font-weight: bold;
+        padding-left: 20px;
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 14px;
+        .countInfo {
+            color: $lightBlackFontColor;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+    }
+    .xContent {
+        @extend %mainContainerStyle;
+        min-height: 800px;
+        background-color: #fff;
+    }
+    .xSortByInfo {
+        height: 70px;
+        line-height: 70px;
+        margin: 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+        position: relative;
+        .sortItem {
+            margin-right: 28px;
+            color: $grayFontColor;
+            position: relative;
+            &.on {
+                color: $blackFontColor;
+                i {
+                    color: $orangeFontColor;
+                    font-size: 12px;
+                    @include abs-pos(2px, 0, auto, 100%);
+                }
+                .countInfo {
+                    color: $lightBlackFontColor;
+                }
+            }
+        }
+        .countInfo {
+            margin-left: 6px;
+            color: $grayFontColor;
+        }
+    }
+    .xCountInfo {
+        height: 70px;
+        line-height: 70px;
+        margin: 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .courseInfo {
+        .courseClassInfo {
+            max-width: 600px;
+            &.importantInfo {
+                max-width: 650px;
+            }
+        }
+    }
+}
+.weichatPayContainer,
+.regTrainingContainer,
+.regExamContainer {
+    @extend %mainContainerStyle;
+    width: 900px;
+    padding: 0 20px;
+    min-height: 600px;
+    .confirmTitle {
+        height: 70px;
+        line-height: 70px;
+        font-size: 14px;
+        border-bottom: 1px solid #e8e8e8;
+        .titleFlag {
+            display: inline-block;
+            width: 4px;
+            height: 26px;
+            margin-right: 12px;
+            background-color: #ffaa33;
+            @include rel-pos($top: 8px);
+        }
+    }
+    .oneTeacherTraining {
+        padding: 20px 20px 0;
+        border: 1px solid #FEEED4;
+        background-color: #FFFBF4;
+        margin: 30px 0;
+        .trainingPoster {
+            top: 20px;
+        }
+        .trainingInfo {
+            padding-bottom: 15px;
+        }
+    }
+    .regSuccessTip {
+        padding: 30px 20px;
+        border: 1px solid #FEEED4;
+        background-color: #FFFBF4;
+        margin-top: 30px;
+        .regMsg,
+        .tipMsg {
+            text-align: center;
+            line-height: 24px;
+        }
+        .successFlag {
+            display: inline-block;
+            width: 30px;
+            height: 24px;
+            @include rel-pos($top: 4px);
+            @include bg_with_retina(succes_flag, png, $versionImgPath);
+        }
+        .tipMsg {
+            font-size: 12px;
+            line-height: 22px;
+            color: $grayFontColor;
+        }
+        .regCode {
+            color: $orangeFontColor;
+        }
+        .viewRegList {
+            color: $orangeFontColor;
+        }
+    }
+    .oneExam {
+        padding: 20px;
+        border: 1px solid #FEEED4;
+        background-color: #FFFBF4;
+        margin: 30px 0;
+        .examPoster {
+            top: 20px;
+        }
+        .examInfo {
+            border: none;
+            padding-bottom: 0;
+            min-height: 128px;
+        }
+    }
+    .extroInfo {
+        padding: 30px 0 20px;
+        border-bottom: 1px dashed #e8e8e8;
+        border-top: 1px dashed #e8e8e8;
+    }
+    .examAddressInfo {
+        line-height: 30px;
+        margin-bottom: 14px;
+        @extend %chosenContainerStyle;
+        .examAddress {
+            width: 325px;
+            height: 30px;
+            border: 1px solid #e8e8e8;
+        }
+        .chosen-container {
+            margin: 0;
+        }
+        .chosen-container a {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            width: 302px;
+            @include border-radius(2px);
+            div{
+                border: none;
+            }
+        }
+        .chosen-drop {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            width: 325px;
+            max-width: none;
+            .group-option {
+                padding-left: 15px;
+            }
+        }
+        .chosen-container-active.chosen-with-drop .chosen-single {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            div {
+                border: none;
+            }
+        }
+    }
+    .courseStatus {
+        line-height: 26px;
+        .statusLabel {
+            display: inline-block;
+            height: 26px;
+            line-height: 26px;
+            margin-right: 30px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .statusInput {
+            margin-right: 10px;
+            width: 13px;
+            height: 13px;
+            @include abs-pos(6px, auto, auto, 0);
+        }
+    }
+    .tipMsgBox {
+        padding: 20px 0 20px 48px;
+        border-top: 1px dashed #e8e8e8;
+        position: relative;
+        .tipTitle {
+            @include abs-pos(20px, auto, auto, 0);
+        }
+    }
+    .btnArea {
+        padding: 40px 0;
+        border-top: 1px dashed #e8e8e8;
+        text-align: center;
+        .nextStep {
+            width: 76px;
+            height: 28px;
+            line-height: 28px;
+            background-color: #ffaa33;
+            color: #fff;
+            display: inline-block;
+            @include border-radius(2px);
+            &:hover {
+
+            }
+        }
+    }
+    .regListInfo {
+        border: 1px solid #FEEED4;
+        background-color: #FFFCF8;
+        margin: 30px 0 20px;
+        .listItem {
+            height: 64px;
+            line-height: 64px;
+            border-bottom: 1px dashed #FEEED4;
+            margin: 0 20px;
+            color: #8A7762;
+            &.amount {
+                color: $blackFontColor;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            .payImg {
+                vertical-align: middle;
+            }
+        }
+        .amountInfo {
+            color: $orangeFontColor;
+        }
+        .codeItem {
+            float: left;
+        }
+        .amountItem {
+            float: right;
+        }
+    }
+    .QrCodeImg {
+        border: 1px solid #FEEED4;
+        background-color: #FFFCF8;
+        text-align: center;
+        padding: 10px 20px 30px;
+        .QrCodeTip {
+            text-align: center;
+            font-size: 12px;
+            color: $grayFontColor;
+            line-height: 52px;
+        }
+        .QrCode {
+            height: 174px;
+            width: 174px;
+        }
+        .linkTip {
+            text-align: center;
+            font-size: 14px;
+            color: $lightBlackFontColor;
+            line-height: 52px;
+            .link {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}
+
+.trainingListContainer {
+    padding: 30px 20px;
+}
+.classesByCourseContainer {
+    @extend %mainContainerStyle;
+    width: 940px;
+    padding: 0;
+    margin-top: 114px;
+    min-height: 800px;
+    .xTitle {
+        @include abs-pos(-42px, auto, auto, 0);
+        font-weight: bold;
+        padding-left: 20px;
+        font-size: 14px;
+        .countInfo {
+            color: $lightBlackFontColor;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+    }
+    .courseMainInfo {
+        height: 70px;
+        line-height: 70px;
+        margin: 0 20px;
+        background: none;
+        color: $blackFontColor;
+        font-size: 14px;
+        border-bottom: 1px solid #e8e8e8;
+        font-weight: bold;
+        .infoItem {
+            margin-right: 20px;
+            float: left;
+            &.originPublisherInfo {
+                max-width: 320px;
+                margin-right: 0;
+            }
+        }
+        .courseName,
+        .courseType,
+        .coursePublisher,
+        .courseNum {
+            color: $lightBlackFontColor;
+            font-weight: normal;
+        }
+        .numInfo {
+            float: right;
+        }
+    }
+    .courseSource {
+        background-color: #f5f5f5;
+        background-color: rgba(245, 245, 245 ,0.5);
+        @include border-radius(4px);
+        margin: 20px 20px 0;
+        dt {
+            float: left;
+        }
+        dd {
+            width: 840px;
+            margin: 0;
+            float: right;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .sourceItem {
+            display: inline-block;
+            padding: 0 8px;
+            height: 22px;
+            line-height: 22px;
+            color: $grayFontColor;
+            margin: 10px 10px 0 10px;
+            &.on,
+            &:hover {
+                color: $orangeFontColor;
+            }
+            &.titleItem {
+                margin-right: 0;
+                padding-right: 0;
+                color: $blackFontColor;
+            }
+        }
+    }
+    .courseInfo .courseClassInfo {
+        max-width: 600px;
+        &.courseTimeInfo,
+        &.courseTeacherInfo {
+            max-width: 600px;
+        }
+    }
+}
+.examDeatilInfo {
+    .xTable {
+        @extend %baseTableStyle;
+        @include border-radius(4px 4px 0 0);
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            height: 70px;
+            line-height: 70px;
+        }
+        th {
+            height: 40px;
+            line-height: 40px;
+            background-color: #FFF3DF;
+        }
+        td {
+            .itemContent {
+                display: inline-block;
+                line-height: 24px;
+                overflow: hidden;
+                margin: 4px;
+                vertical-align: middle;
+                word-break: break-all;
+            }
+        }
+    }
+}
+//后台添加课程
+.addCourseContainer {
+    margin-top: 70px;
+    background-color: #fff;
+    position: relative;
+    width: 880px;
+    padding: 30px;
+    .addCourseLayer {
+        padding: 0;
+        width: 862px;
+    }
+    .crumb {
+        @include abs-pos($top: -48px, $left: 0);
+        font-weight: bold;
+    }
+    .tips{
+        color: #9B9B9B;
+        margin: 20px 0 30px;
+        span {
+            color: #ff8b00;
+        }
+    }
+    .stepBox {
+        position: relative;
+        .stepOne,
+        .stepTwo {
+            height: 80px;
+            width: 90px;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            font-size: 18px;
+            color: #ccc;
+            .circleOrange,
+            .circleGray{
+                width: 24px;
+                height: 24px;
+                color: #fff;
+                @include border-radius(24px);
+                display: inline-block;
+                margin-top: 20px;
+            }
+            .circleOrange {
+                background-color: #ffaa33;
+                border: 4px solid #FFE0B4;
+                box-shadow: 0 0 10px rgba(255, 170, 51, 0.6);
+            }
+            .circleGray {
+                background-color: #ccc;
+                margin-top: 24px;
+            }
+        }
+        .stepOne {
+            margin-right: 140px;
+            margin-left: 298px;
+        }
+        .currentColor {
+            color: $orangeFontColor;
+        }
+        .line {
+            border-bottom: 3px solid  #f5f5f5;
+            @include abs-pos($top: 60px);
+            width: 100%;
+            z-index: 1;
+        }
+    }
+    .stepModifyBox {
+        position: relative;
+        height: 55px;
+        text-align: center;
+        border-bottom: 3px solid  #f5f5f5;
+        margin-bottom: 40px;
+        a {
+            width: 90px;
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            color: #ccc;
+            line-height: 55px;
+            margin: 0 40px;
+            &:hover,
+            &.on {
+                color: $orangeFontColor;
+                border-bottom: 3px solid #ffaa33;
+            }
+        }
+    }
+    .isOnline {
+        display: block;
+        color: $grayFontColor;
+        margin-left: 80px;
+        text-align: left;
+        .onlineCheckbox {
+            margin-right: 8px;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 30px;
+        button {
+            margin: 0 5px;
+        }
+    }
+    /*课程安排*/
+    .arrangementsBox {
+        margin-top: 20px;
+    }
+    .back {
+        display: block;
+        margin: 30px auto 0;
+    }
+    .catalogueBox,
+    .unitInfoBox {
+        float: left;
+        box-shadow: 0 0 2px 4px rgb(255, 251, 244);
+        @include border-radius(2px);
+        border: 1px solid #FEEED4;
+    }
+    .catalogueBox {
+        width: 350px;
+        padding: 10px;
+        box-shadow: 0 0 2px 4px rgb(255, 251, 244);
+        margin-right: 10px;
+        min-height: 260px;
+    }
+    .oneUnit {
+        @extend %oneUnit;
+        margin-bottom: 20px;
+        .unitName {
+            width: 260px;
+            .rightArrow {
+                @include css3(transform ,rotate(-90deg));
+            }
+        }
+        .oneSection {
+            .horLine {
+                width: 30px;
+                height: 56px;
+                display: inline-block;
+                border-left: 1px solid #FEEED4;
+                border-bottom: 1px solid #FEEED4;
+                @include abs-pos($top:-28px, $left:0);
+            }
+            .sectionName {
+                width: 266px;
+            }
+        }
+    }
+    .unitInfoBox {
+        padding: 20px 20px 0 20px;
+        width: 455px;
+        min-height: 240px;
+    }
+    .unitInfo {
+        margin-bottom: 20px;
+        &.edit {
+            .inputName,
+            .decTextArea {
+                border: 1px solid #eee !important;
+            }
+        }
+        .unitTitle,
+        .unitName,
+        .unitDec {
+            margin: 10px 0;
+            line-height: 30px;
+            color: #8A7762;
+            .inputName,
+            .decTextArea {
+                border: none;
+                @include border-radius(2px);
+                width: 400px;
+                background: #fff;
+            }
+        }
+        .unitTitle {
+            font-size: 14px;
+            font-weight: bold;
+            color: #8A7762;
+            i {
+                float: right;
+                cursor: pointer;
+            }
+        }
+        .unitName {
+            .inputName {
+                line-height: 30px;
+                height: 30px;
+                padding: 0 5px;
+            }
+        }
+        .unitDec {
+            .decTextArea {
+                padding: 5px;
+                height: 80px;
+                resize: none;
+            }
+        }
+        .newAreaBtn {
+            padding-left: 45px;
+            button {
+                margin-right: 10px;
+            }
+        }
+    }
+    .courseData,
+    .courseWork {
+        h3 {
+            font-size: 14px;
+            color: #8A7762;
+            padding: 20px 0;
+            .tips {
+                font-size: 12px;
+                color: $grayFontColor;
+                font-weight: normal;
+            }
+            .addWorkBtn {
+                float: right;
+                font-weight: normal;
+            }
+        }
+    }
+    //课程资料
+    .courseData {
+        margin-bottom: 20px;
+        border-top: 1px solid #FEEED4;
+        .upload_things_box {
+            overflow: hidden;
+        }
+        .log_one_file,
+        .log_one_media {
+            float: none;
+            margin: 0 20px 20px 0;
+            .time {
+                @include abs-pos(0, -150px, auto, auto);
+                color: $grayFontColor
+            }
+        }
+        .weibo_attach {
+            a {
+                max-width: 280px;
+            }
+            font-size: 12px;
+            i {
+                position: relative;
+                top: 3px;
+            }
+            .fileSize,
+            .del,
+            .time {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .del {
+                color: $grayFontColor;
+                cursor: pointer;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+            .time {
+                float: right;
+            }
+        }
+        .forbidDown {
+            float: right;
+        }
+        .videoUploadBtn {
+            margin-bottom: 20px;
+        }
+        .log_one_media {
+            .upload_error {
+                height: 50px;
+                padding: 20px 0 0 15px;
+            }
+        }
+    }
+    .courseWork {
+        margin-bottom: 20px;
+        border-top: 1px solid #FEEED4;
+        .workTable {
+            @extend %scoreTableStyle;
+            border: 1px solid $borderOrange;
+            th,
+            td {
+                text-align: center;
+            }
+            td {
+                line-height: 22px;
+                padding: 0 2px;
+            }
+            .name {
+                width: 130px;
+            }
+            .time {
+                max-width: 90px;
+            }
+            .author {
+                max-width: 90px;
+            }
+            .operation {
+                white-space: nowrap;
+            }
+            a {
+                margin: 0 2px;
+                padding: 0 2px;
+                display: inline-block;
+            }
+        }
+    }
+}
+//作业详情
+.courseWorkDetail {
+    margin-top: 70px;
+    padding: 20px;
+    background: #fff;
+    .crumb {
+        @include abs-pos($top: -48px, $left: 0);
+        font-weight: bold;
+    }
+    h3 {
+        font-size: 14px;
+        color: $blackFontColor;
+        margin-bottom: 15px;
+    }
+    .workInfoBox {
+        @extend %workInfoBox;
+    }
+}
+@import "xcourse/_course_filter.scss";
+@import "xcourse/_one_xcourse.scss";
+@import "xcourse/_one_xExam.scss";
+@import "xcourse/_one_xTraining.scss";
+@import "xcourse/_manageCourseContent.scss";
+@import "xcourse/_courseDetail.scss";
+@import "xcourse/_addCoursePartner.scss";
+@import "xcourse/_confirm_information.scss";
+@import "xcourse/_one_course_partner.scss";
+@import "xcourse/_addCourseManager.scss";
+@import "xcourse/_user_info_container.scss";
+@import "xcourse/_add_course_class.scss";
+@import "xcourse/_add_course_layer.scss";
+@import "xcourse/_switchXroleLayer.scss";
+@import "xcourse/_apply_course_partner.scss";
+@import "xcourse/_add_publisher.scss";
+@import "xcourse/_disable_publisher.scss";
+@import "xcourse/_add_student.scss";
+@import "xcourse/_add_exam.scss";
+@import "xcourse/_viewExamPointDetail.scss";
+@import "xcourse/_courseClassTip.scss";
+@import "xcourse/_attentionLayer.scss";
+@import "xcourse/_courseListLayer.scss";
+@import "xcourse/_importCourseTipLayer.scss";
+@import "xcourse/_viewCourseTimeList.scss";
+@import "xcourse/_registerUserInfoBox.scss";
+@import "xcourse/_addChapterNameLayer.scss";
+@import "xcourse/_improvePersonalInfoLayer.scss";
+@import "xcourse/_uploadCouseHomeworkLayer.scss";
+@import "xcourse/_addTeacherLayer.scss";
+@import "xcourse/_addQunModelLayer.scss";
+@import "xcourse/_hhmsWork.scss";
+

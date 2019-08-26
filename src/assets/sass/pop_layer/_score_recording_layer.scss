@@ -1,0 +1,86 @@
+/*录入考试成绩*/
+#uploadScoreErrStudents {
+    .scoreArea {
+        padding: 20px;
+    }
+    .sendItem {
+        label {
+            margin-right: 20px;
+        }
+    }
+    .scoreTable {
+        border: 1px solid $borderOrange;
+        line-height: 40px;
+        text-align: center;
+        margin: 10px 0 20px;
+        @extend %scoreTableStyle;
+        td {
+            text-indent: 0;
+            border: 1px solid $borderOrange;
+            padding: 0 25px;
+            min-width: 50px;
+            white-space: nowrap;
+            input {
+                @include border-radius(5px);
+                line-height: 20px;
+                border: 1px solid $lineGray;
+                background-color: #fff;
+                max-width: 40px;
+                padding: 0 5px;
+                &:focus {
+                    border: 1px solid $orangeFontColor;
+                }
+            }
+            &:last-child {
+                position: relative;
+                .delTr {
+                    position: absolute;
+                    right: 0;
+                    font-size: 12px;
+                }
+            }
+
+        }
+        tr:nth-child(odd) {
+            background-color: rgba($scoreTableTd, 0.4);
+        }
+        .tipInfo {
+            @include abs-pos($top:-20px);
+            @include border-radius(3px);
+            background: #313131;
+            line-height: 20px;
+            font-size: 12px;
+            padding: 2px 4px;
+            left: 50%;
+            margin-left: -64px;
+            color: #fff;
+            i {
+                @include abs-pos(auto, auto, -10px, 40%);
+                color: $blackFontColor;
+            }
+        }
+    }
+    .scoreTableArea {
+       width: 900px;
+       overflow: auto;
+    }
+}
+/*上传成绩表格提示错误问题*/
+#retryUploadExcel,
+#invalidCourse ,
+#delCourseScore{
+    width: 438px;
+    .privacy_message {
+        padding: 0;
+        min-height: 50px;
+    }
+    .content {
+        padding-top: 20px;
+        text-align: center;
+    }
+    .newBtnArea {
+        .btn-orange {
+            margin-top: 10px;
+        }
+    }
+}

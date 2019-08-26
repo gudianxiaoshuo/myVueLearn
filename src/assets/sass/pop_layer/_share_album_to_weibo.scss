@@ -1,0 +1,29 @@
+/*分享图片专辑弹层*/
+#share_album_to_weibo {
+    &.pop_privacy_mes {
+        width: 680px;
+    }
+    .privacy_message {
+        padding: 10px 0 0 0;
+        background: $lightGrayBg;
+    }
+    .layer_title_40 {
+        border: none;
+        background: $lightGrayBg;
+    }
+    .rt_album_layer {
+        background: #fff;
+        @include border-radius(5px);
+        padding: 10px;
+        width: 618px;
+        margin: 0 auto;
+        border: 1px solid $lightLineGray;
+    }
+    .xnw_say_something {
+        @include border-radius(0);
+        .talk_area_textarea {
+            width: 630px;
+            box-sizing: border-box;
+        }
+    }
+}

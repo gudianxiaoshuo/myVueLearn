@@ -1,0 +1,170 @@
+.uploadWroksWrap {
+    .activityInfo {
+        overflow: hidden;
+        display: inline-block;
+        padding: 10px;
+        &:hover {
+                @include box-shadow( 0 2px 4px 1px rgba(0, 0, 0, .19));
+            }
+        .cover {
+            float: left;
+            width: 200px;
+            height: 120px;
+            img {
+                width: 200px;
+                height: 120px;
+            }
+        }
+        .textWrap {
+            float: left;
+            width: 400px;
+            margin-left: 20px;
+            .title {
+                font-size: 16px;
+                color: #313131;
+                margin-bottom: 4px;
+            }
+            .xicon-v-clock {
+                color: #9B9B9B;
+                top: 2px;
+                position: relative;
+                font-size: 14px;
+            }
+            .date {
+                color: #9B9B9B;
+                font-size: 14px;
+            }
+            .introduction {
+                height: 60px;
+                overflow: hidden;
+                position: relative;
+                margin-top: 9px;
+                .text {
+                    font-size: 12px;
+                    height: 60px;
+                    line-height: 20px;
+                    color: #000;
+                    margin-right: 20px;
+                    @include block-text-overflow(3);
+                }
+                .more {
+                    color: #FFAA33;
+                    position: absolute;
+                    right: 0;
+                    top: 36px;
+                    display: inline-block;
+                    background: #FFF;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+    .uploadWorks {
+        margin-top: 20px;
+        .noInputWrap {
+            background-color: #F5FBFF;
+            padding: 5px;
+            margin-bottom: 22px;
+            border-radius: 2px;
+            background-clip: border-box;
+            .noInput {
+                height: 34px;
+                line-height: 34px;
+                color: #d0d0d0;
+                text-indent: 10px;
+                display: block;
+                border: 1px solid #CCE0ED;
+                background-color: #fff;
+                border-radius: 2px;
+                background-clip: border-box;
+                width: 100%;
+            }
+        }
+    }
+    .opusListWrap {
+        margin-bottom: 50px;
+        .title {
+            width: 100%;
+            height: 30px;
+            border-bottom: 1px solid #EEE;
+            .worksNum {
+                font-size: 14px;
+                color: #000000;
+                line-height: 14px;
+                float: left;
+            }
+            .opusAll {
+                float: right;
+                font-size: 14px;
+                color: #313131;
+                line-height: 14px;
+            }
+        }
+    }
+}
+
+.sharedActivityCard {
+    overflow: hidden;
+    display: inline-block;
+    .cover {
+        float: left;
+        width: 196px;
+        height: 96px;
+        img {
+            width: 196px;
+            height: 96px;
+        }
+    }
+    .textWrap {
+        float: left;
+        width: 324px;
+        margin-left: 16px;
+        .title {
+            font-size: 16px;
+            color: #313131;
+            text-align: left;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+        .xicon-v-clock {
+            color: #9B9B9B;
+            top: 2px;
+            position: relative;
+        }
+        .date {
+            color: #9B9B9B;
+            font-size: 14px;
+        }
+        .info {
+            margin-top: 16px;
+            overflow: hidden;
+            font-size: 12px;
+            .dueTime {
+                float: left;
+                border: 1px solid #FFAA33;
+                width: 56px;
+                height: 18px;
+                text-align: center;
+                line-height: 18px;
+                color: #FFAA33;
+            }
+            .workNum {
+                float: left;
+                margin-left: 8px;
+                float: left;
+                color: #9B9B9B;
+            }
+        }
+
+    }
+}
+
+.sharedActivityCardWrap {
+    padding: 5px 20px 0;
+    .sharedActivityCard {
+        background: #F8F8F8;
+        border: 1px solid #EEEEEE;
+        width: 100%;
+    }
+}

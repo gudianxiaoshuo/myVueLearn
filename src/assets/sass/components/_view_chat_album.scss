@@ -1,0 +1,199 @@
+.fancybox-image-customize,
+.fancybox-video-customize {
+     .fancybox-nav{
+        position: fixed;
+        top: 0;
+        width: 45%;
+        height: 100%;
+        cursor: pointer;
+        text-decoration: none;
+        background: transparent url('/images/fancybox/blank.gif');
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        z-index: 8040;
+    }
+    .fancybox-prev,
+    .fancybox-next {
+        i {
+            font-size: 50px;
+        }
+        &:hover {
+            i {
+                color: #fff;
+            }
+        }
+    }
+    .fancybox-prev {
+        left: 0;
+        text-align: left;
+        i{
+            position: relative;
+            top: 50%;
+            left: 100px;
+        }
+    }
+    .fancybox-next {
+        right: 0;
+        text-align: right;
+        i{
+            position: relative;
+            top: 50%;
+            right: 100px;
+        }
+    }
+     .fancybox-close {
+        width: 50px;
+        height: 50px;
+        @include fix-pos(30px,30px,auto,auto);
+        background: none;
+        i {
+            color: $borderGray;
+            font-size: 25px;
+            @include rel-pos(10px,auto,auto,10px);
+        }
+        &:hover {
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+.fancybox-chatalbum-image-customize {
+    .fluid_item {
+        display: block;
+        border: 1px solid red;
+        padding: 0;
+        margin: 0;
+    }
+    .fancybox-close {
+        width: 50px;
+        height: 50px;
+        @include fix-pos(30px,30px,auto,auto);
+        @include bg_with_retina(photoalbum_icon,png,$baseImgRootPath);
+        background-position: -20px -244px;
+    }
+    .fancybox-nav {
+        position: fixed;
+        width: 45%;
+        span {
+        width: 100px;
+        height: 100px;
+        top: 45%;
+        @include bg_with_retina(photoalbum_icon,png,$baseImgRootPath);
+        }
+    }
+    .fancybox-next {
+        span {
+            background-position: -2px -121px;
+            right: 100px
+        }
+    }
+    .fancybox-prev {
+        span {
+            background-position: -2px 0;
+            left: 100px
+        }
+    }
+    .fancybox-skin {
+    position: relative;
+    background: none !important;
+    box-shadow: none !important;
+
+    }
+    .fancybox-opened {
+        z-index: 8030;
+        .fancybox-skin {
+            box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            -moz-box-shadow: none !important;
+        }
+        .fancybox-title {
+            visibility: visible;
+        }
+    }
+}
+.fancybox-chatalbum-image-customize  .fancybox-nav {
+    position: fixed;
+}
+#fancybox-thumbs {
+    width: 1200px !important;
+    margin: 50px auto !important;
+    left: 18% !important;
+    ul {
+        li {
+            width: 122px;
+            height: 122px;
+            margin-left:40px !important;
+            padding: 10px !important;
+            opacity: .7;
+            &.active {
+                opacity: 1;
+                border: 3px solid #fff !important;
+                padding: 7px !important;
+            }
+            a {
+                border: 1px solid #75797a !important;
+            }
+        }
+    }
+}
+.xnw-search-overlay,
+.xnw-overlay {
+    background: url('/images/fancybox/fancybox_overlay.png');
+    z-index: 900;
+    height: 100%;
+    width: 100%;
+    @include fix-pos(0,auto,auto,0);
+}
+
+.xnw-fluid-container {
+    z-index: 1000;
+    width: 940px;
+    height: 100%;
+}
+.chat_album_pic_layer {
+    width: 440px;
+    background: rgba(0,0,0,0.7);
+    h2 {
+        margin: 0 10px;
+        color: #fff;
+        border-bottom: solid 1px $borderGray;
+        line-height: 30px;
+        position: relative;
+        .close_layer {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    }
+    .chat_album_page {
+        border-top: solid 1px $borderGray;
+        height: 30px;
+        position: relative;
+        text-align: right;
+    }
+}
+.chat_album_pic_list_box {
+    width:  960px;
+    overflow: auto;
+    margin: 100px auto;
+    z-index: 888;
+    a {
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        img {
+            display: block;
+        }
+    }
+}
+.chat_album_pic_list {
+    min-height: 1000px;
+}
+
+.chat_album_close {
+    width: 50px;
+    height: 50px;
+    @include fix-pos(30px,30px,auto,auto);
+    @include bg_with_retina(photoalbum_icon,png,$baseImgRootPath);
+    background-position: -20px -244px;
+}

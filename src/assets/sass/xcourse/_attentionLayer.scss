@@ -1,0 +1,23 @@
+#attentionLayer {
+    @extend %mainContainerStyle;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    width: 440px;
+    z-index: 10;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0 20px;
+        color: $blackFontColor;
+        .closeBtn {
+            display: inline-block;
+            padding: 0 5px;
+            margin-right: -5px;
+            float: right;
+        }
+    }
+    .content {
+        padding: 20px;
+        color: $blackFontColor;
+    }
+}

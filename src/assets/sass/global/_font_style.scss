@@ -1,0 +1,1558 @@
+
+@font-face {
+	font-family: "xiconfont";
+	src: url('/fonts/xiconfont.eot?1565260639538');
+	src: url('/fonts/xiconfont.eot?1565260639538#iefix') format('eot'),
+		url('/fonts/xiconfont.woff?1565260639538') format('woff'),
+		url('/fonts/xiconfont.ttf?1565260639538') format('truetype'),
+		url('/fonts/xiconfont.svg?1565260639538#xiconfont') format('svg');
+}
+
+@mixin xicon-styles {
+	font-family: "xiconfont";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+    line-height: 1;
+}
+
+%xicon {
+	@include xicon-styles;
+}
+
+@function xicon-char($filename) {
+	$char: "";
+
+	@if $filename == Android {
+		$char: "\E001";
+	}
+	@if $filename == activity-icon {
+		$char: "\E002";
+	}
+	@if $filename == add-channel {
+		$char: "\E003";
+	}
+	@if $filename == add-icon {
+		$char: "\E004";
+	}
+	@if $filename == add-tl {
+		$char: "\E005";
+	}
+	@if $filename == add {
+		$char: "\E006";
+	}
+	@if $filename == address {
+		$char: "\E007";
+	}
+	@if $filename == album-bookmark {
+		$char: "\E008";
+	}
+	@if $filename == album-close {
+		$char: "\E009";
+	}
+	@if $filename == album-icon {
+		$char: "\E00A";
+	}
+	@if $filename == album-retweet {
+		$char: "\E00B";
+	}
+	@if $filename == align-left {
+		$char: "\E00C";
+	}
+	@if $filename == align-right {
+		$char: "\E00D";
+	}
+	@if $filename == all {
+		$char: "\E00E";
+	}
+	@if $filename == allow-chat {
+		$char: "\E00F";
+	}
+	@if $filename == arrow-down {
+		$char: "\E010";
+	}
+	@if $filename == arrow-down2 {
+		$char: "\E011";
+	}
+	@if $filename == arrow-tool {
+		$char: "\E012";
+	}
+	@if $filename == arrow {
+		$char: "\E013";
+	}
+	@if $filename == at-me {
+		$char: "\E014";
+	}
+	@if $filename == attach {
+		$char: "\E015";
+	}
+	@if $filename == attachment {
+		$char: "\E016";
+	}
+	@if $filename == attendance-icon {
+		$char: "\E017";
+	}
+	@if $filename == audio {
+		$char: "\E018";
+	}
+	@if $filename == bold-rotate-left {
+		$char: "\E019";
+	}
+	@if $filename == bold-rotate-right {
+		$char: "\E01A";
+	}
+	@if $filename == books {
+		$char: "\E01B";
+	}
+	@if $filename == boomerang-down {
+		$char: "\E01C";
+	}
+	@if $filename == boomerang-left {
+		$char: "\E01D";
+	}
+	@if $filename == boomerang-right {
+		$char: "\E01E";
+	}
+	@if $filename == boomerang-up {
+		$char: "\E01F";
+	}
+	@if $filename == boss-banner {
+		$char: "\E020";
+	}
+	@if $filename == boss-hot-word {
+		$char: "\E021";
+	}
+	@if $filename == boss-notice {
+		$char: "\E022";
+	}
+	@if $filename == boss-recommend-read {
+		$char: "\E023";
+	}
+	@if $filename == boss-shield-account {
+		$char: "\E024";
+	}
+	@if $filename == boss-special-topic {
+		$char: "\E025";
+	}
+	@if $filename == brush {
+		$char: "\E026";
+	}
+	@if $filename == cart {
+		$char: "\E027";
+	}
+	@if $filename == change-2-first {
+		$char: "\E028";
+	}
+	@if $filename == change-2-second {
+		$char: "\E029";
+	}
+	@if $filename == change-window {
+		$char: "\E02A";
+	}
+	@if $filename == change {
+		$char: "\E02B";
+	}
+	@if $filename == chat-add-friend {
+		$char: "\E02C";
+	}
+	@if $filename == chat-add-group {
+		$char: "\E02D";
+	}
+	@if $filename == chat-add-user {
+		$char: "\E02E";
+	}
+	@if $filename == chat-buble {
+		$char: "\E02F";
+	}
+	@if $filename == chat-contact {
+		$char: "\E030";
+	}
+	@if $filename == chat-dark {
+		$char: "\E031";
+	}
+	@if $filename == chat-icon {
+		$char: "\E032";
+	}
+	@if $filename == check {
+		$char: "\E033";
+	}
+	@if $filename == circle-arrow-down {
+		$char: "\E034";
+	}
+	@if $filename == circle-arrow-left {
+		$char: "\E035";
+	}
+	@if $filename == circle-arrow-right {
+		$char: "\E036";
+	}
+	@if $filename == circle-arrow-up {
+		$char: "\E037";
+	}
+	@if $filename == circle-minus2 {
+		$char: "\E038";
+	}
+	@if $filename == circle-plus {
+		$char: "\E039";
+	}
+	@if $filename == circle-plus2 {
+		$char: "\E03A";
+	}
+	@if $filename == class {
+		$char: "\E03B";
+	}
+	@if $filename == class_perform-icon {
+		$char: "\E03C";
+	}
+	@if $filename == cog {
+		$char: "\E03D";
+	}
+	@if $filename == collaspe-close {
+		$char: "\E03E";
+	}
+	@if $filename == compass {
+		$char: "\E03F";
+	}
+	@if $filename == compose {
+		$char: "\E040";
+	}
+	@if $filename == contact {
+		$char: "\E041";
+	}
+	@if $filename == course-admin {
+		$char: "\E042";
+	}
+	@if $filename == course-class {
+		$char: "\E043";
+	}
+	@if $filename == course-icon {
+		$char: "\E044";
+	}
+	@if $filename == course-manage {
+		$char: "\E045";
+	}
+	@if $filename == course-partner {
+		$char: "\E046";
+	}
+	@if $filename == course-teacher {
+		$char: "\E047";
+	}
+	@if $filename == course-video {
+		$char: "\E048";
+	}
+	@if $filename == course {
+		$char: "\E049";
+	}
+	@if $filename == date {
+		$char: "\E04A";
+	}
+	@if $filename == del-channel {
+		$char: "\E04B";
+	}
+	@if $filename == double-arrow-left {
+		$char: "\E04C";
+	}
+	@if $filename == double-arrow-right {
+		$char: "\E04D";
+	}
+	@if $filename == down {
+		$char: "\E04E";
+	}
+	@if $filename == download {
+		$char: "\E04F";
+	}
+	@if $filename == dynamic-class {
+		$char: "\E050";
+	}
+	@if $filename == dynamic-course {
+		$char: "\E051";
+	}
+	@if $filename == dynamic {
+		$char: "\E052";
+	}
+	@if $filename == edit {
+		$char: "\E053";
+	}
+	@if $filename == ellipsis-vertical {
+		$char: "\E054";
+	}
+	@if $filename == ellipsis {
+		$char: "\E055";
+	}
+	@if $filename == email {
+		$char: "\E056";
+	}
+	@if $filename == email2 {
+		$char: "\E057";
+	}
+	@if $filename == end-time {
+		$char: "\E058";
+	}
+	@if $filename == enlarge {
+		$char: "\E059";
+	}
+	@if $filename == evaluation-icon {
+		$char: "\E05A";
+	}
+	@if $filename == exam-point {
+		$char: "\E05B";
+	}
+	@if $filename == exam_report-icon {
+		$char: "\E05C";
+	}
+	@if $filename == exclamation {
+		$char: "\E05D";
+	}
+	@if $filename == exit-full-screen {
+		$char: "\E05E";
+	}
+	@if $filename == eye-read {
+		$char: "\E05F";
+	}
+	@if $filename == fav-course {
+		$char: "\E060";
+	}
+	@if $filename == female {
+		$char: "\E061";
+	}
+	@if $filename == file {
+		$char: "\E062";
+	}
+	@if $filename == font {
+		$char: "\E063";
+	}
+	@if $filename == foward {
+		$char: "\E064";
+	}
+	@if $filename == friend-circle {
+		$char: "\E065";
+	}
+	@if $filename == friend-group {
+		$char: "\E066";
+	}
+	@if $filename == full-screen {
+		$char: "\E067";
+	}
+	@if $filename == grid-4-circle {
+		$char: "\E068";
+	}
+	@if $filename == grid-4 {
+		$char: "\E069";
+	}
+	@if $filename == grid-9 {
+		$char: "\E06A";
+	}
+	@if $filename == group-of-add {
+		$char: "\E06B";
+	}
+	@if $filename == h5-close {
+		$char: "\E06C";
+	}
+	@if $filename == h5-consult {
+		$char: "\E06D";
+	}
+	@if $filename == h5-folder {
+		$char: "\E06E";
+	}
+	@if $filename == h5-list {
+		$char: "\E06F";
+	}
+	@if $filename == h5-live {
+		$char: "\E070";
+	}
+	@if $filename == h5-pause {
+		$char: "\E071";
+	}
+	@if $filename == h5-play {
+		$char: "\E072";
+	}
+	@if $filename == h5-star {
+		$char: "\E073";
+	}
+	@if $filename == h5-top {
+		$char: "\E074";
+	}
+	@if $filename == hand-up {
+		$char: "\E075";
+	}
+	@if $filename == hang-up {
+		$char: "\E076";
+	}
+	@if $filename == help-bubble {
+		$char: "\E077";
+	}
+	@if $filename == help {
+		$char: "\E078";
+	}
+	@if $filename == hint-info {
+		$char: "\E079";
+	}
+	@if $filename == iPhone {
+		$char: "\E07A";
+	}
+	@if $filename == info {
+		$char: "\E07B";
+	}
+	@if $filename == intro {
+		$char: "\E07C";
+	}
+	@if $filename == link {
+		$char: "\E07D";
+	}
+	@if $filename == live-exercises {
+		$char: "\E07E";
+	}
+	@if $filename == live-full-screen {
+		$char: "\E07F";
+	}
+	@if $filename == live-in {
+		$char: "\E080";
+	}
+	@if $filename == location-address {
+		$char: "\E081";
+	}
+	@if $filename == location {
+		$char: "\E082";
+	}
+	@if $filename == locker-locked {
+		$char: "\E083";
+	}
+	@if $filename == locker-unlock {
+		$char: "\E084";
+	}
+	@if $filename == log-list {
+		$char: "\E085";
+	}
+	@if $filename == log-out {
+		$char: "\E086";
+	}
+	@if $filename == male {
+		$char: "\E087";
+	}
+	@if $filename == media {
+		$char: "\E088";
+	}
+	@if $filename == menu {
+		$char: "\E089";
+	}
+	@if $filename == message {
+		$char: "\E08A";
+	}
+	@if $filename == mobile-phone {
+		$char: "\E08B";
+	}
+	@if $filename == money {
+		$char: "\E08C";
+	}
+	@if $filename == move-channel {
+		$char: "\E08D";
+	}
+	@if $filename == muted {
+		$char: "\E08E";
+	}
+	@if $filename == my-block {
+		$char: "\E08F";
+	}
+	@if $filename == my-class {
+		$char: "\E090";
+	}
+	@if $filename == my-clock {
+		$char: "\E091";
+	}
+	@if $filename == my-comment {
+		$char: "\E092";
+	}
+	@if $filename == my-favorite {
+		$char: "\E093";
+	}
+	@if $filename == my-follower {
+		$char: "\E094";
+	}
+	@if $filename == my-friend {
+		$char: "\E095";
+	}
+	@if $filename == my-home {
+		$char: "\E096";
+	}
+	@if $filename == my-photo {
+		$char: "\E097";
+	}
+	@if $filename == my-post {
+		$char: "\E098";
+	}
+	@if $filename == my-school {
+		$char: "\E099";
+	}
+	@if $filename == my-test {
+		$char: "\E09A";
+	}
+	@if $filename == new-chat {
+		$char: "\E09B";
+	}
+	@if $filename == new-log {
+		$char: "\E09C";
+	}
+	@if $filename == new-setting {
+		$char: "\E09D";
+	}
+	@if $filename == no-chat {
+		$char: "\E09E";
+	}
+	@if $filename == no-hand-up {
+		$char: "\E09F";
+	}
+	@if $filename == no-public {
+		$char: "\E0A0";
+	}
+	@if $filename == notice {
+		$char: "\E0A1";
+	}
+	@if $filename == notify-icon {
+		$char: "\E0A2";
+	}
+	@if $filename == ok {
+		$char: "\E0A3";
+	}
+	@if $filename == order {
+		$char: "\E0A4";
+	}
+	@if $filename == paper {
+		$char: "\E0A5";
+	}
+	@if $filename == partner-pending {
+		$char: "\E0A6";
+	}
+	@if $filename == personal-record {
+		$char: "\E0A7";
+	}
+	@if $filename == pic-list {
+		$char: "\E0A8";
+	}
+	@if $filename == picture {
+		$char: "\E0A9";
+	}
+	@if $filename == play {
+		$char: "\E0AA";
+	}
+	@if $filename == playing {
+		$char: "\E0AB";
+	}
+	@if $filename == plus {
+		$char: "\E0AC";
+	}
+	@if $filename == posts {
+		$char: "\E0AD";
+	}
+	@if $filename == private {
+		$char: "\E0AE";
+	}
+	@if $filename == promote-12 {
+		$char: "\E0AF";
+	}
+	@if $filename == prompt-info {
+		$char: "\E0B0";
+	}
+	@if $filename == public {
+		$char: "\E0B1";
+	}
+	@if $filename == publisher-info {
+		$char: "\E0B2";
+	}
+	@if $filename == publisher-manage {
+		$char: "\E0B3";
+	}
+	@if $filename == receive-a-case {
+		$char: "\E0B4";
+	}
+	@if $filename == record-off {
+		$char: "\E0B5";
+	}
+	@if $filename == record-on {
+		$char: "\E0B6";
+	}
+	@if $filename == relation-icon {
+		$char: "\E0B7";
+	}
+	@if $filename == remind {
+		$char: "\E0B8";
+	}
+	@if $filename == reminder-icon {
+		$char: "\E0B9";
+	}
+	@if $filename == reminder-user-group {
+		$char: "\E0BA";
+	}
+	@if $filename == rotate-left {
+		$char: "\E0BB";
+	}
+	@if $filename == rotate-right {
+		$char: "\E0BC";
+	}
+	@if $filename == schedule-icon {
+		$char: "\E0BD";
+	}
+	@if $filename == school-info {
+		$char: "\E0BE";
+	}
+	@if $filename == school-manage {
+		$char: "\E0BF";
+	}
+	@if $filename == search {
+		$char: "\E0C0";
+	}
+	@if $filename == selected {
+		$char: "\E0C1";
+	}
+	@if $filename == service {
+		$char: "\E0C2";
+	}
+	@if $filename == shrink {
+		$char: "\E0C3";
+	}
+	@if $filename == silent {
+		$char: "\E0C4";
+	}
+	@if $filename == slide-down {
+		$char: "\E0C5";
+	}
+	@if $filename == slide-up {
+		$char: "\E0C6";
+	}
+	@if $filename == slide-view {
+		$char: "\E0C7";
+	}
+	@if $filename == smile {
+		$char: "\E0C8";
+	}
+	@if $filename == sound {
+		$char: "\E0C9";
+	}
+	@if $filename == star-in {
+		$char: "\E0CA";
+	}
+	@if $filename == star-out {
+		$char: "\E0CB";
+	}
+	@if $filename == statistics-icon {
+		$char: "\E0CC";
+	}
+	@if $filename == tag {
+		$char: "\E0CD";
+	}
+	@if $filename == teacher-training {
+		$char: "\E0CE";
+	}
+	@if $filename == template {
+		$char: "\E0CF";
+	}
+	@if $filename == test-paper {
+		$char: "\E0D0";
+	}
+	@if $filename == title-list {
+		$char: "\E0D1";
+	}
+	@if $filename == to-top {
+		$char: "\E0D2";
+	}
+	@if $filename == training-address {
+		$char: "\E0D3";
+	}
+	@if $filename == training-plan {
+		$char: "\E0D4";
+	}
+	@if $filename == training {
+		$char: "\E0D5";
+	}
+	@if $filename == trash {
+		$char: "\E0D6";
+	}
+	@if $filename == triangle-down {
+		$char: "\E0D7";
+	}
+	@if $filename == triangle-dynamic {
+		$char: "\E0D8";
+	}
+	@if $filename == triangle-left {
+		$char: "\E0D9";
+	}
+	@if $filename == triangle-nav-selected {
+		$char: "\E0DA";
+	}
+	@if $filename == triangle-right {
+		$char: "\E0DB";
+	}
+	@if $filename == triangle-up {
+		$char: "\E0DC";
+	}
+	@if $filename == undo {
+		$char: "\E0DD";
+	}
+	@if $filename == up {
+		$char: "\E0DE";
+	}
+	@if $filename == user-add {
+		$char: "\E0DF";
+	}
+	@if $filename == user-group {
+		$char: "\E0E0";
+	}
+	@if $filename == user {
+		$char: "\E0E1";
+	}
+	@if $filename == v-block {
+		$char: "\E0E2";
+	}
+	@if $filename == v-certify {
+		$char: "\E0E3";
+	}
+	@if $filename == v-clock {
+		$char: "\E0E4";
+	}
+	@if $filename == v-cog {
+		$char: "\E0E5";
+	}
+	@if $filename == v-comment {
+		$char: "\E0E6";
+	}
+	@if $filename == v-draft {
+		$char: "\E0E7";
+	}
+	@if $filename == v-follower {
+		$char: "\E0E8";
+	}
+	@if $filename == v-friend {
+		$char: "\E0E9";
+	}
+	@if $filename == v-post {
+		$char: "\E0EA";
+	}
+	@if $filename == v-record {
+		$char: "\E0EB";
+	}
+	@if $filename == v-reminder {
+		$char: "\E0EC";
+	}
+	@if $filename == v-star {
+		$char: "\E0ED";
+	}
+	@if $filename == verified-group {
+		$char: "\E0EE";
+	}
+	@if $filename == video {
+		$char: "\E0EF";
+	}
+	@if $filename == voice-left {
+		$char: "\E0F0";
+	}
+	@if $filename == voice-right {
+		$char: "\E0F1";
+	}
+	@if $filename == vote-icon {
+		$char: "\E0F2";
+	}
+	@if $filename == warning-tip {
+		$char: "\E0F3";
+	}
+	@if $filename == work-icon {
+		$char: "\E0F4";
+	}
+	@if $filename == x-circle {
+		$char: "\E0F5";
+	}
+	@if $filename == x-small {
+		$char: "\E0F6";
+	}
+	@if $filename == xcourse_register {
+		$char: "\E0F7";
+	}
+	@if $filename == zan {
+		$char: "\E0F8";
+	}
+	@if $filename == zoom-in {
+		$char: "\E0F9";
+	}
+	@if $filename == zoom-out {
+		$char: "\E0FA";
+	}
+	@if $filename == zoom {
+		$char: "\E0FB";
+	}
+
+	@return $char;
+}
+
+@mixin xicon($filename, $insert: before, $extend: true) {
+	& {
+		@if $extend {
+			@extend %xicon;
+		} @else {
+			@include xicon-styles;
+		}
+	}
+	&:#{$insert} {
+		@if $extend {
+			@extend %xicon;
+		} @else {
+			@include xicon-styles;
+		}
+		content: xicon-char($filename);
+	}
+}
+
+.xicon-Android {
+	@include xicon(Android);
+}
+.xicon-activity-icon {
+	@include xicon(activity-icon);
+}
+.xicon-add-channel {
+	@include xicon(add-channel);
+}
+.xicon-add-icon {
+	@include xicon(add-icon);
+}
+.xicon-add-tl {
+	@include xicon(add-tl);
+}
+.xicon-add {
+	@include xicon(add);
+}
+.xicon-address {
+	@include xicon(address);
+}
+.xicon-album-bookmark {
+	@include xicon(album-bookmark);
+}
+.xicon-album-close {
+	@include xicon(album-close);
+}
+.xicon-album-icon {
+	@include xicon(album-icon);
+}
+.xicon-album-retweet {
+	@include xicon(album-retweet);
+}
+.xicon-align-left {
+	@include xicon(align-left);
+}
+.xicon-align-right {
+	@include xicon(align-right);
+}
+.xicon-all {
+	@include xicon(all);
+}
+.xicon-allow-chat {
+	@include xicon(allow-chat);
+}
+.xicon-arrow-down {
+	@include xicon(arrow-down);
+}
+.xicon-arrow-down2 {
+	@include xicon(arrow-down2);
+}
+.xicon-arrow-tool {
+	@include xicon(arrow-tool);
+}
+.xicon-arrow {
+	@include xicon(arrow);
+}
+.xicon-at-me {
+	@include xicon(at-me);
+}
+.xicon-attach {
+	@include xicon(attach);
+}
+.xicon-attachment {
+	@include xicon(attachment);
+}
+.xicon-attendance-icon {
+	@include xicon(attendance-icon);
+}
+.xicon-audio {
+	@include xicon(audio);
+}
+.xicon-bold-rotate-left {
+	@include xicon(bold-rotate-left);
+}
+.xicon-bold-rotate-right {
+	@include xicon(bold-rotate-right);
+}
+.xicon-books {
+	@include xicon(books);
+}
+.xicon-boomerang-down {
+	@include xicon(boomerang-down);
+}
+.xicon-boomerang-left {
+	@include xicon(boomerang-left);
+}
+.xicon-boomerang-right {
+	@include xicon(boomerang-right);
+}
+.xicon-boomerang-up {
+	@include xicon(boomerang-up);
+}
+.xicon-boss-banner {
+	@include xicon(boss-banner);
+}
+.xicon-boss-hot-word {
+	@include xicon(boss-hot-word);
+}
+.xicon-boss-notice {
+	@include xicon(boss-notice);
+}
+.xicon-boss-recommend-read {
+	@include xicon(boss-recommend-read);
+}
+.xicon-boss-shield-account {
+	@include xicon(boss-shield-account);
+}
+.xicon-boss-special-topic {
+	@include xicon(boss-special-topic);
+}
+.xicon-brush {
+	@include xicon(brush);
+}
+.xicon-cart {
+	@include xicon(cart);
+}
+.xicon-change-2-first {
+	@include xicon(change-2-first);
+}
+.xicon-change-2-second {
+	@include xicon(change-2-second);
+}
+.xicon-change-window {
+	@include xicon(change-window);
+}
+.xicon-change {
+	@include xicon(change);
+}
+.xicon-chat-add-friend {
+	@include xicon(chat-add-friend);
+}
+.xicon-chat-add-group {
+	@include xicon(chat-add-group);
+}
+.xicon-chat-add-user {
+	@include xicon(chat-add-user);
+}
+.xicon-chat-buble {
+	@include xicon(chat-buble);
+}
+.xicon-chat-contact {
+	@include xicon(chat-contact);
+}
+.xicon-chat-dark {
+	@include xicon(chat-dark);
+}
+.xicon-chat-icon {
+	@include xicon(chat-icon);
+}
+.xicon-check {
+	@include xicon(check);
+}
+.xicon-circle-arrow-down {
+	@include xicon(circle-arrow-down);
+}
+.xicon-circle-arrow-left {
+	@include xicon(circle-arrow-left);
+}
+.xicon-circle-arrow-right {
+	@include xicon(circle-arrow-right);
+}
+.xicon-circle-arrow-up {
+	@include xicon(circle-arrow-up);
+}
+.xicon-circle-minus2 {
+	@include xicon(circle-minus2);
+}
+.xicon-circle-plus {
+	@include xicon(circle-plus);
+}
+.xicon-circle-plus2 {
+	@include xicon(circle-plus2);
+}
+.xicon-class {
+	@include xicon(class);
+}
+.xicon-class_perform-icon {
+	@include xicon(class_perform-icon);
+}
+.xicon-cog {
+	@include xicon(cog);
+}
+.xicon-collaspe-close {
+	@include xicon(collaspe-close);
+}
+.xicon-compass {
+	@include xicon(compass);
+}
+.xicon-compose {
+	@include xicon(compose);
+}
+.xicon-contact {
+	@include xicon(contact);
+}
+.xicon-course-admin {
+	@include xicon(course-admin);
+}
+.xicon-course-class {
+	@include xicon(course-class);
+}
+.xicon-course-icon {
+	@include xicon(course-icon);
+}
+.xicon-course-manage {
+	@include xicon(course-manage);
+}
+.xicon-course-partner {
+	@include xicon(course-partner);
+}
+.xicon-course-teacher {
+	@include xicon(course-teacher);
+}
+.xicon-course-video {
+	@include xicon(course-video);
+}
+.xicon-course {
+	@include xicon(course);
+}
+.xicon-date {
+	@include xicon(date);
+}
+.xicon-del-channel {
+	@include xicon(del-channel);
+}
+.xicon-double-arrow-left {
+	@include xicon(double-arrow-left);
+}
+.xicon-double-arrow-right {
+	@include xicon(double-arrow-right);
+}
+.xicon-down {
+	@include xicon(down);
+}
+.xicon-download {
+	@include xicon(download);
+}
+.xicon-dynamic-class {
+	@include xicon(dynamic-class);
+}
+.xicon-dynamic-course {
+	@include xicon(dynamic-course);
+}
+.xicon-dynamic {
+	@include xicon(dynamic);
+}
+.xicon-edit {
+	@include xicon(edit);
+}
+.xicon-ellipsis-vertical {
+	@include xicon(ellipsis-vertical);
+}
+.xicon-ellipsis {
+	@include xicon(ellipsis);
+}
+.xicon-email {
+	@include xicon(email);
+}
+.xicon-email2 {
+	@include xicon(email2);
+}
+.xicon-end-time {
+	@include xicon(end-time);
+}
+.xicon-enlarge {
+	@include xicon(enlarge);
+}
+.xicon-evaluation-icon {
+	@include xicon(evaluation-icon);
+}
+.xicon-exam-point {
+	@include xicon(exam-point);
+}
+.xicon-exam_report-icon {
+	@include xicon(exam_report-icon);
+}
+.xicon-exclamation {
+	@include xicon(exclamation);
+}
+.xicon-exit-full-screen {
+	@include xicon(exit-full-screen);
+}
+.xicon-eye-read {
+	@include xicon(eye-read);
+}
+.xicon-fav-course {
+	@include xicon(fav-course);
+}
+.xicon-female {
+	@include xicon(female);
+}
+.xicon-file {
+	@include xicon(file);
+}
+.xicon-font {
+	@include xicon(font);
+}
+.xicon-foward {
+	@include xicon(foward);
+}
+.xicon-friend-circle {
+	@include xicon(friend-circle);
+}
+.xicon-friend-group {
+	@include xicon(friend-group);
+}
+.xicon-full-screen {
+	@include xicon(full-screen);
+}
+.xicon-grid-4-circle {
+	@include xicon(grid-4-circle);
+}
+.xicon-grid-4 {
+	@include xicon(grid-4);
+}
+.xicon-grid-9 {
+	@include xicon(grid-9);
+}
+.xicon-group-of-add {
+	@include xicon(group-of-add);
+}
+.xicon-h5-close {
+	@include xicon(h5-close);
+}
+.xicon-h5-consult {
+	@include xicon(h5-consult);
+}
+.xicon-h5-folder {
+	@include xicon(h5-folder);
+}
+.xicon-h5-list {
+	@include xicon(h5-list);
+}
+.xicon-h5-live {
+	@include xicon(h5-live);
+}
+.xicon-h5-pause {
+	@include xicon(h5-pause);
+}
+.xicon-h5-play {
+	@include xicon(h5-play);
+}
+.xicon-h5-star {
+	@include xicon(h5-star);
+}
+.xicon-h5-top {
+	@include xicon(h5-top);
+}
+.xicon-hand-up {
+	@include xicon(hand-up);
+}
+.xicon-hang-up {
+	@include xicon(hang-up);
+}
+.xicon-help-bubble {
+	@include xicon(help-bubble);
+}
+.xicon-help {
+	@include xicon(help);
+}
+.xicon-hint-info {
+	@include xicon(hint-info);
+}
+.xicon-iPhone {
+	@include xicon(iPhone);
+}
+.xicon-info {
+	@include xicon(info);
+}
+.xicon-intro {
+	@include xicon(intro);
+}
+.xicon-link {
+	@include xicon(link);
+}
+.xicon-live-exercises {
+	@include xicon(live-exercises);
+}
+.xicon-live-full-screen {
+	@include xicon(live-full-screen);
+}
+.xicon-live-in {
+	@include xicon(live-in);
+}
+.xicon-location-address {
+	@include xicon(location-address);
+}
+.xicon-location {
+	@include xicon(location);
+}
+.xicon-locker-locked {
+	@include xicon(locker-locked);
+}
+.xicon-locker-unlock {
+	@include xicon(locker-unlock);
+}
+.xicon-log-list {
+	@include xicon(log-list);
+}
+.xicon-log-out {
+	@include xicon(log-out);
+}
+.xicon-male {
+	@include xicon(male);
+}
+.xicon-media {
+	@include xicon(media);
+}
+.xicon-menu {
+	@include xicon(menu);
+}
+.xicon-message {
+	@include xicon(message);
+}
+.xicon-mobile-phone {
+	@include xicon(mobile-phone);
+}
+.xicon-money {
+	@include xicon(money);
+}
+.xicon-move-channel {
+	@include xicon(move-channel);
+}
+.xicon-muted {
+	@include xicon(muted);
+}
+.xicon-my-block {
+	@include xicon(my-block);
+}
+.xicon-my-class {
+	@include xicon(my-class);
+}
+.xicon-my-clock {
+	@include xicon(my-clock);
+}
+.xicon-my-comment {
+	@include xicon(my-comment);
+}
+.xicon-my-favorite {
+	@include xicon(my-favorite);
+}
+.xicon-my-follower {
+	@include xicon(my-follower);
+}
+.xicon-my-friend {
+	@include xicon(my-friend);
+}
+.xicon-my-home {
+	@include xicon(my-home);
+}
+.xicon-my-photo {
+	@include xicon(my-photo);
+}
+.xicon-my-post {
+	@include xicon(my-post);
+}
+.xicon-my-school {
+	@include xicon(my-school);
+}
+.xicon-my-test {
+	@include xicon(my-test);
+}
+.xicon-new-chat {
+	@include xicon(new-chat);
+}
+.xicon-new-log {
+	@include xicon(new-log);
+}
+.xicon-new-setting {
+	@include xicon(new-setting);
+}
+.xicon-no-chat {
+	@include xicon(no-chat);
+}
+.xicon-no-hand-up {
+	@include xicon(no-hand-up);
+}
+.xicon-no-public {
+	@include xicon(no-public);
+}
+.xicon-notice {
+	@include xicon(notice);
+}
+.xicon-notify-icon {
+	@include xicon(notify-icon);
+}
+.xicon-ok {
+	@include xicon(ok);
+}
+.xicon-order {
+	@include xicon(order);
+}
+.xicon-paper {
+	@include xicon(paper);
+}
+.xicon-partner-pending {
+	@include xicon(partner-pending);
+}
+.xicon-personal-record {
+	@include xicon(personal-record);
+}
+.xicon-pic-list {
+	@include xicon(pic-list);
+}
+.xicon-picture {
+	@include xicon(picture);
+}
+.xicon-play {
+	@include xicon(play);
+}
+.xicon-playing {
+	@include xicon(playing);
+}
+.xicon-plus {
+	@include xicon(plus);
+}
+.xicon-posts {
+	@include xicon(posts);
+}
+.xicon-private {
+	@include xicon(private);
+}
+.xicon-promote-12 {
+	@include xicon(promote-12);
+}
+.xicon-prompt-info {
+	@include xicon(prompt-info);
+}
+.xicon-public {
+	@include xicon(public);
+}
+.xicon-publisher-info {
+	@include xicon(publisher-info);
+}
+.xicon-publisher-manage {
+	@include xicon(publisher-manage);
+}
+.xicon-receive-a-case {
+	@include xicon(receive-a-case);
+}
+.xicon-record-off {
+	@include xicon(record-off);
+}
+.xicon-record-on {
+	@include xicon(record-on);
+}
+.xicon-relation-icon {
+	@include xicon(relation-icon);
+}
+.xicon-remind {
+	@include xicon(remind);
+}
+.xicon-reminder-icon {
+	@include xicon(reminder-icon);
+}
+.xicon-reminder-user-group {
+	@include xicon(reminder-user-group);
+}
+.xicon-rotate-left {
+	@include xicon(rotate-left);
+}
+.xicon-rotate-right {
+	@include xicon(rotate-right);
+}
+.xicon-schedule-icon {
+	@include xicon(schedule-icon);
+}
+.xicon-school-info {
+	@include xicon(school-info);
+}
+.xicon-school-manage {
+	@include xicon(school-manage);
+}
+.xicon-search {
+	@include xicon(search);
+}
+.xicon-selected {
+	@include xicon(selected);
+}
+.xicon-service {
+	@include xicon(service);
+}
+.xicon-shrink {
+	@include xicon(shrink);
+}
+.xicon-silent {
+	@include xicon(silent);
+}
+.xicon-slide-down {
+	@include xicon(slide-down);
+}
+.xicon-slide-up {
+	@include xicon(slide-up);
+}
+.xicon-slide-view {
+	@include xicon(slide-view);
+}
+.xicon-smile {
+	@include xicon(smile);
+}
+.xicon-sound {
+	@include xicon(sound);
+}
+.xicon-star-in {
+	@include xicon(star-in);
+}
+.xicon-star-out {
+	@include xicon(star-out);
+}
+.xicon-statistics-icon {
+	@include xicon(statistics-icon);
+}
+.xicon-tag {
+	@include xicon(tag);
+}
+.xicon-teacher-training {
+	@include xicon(teacher-training);
+}
+.xicon-template {
+	@include xicon(template);
+}
+.xicon-test-paper {
+	@include xicon(test-paper);
+}
+.xicon-title-list {
+	@include xicon(title-list);
+}
+.xicon-to-top {
+	@include xicon(to-top);
+}
+.xicon-training-address {
+	@include xicon(training-address);
+}
+.xicon-training-plan {
+	@include xicon(training-plan);
+}
+.xicon-training {
+	@include xicon(training);
+}
+.xicon-trash {
+	@include xicon(trash);
+}
+.xicon-triangle-down {
+	@include xicon(triangle-down);
+}
+.xicon-triangle-dynamic {
+	@include xicon(triangle-dynamic);
+}
+.xicon-triangle-left {
+	@include xicon(triangle-left);
+}
+.xicon-triangle-nav-selected {
+	@include xicon(triangle-nav-selected);
+}
+.xicon-triangle-right {
+	@include xicon(triangle-right);
+}
+.xicon-triangle-up {
+	@include xicon(triangle-up);
+}
+.xicon-undo {
+	@include xicon(undo);
+}
+.xicon-up {
+	@include xicon(up);
+}
+.xicon-user-add {
+	@include xicon(user-add);
+}
+.xicon-user-group {
+	@include xicon(user-group);
+}
+.xicon-user {
+	@include xicon(user);
+}
+.xicon-v-block {
+	@include xicon(v-block);
+}
+.xicon-v-certify {
+	@include xicon(v-certify);
+}
+.xicon-v-clock {
+	@include xicon(v-clock);
+}
+.xicon-v-cog {
+	@include xicon(v-cog);
+}
+.xicon-v-comment {
+	@include xicon(v-comment);
+}
+.xicon-v-draft {
+	@include xicon(v-draft);
+}
+.xicon-v-follower {
+	@include xicon(v-follower);
+}
+.xicon-v-friend {
+	@include xicon(v-friend);
+}
+.xicon-v-post {
+	@include xicon(v-post);
+}
+.xicon-v-record {
+	@include xicon(v-record);
+}
+.xicon-v-reminder {
+	@include xicon(v-reminder);
+}
+.xicon-v-star {
+	@include xicon(v-star);
+}
+.xicon-verified-group {
+	@include xicon(verified-group);
+}
+.xicon-video {
+	@include xicon(video);
+}
+.xicon-voice-left {
+	@include xicon(voice-left);
+}
+.xicon-voice-right {
+	@include xicon(voice-right);
+}
+.xicon-vote-icon {
+	@include xicon(vote-icon);
+}
+.xicon-warning-tip {
+	@include xicon(warning-tip);
+}
+.xicon-work-icon {
+	@include xicon(work-icon);
+}
+.xicon-x-circle {
+	@include xicon(x-circle);
+}
+.xicon-x-small {
+	@include xicon(x-small);
+}
+.xicon-xcourse_register {
+	@include xicon(xcourse_register);
+}
+.xicon-zan {
+	@include xicon(zan);
+}
+.xicon-zoom-in {
+	@include xicon(zoom-in);
+}
+.xicon-zoom-out {
+	@include xicon(zoom-out);
+}
+.xicon-zoom {
+	@include xicon(zoom);
+}

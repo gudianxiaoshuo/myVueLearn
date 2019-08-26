@@ -1,0 +1,42 @@
+//选择上传成绩格式
+#_selectScoreReportWay {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 20px;
+        text-align: center;
+    }
+    .reportWay {
+        text-align: center;
+        display: inline-block;
+        color: $grayFontColor;
+        span {
+            width: 85px;
+            height: 85px;
+            margin: 0 40px 10px;
+            padding: 5px;
+            display: block;
+            &.noManual {
+                @include bg_with_retina(no_manual, png,$versionImgPath);
+                background-position: center;
+            }
+            &.manual {
+                @include bg_with_retina(manual, png,$versionImgPath);
+                background-position: center;
+            }
+        }
+        &:hover {
+            span {
+                @include border-radius(85px);
+                border: 5px solid #fff;
+                padding: 0;
+                box-shadow: 0 2px 4px rgb(211,211,211);
+            }
+        }
+    }
+    .zpArea {
+        width: 100%;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #EEE;
+    }
+}

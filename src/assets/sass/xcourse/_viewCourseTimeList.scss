@@ -1,0 +1,35 @@
+#viewExamPointList,
+#viewFullTeacherList,
+#viewCourseTimeList {
+    width: 255px;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 2px 4px 0  rgba(0, 0, 0, .19);
+    z-index: 1;
+    overflow: hidden;
+    .title {
+        height: 36px;
+        line-height: 36px;
+        color: $lightBlackFontColor;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 0 10px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .content {
+        padding: 10px;
+    }
+    .teacherItem,
+    .classTimeItem {
+        float: left;
+        line-height: 26px;
+        color: $lightBlackFontColor;
+        font-size: 12px;
+        margin: 0 8px;
+    }
+    .examPointItem {
+        line-height: 26px;
+        color: $lightBlackFontColor;
+        font-size: 12px;
+    }
+}

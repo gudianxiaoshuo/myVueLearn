@@ -1,0 +1,902 @@
+@charset "UTF-8";
+
+// 学校群首页模板*/
+$customColor: #005DAC;
+
+.schoolTemplateHeaderBg {
+    background-color: #fff;
+}
+.schoolTemplateHeader {
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+    padding: 25px 0;
+    .commonAddFriendBtn {
+        top: 68px;
+        left: 250px;
+    }
+    .schoolLogo{
+        height: 70px;
+        line-height: 70px;
+        display: inline-block;
+        img {
+            height: 60px;
+            vertical-align: middle;
+        }
+    }
+    .schoolNav {
+        float: right;
+        position: relative;
+        .navIcon {
+            text-align: right;
+            @include abs-pos(auto, 40px, auto, auto);
+            width: 600px;
+            &.non-authorize {
+                right: 0;
+            }
+            .operArea {
+                display: inline-block;
+                float: right;
+                margin-top: 4px;
+            }
+            a {
+                color: $lightBlackFontColor;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+                &.joinIcon {
+                    width: 90px;
+                    height: 30px;
+                    display: inline-block;
+                    margin-right: 22px;
+                    float: right;
+                    @include bg_with_retina(join-activity, png, $qunIndexSetImgPath);
+                    &:hover {
+                        background-position: 0 -30px;
+                    }
+                }
+            }
+            .line {
+                margin: 0 10px;
+                color: $lineGray;
+            }
+            .iconItem {
+                margin: 0 10px;
+                &:hover {
+                    .itemIcon {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+            .itemIcon {
+                color: $blackFontColor;
+                @include rel-pos($top: 2px);
+            }
+            .functionContainer {
+                right: 0;
+            }
+        }
+        .userIcon {
+            width: 28px;
+            height: 28px;
+            border: 1px solid #eee;
+            @include border-radius(28px);
+            @include abs-pos(0, 0, auto, auto);
+            overflow: hidden;
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+        .searchBox {
+            @include abs-pos(40px, 0, auto, auto);
+            .searchInput {
+                width: 322px;
+                height: 28px;
+                border: 1px solid $lineGray;
+                padding-left: 36px;
+                @include border-radius(100px);
+            }
+            .searchBtn {
+                border: none;
+                cursor: pointer;
+                height: 16px;
+                width: 16px;
+                @include abs-pos(7px, auto, auto, 10px);
+            }
+        }
+    }
+}
+.defaultHeader {
+    position: relative;
+    height: 80px;
+    max-width: 540px;
+    display: block;
+    line-height: normal;
+    .icon {
+        width: 80px;
+        height: 80px;
+        display: block;
+        @include abs-pos(0, auto, auto, 0);
+        &.auto {
+            width: 540px;
+            img {
+                width: auto;
+            }
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            @include border-radius(4px);
+        }
+    }
+    .name {
+        max-width: 450px;
+        font-size: 22px;
+        @include text-truncate();
+        @include abs-pos(10px, auto, auto, 88px);
+    }
+    .user-info {
+        max-width: 450px;
+        @include text-truncate();
+        @include abs-pos(10px, auto, auto, 88px);
+        .name-short {
+            max-width: 200px;
+            font-size: 22px;
+            @include text-truncate();
+        }
+        .rank {
+            padding: 20px;
+        }
+    }
+    .personal {
+        max-width: 200px;
+        @include abs-pos(10px, auto, auto, 188px);
+        .rank {
+
+        }
+        .fanss {
+        }
+    }
+
+
+    .link {
+        font-size:12px;
+        @include abs-pos(55px, auto, auto, 88px);
+    }
+}
+.openNavBg {
+    background-color: $customColor;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.openNav {
+    width: 1140px;
+    padding: 6px 0;
+    margin: 0 auto;
+    .item {
+        position: relative;
+        float: left;
+        margin: 2px 4px 2px 0;
+        .channel {
+            color: #fff;
+            vertical-align: top;
+            padding: 0 15px;
+            display: block;
+            height: 28px;
+            line-height: 28px;
+            &:hover,
+            &.on {
+                background-color: rgba(#000, .2);
+                @include border-radius(2px);
+            }
+        }
+        .childIcon {
+            color: #fff;
+            position: relative;
+            top: 2px;
+            cursor: pointer;
+        }
+    }
+    .childList {
+        display: none;
+        z-index: 10;
+        min-width: 80px;
+        padding: 10px 16px;
+        @include abs-pos(32px, auto, auto, 0);
+        box-shadow: 0 2px 13px 0 rgba(0, 0, 0, .3);
+        max-height: 240px;
+        overflow-y: auto;
+        .arrow {
+            @include abs-pos(-16px, auto, auto, 50%);
+            color: #fff;
+            margin-left: -13px;
+            font-size: 26px;
+        }
+        a {
+            color: #FFFFFF;
+            display: block;
+            white-space: nowrap;
+            line-height: 28px;
+            font-size: 12px;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+    .bulidinChannel {
+        display: inline-block;
+        vertical-align: top;
+        width: 186px;
+    }
+    .line {
+        width: 1px;
+        height: 16px;
+        background-color: rgba(#fff, .3);
+        margin: 7px 5px 0;
+        float: left;
+    }
+}
+.schoolTemplate {
+    width: 944px;
+    font-size: 12px;
+    color: $lightBlackFontColor;
+    margin: 0 auto;
+    box-shadow: none;
+    background-color: initial;
+    .schoolTL {
+        position: relative;
+        margin-bottom: 9px;
+        margin-left: -4px;
+        border: 2px dashed #F1F1F1;
+        padding: 2px;
+        .schoolSetting {
+            display: none;
+            width: 32px;
+            height: 100%;
+            padding: 0 15px;
+            @include abs-pos(0, -62px, auto, auto);
+            li {
+                height: 32px;
+                width: 32px;
+                line-height: 39px;
+                text-align: center;
+                color: #FFF;
+                font-weight: normal;
+                cursor: pointer;
+                background-color: #FFF;
+                box-shadow: #999 0px 0px 8px;
+                margin-bottom: 15px;
+                @include border-radius(100% 100% 100% 100%);
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                & i {
+                    color: #676767;
+                    font-size: 16px;
+                }
+                &:hover {
+                    i {
+                        color: #FFAA33;
+                    }
+                }
+            }
+        }
+        &.set:hover {
+            border-color: #F61313;
+            .schoolSetting {
+                display: block;
+            }
+        }
+        .column,
+        .column2,
+        .column3,
+        .schoolFocusPic {
+            margin-bottom: 0;
+        }
+        &:first-child {
+            .schoolSetting li:first-child {
+                display: none;
+            }
+        }
+        &:last-child {
+            .schoolSetting li:nth-child(2) {
+                display: none;
+            }
+            &[row = "1"] {
+                .schoolSetting li:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .indexNullTips {
+        margin-top: 40px;
+    }
+    .picPlaceholder {
+        width: 106px;
+        height: 87px;
+        display: inline-block;
+        vertical-align: middle;
+        @include bg_with_retina(indexNullTips, png, $versionImgPath);
+        margin: 0 auto;
+        background-position: 0 -180px;
+    }
+}
+.moduleBorder {
+    @include border-radius(4px);
+    border: 1px solid $borderDark;
+    background-color: #FFF;
+    height: 252px;
+    position: relative;
+    .channel_content {
+        padding-left: 0;
+    }
+    .channelContent {
+        padding: 12px;
+    }
+}
+.moduleTitle {
+    height: 34px;
+    border-bottom: 1px solid $borderDark;
+    margin-bottom: 10px;
+    position: relative;
+    margin: 0 12px;
+    .mTitle {
+        float: left;
+        color: $blackFontColor;
+        overflow: hidden;
+        max-width: 82%;
+        font-size: 16px;
+        height: 27px;
+        padding-top: 6px;
+        border-bottom: 2px solid $customColor;
+        .letter {
+            font-size: 18px;
+            line-height: 18px;
+            height: 18px;
+            display: inline-block;
+            border-right: 1px solid $borderGray;
+            padding-right: 8px;
+            margin-right: 8px;
+        }
+        .customName {
+            &.hasLetter {
+                max-width: 82%;
+            }
+            max-width: 100%;
+            display: inline-block;
+            vertical-align: top;
+            @include text-truncate();
+        }
+    }
+    .mMore {
+        color: $lightBlackFontColor;
+        float: right;
+        font-size: 12px;
+        line-height: 34px;
+        font-weight: normal;
+        i {
+            position: relative;
+            top: 2px;
+        }
+        &:hover {
+            color: $orangeFontColor;
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .setChannel {
+        //display: none;
+        height: 32px;
+        width: 32px;
+        line-height: 30px;
+        text-indent: 8.5px;
+        color: #fff;
+        font-weight: normal;
+        cursor: pointer;
+        background-color: #fff;
+        box-shadow: #999 0px 0px 8px;
+        margin-left: -18px;
+        @include border-radius(100% 100% 100% 100%);
+        @include abs-pos(-16px, auto, auto, 50%);
+        & i{
+            color: #676767;
+            font-size: 16px;
+        }
+        &:hover {
+            i{
+                color: #FFAA33;
+            }
+        }
+    }
+    &.noBorder {
+        margin: 0;
+        padding: 0 12px;
+        .setChannel {
+            right: 0;
+        }
+        .mTitle {
+            border-bottom: none;
+        }
+    }
+    &.three {
+        @include border-radius(4px 4px 0 0);
+        .mTitle,
+        .mMore, .mMore i {
+            color: #fff;
+        }
+    }
+
+}
+.schoolFocusPic {
+    &.set {
+        width: 620px;
+        .setChannel {
+            right: 0;
+        }
+    }
+}
+.schoolFocusPic,
+.moduleBorder {
+    &.set {
+        border: 1px dashed $borderDark;
+        &:hover {
+            border: 1px dashed $orangeFontColor;
+            .setChannel {
+                display: block;
+            }
+        }
+    }
+}
+
+.column {
+    width: 938px;
+    margin-bottom: 16px;
+}
+.column2 {
+    width: 620px;
+}
+.column3 {
+    width: 301px;
+    &.last {
+        width: 300px;
+    }
+}
+.column2,
+.column3 {
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    &.last {
+        margin-right: 0;
+    }
+}
+// 首页专用的标题列表
+.titleModule {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed $lightLineGray;
+    color: $grayFontColor;
+    .line {
+        height: 12px;
+        border-left: 2px solid $borderGray;
+        margin-right: 10px;
+        vertical-align: top;
+    }
+    .mTitle {
+        display: inline-block;
+        color: $grayFontColor;
+        max-width: 70%;
+        @include text-truncate();
+        &:hover {
+            color: $blackFontColor;
+            i {
+                color: $blackFontColor;
+            }
+        }
+        i {
+            position: relative;
+            top: 3px;
+        }
+    }
+    .mTime {
+        float: right;
+        text-align: right;
+    }
+}
+// 首页标题列表设置
+.titleModuleSet {
+    .list {
+        height: 10px;
+        margin-top: 10px;
+        background-color: $lightLineGray;
+        @include border-radius(100px);
+    }
+    .line {
+        margin: 12px 0;
+        border-bottom: 1px dashed $borderGray;
+    }
+}
+
+// 新的首条摘要
+.firstSummaryModule {
+    .firstSummary {
+        .title {
+            font-weight: normal;
+            font-size: 14px;
+            color: $blackFontColor;
+            @include text-truncate();
+        }
+        .content {
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 1px dashed $borderGray;
+        }
+        .pic {
+            width: 54%;
+            float: left;
+            height: 92px;
+            line-height: 92px;
+            text-align: center;
+            overflow: hidden;
+            background-color: $lightGrayBg;
+            img {
+                vertical-align: middle;
+                max-height: 100%;
+                max-width: 100%;
+            }
+            &:hover {
+                transition: .4s;
+                img {
+                    opacity: .7;
+                }
+            }
+        }
+        .detail {
+            float: right;
+            margin-left: 12px;
+            width: 40%;
+            height: 94px;
+            overflow: hidden;
+            position: relative;
+            color: $grayFontColor;
+            line-height: 1.6;
+            &:hover {
+                color: $blackFontColor;
+                i {
+                    color: $blackFontColor;
+                }
+            }
+        }
+    }
+}
+// 单篇日志
+.singleArticleModule {
+    &.threeArticle {
+        width: 190px;
+    }
+
+    &.fourArticle {
+        width: 219px;
+    }
+    &.threeArticle,
+    &.fourArticle {
+        float: left;
+        margin-right: 12px;
+    }
+    &.last {
+        margin-right: 0;
+    }
+    .title {
+        font-weight: normal;
+        font-size: 14px;
+        color: $blackFontColor;
+        @include text-truncate();
+    }
+    .pic {
+        width: 100%;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+        margin-bottom: 10px;
+        overflow: hidden;
+        background-color: $lightGrayBg;
+        img {
+            vertical-align: middle;
+            max-height: 100%;
+            max-width: 100%;
+            transition: .4s;
+        }
+        &:hover {
+            img {
+                opacity: .7;
+            }
+        }
+    }
+    .detail {
+        margin-top: 5px;
+        position: relative;
+        @include block-text-overflow(2);
+        line-height: 1.6;
+        height: 36px;
+        color: $grayFontColor;
+        &:hover {
+            color: $blackFontColor;
+            i {
+                color: $blackFontColor;
+            }
+        }
+    }
+}
+.firstSummaryModule .firstSummary,
+.singleArticleModule {
+    &.moduleSet {
+        .pic {
+            background: $lineGray url(/images/qun_index_set/fixed_img.png) center center no-repeat;
+        }
+        .title {
+            width: 110px;
+            height: 15px;
+            margin-bottom: 10px;
+            background-color: $lightLineGray;
+            @include border-radius(100px);
+        }
+        .list {
+            height: 10px;
+            margin-bottom: 10px;
+            background-color: $lightLineGray;
+            @include border-radius(100px);
+        }
+    }
+ }
+
+.schoolFocusPic {
+    width: 622px;
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    height: 252px;
+    @extend %focus_pic;
+    .focus_pic {
+        overflow: hidden;
+        height: 252px;
+    }
+    .animate_img_item {
+        @include border-radius(5px);
+        height: 252px;
+        line-height: 252px;
+        width: 622px;
+    }
+    .moduleTitle {
+        margin: 0 auto;
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(#fff, .8);
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        @include border-radius(5px 5px 0 0);
+    }
+    &.moduleBorder {
+        padding: 0;
+        width: 620px;
+    }
+    .setFoucsPic {
+        height: 252px;
+        background: $lineGray url(/images/qun_index_set/fixed_img.png) center center no-repeat;
+    }
+    .indexNullTips {
+        margin-top: 70px;
+    }
+}
+.videoArea {
+    .pic_or_video {
+        &:hover {
+            .player {
+                opacity: 1;
+            }
+        }
+        .preview_video,
+        .show_video_box {
+            display: block;
+            height: 195px;
+            width: 100%;
+        }
+        img {
+            max-width: 276px;
+            max-height: 195px;
+            width: auto;
+        }
+        .player {
+            opacity: .5;
+        }
+
+    }
+    .videoSet {
+        background-color: $lineGray;
+        text-align: center;
+        padding-bottom: 18px;
+    }
+}
+// 学校模板设置
+.schoolTemplateSet {
+    box-shadow: none;
+    .index_set {
+        width: 940px;
+        padding: 0;
+    }
+}
+
+// 上传logo
+.uploadLogo {
+    max-width: 280px;
+    margin-bottom: 20px;
+    position: relative;
+    height: 70px;
+    .qunIndexLogo {
+        height: 70px;
+        line-height: 70px;
+        img {
+            height: 70px;
+        }
+    }
+    &:hover {
+        .uploadBtn {
+            display: block;
+        }
+    }
+    .uploadBtn {
+        border: 1px dashed $lineGray;
+        background-color: rgba(#fff, .5);
+        height: 70px;
+        line-height: 70px;
+        font-size: 20px;
+        display: none;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        @include abs-pos(0, auto, auto, 0);
+        &.show {
+            display: block;
+            color: $blue;
+        }
+    }
+}
+
+// 栏目设置层
+.setChannelLayer {
+    width: 300px;
+    max-height: 362px;
+    margin-left: -150px;
+    @include border-radius(6px);
+    @include abs-pos(35px, auto, auto, 50%);
+    background-color: $headerNavBg;
+    box-shadow: 0 8px 18px rgba(#000, .18);
+    z-index: 3;
+    .title {
+        height: 62px;
+        border: 1px solid $borderDark;
+        @include border-radius(4px 4px 0 0);
+        border-bottom: none;
+        position: relative;
+        .titleText {
+            text-align: center;
+            height: 37px;
+            line-height: 37px;
+            color: $blackFontColor;
+        }
+        .close {
+            @include abs-pos(10px, 10px, auto, auto);
+            cursor: pointer;
+        }
+        .tab {
+            height: 24px;
+            border-bottom: 1px solid $borderDark;
+            .item {
+                color: $grayFontColor;
+                height: 23px;
+                font: 12px/24px normal;
+                display: block;
+                float: left;
+                cursor: pointer;
+                padding: 1px 10px;
+                margin-right: 6px;
+                @include border-radius(4px 4px 0 0);
+                &.first {
+                    border-left: none;
+                }
+                &:hover,
+                &.current {
+                    padding: 0 9px;
+                    color: $blackFontColor;
+                    background: #fff;
+                    border: 1px solid $borderDark;
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+    }
+    .content {
+        padding: 6px 0 6px 6px;
+        border: 1px solid $borderDark;
+        border-top: none;
+        background-color: #fff;
+        @include border-radius(0 0 4px 4px);
+        .oneTag {
+            &.on {
+                border: 1px solid $orangeFontColor;
+                background-color: $orangeFontColor;
+                color: #fff;
+            }
+            &.checked {
+                background: $bodyGray;
+                color: $grayFontColor;
+                border: 1px solid $sideBarGray;
+                cursor: auto;
+            }
+        }
+    }
+    .demoTitle {
+        padding: 6px;
+        .item {
+            position: relative;
+            display: block;
+            cursor: pointer;
+            .demo {
+                font-size: 16px;
+                color: $blackFontColor;
+                border: 1px dashed $lineGray;
+                @include border-radius(4px);
+                display: inline-block;
+                vertical-align: middle;
+                margin: 10px;
+                padding: 0 10px;
+                width: 215px;
+                position: static;
+                &.lineHeight {
+                    line-height: 34px;
+                }
+                &.bg {
+                    color: #fff;
+                    background-color: $customColor;
+                }
+            }
+        }
+    }
+    .available,
+    .unavailable {
+        margin: 6px;
+        max-height: 98px;
+        overflow-y: auto;
+    }
+    .unavailableTitle {
+        position: relative;
+        height: 30px;
+        width: 250px;
+        margin: 8px auto;
+        .text {
+            background-color: #fff;
+            padding: 0 10px;
+            font-size: 12px;
+            color: $grayFontColor;
+            @include abs-pos($top: 5px, $left: 30px);
+        }
+        .line {
+            height: 1px;
+            width: 100%;
+            background-color: $borderDark;
+            @include abs-pos($top: 16px);
+        }
+    }
+}
+
+.isSetting {
+    .schoolTemplate .schoolTL.set:hover {
+        border-color: #F1F1F1;
+    }
+    .schoolTemplate .schoolTL .schoolSetting li{
+        display: none;
+    }
+}

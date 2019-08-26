@@ -1,0 +1,210 @@
+#upload_xcourse_userInfo_layer,
+#upload_xcourse_poster_layer,
+#modify_qun_activity,
+#pub_activities_layer {
+    background-color: #fff;
+    @include border-radius(0);
+    width: 638px;
+    .layer_title_40 {
+        border-bottom: 1px solid $lineGray;
+    }
+    .activities_info_container {
+
+    }
+    .activities_image {
+        float: left;
+        height: 160px;
+        width: 240px;
+        margin-right: 20px;
+        overflow: hidden;
+        position: relative;
+        img {
+            height: 160px;
+            width: 240px;
+        }
+        .upload_poster {
+            @include abs-pos($bottom: 4px, $left: 84px);
+            @include bg_with_retina(upload-poster, png, $versionImgPath);
+            display: block;
+            width: 72px;
+            height: 22px;
+            text-indent: -99999px;
+        }
+    }
+    .activities_info_from {
+        float: right;
+        width: 338px;
+        div {
+            margin-bottom: 10px;
+            position: relative;
+            sup {
+                color: $darkOrangeFontColor;
+                margin-right: 4px;
+                top: 0;
+            }
+        }
+        input {
+            height: 22px;
+            line-height: 22px;
+            width: 236px;
+            padding: 0 6px;
+            border: 1px solid $lineGray;
+            vertical-align: middle;
+            @include border-radius(4px);
+            &.time_input,
+            &.num_input {
+                width: 100px;
+            }
+            &.time_input {
+                font-size: 12px;
+            }
+            &.upload_opus {
+                width: auto;
+                margin-right: 5px;
+            }
+        }
+        .suggestion_address_list {
+            width: 258px;
+            padding: 4px 0;
+            max-height: 180px;
+            overflow-y: auto;
+            border: 1px solid $lineGray;
+            @include abs-pos(22px, auto, auto, 54px);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
+            background-color: #fff;
+            z-index: 1;
+            display: none;
+            .address_list_item {
+                &:hover {
+                    background-color: $lightGrayBg;
+                    cursor: pointer;
+                }
+                padding: 0 6px;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+    .activities_desc_container {
+        .activities_desc_textarea {
+            height: 88px;
+            width: 584px;
+            padding: 6px;
+            border: 1px solid $lineGray;
+            resize: none;
+            margin: 12px 0;
+            @include border-radius(4px);
+        }
+        .option_container {
+            text-align: right;
+            position: relative;
+        }
+        .tip_container {
+            @include abs-pos($top: 0, $left: 0);
+            label {
+                font-weight: bold;
+            }
+            span {
+                color: $grayFontColor;
+            }
+        }
+    }
+}
+#upload_xcourse_userInfo_layer,
+#upload_xcourse_poster_layer,
+#upload_activities_poster_layer {
+    width: 675px;
+    .activities_poster_select_box {
+        float: left;
+        width: 440px;
+        background-color: #f5f5f5;
+        outline: 1px solid #ddd;
+    }
+    .poster_select_container,
+    .activities_poster_select_area {
+        width: 440px;
+        height: 260px;
+    }
+    .poster_select_box {
+        position: relative;
+        width: 440px;
+        height: 260px;
+        overflow: hidden;
+        text-align: center;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .poster_preview {
+        float: right;
+        height: 120px;
+        width: 184px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .upload_btn_area {
+        text-align: right;
+        height: 30px;
+        a {
+            overflow: hidden;
+            margin-left: 16px;
+            &.hide {
+                display: none;
+            }
+        }
+    }
+}
+#upload_xcourse_poster_layer {
+    .poster_preview {
+        width: 160px;
+        height: 120px;
+        margin-right: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .select_btn {
+        text-align: center;
+        padding-top: 90px;
+        p {
+            font-size: 12px;
+            color: $grayFontColor;
+            text-align: center;
+        }
+    }
+}
+#upload_xcourse_userInfo_layer {
+    width: 550px;
+    .activities_poster_select_box,
+    .activities_poster_select_area,
+    .poster_select_box {
+        width: 250px;
+        height: 310px;
+    }
+    .posterArea {
+        padding: 0 40px 20px;
+    }
+    .select_btn {
+        text-align: center;
+        margin-top: 106px;
+        p {
+            font-size: 12px;
+            color: $grayFontColor;
+            text-align: center;
+        }
+    }
+    .poster_preview {
+        width: 100px;
+        height: 124px;
+        margin-right: 20px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

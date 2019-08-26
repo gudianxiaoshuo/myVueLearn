@@ -1,0 +1,147 @@
+//提交课程方作业
+#uploadImageHomeworkBox,
+#uploadVideoHomeworkBox{
+    width: 438px;
+    .privacy_message {
+        padding: 0;
+    }
+    .content {
+        position: relative;
+        padding: 20px 20px 0 20px;
+        .tip {
+            color: $grayFontColor;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
+    .newBtnArea {
+        .btn-orange {
+            margin-left: 10px;
+        }
+    }
+    .success {
+        color: $grayFontColor;
+        text-align: center;
+        margin-top: 15px;
+        i {
+            color: #7ED321;
+            margin-right: 5px;
+        }
+    }
+    .log_one_pic,
+    .log_one_media {
+        .delete {
+            @include abs-pos(-12px, -12px, auto, auto);
+            @include border-radius(24px);
+            background: #5B5B5B;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            visibility: visible;
+            z-index: 4;
+            &:hover {
+                color: #ffffff;
+            }
+            i {
+                top: 1px;
+                left: 1px;
+                position: relative;
+                font-size: 22px;
+                color: #ffffff;
+            }
+        }
+    }
+}
+#uploadImageHomeworkBox {
+    .uploadBox {
+        width: 98px;
+        height: 98px;
+        border: 1px dashed #ffaa33;
+        text-align: center;
+        margin: 25px auto 0;
+        .primary-btn {
+            display: inline-block;
+            margin-top: 35px;
+        }
+    }
+    .log_one_pic {
+        @include abs-pos(69px, auto, auto, 149px);
+        width: 100px;
+        height: 100px;
+        z-index: 2;
+        &:hover {
+            .delete {
+                display: block;
+            }
+        }
+        img {
+            max-height: 100px;
+            max-width: 100px;
+        }
+        .add_desc,
+        textarea {
+            display: none;
+        }
+        .pic_preview,
+        .pic_container {
+            width: 100px;
+            height: 100px;
+            border: none;
+            line-height: 100px;
+            overflow: hidden;
+        }
+        .img_control {
+            width: 100px;
+            height: 100px;
+            left: 0;
+            top: 0;
+        }
+        .log_upload_error {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+#uploadVideoHomeworkBox {
+    .uploadBox {
+        width: 268px;
+        height: 168px;
+        border: 1px dashed #ffaa33;
+        text-align: center;
+        margin: 25px auto 0;
+        .primary-btn {
+            display: inline-block;
+            margin-top: 70px;
+        }
+    }
+    .videoIcon {
+        @include bg_with_retina(videoIcon, png, $versionImgPath);
+        width: 32px;
+        height: 18px;
+        @include abs-pos($top:80px, $left:120px);
+        z-index: 4;
+    }
+    .log_one_media {
+        @include abs-pos(70px, auto, auto, 65px);
+        border: none;
+        width: 270px;
+        padding: 0;
+        height: 170px;
+        z-index: 2;
+        .media_name {
+            display: none;
+        }
+        span {
+            width: 270px;
+            height: 170px;
+            background: #313131;
+        }
+    }
+    .upload_error {
+        position: absolute;
+        z-index: 4;
+        color: #fff;
+        line-height: 50px;
+        padding: 20px 100px;
+    }
+}

@@ -1,0 +1,18 @@
+#add_template_layer {
+    //width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    textarea {
+        padding: 10px;
+        margin: 0 20px;
+        @include border-radius(5px);
+        border: 1px solid $lineGray;
+        width: 538px;
+        height: 110px;
+        resize: none;
+        &:focus {
+            border: 1px solid $orange;
+        }
+    }
+}

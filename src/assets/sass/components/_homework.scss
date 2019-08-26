@@ -1,0 +1,1003 @@
+.f_right {
+    float: right;
+}
+.f_left {
+    float: left;
+}
+.isFavWork {
+    a.blue_f {
+        color: $blue;
+    }
+    a.gray {
+        cursor: default !important;
+        color: $grayFontColor !important;
+    }
+    .comment_content {
+        margin-bottom: 20px;
+        @include border-radius(0);
+        border: 1px solid $lightLineGray;
+        .one_comment {
+            background: $lightGrayBg;
+        }
+    }
+    .favSubject {
+        font-weight: normal;
+        max-width: 350px;
+        display: inline-block;
+        margin-left: 10px;
+        @include text-truncate();
+    }
+}
+.one_homework {
+    margin-left: auto;
+    border: none;
+    &.fixedHeight {
+        height: 180px;
+        overflow: hidden;
+    }
+    &:not(.fixedHeight) {
+        .shrinkBtn {
+            height: 45px;
+            background-image: none;
+        }
+    }
+    .content {
+        padding-top: 20px;
+    }
+    .operation,
+    .operArea {
+        color: $grayFontColor;
+        font-size: 14px;
+        .newWork {
+            font-size: 12px;
+            color: $orangeFontColor;
+        }
+        .dividing_line {
+            color: $middleGrayBg;
+            padding: 0 10px;
+        }
+        .show {
+            color: $orangeFontColor;
+        }
+    }
+    .operation {
+        line-height: 26px;
+        height: 26px;
+    }
+    .operArea {
+        @include abs-pos($right: 0);
+        height: 40px;
+        line-height: 40px;
+    }
+    .screen_height {
+        max-height: 560px;
+        overflow: auto;
+    }
+    .subject {
+        font-size: 18px;
+        margin-right: 20px;
+        color: $blackFontColor;
+    }
+    .workType {
+        margin-right: 20px;
+    }
+    .workType,
+    .commit_time {
+        margin-bottom: 7px;
+        &.expiration_time {
+            color: $orangeFontColor;
+        }
+    }
+    .workName {
+        font-size: 14px;
+        color: $blackFontColor;
+    }
+    .noticeTip {
+        border-left: 2px solid $orange;
+        padding-left: 10px;
+        line-height: 14px;
+    }
+    .noticeText {
+        margin: 20px 0;
+    }
+
+    .btn_disable {
+        cursor: default;
+    }
+    .countColor {
+        color: $orangeFontColor;
+    }
+    .comment_info {
+        color: $grayFontColor;
+        font-size: 12px;
+        padding: 10px 0;
+        margin: 0 20px;
+        font-weight: bold;
+        border-bottom: 1px solid $lightLineGray;
+    }
+    .special_item {
+        font-size: 12px;
+        font-weight: bold;
+        padding: 10px 20px 0;
+    }
+    .group_member_list {
+        margin: 0 15px;
+        padding-bottom: 15px;
+        .readStatus {
+            padding: 5px 0;
+            color: $grayFontColor;
+        }
+        .item {
+            font-size: 14px;
+            margin: 0 20px 0px 0;
+            cursor: pointer;
+            max-width: 150px;
+            @include text-truncate();
+            float: left;
+            color: $blackFontColor;
+            display: inline-block;
+            b {
+                font-weight: normal;
+            }
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .students_submit{
+        border-bottom: 1px solid $lightLineGray;
+        padding: 15px 0;
+        position: relative;
+        min-height: 30px;
+        &.border_none {
+            border: none
+        }
+        .simplify_id_card {
+            float: none !important;
+        }
+        .wb_add_img  {
+            .thumbnail_img {
+                height: 158px;
+                line-height: 158px;
+                width: 158px;
+            }
+            .bigger_width {
+                max-width: 100%;
+            }
+        }
+        /*提交作业时包含视频音频的样式*/
+
+        .audio_container {
+            .jp-progress {
+                width: 418px !important;
+            }
+        }
+        ul.jp-controls li.music_voice_ctrol {
+            margin-right: 90px;
+        }
+        .video_play {
+            .music_container {
+                width: 500px !important;
+                video {
+                    max-width: 500px !important;
+                }
+            }
+        }
+        .aside,
+        .commentAside {
+            margin-top: 0;
+            width: 20px;
+            height: 20px;
+            @include abs-pos(15px, auto, auto, 0);
+            .user_photo {
+                width: 20px;
+                height: 20px;
+                img {
+                    width: 20px;
+                    height: 20px;
+                    @include border-radius(20px);
+                }
+            }
+        }
+        .section {
+            padding: 0 0 0 30px;
+            h3 {
+                font-size: 14px;
+                position: relative;
+                .time {
+                    font-weight: normal;
+                    top: 0;
+                    right: auto;
+                }
+                .name {
+                    margin-right: 5px;
+                }
+                .lateHomework {
+                    width: 30px;
+                    height: 20px;
+                    @include abs-pos($top: 2px);
+                    margin-left: 10px;
+                    display: inline-block;
+                    @include bg_with_retina(late_homework, png, $versionImgPath);
+                }
+            }
+            .subject {
+                margin: 10px 0;
+            }
+        }
+
+        .oper_icon{
+            font-size: 12px;
+            font-weight: normal;
+            &.blue_f {
+                color: $blue;
+            }
+            &.onlyRead {
+                cursor: auto;
+                color: $orangeFontColor;
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+            &.lastChild {
+                padding-right: 0;
+            }
+            &.gray {
+                color: $grayFontColor;
+                cursor: auto;
+            }
+        }
+
+        .comment_content {
+            clear: both;
+            border: 1px solid $lightLineGray;
+            margin-left: 30px;
+            background: #FFF;
+            position: relative;
+            @include border-radius(0);
+            &.hhmsComment {
+                color: $lightBlackFontColor;
+                padding: 10px;
+            }
+            .one_comment {
+                background: #FFF;
+                padding: 13px;
+            }
+            .comment_section  {
+                color: $grayFontColor;
+                .user_account {
+                    margin-bottom: 10px;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                .wb_add_img:last-child {
+                    margin-bottom: 0;
+                }
+                .article_operation {
+                    padding-bottom: 10px;
+                }
+            }
+            .one_comment_content {
+                margin-bottom: 12px;
+                padding: 0;
+                word-wrap: break-word;
+                max-width: 450px;
+                color: $blackFontColor;
+            }
+            .multi_media_title {
+                margin-top: 12px;
+            }
+        }
+
+        //无效作业tip
+        .hhmsInvalidWorkTip{
+            color: $orangeFontColor;
+        }
+    }
+    //点评作业优秀，良好，合格，待提高
+    .estimateStatus {
+        width: 34px;
+        height: 34px;
+        float: right;
+        &.status401,
+        &.status402,
+        &.status403,
+        &.status404 {
+            @include bg_with_retina(estimate_status, png, $evaluationImgPath);
+            transform: rotate(-30deg);
+        }
+        &.status401 {
+            background-position: 0 0;
+        }
+        &.status402 {
+            background-position: 0 -34px;
+        }
+        &.status403 {
+            background-position: 0 -68px;
+        }
+        &.status404 {
+            background-position: 0 -102px;
+        }
+    }
+    .in_comment_homework {
+        color: $borderGray;
+        .name {
+            margin-right: 5px !important;
+        }
+        .source {
+            color: $grayFontColor;
+        }
+    }
+    .btnHomeworkOrange {
+        line-height: 24px;
+        height: 24px;
+        width: 58px;
+        text-align: center;
+        font-size: 12px;
+        color: #FFF;
+        @include border-radius(2px);
+        display: inline-block;
+        margin-top: -2px;
+        margin-left: 10px;
+        i {
+            color: #FFF;
+            font-size: 12px;
+            margin-right: 6px;
+            @include rel-pos(1px, auto, auto, 3px);
+        }
+    }
+    .btnHomeworkOrange {
+        background: $orangeFontColor;
+    }
+    .detailBtnOrange {
+        color: $orangeFontColor;
+    }
+    .detailBtnGray {
+        color: $grayFontColor;
+    }
+    .commentIcon {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: top;
+        @include bg_with_retina(commentedIcon, png, $evaluationImgPath);
+        &.status401 {
+            background-position: 8px 0;
+        }
+        &.status402 {
+            background-position: -37px 0;
+        }
+        &.status403 {
+            background-position: -83px 0;
+        }
+        &.status404 {
+            background-position: -129px 0;
+        }
+        &.status408 {
+            background-position: -175px 0;
+        }
+        &.statusNull {
+            background-position: -221px 0;
+        }
+    }
+}
+
+.homeworkChooseQun {
+    .oneQunType {
+        .typeIcon {
+            &.classQun {
+                @include bg_with_retina(homework_class, png, $versionImgPath);
+                background-position: center;
+            }
+            &.otherQun {
+                @include bg_with_retina(homework_other, png, $versionImgPath);
+                background-position: center;
+            }
+            &.courseQun {
+                @include bg_with_retina(homework_course, png,$versionImgPath);
+                background-position: center;
+            }
+        }
+    }
+}
+.sendGuardian {
+    position: relative;
+    @include border-radius(5px);
+    padding: 5px 10px;
+    background: #FFF;
+    margin-top: 10px;
+    i {
+        color: #FFF;
+        @include abs-pos(-10px, auto, auto, 30px);
+    }
+}
+
+.canvasContainer {
+    background: #FFF;
+    position: relative;
+    .closeBtn {
+        @include abs-pos($top:-5px, $right:-18px);
+        @include border-radius(5px);
+        width: 30px;
+        height: 30px;
+        background: #FFF;
+        text-align: center;
+        line-height: 35px;
+    }
+    .btnArea {
+        @include abs-pos($top: 10px, $right: 10px);
+        width: 100px;
+        .rotateLeftBtn,
+        .rotateRightBtn,
+        .enlargeBtn,
+        .dwindleBtn,
+        .fontBtn,
+        .drawBtn,
+        .arrowBtn,
+        .revertBtn {
+            display: inline-block;
+            color: $blackFontColor;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            i {
+                display: block;
+                font-weight: bold;
+                color: $blackFontColor;
+            }
+            .text {
+                padding: 10px;
+            }
+            &.on {
+                color: $orangeFontColor;
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .rotateLeftBtn,
+        .rotateRightBtn {
+            margin-bottom: 20px;
+        }
+        //.rotateLeftBtn,
+        .fontBtn {
+            .text {
+                border-right: 1px solid $lightLineGray;
+                border-bottom: 1px solid $lightLineGray;
+            }
+            .box {
+                top: 45px;
+                width: 151px;
+            }
+        }
+        //.rotateRightBtn,
+        .drawBtn {
+            .box {
+                top: 45px;
+            }
+            .text {
+                border-bottom: 1px solid $lightLineGray;
+            }
+        }
+        .enlargeBtn,
+        .arrowBtn {
+            border-right: 1px solid $lightLineGray;
+            padding-top: 20px;
+        }
+        .dwindleBtn,
+        .revertBtn {
+            padding-top: 20px;
+            margin-bottom: 40px;
+        }
+        .fontBtn,
+        .drawBtn,
+        .arrowBtn,
+        .revertBtn {
+            float: left;
+        }
+        .notice {
+            color: $grayFontColor;
+        }
+        .revertBtn {
+            &.gray {
+                color: #BBB;
+                cursor: auto;
+                i {
+                    color: #BBB;
+                }
+            }
+        }
+    }
+    .saveArea {
+        width: 100px;
+        @include abs-pos($bottom: 20px, $right: 10px);
+        color: $grayFontColor;
+        .saveBtn {
+            margin: 0 auto 20px;
+            display: block;
+        }
+    }
+    .picArea {
+        max-width: 800px;
+        max-height: 500px;
+        overflow: auto;
+    }
+    .box {
+        background: #FFF;
+        padding: 10px 5px;
+        position: absolute;
+        top: 65px;
+        right: -70px;
+        width: 180px;
+        z-index: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+        display: none;
+        .arrowUp {
+            color: $lightLineGray !important;
+            position: absolute;
+            top: -11px;
+            right: 50%;
+        }
+        .arrowDown {
+            color: #FFF !important;
+            position: absolute;
+            top: -10px;
+            right: 50%;
+        }
+        .drawSize {
+            float: left;
+            .sizeBox {
+                padding: 2px;
+                width: 12px;
+                height: 12px;
+                border: 1px solid #FFF;
+                line-height: 10px;
+                text-align: center;
+                float: left;
+                margin: 0 2px;
+                @include border-radius(2px);
+                &.selected {
+                    background: #F2F2F2;
+                    border: 1px solid $lineGray;
+                }
+                &:hover{
+                    border: 1px solid $lineGray;
+                }
+            }
+            .brushSize {
+                @include border-radius(100%);
+                background: #313131;
+                display: inline-block;
+                vertical-align: middle;
+                &.small {
+                    width: 3px;
+                    height: 3px;
+                }
+                &.normal {
+                    width: 5px;
+                    height: 5px;
+                }
+                &.big {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+        .colorBox {
+            display: block;
+            border-left: 2px $lineGray solid;
+            margin-left: 10px;
+            padding-left: 10px;
+            float: left;
+            .colorBlock {
+                display: block;
+                padding: 2px;
+                border: 1px solid #FFF;
+                float: left;
+                margin: 0 2px;
+                @include border-radius(2px);
+                &.selected {
+                    background: #F2F2F2;
+                    border: 1px solid $lineGray;
+                }
+                &:hover {
+                    border: 1px solid $lineGray;
+                }
+                em {
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    cursor: pointer;
+                    @include border-radius(2px);
+                }
+
+            }
+        }
+    }
+}
+.studentSubmit {
+    display: block !important;
+    margin: 20px auto 0;
+}
+.correctWork,
+.studentWorkList {
+    .title {
+        height: 59px;
+        line-height: 59px;
+        font-size: 16px;
+        padding: 0 20px;
+        background: #FFF;
+        border-bottom: 1px solid #E8E8E8;
+        position: relative;
+        &.userInfo {
+            padding-bottom: 20px;
+        }
+        .attachment {
+            font-weight: normal;
+            font-size: 14px;
+            padding: 0 30px;
+            color: $grayFontColor;
+            .total {
+                color: $darkOrangeFontColor;
+            }
+        }
+        .download {
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .lateWork {
+            float: left;
+            display: block;
+            position: relative;
+            top: 18px;
+        }
+        .del,
+        .fav,
+        .modifyCommitedBtn {
+            float: right;
+            color: $grayFontColor;
+            font-size: 14px;
+            font-weight: normal;
+            margin-left: 15px;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .fav,
+        .modifyCommitedBtn {
+            color: $orangeFontColor;
+        }
+        .userIcon {
+            width: 44px;
+            height: 44px;
+            @include border-radius(100%);
+            display: inline-block;
+            float: left;
+            margin: 7px 10px 0 0;
+        }
+        .userName {
+            float: left;
+            display: block;
+            font-size: 16px;
+        }
+        .studentInfo {
+            float:left;
+            font-size:14px;
+            font-weight:normal;
+            padding-top:5px;
+            .student {
+                height:30px;
+                line-height: 30px;
+                display:block;
+            }
+            .time {
+                height:12px;
+                line-height: 12px;
+                font-size:12px;
+                color: $grayFontColor;
+                display:block;
+            }
+        }
+    }
+    .lateWork {
+        width: 30px;
+        height: 20px;
+        margin-left: 10px;
+        display: inline-block;
+        @include bg_with_retina(late_homework, png, $versionImgPath);
+    }
+}
+.correctWork {
+    position: relative;
+    &.back {
+        background: none;
+        padding: 0 0;
+        box-shadow: none;
+    }
+    .aside {
+        padding-top: 0;
+        .student {
+            height: 56px;
+            line-height: 56px;
+            color: $blackFontColor;
+            padding: 0 20px;
+            border-bottom: 1px solid $lineGray;
+            display: block;
+            max-width: 200px;
+            @include text-truncate()
+            &:hover,
+            &.current{
+                background: $lightLineGray;
+            }
+        }
+    }
+    .favModify {
+        text-align: right;
+        a {
+            color: $orangeFontColor;
+        }
+    }
+    .crumbs {
+        color: $grayFontColor;
+        padding-left: 0;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .workTitle {
+        height: 59px;
+        font-size: 16px;
+        padding: 10px 20px 0;
+        border-bottom: 1px solid #E8E8E8;
+        position: relative;
+        text-align: center;
+        .commit_time {
+            font-size: 12px;
+            font-weight: normal;
+            color: $lightBlackFontColor;
+            margin-left: 0;
+        }
+        .del {
+            font-weight: normal;
+            font-size: 14px;
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            color: $orangeFontColor;
+        }
+        .method {
+            @include abs-pos(35px, 20px, auto, auto);
+            width: 300px;
+            overflow: hidden;
+            text-align: right;
+            .item {
+                font-size: 14px;
+                font-weight: 400;
+                padding: 0;
+            }
+        }
+    }
+    .workContent {
+        width: 566px;
+        margin: 0 auto;
+        padding: 20px 0px 20px;
+    }
+    .commit_time {
+        margin-left: 40px;
+        color: $grayFontColor;
+        &.expiration_time {
+            color: $orangeFontColor;
+        }
+    }
+    .multi_media_title {
+        margin-left: 0;
+        margin-top: 20px;
+        &.pics {
+            margin-top: 0;
+        }
+    }
+    .content {
+        width: 566px;
+        margin: 0 auto;
+        border: none;
+        padding-bottom: 20px;
+    }
+    .wb_add_img {
+        .thumbnail_img {
+            height: 182px;
+            line-height: 182px;
+            width: 182px;
+        }
+        .noMargin {
+            margin-right: 0;
+        }
+    }
+    .marked {
+        position: relative;
+        .ok {
+            @include border-radius(100%);
+            @include abs-pos($top: 4px,$right: 4px);
+            color: #3BC475;
+            z-index: 1;
+            background: #FFF;
+        }
+    }
+    .commentsHomeworkBox {
+        padding: 20px 0 0;
+        border-top: 1px solid #E8E8E8;
+        position: relative;
+        text-align: left;
+        &.normal {
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .commentBox {
+            text-align: center;
+            margin: 30px 0;
+            padding: 30px 0;
+            //width: 400px;
+            margin: 10px auto;
+            background: $bgOrange;
+            @include border-radius(4px);
+            img {
+                width: 100%;
+            }
+        }
+        .saveBtn {
+            display: block;
+            margin: 30px auto;
+        }
+        .audio_container {
+            .jp-progress {
+                width: 350px;
+            }
+        }
+    }
+    .attach_container {
+        padding-bottom: 20px;
+    }
+
+    .shrinkBtn {
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+        height: 80%;
+        @include abs-pos(auto, auto, 0, auto);
+        cursor: pointer;
+        background-image:linear-gradient(to bottom, rgba(255,255,255, 0) 0%, #fff 100%);
+        i {
+            font-size: 36px;
+            position: absolute;
+            bottom: 5px;
+        }
+    }
+    .workCommentZanBtn,
+    .comment_list_content {
+        width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .publish_comment .upload_something {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.bgWhite {
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+.workBackBtn {
+    height: 60px;
+    line-height: 60px;
+    a {
+        color: $lightBlackFontColor;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+}
+
+.workCommentZanBtn {
+    margin: 12px 0;
+    .operation {
+        height: 20px;
+        line-height: 20px;
+        padding: 0 16px;
+        color: $grayFontColor;
+        cursor:  pointer;
+    }
+    .dividingLine {
+        color: #E8E8E8;
+        line-height: 12px;
+        padding-top: 3px;
+        font-size: 12px;
+    }
+    .plusone {
+        color: $orangeFontColor;
+        i {
+            color: $orangeFontColor;
+        }
+    }
+    i {
+        position: relative;
+        top: 4px;
+        margin-right: 4px;
+    }
+
+}
+//老师查看学生提交作业
+.studentWorkList {
+    .aside {
+        padding-top: 0;
+    }
+    .commitTitle {
+        line-height: 55px;
+        margin: 0 10px;
+        text-align: left;
+        border-bottom: 1px dotted #D9D9D9;
+        font-weight: bold;
+        font-size: 14px;
+        span {
+            background-color: $orangeFontColor;
+            padding-left: 2px;
+            margin-right: 10px;
+        }
+    }
+    .userInfo {
+        margin: 0;
+        height: 60px;
+        line-height: 60px;
+        position: relative;
+        padding-left: 20px;
+        display: block;
+        &.current {
+            background: $lightLineGray;
+        }
+        .name,
+        .time {
+            color: $blackFontColor;
+            display: block;
+            max-width: 150px;
+        }
+        .time {
+            font-size: 12px;
+        }
+        .nameFlow {
+            @include text-truncate();
+        }
+        .dotReminder {
+            @include abs-pos(20px, auto, auto, auto);
+            @include border-radius(10px);
+            background: $darkOrange;
+            width: 6px;
+            height: 6px;
+            z-index: 5;
+        }
+        .lateWork {
+            @include abs-pos($top: 20px, $right:55px);
+        }
+        .status {
+            color: $grayFontColor;
+            @include abs-pos($top:0, $right:20px);
+        }
+    }
+}
+
+//批改作业的引导样式
+.correctWorkGuide {
+    width: 230px;
+    height: 148px;
+    @include bg_with_retina(correctWorkGuide, png, $versionImgPath);
+    @include fix-pos($top:110px, $right:280px);
+    z-index: 8890 !important;
+    .closeGuideBtn {
+        width: 72px;
+        height: 38px;
+        @include abs-pos(auto, auto, 10px, 70px);
+        display: block;
+    }
+}
+
+

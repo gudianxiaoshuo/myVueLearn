@@ -1,0 +1,211 @@
+@import "global/_variables.scss";
+@import "global/_mixins.scss";
+@import "global/_extends.scss";
+
+.onlineExamTitle {
+    font-size: 16px;
+    color: $lightBlackFontColor;
+    line-height: 44px;
+    padding-left: 100px;
+    font-weight: 400;
+}
+.onlineExam {
+    background: #fff;
+    padding: 0 30px 30px;
+    width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    &.padding {
+        padding: 30px;
+        margin-top: 30px;
+    }
+    img {
+        max-width: 100%;
+    }
+    .newPaperOperateArea {
+        a {
+            margin-right:  10px;
+        }
+    }
+    .nav {
+        height: 70px;
+        line-height: 70px;
+        border-bottom: 1px solid $lightLineGray;
+        .back {
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        &.fixedNav {
+            position: fixed;
+            left: 50%;
+            background: #fff;
+            width: 940px;
+            height: 58px;
+            line-height: 58px;
+            @include fix-pos(60px, auto, auto, 50%);
+            margin-left: -470px;
+            box-shadow: 0 2px 10px rgba(#000, 0.2);
+            z-index: 3;
+           /*  -webkit-transition: all .1s ease-in-out 0s;
+            -moz-transition: all .1s ease-in-out 0s;
+            transition: all .1s ease-in-out 0s; */
+            .back {
+                display: none;
+            }
+            .testPaperTitle {
+                display: none;
+                &.answer {
+                    margin-left: 30px;
+                    display: block !important;
+                }
+            }
+        }
+    }
+
+    .oneExam{
+        margin-top: 20px;
+        height: 60px;
+        padding: 20px;
+        background-color: $lightGrayBg;
+        @include border-radius(2px);
+        position: relative;
+        .title {
+            font-size: 16px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+        .time {
+            color: $grayFontColor;
+        }
+        .saveTime {
+            margin-right: 20px;
+        }
+        .status {
+            width: 54px;
+            height: 44px;
+            @include abs-pos(0, 0, auto, auto);
+            @include bg_with_retina(status, png, $onlineExamImgPath);
+            &.one {
+                background-position: 0 0;
+            }
+            &.two {
+                background-position: 0 -44px;
+            }
+        }
+        .operation {
+            color: $grayFontColor;
+            .line {
+                padding: 0 8px;
+            }
+            @include abs-pos(auto, 10px, 16px, auto);
+        }
+    }
+    .testPaper {
+        background-image: linear-gradient(-180deg, #F9F9F9 0%, #FFFFFF 6%);
+        border: 1px solid $lightLineGray;
+        box-shadow: 0 1px 10px 0 rgba(0,0,0,0.08);
+        width: 100%;
+        padding: 50px 0 40px;
+        margin-top: 30px;
+    }
+    .star {
+        color: $darkOrangeFontColor;
+        margin-right: 5px;
+    }
+    .inputText,
+    .examIntro,
+    .textarea {
+        padding: 8px;
+        border: 1px solid $lightLineGray;
+        @include border-radius(4px);
+    }
+    .interval {
+        position: relative;
+        text-align: center;
+        margin: 40px 0 20px;
+        .text {
+            color: $grayFontColor;
+            background-color: #fff;
+            padding: 0 10px;
+            position: relative;
+            z-index: 2;
+        }
+        .line {
+            @include abs-pos(12px, 0, auto, auto);
+            border-top: 1px dashed $lineGray;
+            width: 100%;
+        }
+    }
+    .examStatus {
+        padding: 100px 0;
+        color: $grayFontColor;
+        text-align: center;
+        font-size: 24px;
+        .status {
+            width: 280px;
+            height: 250px;
+            display: inline-block;
+            margin-bottom: 20px;
+            @include bg_with_retina(exam-status, png, $onlineExamImgPath);
+            &.unstart {
+                background-position: 0 0;
+            }
+            &.commit {
+                background-position: 0 -270px;
+            }
+            &.end {
+                background-position: 0 -540px;
+            }
+        }
+    }
+    .countDown {
+        padding: 10px;
+        width: 100px;
+        height: 40px;
+        color: #fff;
+        display: inline-block;
+        line-height: 20px;
+        text-align: center;
+        background-color: $lightOrange;
+        @include abs-pos(-7px, 30px, auto, auto);
+        @include border-radius(0 0 5px 5px);
+        .leftArrow {
+            transform: rotate(45deg);
+            border-style: solid;
+            border-width: 5px;
+            border-color: transparent transparent transparent #DD5918;
+            @include abs-pos(2px, 115px, auto, auto);
+        }
+        .rightArrow {
+            border-style: solid;
+            border-width: 5px;
+            border-color: transparent #DD5918 transparent transparent;
+            transform: rotate(-45deg);
+            @include abs-pos(2px, -5px, auto, auto);
+        }
+    }
+    .timeCountDown {
+        font-size: 20px;
+        color: $orangeFontColor;
+        margin-top: 10px;
+    }
+    .submitBtn {
+        padding-top: 40px;
+        border-top: 1px dashed $lineGray;
+        text-align: center;
+    }
+    .reportTable {
+        @extend %baseTableStyle;
+        th,
+        td {
+            text-align: center;
+        }
+    }
+}
+
+@import "online_exam/_add_test_paper.scss";
+@import "online_exam/_answer_test_paper.scss";
+@import "online_exam/_exam_statistics.scss";
+

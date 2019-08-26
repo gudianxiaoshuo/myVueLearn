@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@import "../global/_font-variables.scss";
+
+.icon-fullscreen {
+    font-family: 'xiconfont' !important;
+    &:before {
+        content: $xicon-full-screen;
+    }
+}
+
+.simditor-fullscreen {
+    overflow: hidden;
+    .icon-fullscreen {
+        font-family: 'xiconfont' !important;
+        &:before {
+            content: $xicon-exit-full-screen;
+        }
+    }
+    .simditor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+
+        .simditor-body {
+            overflow: auto;
+        }
+    }
+}

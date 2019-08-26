@@ -1,0 +1,1289 @@
+h1,
+h2 {
+    padding-left: 15px;
+    padding-top: 20px;
+    font-size: 24px;
+    line-height: 1.75;
+}
+.h_link {
+    margin-left: 30px;
+    font-size: 14px;
+}
+.margin_20 {
+    margin: 20px;
+}
+.padding_20 {
+    padding: 20px 0;
+}
+.padding_30 {
+    padding: 30px;
+}
+.main_content {
+    margin: 10px 16px;
+}
+.red {
+    color: $darkRed;
+}
+.hide {
+    display: none;
+}
+#up_top {
+    margin-left: 580px;
+}
+.weibo_tool {
+    input {
+        padding: 3px 8px;
+        width: 250px;
+        height: 24px;
+        @include border-radius(4px);
+    }
+    input[type="checkbox"] {
+        width: auto;
+    }
+    a { color: $blue;
+        &:hover {
+            color: $lightOrange;
+        }
+    }
+    p {
+        margin: auto 20px;
+    }
+    .page {
+        display: table-cell;
+        a{
+            color: $grayFontColor;
+            &:hover,
+            &.on {
+                color: #fff;
+            }
+        }
+    }
+
+}
+.base_info {
+    padding-left: 20px;
+}
+.nav_kpi {
+    width: 100%;
+    min-height: 36px;
+    background: #000;
+    padding-top: 44px;
+    li {float: left;
+        margin: 0 10px;
+        a {
+            display: block;
+            color: $lineGray;
+            font-size: 14px;
+            line-height: 30px;
+            padding: 2px 8px 3px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .on {
+            color: #fff;
+            font-weight: bold;
+            padding-bottom: 0;
+            border-bottom: 3px solid $borderOrange;
+        }
+    }
+}
+
+.put_table_in_box {
+    background: #fff;
+    margin: 20px 0;
+    position: relative;
+    @include border-radius(10px);
+    .add_local_pic {
+        position: relative;
+        top: 7px;
+        width: 70px;
+        overflow: hidden;
+        display: inline-block;
+        input {
+            @include abs-pos(0, 0, auto, auto);
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+}
+.connect_log,
+.table_98percent {
+    width: 98%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    td,th {
+        border: solid 1px $borderGray;
+        padding: 8px 5px;
+    }
+    tr {
+        &:nth-child(even) td,
+        &:nth-child(even) th {
+            background: $borderOrange;
+        }
+    }
+}
+
+.add_tel_record_box {
+    width: 500px;
+    margin: 20px auto;
+    padding: 30px 150px;
+    background: #fff;
+    @include border-radius(15px);
+}
+.add_tel_record_table {
+    th,
+    td {
+        padding: 10px;
+        vertical-align: top;
+    }
+    th {
+        text-align: center;
+    }
+    select {
+        width: 150px;
+    }
+    textarea {
+        width: 300px;
+        height: 80px;
+        @include border-radius(4px);
+    }
+}
+
+.search_advice_box {
+    padding-left: 20px;
+    margin: 20px 0;
+    input {
+        width: 150px;
+    }
+    label {
+        margin-right: 15px;
+    }
+}
+.suggestions_list {
+    padding-bottom: 20px;
+}
+.edit_log {
+    border: solid 10px $borderGray;
+    padding: 20px;
+    background: $borderGray;
+    width: 500px;
+    max-height: 300px;
+    overflow-y: auto;
+    @include border-radius(15px);
+    @include abs-pos(20px, auto, auto, 30%);
+    div {
+        border-bottom: dotted 1px $borderGray;
+        font-size: 12px;
+        text-align: right;
+        color: $grayFontColor;
+        margin-bottom: 15px;
+    }
+}
+.already_qun {
+    margin: 20px;
+}
+
+.title_of_box {
+    background: $darkOrange;
+    color: #fff;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    @include border-radius(5px);
+}
+
+.leaving_person_info_box {
+    background: #fff;
+    width: 800px;
+    padding: 50px;
+    margin: 20px auto;
+    @include border-radius(15px);
+    .title_of_box {
+        margin: 20px 0;
+    }
+}
+.invote_qun_list {
+    border-bottom: dotted 1px $borderGray;
+    padding: 15px 0 0 0;
+    margin-bottom: 15px;
+    label {
+        margin-right: 10px;
+    }
+    div {
+        padding-left: 60px;
+    }
+}
+
+.weibo_type {
+    width: 98%;
+    margin: 0 auto;
+    text-align: left;
+    a {
+        display: inline-block;
+        background: $borderOrange;
+        border: solid 1px $chatOrange;
+        color: $menuGray;
+        padding: 0 8px;
+        margin: 3px;
+        @include border-radius(5px);
+        &.on {
+            color: #fff;
+            background: $lightOrange;
+            border: solid 1px $darkOrange;
+        }
+    }
+}
+
+.school_contact_form {
+    li {
+        border-top: dotted 1px $borderGray;
+        padding: 15px 0;
+        min-height: 30px;
+        i {
+            font-size: 16px;
+            font-weight: bold;
+            width: 100px;
+            text-align: right;
+            padding-right: 10px;
+            display: inline-block;
+            float: left;
+            line-height: 30px;
+        }
+        .w_400 {
+            float: left;
+            margin-left: 10px;
+            padding: 3px 5px;
+            height: 20px;
+            width: 470px;
+            @include border-radius(3px);
+            &.smallInput {
+                width: 80px;
+            }
+        }
+        .small_input {
+            float: left;
+            margin-left: 10px;
+            padding: 3px 5px;
+            height: 20px;
+            width: 200px;
+            @include border-radius(3px);
+        }
+        .medium_input {
+            float: left;
+            margin-left: 10px;
+            padding: 3px 5px;
+            height: 20px;
+            width: 400px;
+            @include border-radius(3px);
+        }
+        .school_info {
+            float: left;
+            margin-left: 10px;
+        }
+        label {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .city_select {
+            width: 120px;
+            margin-right: 5px;
+        }
+    }
+}
+.add_audit_school_info {
+    background: #fff;
+    width: 700px;
+    padding: 50px;
+    margin: 20px auto;
+    @include border-radius(15px);
+    h1,
+    h2 {
+        text-align: center;
+        padding: 15px;
+    }
+}
+.button_center_box {
+    height: 50px;
+    text-align: center;
+}
+#admin_operation_poplayer {
+    input {
+        padding: 3px 5px;
+        height: 24px;
+    }
+}
+.week_data {
+    background: #fff;
+    width: 98%;
+    border-collapse: collapse;
+    margin: 15px auto;
+    th,
+    td {
+        border: solid 1px $lightLineGray;
+        line-height: 26px;
+        padding: 5px;
+        text-align: center;
+        font-weight: normal;
+        white-space: nowrap;
+    }
+    .even {
+        background: #F2F9FD;
+    }
+}
+
+.title_center {
+    text-align: center;
+}
+.school_number,
+#bweek {
+    background: #fff;
+    padding: 15px;
+    margin: 0 15px;
+    @include border-radius(3px);
+    a {
+        padding: 0 5px;
+        width: 55px;
+        text-align: center;
+        background: $borderOrange;
+        margin: 5px;
+        border: solid 1px $chatOrange;
+        display: inline-block;
+        color: $menuGray;
+    }
+    a.on {
+        background: $lightOrange;
+        color: #fff;
+        border: solid 1px $darkOrange;
+        font-weight: bold;
+    }
+    label {
+        display: inlin-block;
+        float: left;
+        padding-right: 25px;
+    }
+}
+
+.input {
+    width: 80%;
+    padding: 6px 5px;
+}
+.manage_qun_type {
+    padding: 20px;
+}
+.one_manage {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+    background: #fff;
+    margin: 0 30px 30px 0;
+    padding: 20px 30px;
+    @include border-radius(5px);
+    p {
+        padding: 10px 0;
+        clear: both;
+        label {
+            padding: 0 20px 0 0;
+            display: inline-block;
+        }
+        .input {
+            width: 80%;
+            padding: 3px 8px;
+            min-height: 26px;
+        }
+        textarea {
+            width: 80%;
+            padding: 3px 8px;
+            min-height: 50px;
+            float: left;
+        }
+        &.left_150 {
+            padding-left: 115px;
+        }
+        &.line_50 {
+            line-height: 50px;
+            vertical-align: middle;
+            span {
+                float: left;
+                padding: 0 5px;
+            }
+        }
+    }
+    .but_box {
+        padding-left: 90px;
+    }
+}
+
+.sort_nav {
+    margin: 20px;
+    padding: 15px 20px 10px 20px;
+    background: #fff;
+    height: 40px;
+    @include border-radius(5px);
+    a {
+        float: left;
+        padding: 5px 10px;
+        margin-right: 20px;
+        background: $borderOrange;
+        border: solid 1px $chatOrange;
+        color: $menuGray;
+        text-align: center;
+        @include border-radius(2px);
+        &:hover {
+            background: #fff;
+        }
+        &.on {
+            background: $lightOrange;
+            border: solid 1px $darkOrange;
+            color: #fff;
+        }
+    }
+}
+#qun_list_container {
+    li {
+        width: 120px;
+        margin: 0 15px 15px 0;
+        padding-top: 10px;
+        height: 120px;
+        float: left;
+        background: #f2f9fd;
+        border: solid 1px #d6e6ef;
+        text-align: center;
+        cursor: move;
+        @include border-radius(2px);
+        img {
+            width: 50px;
+            height: 50px;
+        }
+        time,
+        span {
+            display: block;
+            font-size: 12px;
+        }
+        &.sort_placeholder {
+            background: #0F8DCC;
+        }
+    }
+}
+
+.qun_statistics {
+    dl {
+        background: #fff;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+        width: 350px;
+        height: 400px;
+        float: left;
+        padding: 10px 10px 10px 130px;
+        position: relative;
+        margin: 0 0px 20px 30px;
+        dt {
+            @include abs-pos($left: 10px,$top: 10px);
+            width: 110px;
+            height: 110px;
+            img {
+                width: 110px;
+                height: 110px;
+            }
+        }
+        dd {
+            margin: 0;
+        }
+    }
+}
+.day {
+    font-size: 25px;
+    margin-top: 10px;
+}
+a.preview_video:hover {
+    background: url(/images/svideo.jpg?20130809) no-repeat;
+    cursor: pointer;
+}
+.preview_music {
+    display: block;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/*敏感日志页面样式*/
+.check_sensitive_weibo {
+    margin: 0 20px;
+    padding: 20px 0;
+    background: #fff;
+    min-width: 960px;
+    .title {
+        font-weight: bold;
+    }
+    .del_multi {
+        margin: 10px 10px 10px 20px;
+        color: #fff;
+        &.absolute {
+            position: absolute;
+        }
+    }
+    .del {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+    .one_weibo {
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        margin: 0 20px;
+        padding: 10px;
+        .content {
+            line-height: 25px;
+            width: 92%;
+            padding-left: 4%;
+        }
+        &.choose {
+            background-color: #f2f2f2;
+        }
+    }
+    .page_container {
+        width: 98%;
+    }
+}
+/*添加管理员*/
+.addOperator {
+    max-width: 540px;
+    min-height: 150px;
+    padding: 20px;
+    margin: 0 15px;
+    background: #fff;
+    @include border-radius(5px);
+    .userArea {
+        line-height: 30px;
+        color: $grayFontColor;
+    }
+    .userName {
+        color: $blackFontColor;
+        position: relative;
+        input {
+            line-height: 30px;
+            height: 30px;
+            @include border-radius(5px);
+            border: 1px solid $lineGray;
+            margin-right: 10px;
+            width: 150px;
+            padding: 0 5px;
+        }
+        i {
+            @include border-radius(10px);
+            @include abs-pos(0, 20px, auto, auto);
+            background: $sideBarGray;
+            padding: 3px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    }
+    .btn-blue {
+        margin: 40px;
+    }
+    .tips {
+        margin: 5px 0 5px 40px;
+        color: $grayFontColor;
+    }
+}
+
+/*为学校添加班级样式*/
+.schoolInfo {
+    background: #F2F9FD;
+    border: 1px solid $tagBlue;
+    padding: 20px;
+    .qunIcon {
+        float: left;
+        width: 86px;
+        height: 86px;
+        overflow: hidden;
+        img {
+            width: 86px;
+            height: 86px;
+        }
+    }
+    .qunInfo {
+        float: left;
+        max-width: 380px;
+        margin: 0 0 0 20px;
+        p {
+            line-height: 22px;
+            position: relative;
+            .item {
+                width: 70px;
+                text-align: right;
+                display: block;
+                float: left;
+            }
+            .info {
+                float: left;
+                text-align: left;
+                max-width: 300px;
+            }
+        }
+    }
+}
+.importExcel {
+    margin-top: 10px;
+    color: $grayFontColor;
+    .btn-blue {
+        margin: 0;
+        float: right;
+    }
+}
+/*上传表格弹层*/
+#import_class_qun_layer {
+    width: 438px;
+    .privacy_message {
+        padding: 0;
+    }
+    .import_contacts_box {
+        padding: 20px 20px 0 40px;
+        position: relative;
+        i {
+            color: $darkOrangeFontColor;
+            @include abs-pos(25px, auto, auto, 20px);
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        padding-right: 20px;
+        margin-top: 20px;
+        text-align: right;
+        background-color: $lightGrayBg;
+        .btn-blue {
+            margin-top: 10px;
+        }
+    }
+}
+.classQunOperation {
+    color: $grayFontColor;
+    line-height: 42px;
+    background: #fff;
+    margin: 10px 15px;
+    padding: 0 20px;
+    .colorBlack{
+        color: $blackFontColor;
+    }
+    .colorBlue {
+        color: $blue;
+        float: right;
+    }
+}
+.classQunTable {
+    .week_data {
+        color: $blue;
+        th {
+            color: $blackFontColor;
+            border-bottom: none;
+        }
+        .error {
+            outline: 1px solid $lightRed;
+        }
+        td {
+            border-bottom: none;
+        }
+    }
+    .repeatError {
+        td:nth-child(-n + 3) {
+            border-top: 1px solid $lightRed;
+            border-bottom: 1px solid $lightRed;
+        }
+        td:nth-child(1) {
+            border-left: 1px solid $lightRed;
+        }
+        td:nth-child(3) {
+            border-right: 1px solid $lightRed;
+        }
+    }
+}
+
+/*系统消息推送*/
+.pushMessage {
+    background: #fff;
+    padding: 30px;
+    margin: 0 15px;
+    @include border-radius(3px);
+    p {
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 80px;
+        line-height: 30px;
+        span {
+            width: 70px;
+            text-align: right;
+            @include abs-pos(0, auto, auto, 0);
+        }
+        label {
+            margin-right: 10px;
+        }
+    }
+    .message {
+        border: 1px solid $lineGray;
+        width: 440px;
+        padding: 5px;
+        height: 120px;
+        @include border-radius(5px);
+    }
+    .btn-darkred {
+        margin-right: 10px;
+    }
+    .inputCharCounter {
+        color: $darkOrangeFontColor;
+    }
+}
+.btn-default {
+    width: 45px;
+    font-size: 12px;
+    border: 2px solid #f27878;
+    background-color: #f27878;
+}
+.messageListTable {
+    background: #fff;
+    width: 98%;
+    border-collapse: collapse;
+    margin: 15px auto;
+    th,
+    td {
+        border: solid 1px $lightLineGray;
+        line-height: 26px;
+        padding: 5px;
+        text-align: center;
+        font-weight: normal;
+    }
+    th {
+        line-height: 50px;
+        font-weight: bold;
+    }
+    td {
+        word-break: break-all;
+        word-wrap: break-word;
+        &:last-child {
+            text-align: left;
+            padding: 10px 5px;
+        }
+    }
+    tr {
+        &:nth-child(odd) {
+            background: #f8f8f8;
+        }
+    }
+}
+
+/*活动管理页面*/
+.addActivityContainer,
+.exportExcelContainer {
+    width: 95%;
+    margin: 20px auto;
+    .addActivity,
+    .exportButton {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        color: #fff;
+        text-align: center;
+        background: none;
+        border: none;
+        display: block;
+        background-color: #ffaa33;
+        @include border-radius(2px);
+    }
+}
+.activityListTitle {
+    padding-top: 20px;
+    width: 95%;
+    margin: 0 auto;
+}
+.activityListContainer {
+    min-height: 800px;
+    .activityListTable,
+    .exportActivityInfo {
+        @extend %baseTableStyle;
+        border: 1px solid #FEEED4;
+        @include border-radius(4px 4px 0 0);
+        width: 95%;
+        margin: 0 auto;
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #feeed4;
+        }
+        th {
+            height: 40px;
+            line-height: 40px;
+            background-color: #FFF3DF;
+        }
+        td {
+            background-color: #FFFCF8;
+            &:even{
+                background-color: #FFFAF0;
+            }
+        }
+    }
+    .enableActivity {
+        color: #32C572;
+    }
+    .disableActivity {
+        color: #EC3C3C;
+    }
+}
+.applyActivityContainer {
+    width: 900px;
+    padding: 0 30px 30px;
+    margin: 30px auto 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .19);
+    .applyActivityTitle {
+        font-size: 18px;
+        line-height: 60px;
+        font-weight: normal;
+    }
+    .applyInfo {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .itemFlag {
+        color: $darkOrangeFontColor;
+        position: relative;
+        top: 2px;
+        left: 15px;
+    }
+    .infoTitle {
+        width: 120px;
+        text-align: right;
+        display: inline-block;
+    }
+    .infoInput {
+        height: 28px;
+        border: 1px solid #e8e8e8;
+        width: 290px;
+        padding: 0 4px;
+        @include border-radius(2px);
+    }
+    .applyTextAreaInfo {
+        margin-bottom: 20px;
+    }
+    .applyTextArea {
+        width: 490px;
+        border: 1px solid #e8e8e8;
+        padding: 4px;
+        height: 60px;
+        resize: none;
+    }
+    .applyLabelInfo {
+        margin-top: -8px;
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+    .applyLabelName {
+        float: left;
+    }
+    .applyLabelList {
+        float: left;
+        margin: 0 0 6px;
+        max-width: 768px;
+    }
+    .applyLabelItem {
+        display: block;
+    }
+    .labelInput {
+        margin-right: 6px;
+    }
+    .activityInfoCommit {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        color: #fff;
+        text-align: center;
+        background: none;
+        border: none;
+        display: block;
+        margin-left: 90px;
+        background-color: #ffaa33;
+        @include border-radius(2px);
+    }
+}
+#_newActivity {
+    .privacy_message {
+        padding: 0;
+    }
+}
+.addActivityForm {
+    padding-top: 20px;
+    .activityName {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 20px;
+        .activityNameInput {
+            height: 28px;
+            line-height: 28px;
+            border: 1px solid #e8e8e8;
+            @include border-radius(2px);
+            width: 290px;
+            padding: 0 4px;
+        }
+    }
+    .activityInfoList {
+        padding: 20px 20px 0;
+    }
+    .activityInfoTitle {
+        line-height: 30px;
+    }
+    .activityInfo {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        margin-right: 20px;
+        display: inline-block;
+        .delActivityItem {
+            &:hover {
+                .delIcon {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .delIcon {
+            font-size: 12px;
+        }
+    }
+    .addInfoContainer {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 20px;
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        padding: 0 20px;
+        background-color: #f5f5f5;
+    }
+    .createActivityItem {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        color: #fff;
+        text-align: center;
+        background: none;
+        border: none;
+        background-color: #ffaa33;
+        @include border-radius(2px);
+    }
+}
+.activityTypeContainer {
+    padding: 20px;
+    text-align: center;
+    .activityType {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        color: #fff;
+        text-align: center;
+        background: none;
+        border: none;
+        display: inline-block;
+        margin: 0 20px;
+        background-color: #ffaa33;
+        @include border-radius(2px);
+    }
+}
+.activityInfoBox {
+    .infoItem,
+    .newItemList {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    .itemInfoContainer {
+        position: relative;
+        padding-left: 114px;
+        min-height: 30px;
+        .infoTitle {
+            width: 110px;
+            line-height: 30px;
+            @include abs-pos(0, auto, auto, 0);
+        }
+        .addOneItem {
+            line-height: 30px;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .delItemButton {
+        margin-left: 10px;
+        &:hover {
+            .delIcon {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .delIcon {
+        font-size: 12px;
+        @include rel-pos($top: 1px);
+    }
+    .oneSignUpItem {
+        line-height: 30px;
+        max-width: 300px;
+    }
+    .newItem {
+        margin-bottom: 20px;
+    }
+    .infoItemName,
+    .oneItemInput {
+        height: 28px;
+        border: 1px solid #e8e8e8;
+        width: 290px;
+        padding: 0 4px;
+        @include border-radius(2px);
+    }
+    .infoTitle {
+        width: 90px;
+        text-align: right;
+        display: inline-block;
+    }
+    .oneItemInput {
+        width: 240px;
+        margin-right: 10px;
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        padding: 0 20px;
+        background-color: #f5f5f5;
+    }
+    .confirmBtn {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        color: #fff;
+        text-align: center;
+        background: none;
+        border: none;
+        background-color: #ffaa33;
+        @include border-radius(2px);
+    }
+}
+
+//发送记录查询
+.searchRecord {
+    background: #fff;
+    padding: 15px;
+    margin: 15px;
+    @include border-radius(3px);
+    .weibo_type {
+        margin: 10px 0 20px;
+    }
+    .table_98percent {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+    .input {
+        border: 1px solid #ddd;
+        width: 150px;
+        @include border-radius(5px);
+        margin-right: 10px;
+    }
+}
+
+// 拉黑用户，删除日志、评论、群聊页面
+#badUserPage {
+    margin: 30px 20px;
+    input {
+        outline:medium;
+    }
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+    .searchArea {
+        margin: 15px auto;
+        #_userInput {
+            width: 250px;
+            height: 25px;
+            border-radius: 2px;
+            font-size: 14px;
+        }
+        #_operationPeriod {
+            width: 75px;
+        }
+        .searchItem {
+            padding-right: 25px;
+        }
+        #_queryUser {
+            margin: 0 70px;
+            width: 80px;
+            height: 25px;
+            border-radius: 4px;
+        }
+        .errTip {
+            margin-top: 15px;
+            color:darkred;
+        }
+    }
+    #_delBadUserOperation {
+        margin: 10px 10px 20px 0;
+        width: 180px;
+        height: 28px;
+        border-radius: 2px;
+    }
+    .searchErrTip {
+        color: darkred;
+    }
+    .itemContainer {
+        margin-bottom: 18px;
+        h3 {
+            padding-bottom: 8px;
+        }
+    }
+    .oneItemList {
+        margin: 0 20px;
+        .oneItem {
+            padding: 5px auto;
+        }
+    }
+    .messageSrc {
+        font-size:12px;
+        color: #9B9B9B;
+        padding-left: 10px;
+    }
+    .srcName {
+        font-size: 13px;
+        padding-right: 10px;
+    }
+    .selectAll {
+        margin-right: 5px;
+    }
+
+}
+//更新学校节点
+.updataSchoolNode {
+    padding: 0 50px 20px;
+    h1 {
+        padding: 10px 0 20px;
+    }
+    .input {
+        border: 1px solid #ddd;
+        width: 200px;
+        @include border-radius(5px);
+        margin-right: 10px;
+    }
+    .messageListTable {
+        width: 100%;
+        margin-top: 30px;
+        th{
+            background-color: #ddd;
+        }
+    }
+}
+.showSchoolInfo {
+    margin-top: 30px;
+    padding: 10px 30px 30px;
+    text-align: center;
+    .input {
+        border: 1px solid #ddd;
+        width: 200px;
+        @include border-radius(5px);
+        margin-right: 10px;
+    }
+    .from {
+        text-align: left;
+    }
+    .info {
+        width: 500px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 20px;
+        display: inline-block;
+        text-align: left;
+        margin-left: 60px;
+        .name {
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .textarea {
+            border: 1px solid #ddd;
+            width: 360px;
+            height: 80px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .input {
+            width: 360px;
+            height: 18px;
+            line-height: 18px;
+            padding: 6px;
+        }
+        select {
+            border: 1px solid #ddd;
+            height: 30px;
+            background: #fff;
+            margin-right: 10px;
+        }
+        .approve {
+            margin-right: 20px;
+        }
+    }
+    .title {
+        text-align: center;
+        padding: 0;
+        margin: 20px 0;
+        width: 100%;
+    }
+}
+
+
+//模板群管理
+.moduleQun {
+    margin: 0 auto;
+    padding: 40px;
+    .tplType {
+        line-height: 30px;
+        height: 30px;
+        display: inline-block;
+        label {
+            margin-right: 15px;
+            input {
+                margin-right: 5px;
+            }
+        }
+    }
+    .weibo_tool {
+        margin:  20px 0;
+    }
+    .qunCard {
+        background: #fff;
+        box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.4);
+        width: 510px;
+        padding: 10px 10px 10px 140px;
+        position: relative;
+        height: 120px;
+        @include border-radius(5px);
+        .qunIcon {
+            @include abs-pos(10px, auto, auto, 10px);
+            width: 120px;
+            height: 120px;
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .qunName {
+            max-width: 400px;
+            @include text-truncate();
+        }
+        .setModule {
+            @include abs-pos($top:10px, $right:10px);
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}

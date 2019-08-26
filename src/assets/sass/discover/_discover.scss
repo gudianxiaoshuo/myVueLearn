@@ -1,0 +1,254 @@
+.discover_box {
+    width:1000px;
+    margin:20px auto;
+    background: #fff;
+    box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.discover_title {
+    padding-top: 30px;
+    line-height: 1.75;
+    margin: 0 30px 20px;
+    border-bottom: dotted 1px $borderGray;
+}
+.discover_search_box {
+    height: 35px;
+    padding: 25px 30px 0 80px;
+    border-bottom: solid 2px $orangeFontColor;
+    position: relative;
+    .discover_nav {
+        float: right;
+        a {
+            padding: 0 10px;
+            color: $blackFontColor;
+            &:hover,
+            &.on {
+                color: $lightOrange;
+            }
+        }
+
+    }
+    .search_in_page {
+        float: left;
+    }
+
+}
+.discover_edit_layer {
+    width: 200px;
+    bottom: 5%;
+    right: 10px;
+    z-index:1;
+    background-color: $lightGrayBg;
+    padding: 15px;
+    border: solid 1px $lightLineGray;
+    box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    @include border-radius(5px);
+}
+.discover_operation_box {
+    text-align: center;
+}
+
+.discover_list_box{
+    .discover_list {
+        width:740px;
+        float: left;
+        border-right: solid 1px $borderGray;
+    }
+    .discover_template {
+        width: 200px;
+        float: right;
+    }
+}
+.rizhi_and_template_box {
+    border-bottom: dotted 1px $borderGray;
+    clear: both;
+    background: #fff;
+    width: 1000px;
+    .page_rizhi_list {
+        width:740px;
+        float: left;
+    }
+    .page_box {
+        width: 200px;
+        float: right;
+        margin:5px 15px 15px auto;
+    }
+}
+
+.template_table {
+    width: 200px;
+    height: 320px;
+    border:solid 1px $borderGray;
+    border-collapse: collapse;
+    margin: 0 auto 15px auto;
+    background: #fff;
+    th,
+    td {
+        border: 1px dotted $borderGray;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.5;
+        background-repeat:no-repeat;
+        background-size: 100% auto;
+        background-position: center top;
+        position: relative;
+        .del {
+            z-index: 2;
+            @include abs-pos($right:-10px, $top:-10px);
+            .xicon-x-circle {
+                color: $darkRed;
+            }
+        }
+        &.h_percent_50 {
+            height: 50%;
+        }
+        &.h_percent_66 {
+            height: 66%;
+        }
+        &.h_percent_33 {
+            height: 33%;
+        }
+        &.w_percent_50 {
+            width: 50%;
+        }
+    }
+    .edit_item {
+        width:60px;
+        height:20px;
+        padding: 5px;
+        text-align: center;
+        border: solid 1px $borderGray;
+        @include border-radius(3px);
+        &:focus {
+            border: solid 2px $orange;
+        }
+    }
+    .rizhi_content {
+        width: 100%;
+        height: 100%;
+        overflow: hiddent;
+    }
+    .rizhi_content_box {
+        width:100%;
+        background:rgba(255,255,255,.6);
+        @include abs-pos($bottom:0, $left:0);
+        h1 {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: left;
+        }
+        p {
+            color: $grayFontColor;
+            font-size: 12px;
+            line-height:16px;
+        }
+    }
+}
+.one_rizhi {
+    width: 650px;
+    min-height: 60px;
+    padding:5px 0 5px 80px;
+    position: relative;
+    margin-bottom: 15px;
+    &:hover {
+        .rizhi{
+            border: solid 1px $borderGray;
+            background: $lightGrayBg;
+        }
+    }
+    .rizhi_input {
+        @include abs-pos($left:60px, $top:29px);
+        z-index:1;
+    }
+    .order_number {
+        width: 35px;
+        padding:10px 0 0 30px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        @include abs-pos(0, 0, 0, 0);
+    }
+    .rizhi{
+        padding:0 0 0 70px;
+        position: relative;
+        min-height: 60px;
+        border: solid 1px #fff;
+        .aside {
+            width: 50px;
+            height: 50px;
+            @include abs-pos($left:5px, $top:5px);
+            img {
+                width: 50px;
+                height: 50px;
+                @include border-radius(50px);
+
+            }
+        }
+        h3 {
+            font-weight: normal;
+            position: relative;
+            time {
+                font-size: 12px;
+                color: $grayFontColor;
+                @include abs-pos($right:5px, $top:0);
+                a {
+                    color: $grayFontColor;
+                }
+            }
+        }
+        h1 {
+            line-height: 1.5;
+        }
+        p {
+            color: $grayFontColor;
+        }
+        .rizhi_has_img {
+            margin-top: 5px;
+            img{
+                width: 100px;
+            }
+        }
+
+    }
+}
+#chose_template_layer {
+    .privacy_message {
+        background: $lightGrayBg;
+        padding: 0;
+    }
+}
+.chose_template_layer {
+    height:565px;
+    a {
+        display: inline-block;
+        color: $blackFontColor;
+        font-weight: 700;
+        text-align: center;
+        margin: 15px 0 0px 21px;
+        cursor: pointer;
+        i {
+            border: solid 3px $lightGrayBg;
+            width: 84px;
+            height: 138px;
+            display: block;
+            cursor: pointer;
+            background-image: url(/images/xnw/template.png);
+            &.img_a{background-position: 0 0;}
+            &.img_b{background-position: -125px 0;}
+            &.img_c{background-position: -250px 0;}
+            &.img_d{background-position: -376px 0;}
+            &.img_e{background-position: 0px -168px;}
+            &.img_f{background-position: -125px -168px;}
+            &.img_g{background-position: -250px -168px;}
+            &.img_h{background-position: -376px -168px;}
+            &.img_i{background-position: 0 -336px;}
+            &.img_j{background-position: -125px -336px;}
+            &.img_k{background-position: -250px -336px;}
+        }
+        &.on i,
+        &:hover i{
+            border: solid 3px $orangeFontColor;
+        }
+    }
+}

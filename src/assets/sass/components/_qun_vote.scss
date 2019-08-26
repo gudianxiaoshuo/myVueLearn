@@ -1,0 +1,200 @@
+.qun_vote_main {
+    background-color: #fff;
+    padding: 0 30px 20px;
+    width: 880px;
+    min-height: 800px;
+    .qun_vote_nav {
+        height: 56px;
+        line-height: 56px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid $lightLineGray;
+        a {
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .vote_detail_container {
+        float: left;
+        width: 580px;
+    }
+    .vote_title {
+        font-size: 16px;
+        line-height: 30px;
+        padding-top: 14px;
+        font-weight: normal;
+    }
+    .vote_time {
+        font-weight: normal;
+        height: 32px;
+        line-height: 32px;
+        margin: 16px 0;
+        color: $grayFontColor;
+        .fav_vote {
+            padding: 0 14px;
+            height: 26px;
+            line-height: 26px;
+            display: inline-block;
+            border: 1px solid $lineGray;
+            @include border-radius(4px);
+            float: right;
+            color: $grayFontColor;
+            i {
+                color: #F8DA06;
+                margin-right: 10px;
+                @include rel-pos($top: 1px);
+            }
+        }
+    }
+    .vote_status {
+        display: inline-block;
+        height: 32px;
+        width: 72px;
+        margin-left: 10px;
+        text-indent: -99999px;
+        &.vote_status_0 {
+            @include bg_with_retina(activity-status_2, png, $versionImgPath);
+        }
+        &.vote_status_1 {
+            @include bg_with_retina(activity-status_3, png, $versionImgPath);
+        }
+    }
+    .vote_option_title {
+        height: 48px;
+        line-height: 48px;
+        font-size: 16px;
+        padding: 0 20px;
+        background-color: $lightGrayBg;
+        border: 1px solid $lightLineGray;
+        @include border-radius(5px 5px 0 0);
+        .option_num {
+            color: $grayFontColor;
+        }
+    }
+    .option_list_container {
+        border: 1px solid $lightLineGray;
+        border-top: none;
+        padding: 0 20px;
+        .option_list_item {
+            margin-bottom: 10px;
+            position: relative;
+        }
+    }
+    .vote_type {
+        line-height: 34px;
+        margin: 10px 0;
+        color: $lightBlackFontColor;
+        display: inline-block;
+        position: relative;
+        padding-left: 28px;
+        .radioInput {
+            @include abs-pos($top: 10px, $left: 0);
+        }
+    }
+    .link {
+        i {
+            position: relative;
+            top: 2px;
+            color: $blueFontColor;
+        }
+        &:hover {
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .optionImg {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        display: block;
+        margin: 10px 0;
+        background-color: $lightGrayBg;
+        font-size: 0;
+        text-align: center;
+        img {
+            max-width: 80px;
+            max-height: 80px;
+            vertical-align: middle;
+        }
+    }
+    .option_column {
+        background-color: $lightLineGray;
+        height: 20px;
+        width: 80%;
+        position: relative;
+        margin-left: 28px;
+        .column_percent {
+            height: 100%;
+            @include abs-pos($left: 0, $top: 0);
+        }
+    }
+    .vote_percent {
+        width: 15%;
+        text-align: right;
+        @include abs-pos($bottom: 0, $right: 0);
+    }
+    .submit_vote_button {
+        height: 48px;
+        line-height: 48px;
+        padding: 0 20px;
+        border: 1px solid $lightLineGray;
+        border-top: none;
+        @include border-radius(0 0 5px 5px);
+        .submited_vote,
+        .vote_ended,
+        .submit_vote {
+            float: right;
+            margin-top: 10px;
+        }
+        .anonymous_tip {
+            color: $grayFontColor
+        }
+    }
+    .del_vote_container {
+        height: 28px;
+        line-height: 28px;
+        border: 1px solid $lightLineGray;
+        background-color: $lightLineGray;
+        @include border-radius(4px);
+        margin: 10px 0;
+        text-align: center;
+        .del_vote {
+            color: $grayFontColor;
+            padding: 0 10px;
+            line-height: 28px;
+            display: inline-block;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .vote_user_container {
+        float: right;
+        width: 200px;
+        .vote_user_detail {
+            font-size: 16px;
+            line-height: 30px;
+            padding-top: 14px;
+            margin-bottom: 10px;
+        }
+    }
+    .vote_user_list {
+        li {
+            float: left;
+            width: 66px;
+            height: 84px;
+            margin-bottom: 10px;
+            @extend %one_user_item;
+        }
+        .verify_icon {
+            display: none;
+        }
+        .get_more_user {
+            clear: both;
+            float: right;
+        }
+    }
+}

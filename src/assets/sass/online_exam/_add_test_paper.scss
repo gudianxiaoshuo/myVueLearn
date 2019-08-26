@@ -1,0 +1,210 @@
+.addTestPaper {
+    .item {
+        margin: 0 0 30px 50px;
+        display: inline-block;
+        .inputText {
+            height: 18px;
+            &.name {
+                width: 435px;
+            }
+            &.dateTime {
+                width: 135px;
+            }
+            &.time {
+                width: 70px;
+            }
+        }
+        .examIntro {
+            width: 435px;
+            height: 86px;
+            resize: none;
+        }
+    }
+    .topic {
+        margin: 0 20px;
+        padding: 14px 30px;
+        background: rgba($lightGrayBg, .5);
+        border: 1px solid $lineGray;
+        .marginRight {
+            margin-right: 14px;
+        }
+    }
+    .question {
+        margin: 20px;
+        background-color: $bgOrange;
+        border: 1px solid $borderOrange;
+        position: relative;
+        &:hover {
+            border: 1px solid $orangeFontColor;
+        }
+        .content {
+            padding: 20px 20px 0px 70px;
+        }
+        .number {
+            @include abs-pos(25px, auto, auto, 20px);
+        }
+        .testQuestion {
+            margin-bottom: 14px;
+        }
+        .title {
+            width: 636px;
+            display: inline-block;
+        }
+        .picIcon,
+        .delIcon {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            @include border-radius(2px);
+            cursor: pointer;
+            i {
+                color: #fff;
+                position: relative;
+                top: 5px;
+            }
+        }
+        .picIcon {
+            background-color: $orangeFontColor;
+        }
+        .delIcon {
+            background-color: $borderGray;
+            &:hover {
+                background-color: $orangeFontColor;
+            }
+        }
+
+        .log_one_pic {
+            margin: 10px 14px 0 0;
+            width: 60px;
+            height: 60px;
+            .pic_preview,
+            .pic_container {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+            }
+            .log_upload_error.limit {
+                font-size: 12px;
+                width: 60px;
+                height: 40px;
+            }
+            img {
+                vertical-align: middle;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .option {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            .number {
+                width: 25px;
+                text-align: left;
+                @include abs-pos(5px, auto, auto, 0);
+            }
+            .inputText {
+                width: 565px;
+            }
+            .hide {
+                display: none;
+            }
+            .log_one_pic {
+                margin-left: 5px;
+            }
+        }
+        .answer {
+            text-indent: -16px;
+            margin: 20px 0;
+            select {
+                min-width: 100px;
+                height: 30px;
+                margin-right: 25px;
+            }
+            .score {
+                width: 120px;
+            }
+        }
+        .delQuestion {
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            border-top: 1px solid $borderOrange;
+        }
+        .textarea {
+            width: 636px;
+            height: 100px;
+            resize: none;
+        }
+        .audio_container {
+            font-size: 12px;
+            position: relative;
+            margin: 10px 0;
+            line-height: 50px;
+            padding-left: 24px;
+            width: 630px;
+            background:white;
+            &.expand {
+                padding-bottom: 24px;
+            }
+            .jp-audio {
+                width: 93%;
+                padding: 8px 10px 6px 10px
+            }
+            .jplayerStart {
+                padding-left: 12px;
+            }
+            .jp-type-single {
+                height: 35px;
+            }
+            .jp-progress {
+                width: 323px;
+            }
+            .audioIcon {
+                @include abs-pos(1px, auto, auto, auto);
+                .xicon-v-reminder {
+                    font-size: 12px;
+                    color: $blackFontColor;
+                }
+            }
+            .name {
+                padding-left: 23px;
+            }
+            .loading_bg {
+                height:4px;
+                display:inline-block;
+                margin-left:15px;
+                width: 110px;
+                background-color: $lightGrayBg;
+                .loading {
+                    display: block;
+                    height: 4px;
+                    width: 0%;
+                    background-color: $green;
+                }
+            }
+            .percent {
+                color: grey;
+            }
+            .delete {
+                padding-left: 30px;
+            }
+            .jp-audio {
+                background-color: $headerNavBg;
+            }
+            .jp-time-holder {
+                @include abs-pos(5px, 5px, auto, auto !important);
+            }
+            .music_voice_ctrol {
+                margin-top: -10px;
+            }
+            .jp-volume-bar {
+                top: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.show_message_layer {
+    z-index: 200;
+    @include abs-pos(42px, auto, auto, -95px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    .qun_list_box,
+    .friend_list_box,
+    .user_list_box,
+    .qun_group_list,
+    .friend_group_list {
+        height: 400px;
+    }
+    .user_list {
+        padding-bottom: 16px;
+    }
+}

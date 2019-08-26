@@ -1,0 +1,381 @@
+@charset "UTF-8";
+
+@import "global/_variables.scss";
+@import "global/_mixins.scss";
+@import "global/_font_style.scss";
+@import "global/_font-variables";
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.75;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.indexPage {
+    @include bg_with_retina(sms-reminder-service-bg, png, $baseImgRootPath);
+    background-size: cover;
+    background-position: top center;
+    .pageContent {
+        margin-top: 70%;
+        background-color: inherit;
+    }
+    .verification {
+        width: 80%;
+        .productionInfo {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding: .5rem 2rem;
+            color: $orange;
+            .txt {
+                margin: .2rem auto;
+            }
+        }
+        .formItem {
+            width: 100%;
+            .formControl {
+                margin: 1rem auto;
+                input {
+                    font-size: 1rem;
+                    color: #FF9519;
+                    border: 1px solid #FE8701;
+                    @include placeholder {
+                        font-size: 1rem;
+                        @include opacity(.4);
+                        color: #FE8701;
+                    }
+                }
+                .inputItem {
+                    display: inline-block;
+                    padding: .5rem 1rem;
+                    @include border-radius(.3rem);
+                    &.mobileInput {
+                        width: 90%;
+                    }
+                    &.codeInput {
+                        width: 45%;
+                    }
+                }
+                .errMsg {
+                    font-size: .8rem;
+                    color: #F00;
+                }
+            }
+            .getCodeBtn {
+                color: #FFF;
+                float: right;
+                padding: .2rem .5rem;
+                margin-right: .5rem;
+                background-color: $orange;
+                @include border-radius(.3rem);
+                &.disabled {
+                    @include opacity(.4);
+                }
+                &.info {
+                    padding: .2rem 2.8rem;
+                }
+            }
+        }
+        .buttonItem {
+            width: 100%;
+            text-align: center;
+            .purchaseBtn {
+                width: 80%;
+                color: #FFF;
+                cursor: pointer;
+                font-size: 1.2rem;
+                padding: .4rem 2.2rem;
+                display: inline-block;
+                background-color: #FF4242;
+                @include border-radius(.3rem);
+                box-shadow: 0 4px 10px 0px rgba(226, 16, 16, .57);
+                @include linear-gradient(0deg, #FF4242 0%, #FF6283 100%);
+            }
+        }
+        .clauseItem {
+            margin: 1rem auto;
+            text-align: center;
+            .txt {
+                padding: .2rem;
+                margin: .2rem auto;
+                color: $grayFontColor;
+                border-bottom: 1px solid $grayFontColor;
+            }
+        }
+    }
+    .sendMsgCodeLayer {
+        padding: .8rem;
+        h1 {
+            margin: 0 auto;
+            font-size: 1.2rem;
+            border-bottom: 1px solid $grayFontColor;
+        }
+        input {
+            width: 8rem;
+            height: 2rem;
+            padding: .2rem .5rem;
+            color: $grayFontColor;
+            @include border-radius(.3rem);
+            border: 1px solid $grayFontColor;
+            @include placeholder {
+                color: $grayFontColor;
+            }
+        }
+        .wrapper {
+            margin: 0 auto;
+            height: 4rem;
+            line-height: 4rem;
+            border-bottom: 1px solid $grayFontColor;
+            .captchaImg {
+                vertical-align: middle;
+            }
+            .errMsg {
+                color: #F00;
+                font-size: .9rem;
+                line-height: .9rem;
+                margin: .5rem auto;
+            }
+        }
+        .sendCodeBtn {
+            color: #FFF;
+            float: right;
+            padding: .2rem .5rem;
+            margin-top: 2rem;
+            margin-right: .5rem;
+            background-color: $orange;
+            @include border-radius(.3rem);
+        }
+    }
+}
+
+.cartPage {
+    background-color: $yellowBg;
+    .cart {
+        top: 10%;
+        .cartInfo {
+            margin-bottom: 1rem;
+            padding: .5rem 5rem;
+            color: $orange;
+            .txt {
+                margin: .5rem auto;
+            }
+        }
+        .paymentSection {
+            padding: .5rem 1rem;
+            .paymentInstrumentList {
+                padding: 0 .3rem;
+                background-color: #FFF;
+                @include border-radius(.3rem);
+                border: 1px solid $orange;
+                box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, .19);
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                > li {
+                    margin-right: .5rem;
+                    line-height: 2.5rem;
+                    float: left;
+                }
+            }
+            .title {
+                padding: .5rem 1rem;
+                border-bottom: 1px solid $lineGray;
+            }
+            .paymentPortal {
+                margin: .8rem auto 0;
+                padding: 0 .8rem;
+                line-height: 3rem;
+                height: 3rem;
+                &.wechat {
+                    border-bottom: 1px solid $lineGray;
+                }
+                .txt {
+                    height: 1.5rem;
+                    margin: 0;
+                    font-size: .8rem;
+                    color: $grayFontColor;
+                    &.name {
+                        color: inherit;
+                        font-size: 1rem;
+                    }
+                }
+                .controlRow {
+                    &.tip {
+                        line-height: .5rem;
+                    }
+                    img {
+                        margin: auto;
+                    }
+                }
+            }
+            .errMsg {
+                font-size: 1rem;
+                color: #F00;
+            }
+            .helpTip {
+                font-size: 1rem;
+                margin-top: 1rem;
+                text-align: center;
+                color: $grayFontColor;
+            }
+        }
+        .payButton {
+            margin: .5rem auto;
+            text-align: center;
+            .checkoutBtn {
+                width: 70%;
+                color: #FFF;
+                border: none;
+                cursor: pointer;
+                font-size: 1.2rem;
+                padding: .4rem 2.2rem;
+                display: inline-block;
+                background-color: $lightRed;
+                @include border-radius(.3rem);
+                box-shadow: 0 4px 8px 2px rgba(0, 0, 0, .19);
+                @include linear-gradient($pinkRed, $lightRed);
+            }
+        }
+    }
+}
+
+.resultPage {
+    background-color: $yellowBg;
+    .result {
+        @include abs-pos(35%, 0, 0, 0);
+        .iconTip {
+            font-size: 2rem;
+            text-align: center;
+            .xicon-selected {
+                color: $statusGreen;
+                &:before {
+                    content: $xicon-selected;
+                }
+            }
+            .xicon-x-circle {
+                color: $darkRed;
+                &:before {
+                    content: $xicon-x-circle;
+                }
+            }
+        }
+        .txt {
+            display: block;
+            text-align: center;
+        }
+        .msg {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
+        }
+        .detail {
+            color: $grayFontColor;
+        }
+    }
+}
+
+.pageContent {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    .hide {
+        display: none;
+    }
+    .container {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.popoverModal {
+    padding: 1rem 0;
+    p {
+        margin: 0;
+        padding: .4rem 0;
+        text-align: center;
+    }
+    .colorPrompt {
+        padding: .8rem 0;
+        border-bottom: 1px solid $lineGray;
+    }
+    .colorSuccess {
+        color: #F06;
+        border-bottom: 1px solid $lineGray;
+        .btnTxt {
+            color: inherit;
+        }
+    }
+    .colorInfo {
+        color: $grayFontColor;
+    }
+}
+
+.clause {
+    padding: .5rem;
+    .contentTitle {
+        text-align: center;
+    }
+}
+
+@media only screen and (orientation:landscape) {
+    .pageContent {
+        .verification {
+            .productionInfo {
+                padding-left: 6rem;
+            }
+        }
+        .cart {
+            top: 5%;
+            .cartInfo {
+                padding-left: 13rem;
+                margin-bottom: 0;
+            }
+            .paymentSection {
+                padding: .5rem 5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .indexPage .sendMsgCodeLayer input {
+        width: 6rem;
+    }
+    .pageContent {
+        .verification {
+            .formItem {
+                .getCodeBtn {
+                    padding: .2rem;
+                    margin-right: 0;
+                }
+            }
+        }
+        .cart {
+            .paymentSection .paymentPortal {
+                padding: 0 .4rem;
+                .txt {
+                    font-size: .8rem;
+                }
+                .controlRow {
+                    margin-right: .2rem;
+                    &.tip {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

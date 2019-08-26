@@ -1,0 +1,401 @@
+/*合和美素作业样式表*/
+.hhmsWorkContent {
+    position: static;
+    padding: 0 20px 40px;
+    width: 900px;
+    min-height: 800px;
+    background-color: #fff;
+    margin: 30px auto 20px;
+    .crumb {
+        @extend %mainTitleStyle;
+        margin: 0;
+        color: $grayFontColor;
+        font-weight: normal;
+        .back {
+            font-size: 14px;
+            color: $blackFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .submitBtn {
+            margin-top: 25px;
+            float: right;
+        }
+    }
+    .tipArea {
+        margin: 24px 0;
+        color: $grayFontColor;
+        line-height: 28px;
+        .count {
+            color: $orangeFontColor;
+        }
+        .chosenBtn {
+            display: inline-block;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+        .chosenBtn_disabled {
+            @include opacity (.5);
+            &:hover {
+                background-color: #fff;
+                color: $orangeFontColor;
+                cursor: default;
+            }
+            input {
+                display: none;
+            }
+        }
+    }
+    .submittedTips {
+        border: 1px solid #FEEED4;
+        background-color: #FFFBF4;
+        line-height: 30px;
+        text-align: center;
+        width: 100%;
+        margin: 20px 0;
+        color: #5B5B5B;
+        font-size: 12px;
+        .title {
+            color: $darkOrangeFontColor;
+        }
+    }
+    .oneWork {
+        width: 230px;
+        position: relative;
+        margin-right: 10px;
+        .close {
+            @include abs-pos(0, -10px, auto, auto);
+            width: 10px;
+            height: 10px;
+            background-color: #f5f5f5;
+            i {
+                color: #fff;
+            }
+        }
+    }
+}
+.hhmsWorkUpload {
+    width: 164px;
+    position: relative;
+    margin:20px 20px 20px 0;
+    float: left;
+    &:nth-child(5n) {
+        margin-right: 0;
+    }
+    .log_upload_error,
+    .workImg {
+        height: 126px;
+        width: 164px;
+        background-color: #F0F0F0;
+        text-align: center;
+        line-height: 126px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        img {
+            vertical-align: middle;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .log_upload_error {
+        color: $grayFontColor;
+    }
+    .progress {
+        @include abs-pos(120px, auto, auto, 0);
+        height: 6px;
+        background-color: #3BC475;
+    }
+    .errowTip,
+    .committedTip {
+        display: none;
+        font-size: 12px;
+        height: 18px;
+        line-height: 18px;
+
+        color: #fff;
+        padding: 0 5px;
+        @include border-radius(5px 5px 0 0);
+        @include abs-pos(-18px, auto, auto, auto);
+    }
+    .errowTip {
+        background-color: #ff7733;
+    }
+    .submittedTip {
+        background-color: #3BC475;
+    }
+    .studentNameBox {
+        display: none;
+    }
+    .errPic {
+        @include abs-pos(20px, auto, auto, 68px);
+    }
+    .repeatBtn {
+        top: -60px;
+        left: 35px;
+    }
+    .info {
+        width: 148px;
+        height: 28px;
+        line-height: 28px;
+        color: $lightBlackFontColor;
+        font-size: 12px;
+        background-color: #FFFBF4;
+        padding: 0 8px;
+        margin-top: 8px;
+        box-shadow: 0 1px 1px rgba(#000, 0.1);
+        @include border-radius(2px);
+        .ok {
+            margin-right: 5px;
+            i {
+                color: #3BC475;
+                position: relative;
+                top: 2px;
+                font-size: 14px;
+            }
+        }
+        .choseStudentBtn {
+            cursor: pointer;
+            i {
+                position: relative;
+                top: 2px;
+            }
+        }
+        .fileSize {
+            float: right;
+        }
+    }
+    .close {
+        @include abs-pos(0, -16px, auto, auto);
+        width: 16px;
+        height: 16px;
+        background-color: #ccc;
+        i {
+            color: #fff;
+            position: relative;
+            top: -2px;
+        }
+    }
+}
+.chooseStudentBox {
+    max-width: 495px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(#000, 0.2);
+    position: absolute;
+    top: 180px;
+    background-color: #fff;
+    .arrow {
+        @include abs-pos(-12px, auto, auto,40px);
+        color: #fff;
+        .down {
+            color: #eee;
+            @include abs-pos(0, auto, auto, 0);
+        }
+        .up {
+            color: #fff;
+            @include abs-pos(1px, auto, auto, 0);
+        }
+    }
+    .chooseStudentList {
+        max-height: 200px;
+        padding-right: 16px;
+        overflow: auto;
+    }
+    .oneUser {
+        width: 78px;
+        height: 80px;
+        margin-top: 16px;
+        text-align: center;
+        @include border-radius(5px);
+        float: left;
+        @extend %one_user_item;
+        cursor: pointer;
+        &.current {
+            .user_icon {
+                border: 2px solid #ffaa33;
+            }
+        }
+        &.locked {
+            cursor: not-allowed;
+            .user_icon {
+                opacity: 0.6;
+                border: 2px solid #ddd !important;
+            }
+            .user_name {
+                color: #bbb;
+                &:hover {
+                    color: #bbb;
+                }
+            }
+        }
+        .user_icon {
+            padding: 0;
+            border: 2px solid #fff;
+            &:hover {
+                border: 2px solid #ffaa33;
+            }
+        }
+        .user_name {
+            color: #5B5B5B;
+            &:hover {
+                color: #5B5B5B;
+            }
+        }
+    }
+}
+.placeholderPic {
+    margin-top: 24px;
+    height: 126px;
+    width: 164px;
+    text-align: center;
+    line-height: 126px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    @include bg_with_retina(defaultPic, png, $hhmsImgPath);
+    background-color: #F0F0F0;
+    background-position: center;
+}
+.uncommittedBox {
+    margin: 0 auto 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    .oneUser {
+        width: 102px;
+        height: 110px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 2px 4px 1px rgba(#000, 0.1);
+        @include border-radius(5px);
+        border-top: 1px solid #ffaa33;
+        margin: 0 12px 12px 0;
+        float: left;
+        position: relative;
+        &:nth-child(8n) {
+            margin-right: 0;
+        }
+        @extend %one_user_item;
+        &.selected {
+            .ok {
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-color: #7ED321;
+                @include border-radius(16px);
+                @include abs-pos(40px, auto, auto, 55px);
+                i {
+                    color: #fff;
+                    font-size: 12px;
+                    top: -3px;
+                    position: relative;
+                }
+            }
+            .invalidWork {
+                display: none;
+            }
+        }
+        .invalidWork {
+            @include border-radius(3px 0 0 3px);
+            width: 16px;
+            background-color: #eee;
+            @include abs-pos(20px, auto, auto, 0);
+            line-height: 14px;
+            font-size: 12px;
+            color: $grayFontColor;
+            padding: 5px 0px;
+        }
+        .ok {
+            display: none;
+        }
+        .user_icon {
+            padding: 0;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 4px rgba(#000, 0.1);
+            margin: 10px auto;
+            &:hover {
+                border: 2px solid #fff;
+            }
+        }
+        .user_name {
+            color: $grayFontColor;
+            .name {
+                max-width: 76px;
+                display: block;
+                @include text-truncate();
+                margin: 0 auto;
+                color: $grayFontColor;
+            }
+            &:hover {
+                color: $grayFontColor;
+            }
+        }
+    }
+}
+.hhmsWorkUploadFail {
+    .success {
+        display: none;
+    }
+    .studentNameBox {
+        display: inline-block;
+    }
+    .errowTip{
+        display: inline-block;
+    }
+}
+.zoomImg {
+    .spanArea{
+        @include abs-pos(0, 0, auto, auto);
+        width: 50px;
+        height: 50px;
+        border: 1px solid #4C829D;
+        background-color: #4C829D;
+        z-index: 50;
+        @include opacity(.5);
+    }
+}
+.zoomBigBox{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #f4f4f4;
+    overflow: hidden;
+    img {
+        @include abs-pos(0, 0, auto, auto);
+    }
+}
+
+//报名详情页下载二维码提示层
+.downloadErcode {
+    position: relative;
+    i {
+        color: $orangeFontColor;
+    }
+    .helpBox {
+        display: none;
+        color: $grayFontColor;
+        font-size: 12px;
+        width: 230px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(#000, 0.1);
+        @include abs-pos(24px, 0, auto, auto);
+        img {
+            vertical-align: top;
+        }
+        .up {
+            @include abs-pos(-11px, 2px, auto, auto);
+            color: #f9f9f9;
+        }
+        .down {
+            color: #fff;
+            @include abs-pos(-10px, 2px, auto, auto);
+        }
+        .img {
+            margin: 0 auto;
+        }
+    }
+    &:hover {
+        .helpBox {
+            display: block;
+        }
+    }
+}

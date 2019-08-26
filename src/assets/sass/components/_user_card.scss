@@ -1,0 +1,342 @@
+.pop_person_info {
+    @include abs-pos(auto, auto, auto, auto);
+    @include border-radius(4px);
+    padding: 20px;
+    width: 360px;
+    min-height: 120px;
+    z-index: 10005;
+    background: #fff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .21);
+    border: 1px solid $borderGray;
+    .user_card,
+    .qun_user_card {
+        width: 100%;
+        height: 120px;
+    }
+    .icon_in_card {
+        width: 120px;
+        height: 120px;
+        float: left;
+        text-align: center;
+        .user_card_img,
+        .qun_card_img {
+            width: 120px;
+            height: 120px;
+        }
+        .user_card_img {
+            @include border-radius(120px);
+        }
+    }
+    .qun_card_operation,
+    .card_operation {
+        float: left;
+        width: 220px;
+        line-height: normal;
+        overflow: hidden;
+        padding-left: 20px;
+        position: relative;
+        &.closedAccountCard {
+            height: 120px;
+            line-height: 120px;
+            .name_in_card {
+                line-height: 120px;
+            }
+            .closedAccount {
+                font-size: 12px;
+                font-weight: normal;
+                color: $darkOrangeFontColor;
+            }
+        }
+        .name_in_card {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 8px;
+            font-family: $genericFontFamily;
+            a {
+                color: $blackFontColor;
+                text-decoration: none;
+                &.name {
+                    width: 190px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: inline-block;
+                    vertical-align: top;
+                    font-weight: bold;
+                }
+            }
+            .set_star_friend {
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+            }
+            .cancel_star_friend {
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+                i {
+                    color: $starYellow;
+                }
+            }
+            .name {
+                color: $blackFontColor;
+            }
+            .simplify_name {
+                color: $grayFontColor;
+            }
+            .verify_icon {
+                color: $darkOrangeFontColor;
+            }
+            .remark {
+                font-size: 12px;
+                color: $blue;
+                font-weight: normal;
+                cursor: pointer;
+            }
+        }
+        .qun_synopsis,
+        .qun_website_adress,
+        .qun_master,
+        .qun_parent,
+        .local {
+            color: $grayFontColor;
+            font-size: 12px;
+            line-height: 18px;
+            @include text-truncate;
+            a {
+                color: $grayFontColor;
+            }
+        }
+        .qun_website_adress {
+            margin: 4px 0;
+        }
+        .failure_tip {
+            @include abs-pos( 50%, auto, auto, 50%);
+            margin: -12px 0 0 -12px;
+            height: 24px;
+            line-height: 24px;
+            font-weight: bold;
+        }
+    }
+    .person_synopsis {
+        font-size: 12px;
+        line-height: 18px;
+        color: $grayFontColor;
+        margin-top: 4px;
+        word-wrap: break-word;
+        @include block-text-overflow(2);
+    }
+    .qun_apply,
+    .person_apply {
+        @include abs-pos(auto, 20px, 20px ,auto);
+        width: 220px;
+        height: 20px;
+        line-height: 20px;
+        a {
+            cursor: pointer;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .hide {
+            display: none;
+        }
+        .num {
+            color: $grayFontColor;
+            margin-right: 12px;
+            &:hover {
+                color: $darkOrangeFontColor;
+                i {
+                    color: $darkOrangeFontColor;
+                }
+            }
+            i {
+                margin-right: 6px;
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
+    .person_apply {
+        .operation_list {
+            border-top: 1px solid $lightLineGray;
+            @include abs-pos(25px, 120px, auto, auto);
+            .group_list {
+                max-height: 105px;
+            }
+        }
+    }
+    .send_weibo,
+    .send_message {
+        @include abs-pos(auto, 80px, 0 ,auto);
+        height: 16px;
+        line-height: 16px;
+        width: 56px;
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .send_weibo {
+        @include abs-pos(auto, 0, 0 ,auto);
+    }
+    .send_message {
+        @include abs-pos(auto, 50px, 0 ,auto);
+    }
+    .add_friend,
+    .btn_black,
+    .go_chat {
+        @include abs-pos(auto, 120px, 0,auto);
+        color: $darkOrangeFontColor;
+        border: 1px solid $darkOrange;
+        display: block;
+        height: 18px;
+        line-height: 18px;
+        width: 58px;
+        font-size: 12px;
+        @include border-radius(4px);
+        text-align: center;
+        cursor: pointer;
+    }
+    .btn_black,
+    .add_friend {
+        padding-left: 5px;
+        width: 55px;
+        i {
+            color: $darkOrangeFontColor;
+            @include abs-pos(0, 5px, auto, auto);
+        }
+    }
+    .btn_black {
+        &.double {
+            width: 75px;
+        }
+    }
+    .add_friend {
+        padding-left: 10px;
+        width: 50px;
+        text-align: left;
+        &.double {
+            width: 70px;
+            text-align: left;
+            padding-left: 10px;
+        }
+    }
+    .more_set_up {
+        @include abs-pos(auto, 20px, -2px ,auto);
+        i {
+            color: $darkOrangeFontColor;
+        }
+        .set_up_layer {
+            @include abs-pos(25px, 0, auto, auto);
+            border-top: 1px solid $lightLineGray;
+            z-index: 4;
+            .arrow {
+                color: #fff;
+            }
+        }
+    }
+    .incorrect_user_tip {
+        background: $borderOrange;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 400;
+        width: 396px;
+        @include opacity(0.4);
+        @include abs-pos(2px, auto, auto, 2px);
+    }
+    .take_place {
+        height:20px;
+        display:block;
+    }
+    .card_loading_status {
+        text-align: center;
+        height: 100%;
+        img {
+            margin-top: 30px;
+        }
+    }
+    .card_unload_status {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        &.default_user_img {
+            @include bg_with_retina(default_user_card, png, $versionImgPath);
+        }
+        &.default_qun_img {
+            @include bg_with_retina(default_qun_card, png, $versionImgPath);
+        }
+    }
+    .card_unload_tip {
+        @include abs-pos(66px, 66px, auto, auto);
+        color: $grayFontColor;
+    }
+    .card_pointer_topleft,
+    .card_pointer_topright,
+    .card_pointer_bottomleft,
+    .card_pointer_bottomright {
+        width: 0;
+        height: 0;
+        display: none;
+        border-width: 10px;
+        border-style: solid;
+        div {
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-style: solid;
+        }
+    }
+    .card_pointer_topleft {
+        border-color: transparent transparent $borderGray transparent;
+        @include abs-pos(-20px, auto, auto, 100px);
+        div {
+            border-color: transparent transparent #fff transparent;
+            @include abs-pos(-9px, auto, auto, -10px);
+        }
+    }
+    .card_pointer_topright {
+        border-color: transparent transparent $borderGray transparent;
+        @include abs-pos(-20px, 100px, auto, auto);
+        div {
+            border-color: transparent transparent #fff transparent;
+            @include abs-pos(-9px, auto, auto, -10px);
+        }
+    }
+    .card_pointer_bottomleft {
+        border-color: $borderGray transparent transparent transparent;
+        @include abs-pos( auto, auto, -20px, 100px);
+        div {
+            border-color: #fff transparent transparent transparent;
+            @include abs-pos(-11px, auto, auto, -10px);
+        }
+    }
+    .card_pointer_bottomright {
+        border-color: $borderGray transparent transparent transparent;
+        @include abs-pos( auto, 100px, -20px, auto);
+        div {
+            border-color: #fff transparent transparent transparent;
+            @include abs-pos(-11px, auto, auto, -10px);
+        }
+    }
+}
+
+// 学号修改引导层
+.modify_student_id_guide {
+    @include abs-pos(0, auto, auto, 0);
+    width: 100%;
+    background-color:#000;
+    @include opacity(.5);
+    z-index:10000;
+}
+.student_id_guide_icon{
+    position: absolute;
+    width: 209px;
+    height: 177px;
+    @include bg_with_retina(modify_student_guide_bg, png, $versionImgPath);
+    z-index: 10001;
+    .confirm_btn{
+        @include abs-pos(141px, auto, auto, 57px);
+        width: 91px;
+        height: 35px;
+        cursor:pointer;
+    }
+}

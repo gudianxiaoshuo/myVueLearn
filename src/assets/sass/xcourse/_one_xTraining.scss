@@ -1,0 +1,178 @@
+.oneTraining {
+    padding: 30px 20px 0;
+    position: relative;
+    min-height: 150px;
+    &:last-child {
+        .trainingInfo {
+            border: none;
+        }
+    }
+    &.oneTeacherTraining {
+        .trainingPoster {
+            width: 170px;
+            height: 128px;
+        }
+        .trainingInfo {
+            padding-left: 190px;
+            min-height: 133px;
+            .infoItem {
+                padding-right: 124px;
+            }
+        }
+        .trainingDetail {
+            width: 124px;
+            text-align: right;
+            .payInfo {
+                text-align: right;
+            }
+        }
+    }
+    .trainingPoster {
+        width: 200px;
+        height: 150px;
+        @include abs-pos(30px, auto, auto,  20px);
+    }
+    .poster {
+        width: 100%;
+        height: 100%;
+    }
+    .publishName {
+        height: 26px;
+        line-height: 26px;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 12px;
+        display: block;
+        width: 150px;
+        @include abs-pos(auto, auto, 0, 0);
+        background-color: rgba(0, 0, 0, .5);
+        @include text-truncate;
+    }
+    .trainingStatusFlag {
+        width: 60px;
+        height: 62px;
+        @include abs-pos(0, auto, auto, 0);
+        z-index: 1;
+        &.trainingStatus1 {
+            @include bg_with_retina(training_released, png, $versionImgPath);
+        }
+        &.trainingStatus2 {
+            @include bg_with_retina(training_unreleased, png, $versionImgPath);
+        }
+        &.trainingStatus3 {
+            @include bg_with_retina(training_finished, png, $versionImgPath);
+        }
+    }
+}
+.trainingInfo {
+    padding: 0 0 25px 220px;
+    margin: 0;
+    min-height: 155px;
+    border-bottom: 1px dashed #e8e8e8;
+    position: relative;
+    .trainingTitle {
+        font-size: 16px;
+        line-height: 32px;
+        max-width: 100%;
+        @include text-truncate;
+        .courseName {
+            color: $blue;
+            font-weight: normal;
+            margin-left: 8px;
+        }
+    }
+    .trainingOper {
+        @include abs-pos(30px, 0, auto, auto);
+        .operItem {
+            font-size: 12px;
+            line-height: 22px;
+        }
+    }
+    .infoLine {
+        margin: 0 16px;
+        color: #e8e8e8;
+    }
+    .viewNotice {
+        @include abs-pos(0, 0, auto, auto);
+    }
+    .infoItem {
+        font-size: 12px;
+        line-height: 22px;
+        color: $lightBlackFontColor;
+        padding-right: 110px;
+        @include text-truncate;
+        &.info {
+            margin-bottom: 10px;
+            color: $grayFontColor;
+        }
+        .infoIcon {
+            @include rel-pos($top: 1px);
+            margin-right: 8px;
+            font-size: 12px;
+            &.addressIcon {
+                color: #3BC475;
+            }
+            &.clockIcon {
+                color: #FF8800;
+            }
+            &.dateIcon {
+                color: #FB7E81;
+            }
+            &.moneyIcon {
+                color: #FFBF05;
+            }
+        }
+    }
+    .viewNotice {
+        @include abs-pos(0, 0, auto, auto);
+        &:hover {
+            .introIcon {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .trainingDetail {
+        @include abs-pos(auto, 0, 30px, auto);
+        width: 100px;
+        height: 78px;
+        margin-top: -12px;
+        text-align: center;
+        .payInfo,
+        .regInfo {
+            display: block;
+            text-align: center;
+        }
+        .payInfo {
+            font-size: 18px;
+            color: $orangeFontColor;
+            .unit {
+                font-size: 12px;
+                margin-right: 2px;
+            }
+        }
+        .regInfo {
+            font-size: 12px;
+            line-height: 24px;
+            color: $grayFontColor;
+            margin-bottom: 4px;
+        }
+        .primary-btn {
+            &.disabled {
+                border: 1px solid #ccc;
+                color: $grayFontColor;
+                cursor: default;
+                &:hover {
+                    color: $grayFontColor;
+                    background-color: #fff;
+                }
+            }
+            &.isReg {
+                cursor: default;
+                &:hover {
+                    color: $orangeFontColor;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

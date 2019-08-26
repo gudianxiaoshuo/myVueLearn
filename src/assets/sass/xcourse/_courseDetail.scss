@@ -1,0 +1,495 @@
+@charset "UTF-8";
+
+.courseDetailContainer {
+    padding: 0;
+    width: 940px;
+}
+.detailHeader,
+.detailContent,
+.courseClassList {
+    @extend %mainContainerStyle;
+}
+.detailHeader {
+    padding: 20px 20px 20px 330px;
+    width: 590px;
+    height: 210px;
+    position: relative;
+    .poster {
+        display: block;
+        height: 210px;
+        width: 280px;
+        cursor: default;
+        &.courseClass {
+            border: 1px solid #FFF;
+            @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+        }
+        @include abs-pos(20px, auto, auto, 20px);
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        .publisherName {
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px;
+            color: #FFF;
+            font-size: 12px;
+            display: block;
+            width: 260px;
+            @include abs-pos(auto, auto, 0, 0);
+            background-color: rgba(0, 0, 0, .5);
+        }
+    }
+    .headerTitle {
+        font-size: 16px;
+        line-height: 32px;
+        @include text-truncate();
+    }
+    .headerContent {
+        height: 100%;
+        position: relative;
+    }
+    .headerInfo {
+        font-size: 12px;
+        line-height: 24px;
+        margin-bottom: 12px;
+        color: $grayFontColor;
+        .coursePrice {
+            margin-top: 30px;
+            color: #F50;
+            font-size: 22px;
+        }
+        .infoItem {
+            padding-right: 16px;
+            margin-right: 16px;
+            border-right: 1px solid #E8E8E8;
+            &.sourceItem {
+                border-right: none;
+            }
+        }
+        #viewTeacherList,
+        #viewTimeList {
+            width: 254px;
+            background-color: #FFF;
+            @include border-radius(4px);
+            background-clip: border-box;
+            @include box-shadow(0 2px 4px 0 rgba(0, 0, 0, 0.19));
+            z-index: 1;
+            overflow: hidden;
+            .title {
+                height: 36px;
+                line-height: 36px;
+                color: #5B5B5B;
+                font-size: 12px;
+                font-weight: normal;
+                padding: 0 10px;
+                border-bottom: 1px solid #E8E8E8;
+            }
+            .content {
+                padding: 10px;
+            }
+            .teacherItem,
+            .classTimeItem {
+                float: left;
+                line-height: 26px;
+                color: #5B5B5B;
+                font-size: 12px;
+                margin: 0 8px;
+            }
+        }
+        .viewTeacherList,
+        .viewTimeList {
+            color: #FA3;
+            cursor: pointer;
+            top: 2px;
+            right: auto;
+            bottom: auto;
+            left: auto;
+            position: relative;
+        }
+    }
+    .courseOper {
+        @include abs-pos(auto, 0, 0, auto);
+        height: 28px;
+        line-height: 28px;
+        .favOper {
+            font-weight: normal;
+            background-color: #FFAA33;
+            border: 1px solid #FFAA33;
+            @include border-radius(2px);
+            i {
+                color: #FFF;
+                margin-right: 2px;
+                @include rel-pos($top: 1px);
+            }
+        }
+
+        .imported {
+            width: 76px;
+            height: 26px;
+            line-height: 26px;
+            display: inline-block;
+            border: 1px solid #FFAA33;
+            color: $orangeFontColor;
+            text-align: center;
+            @include border-radius(2px);
+        }
+        .modify {
+            margin-right: 15px;
+            padding-right: 15px;
+            border-right: 1px solid #E8E8E8;
+            &.borderNone {
+                border: none;
+                margin-right: 0;
+                padding-right: 0
+            }
+        }
+    }
+    .coursePrice {
+        color: #F50;
+        font-size: 22px;
+        @include abs-pos(auto, auto, 10px, 0);
+    }
+    .headerDesc {
+        color: $lightBlackFontColor;
+        max-height: 100px;
+        overflow: auto;
+        line-height: 24px;
+    }
+    .favCountTip {
+        margin-left: 10px;
+        color: $grayFontColor;
+        .favCount {
+            color: $orangeFontColor;
+        }
+    }
+}
+.courseClassList {
+    padding: 20px;
+    width: 900px;
+}
+.courseTable {
+    @extend %baseTableStyle;
+    th,
+    td {
+        text-indent: 0;
+        text-align: center;
+    }
+    tr {
+        height: 70px;
+        line-height: 70px;
+    }
+    .classTimeItem {
+        display: block;
+        line-height: 24px;
+        text-align: center;
+        max-width: 115px;
+    }
+    .classTime {
+        white-space: nowrap;
+        max-width: 130px;
+    }
+    .itemContent {
+        display: inline-block;
+        line-height: 24px;
+        vertical-align: middle;
+        overflow: hidden;
+        word-break: break-all;
+    }
+    .courseClassOper {
+        &.disabled {
+            color: $grayFontColor;
+            cursor: default;
+        }
+    }
+    .regStatusComing {
+        cursor: default;
+        color: #AE9B85;
+    }
+    .courseClassInfo {
+        text-align: left;
+        height: 50px;
+        line-height: 50px;
+        td {
+            text-align: left;
+            padding: 0 10px;
+        }
+        .gradeInfo {
+            .className {
+                &:last-child {
+                    padding-right: 0;
+                    &:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+        .className {
+            position: relative;
+            padding-right: 10px;
+            &:after {
+                content: "/";
+                font-size: 14px;
+                line-height: 24px;
+                @include abs-pos(-4px, 1px, auto, auto);
+            }
+        }
+    }
+}
+.detailContent {
+    padding: 0 30px 40px;
+    width: 880px;
+    min-height: 800px;
+    .detailTitle {
+        @extend %mainTitleStyle;
+        margin: 0;
+        a {
+            display: inline-block;
+            line-height: 70px;
+            margin: 0 20px;
+            font-size: 16px;
+            color: $blackFontColor;
+            &:hover,
+            &.on {
+                line-height: 68px;
+                border-bottom: 2px solid #FFAA33;
+            }
+        }
+        .workList {
+            border: none;
+            font-size: 14px;
+            font-weight: normal;
+            color: #0088CC;
+            margin: 0;
+            &:hover {
+                color: $orangeFontColor;
+                border: none;
+            }
+        }
+    }
+    .detailText {
+        color: $lightBlackFontColor;
+        line-height: 26px;
+        margin-top: 24px;
+        .simditor {
+            border: none;
+            .editorBody {
+                font-size: 14px;
+                min-height: auto;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .attachTitle,
+    .imgTitle,
+    .videoTitle {
+        margin: 40px 0 30px;
+        .flag {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #FFAA33;
+            @include rel-pos($top: -3px);
+            margin-right: 8px;
+        }
+    }
+    .detailAttach {
+        font-size: 12px;
+        .attachIcon {
+            margin-right: 6px;
+            position: relative;
+            top: 3px;
+        }
+        .fileSize {
+            color: $grayFontColor;
+            margin-left: 10px;
+        }
+        .fileTime {
+            color: $grayFontColor;
+            float: right;
+        }
+    }
+    .imgList {
+        margin-left: -8px;
+        width: 896px;
+        .imgItem {
+            float: left;
+            line-height: 156px;
+            text-align: center;
+            background: #F5F5F5;
+            height: 156px;
+            width: 208px;
+            margin: 8px;
+        }
+        .oneImg {
+            max-width: 208px;
+            max-height: 156px;
+            vertical-align: middle;
+        }
+    }
+    .chapterBox {
+        margin-top: 20px;
+        .oneUnit {
+            margin-bottom: 20px;
+        }
+    }
+    .oneUnit {
+        @extend %oneUnit;
+        .unitDec {
+            padding: 20px 0 20px 30px;
+            border-left: 1px solid #FEEED4;
+            margin-left: 30px;
+        }
+
+        .unitName,
+        .sectionName {
+            cursor: auto;
+            &:hover {
+                background-color: #FFF;
+            }
+            .show {
+                float: right;
+                color: $orangeFontColor;
+                &:hover {
+                    color: #F50;
+                }
+            }
+            .rightArrow {
+                @include css3(transform ,rotate(-90deg));
+            }
+
+        }
+        .unitName {
+            width: 838px;
+            padding-right: 10px;
+            z-index: initial;
+        }
+        .oneSection {
+            padding: 0 0 0 30px;
+            border-left: 1px solid #FEEED4;
+            margin-left: 30px;
+            &:last-child {
+                border-left: none;
+                .horLine {
+                    left: 0;
+                }
+            }
+            .horLine {
+                width: 30px;
+                height: 56px;
+                display: inline-block;
+                border-bottom: 1px solid #FEEED4;
+                border-left: 1px solid #FEEED4;
+                @include abs-pos($top:-34px, $left: -1px);
+                &.first{
+                    top: -14px;
+                    height: 36px;
+                }
+            }
+        }
+        .sectionName {
+            width: 796px;
+            padding-right: 10px !important;
+        }
+        .sectionContent {
+            margin-left: 16px;
+            line-height: 24px;
+            .fileArea,
+            .videoArea {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .describe {
+                margin: 20px 0;
+            }
+        }
+        .oneWork {
+            margin-top: 20px;
+            border: 1px solid #FEEED4;
+            @include border-radius(2px);
+            .workName {
+                line-height: 40px;
+                background-color: rgba(254, 238, 221, 0.4);
+                padding-left: 16px;
+                color: $orangeFontColor;
+                @include border-radius(2px 2px 0 0);
+                .xnwbtn-orange {
+                    margin: 5px 0 0 10px;
+                }
+                .sendWork {
+                    color: $grayFontColor;
+                    margin-right: 10px;
+                    float: right;
+                }
+            }
+            .workInfoBox {
+                position: relative;
+                padding: 0 16px 20px;
+                width: 772px;
+                height: auto;
+                margin: 0;
+                &.overflow {
+                    height: 100px;
+                    overflow: hidden;
+                    position: relative;
+                    display: block;
+                    .showDetail,
+                    .overflowBg {
+                        display: block;
+                    }
+                }
+                .overflowBg {
+                    @include abs-pos(auto, auto, 0, 0);
+                    background: #FFF;
+                    width: 800px;
+                    height: 24px;
+                    display: none;
+                }
+                .showDetail {
+                    @include abs-pos($bottom: 20px, $right: 18px);
+                    background: #FFF;
+                    padding-left: 10px;
+                    display: none;
+                }
+                @extend %workInfoBox;
+                .showDetailBtn {
+                    @include abs-pos(auto, 16px, 20px, auto);
+                }
+            }
+        }
+    }
+    .detailText,
+    .attachContainer,
+    .imgContainer,
+    .videoArea,
+    .fileArea {
+        margin-bottom: 20px;
+    }
+    .videoArea {
+        h4 {
+            color: $grayFontColor;
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .time {
+            float: right;
+            color: $grayFontColor;
+        }
+    }
+}
+.courseDetailContainer {
+    .simditor {
+        .editorBody {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+

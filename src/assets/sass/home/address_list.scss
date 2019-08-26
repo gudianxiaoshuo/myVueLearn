@@ -1,0 +1,51 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+@import "_home-reset.scss";
+
+.homeAddressList {
+    .addressListTabs {
+        margin-bottom: 20px;
+        li {
+            a {
+                float: left;
+                margin-right: 60px;
+                padding: 5px 10px;
+                font-size: 14px;
+                line-height: 20px;
+                color: $lightBlackFontColor;
+                cursor: pointer;
+            }
+            &.selected {
+                a {
+                    font-weight: bold;
+                    border-bottom: 2px solid $orangeFontColor;
+                }
+            }
+        }
+    }
+    .panels {
+        .panel {
+            border: none;
+            .content {
+                padding: 0;
+                .addFriendGroup {
+                    background: none;
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+    .friendslist,
+    .blacklist{
+        float: left;
+        width: 47%;
+        height: 133px;
+        margin: 0 20px 20px 0;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+        .user_operation {
+            @include abs-pos(auto, 10px, 20px ,auto);
+        }
+    }
+}

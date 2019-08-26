@@ -1,0 +1,331 @@
+.activityDetailWrap {
+    .activityInfoWrap {
+        background-color: #FFF;
+        padding-bottom: 34px;
+        a {
+            color: #313131;
+        }
+        .activityInfo {
+            width: 1140px;
+            margin: 0 auto;
+            .cardInfo {
+                height: 264px;
+                padding-top: 40px;
+                .leftPic {
+                    float: left;
+                    width: 440px;
+                    height: 264px;
+                    overflow: hidden;
+                    img {
+                        width: 440px;
+                        height: 264px;
+                    }
+                }
+                .rightCard {
+                    float: left;
+                    height: 264px;
+                    margin-left: 44px;
+                    position: relative;
+                    width: 655px;
+                    .activityTitle {
+                        font-size: 22px;
+                        color: #313131;
+                        font-weight: 400;
+                        margin-bottom: 14px;
+                    }
+                    .xicon-contact {
+                        font-size: 12px;
+                    }
+                    .Initiator {
+                        font-size: 12px;
+                        color: #9B9B9B;
+                        font-weight: 300;
+                    }
+                    .dateTime {
+                        width: 530px;
+                        height: 40px;
+                        background: #FFFBF4;
+                        line-height: 40px;
+                        margin-top: 17px;
+                        margin-bottom: 17px;
+                        .xicon-v-clock {
+                            font-size: 18px;
+                            margin-left: 8px;
+                            margin-right: 16px;
+                            color: #FFAA33;
+                        }
+                        .time {
+                            font-size: 22px;
+                            color: #FFAA33;
+                            font-weight: 300;
+                        }
+                    }
+                    .participant {
+                        height: 69px;
+                        overflow: hidden;
+                        font-size: 12px;
+                        color: #666;
+                        display: inline-block;
+                        margin-top: 20px;
+                    }
+                    .bottomWrap {
+                        position: relative;
+                        height: 120px;
+                        .collection {
+                            background: #FFAA33;
+                            border-radius: 2px;
+                            width: 116px;
+                            height: 40px;
+                            display: inline-block;
+                            line-height: 40px;
+                            text-align: center;
+                            color: #FFF;
+                            font-weight: 300;
+                            position: absolute;
+                            bottom: 0;
+                            .xicon-star-in {
+                                color: #FFF;
+                                position: relative;
+                                top: 2px;
+                            }
+                        }
+                        .menuWrap {
+                            float: right;
+                            bottom: 0;
+                            right: 0;
+                            .textStyle {
+                                padding-right: 12px;
+                                display: inline-block;
+                                border-right: 1px solid #DEDFE0;
+                                height: 12px;
+                                line-height: 12px;
+                                color: #313131;
+                                font-size: 12px;
+                                &.last {
+                                    border: none;
+                                }
+                            }
+                            .icon {
+                                margin-left: 12px;
+                                position: relative;
+                                top: 2px;
+                                font-size: 14px;
+                            }
+                            .reader {
+                                float: left;
+                            }
+                            .shared {
+                                float: left;
+                                cursor: pointer;
+                            }
+                            .reader {
+                                float: left;
+                                cursor: pointer;
+                            }
+                        }
+                        .getMoreMenu {
+                            position: relative;
+                            float: right;
+                            bottom: -30px;
+                            right: 0;
+                            margin-right: -228px;
+                            width: 80px;
+                            background: #fff;
+                            border: 1px solid #ccc;
+                            text-align: center;
+                            li {
+                                padding: 0 10px;
+                                font-size: 12px;
+                                cursor: pointer;
+                                a {
+                                    color: #000;
+                                }
+                                &:hover {
+                                    background-color: #ccc;
+                                }
+                            }
+                            .sharedCodeImg {
+                                position: absolute;
+                                right: 81px;
+                                top: 0px;
+                                padding: 20px;
+                                border: 1px solid #CCC;
+                                background-color: #FFF;
+                                z-index: 9;
+                            }
+                        }
+                    }
+                }
+            }
+            .textInfo {
+                margin-top: 50px;
+                .menuWrap {
+                    margin-bottom: 30px;
+                    li {
+                        display: inline-block;
+                        font-size: 16px;
+                        color: #666666;
+                        height: 33px;
+                        margin-right: 50px;
+                        &.active {
+                            border-bottom: 3px solid #FFAA33;
+                            a {
+                                color: #FFAA33;
+                            }
+                        }
+                        a {
+                            color: #666666;
+                        }
+                        margin-right: 50px;
+                    }
+                    .info {
+
+                    }
+                    .works {
+
+                    }
+                }
+            }
+        }
+    }
+    .activityWorksWrap {
+        width: 1140px;
+        margin: auto;
+        min-height: 600px;
+        .workWrap {
+            .menuWrap {
+                height: 80px;
+                .left{
+                    float: left;
+                    .workNum {
+                        margin-bottom: 20px;
+                        margin-top: 30px;
+                        display: inline-block;
+                    }
+                }
+                .right {
+                    float: right;
+                    margin-bottom: 20px;
+                    margin-top: 30px;
+                    span {
+                        margin-right: 15px;
+                    }
+                    a {
+                        &.active {
+                            color: #FFAA33;
+                        }
+                    }
+                    .last {
+                        color: #000000;
+                        padding-right: 15px;
+                    }
+                    .line {
+                        color: #9B9B9B;
+                        margin-right: 0;
+                    }
+                    .host {
+                        color: #000000;
+                        margin-left: 15px;
+                    }
+                }
+            }
+            .masonryWrap {
+                .masonryList {
+                    width: 273px;
+                    border: 1px solid #E8E8E8;
+                    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16);
+                    box-sizing: border-box;
+                    float: left;
+                    margin-bottom: 16px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    .workCover {
+                        width: 272px;
+                        vertical-align: top;
+                    }
+                    .info {
+                        padding-left: 16px;
+                        background-color: #FFF;
+                        border-bottom: 1px solid #E8E8E8;
+                        .title {
+                            font-size: 12px;
+                            line-height: 18px;
+                            display: inline-block;
+                            margin-bottom: 3px;
+                            margin-top: 12px;
+                            width: 240px;
+                        }
+                        .iconWrap {
+                            font-size: 12px;
+                            position: relative;
+                            .iconList {
+                                margin-right: 20px;
+                                i{
+                                    font-size: 12px;
+                                    cursor: pointer;
+                                    margin-right: 4px;
+                                }
+                            }
+                            .more {
+                                position: absolute;
+                                right: 16px;
+                                cursor: pointer;
+                            }
+                        }
+                        .getMoreMenu {
+                            display: none;
+                            position: absolute;
+                            bottom: 35px;
+                            right: 0px;
+                            background: #FFF;
+                            border: 1px solid #CCC;
+                            text-align: center;
+                            cursor: pointer;
+                            width: 60px;
+                            li {
+                                padding: 0 10px;
+                                cursor: pointer;
+                                font-size: 12px;
+                                &:hover {
+                                    background-color: #ccc;
+                                }
+                            }
+                        }
+                    }
+                    .user {
+                        height: 66px;
+                        .userIcon {
+                            float: left;
+                            width: 34px;
+                            height: 34px;
+                            border-radius: 34px;
+                            overflow: hidden;
+                            margin: 16px 12px 0 16px;
+                            img {
+                                width: 34px;
+                                height: 34px;
+                            }
+                        }
+                        .name {
+                            float: left;
+                            font-size: 12px;
+                            color: #999999;
+                            h3 {
+                                margin-top: 18px;
+                                line-height: 12px;
+                                color: #313131;
+                                font-weight: 400;
+                                font-size: 12px;
+                            }
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

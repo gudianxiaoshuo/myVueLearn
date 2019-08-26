@@ -1,0 +1,217 @@
+/*选择群标签弹层的样式*/
+#chooseQunLabel {
+    width: 480px;
+    .layer_content {
+        padding: 0;
+    }
+    .layer_title_40 {
+        border: none;
+        background-color: #fff;
+        color: #fff;
+    }
+    .qunLabelContainer {
+        padding-bottom: 20px;
+    }
+    .qunLabelItem {
+        float: left;
+        margin: 0 60px;
+        @include bg_with_retina(qun_label_icon, png, $versionImgPath);
+        background-position: -315px 7px;
+        overflow: hidden;
+        width: 80px;
+        padding-top: 60px;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        &.schoolItem {
+            background-position: 14px 7px;
+        }
+        &.classItem {
+            background-position: -150px 7px;
+            margin-left: 100px;
+        }
+        input {
+            @include rel-pos($left: -100px);
+        }
+        span {
+            color: $grayFontColor;
+            font-size: 12px;
+            @include rel-pos($left: 6px,$top: -8px);
+        }
+    }
+    .qunLabelTip {
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color: $grayFontColor;
+        padding-left: 20px;
+        background-color: $lightGrayBg;
+        i {
+            color: $darkOrangeFontColor;
+            margin-right: 2px;
+        }
+    }
+}
+
+//创建群弹层的样式
+#selectGrade2attachParent,
+#createSchoolQun,
+#createNormalQun,
+#createClassQun {
+    width: 600px;
+    .layer_content {
+        padding: 0;
+    }
+    .schoolQunInfo,
+    .classQunInfo,
+    .normalQunInfo {
+        padding: 20px 20px 0;
+    }
+    .normalQunInfo {
+        .infoTitle {
+            display: inline-block;
+            width: 56px;
+        }
+    }
+    .schoolQunInfo,
+    .classQunInfo {
+        position: relative;
+        .infoTitle {
+            margin-right: 6px;
+            &.provinceInfoTitle {
+                float: left;
+            }
+        }
+    }
+    .provinceInfo {
+        float: left;
+        margin-left: 4px;
+    }
+    .yearInfo,
+    .gradeInfo,
+    .classInfo,
+    .schoolInfo,
+    .qunNameInfo,
+    .className {
+        border: 1px solid $lineGray;
+        @include border-radius(2px);
+        padding: 0 4px;
+        width: 446px;
+        height: 30px;
+    }
+    .schoolInfo {
+        width: 438px;
+        &.schoolNameInfo {
+            margin-left: 5.8em;
+            margin-top: 10px;
+        }
+    }
+    .schoolName {
+        margin-left: 5.8em;
+    }
+    .yearInfo,
+    .gradeInfo,
+    .classInfo {
+        width: 100px;
+        margin-right: 10px;
+    }
+    .classInfo {
+        margin-left: 15px;
+        margin-right: 0;
+    }
+    .qunNameInfo {
+        width: 200px;
+        margin-right: 15px;
+    }
+    .qunDescInfo {
+        border: 1px solid $lineGray;
+        @include border-radius(2px);
+        padding: 4px;
+        width: 446px;
+        height: 70px;
+        resize: none;
+    }
+    .className {
+        width: 438px;
+        background: #f5f5f5;
+    }
+    .infoTip {
+        padding-left: 58px;
+        font-size: 12px;
+        color: $grayFontColor;
+        &.red {
+            color: $darkRed;
+        }
+        .descCharCounter {
+            color: $darkOrangeFontColor;
+        }
+        .countColor {
+            color: #FFAA33;
+        }
+    }
+    .dropdownBox {
+        @include abs-pos(auto, auto, auto, 90px);
+        width: 108px;
+        @extend %yearDropListStyle;
+        &.gradeListBox {
+            @include abs-pos(auto, auto, auto, 256px);
+        }
+    }
+    .typeLabel {
+        margin-right: 30px;
+        input {
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
+        }
+    }
+    .newBtnArea {
+        .graduatedLabel {
+            float: left;
+            margin-left: 20px;
+            input {
+                margin-right: 4px;
+            }
+        }
+    }
+    @extend %chosenContainerStyle;
+    .chosen-drop {
+        &.autocomplete {
+            left: 101px;
+        }
+    }
+}
+#showRegisterTip {
+    width: 478px;
+    .layer_content {
+        padding: 0;
+        p {
+            padding: 40px 20px 20px;
+            text-align: center;
+            i {
+                @include rel-pos($top: 2px);
+                color: $orangeFontColor;
+                margin-right: 6px;
+            }
+        }
+    }
+    .noRemind {
+        float: left;
+        margin-left: 20px;
+        input {
+            margin-right: 6px;
+        }
+    }
+}
+//申请为学校子群不存在年级层
+#selectGrade2attachParent {
+    .noExistenceTips {
+        color: $darkOrangeFontColor;
+        padding: 20px 20px 0;
+    }
+    .dropdownBox {
+        @include abs-pos(auto, auto, auto, 101px);
+    }
+}
+
+

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+#index_channel_set_layer,
+#modifyLabelLayer{
+    width: 438px;
+    .privacy_message {
+        padding: 0;
+    }
+    .setting_panel {
+        .table_four_cell {
+            margin: 10px 20px;
+        }
+        li,
+        td,
+        th {
+            padding: 10px 0;
+        }
+        li {
+            .ch_name {
+                width: 76px;
+            }
+            .scroll_pic {
+                width: 130px;
+                display: inline-block;
+                padding-bottom: 20px;
+                &.hide {
+                    display: none;
+                }
+            }
+        }
+        select,
+        .name_input_text,
+        .inputReadonly,
+        .inputAlbum {
+            height: 28px;
+            line-height: 28px;
+            @include border-radius(4px);
+            padding: 0 0 0 5px;
+            border: 1px solid $borderGray;
+        }
+         select,
+        .name_input_text,
+        .inputReadonly {
+            width: 205px;
+        }
+        .inputAlbum {
+            width: 160px;
+            margin-right: 10px;
+            background-color: $sideBarGray;
+        }
+        .inputReadonly {
+            color: $grayFontColor;
+            border: 0;
+        }
+        select {
+            width: 170px;
+            margin-right: 10px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .countTextInput {
+            height: 28px;
+            width: 58px;
+            line-height: 28px;
+            @include border-radius(4px);
+            padding: 0 0 0 5px;
+            border: 1px solid $borderGray;
+            &.inputReadonly {
+                background-color: $sideBarGray;
+            }
+        }
+        label {
+            margin-right: 15px;
+            cursor: pointer;
+        }
+    }
+}

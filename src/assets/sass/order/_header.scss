@@ -1,0 +1,32 @@
+.orderHeader {
+    margin: 0 auto;
+    width: 938px;
+    height: 34px;
+    border: 1px solid #E0E0E0;
+    background: #F8F8F8;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    .logoWrap {
+        float: left;
+        height: 32px;
+        padding-top: 4px;
+        width: 144px;
+        text-align: center;
+        border-right: 1px solid #E0E0E0;
+        .logo {
+            width: 84px;
+            height: 28px;
+            margin-left: 30px;
+            @include bg_with_retina(orange-logo, png, $versionImgPath);
+            background-size: cover;
+        }
+    }
+    .title {
+        float: left;
+        font-size: 18px;
+        height: 36px;
+        line-height: 36px;
+        margin-left: 20px;
+        color: #5B5B5B;
+    }
+}

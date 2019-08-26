@@ -1,0 +1,57 @@
+#get_qun_column_layer {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    .contact_column {
+        margin: 0 20px;
+    }
+    .add_column_input {
+        padding-left: 20px;
+        input {
+            border: 1px solid $lineGray;
+            @include border-radius(3px);
+            padding-left: 10px;
+            color: $grayFontColor;
+        }
+    }
+    #already_column {
+        padding-bottom: 10px;
+        li {
+            float: left;
+            padding: 0 8px;
+            background: $bgOrange;
+            border: solid 1px $borderOrange;
+            margin:10px 10px 0 0;
+            @include border-radius(3px);
+            cursor: move;
+            .update_column_name {
+                @include border-radius(3px);
+                border: none;
+                background: #fff;
+                height: 25px;
+                line-height: 25px;
+                position: relative;
+                left: -8px;
+                z-index: 1;
+                padding-left: 8px;
+            }
+            .remove_column {
+                cursor: pointer;
+            }
+
+        }
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+        button {
+            margin-left: 10px;
+        }
+    }
+}

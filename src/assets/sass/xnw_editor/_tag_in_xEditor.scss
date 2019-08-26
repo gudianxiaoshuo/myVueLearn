@@ -1,0 +1,70 @@
+.added_tags_box {
+    margin: 4px 20px 0;
+    .oneTag {
+        padding-right: 18px;
+    }
+    .remove_channel {
+        @include abs-pos(0, 0, auto, auto);
+        width: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+.is_in_page {
+    .added_tags_box {
+        float: left;
+        max-width: 520px;
+    }
+}
+.blueXeditor {
+    .added_tags_box {
+        margin-bottom: 20px;
+    }
+}
+
+.oneTag {
+    background-color: $bgOrange;
+    border: 1px solid $borderOrange;
+    color: $orangeFontColor;
+    font-size: 12px;
+    max-width: 200px;
+    @include text-truncate;
+    @include border-radius(2px);
+    position: relative;
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 6px;
+    margin: 6px 12px 4px 0;
+    float: left;
+    &.hasChildTag {
+        padding-right: 14px;
+        .tag_flag {
+            display: block;
+        }
+    }
+    &:hover {
+        border: 1px solid $orangeFontColor;
+        background-color: $orangeFontColor;
+        color: #fff;
+        i {
+            color: #fff;
+        }
+        .tag_flag {
+            border-color: #fff transparent transparent transparent;
+        }
+    }
+    i {
+        color: $orangeFontColor;
+        position: relative;
+        top: 2px;
+    }
+    .tag_flag {
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: $orangeFontColor transparent transparent transparent;
+        @include abs-pos(8px, 3px, auto, auto);
+        display: none;
+    }
+}

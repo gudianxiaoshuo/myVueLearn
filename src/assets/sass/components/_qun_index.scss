@@ -1,0 +1,815 @@
+@charset "UTF-8";
+
+.qun_index_box {
+    .one_column_list {
+        padding: 20px;
+        background-color: #fff;
+    }
+    .member_icon_only {
+        margin: 5px;
+    }
+}
+.padding_top {
+    padding-top: 45px !important;
+}
+.channel_content {
+    margin:0 0 10px 0;
+    padding-left: 20px;
+    .one_article {
+        &:first-child {
+            margin-top: 20px;
+        }
+        margin-top: 14px;
+        margin-bottom: 14px;
+        .incomplete_article_content {
+            margin-bottom: 14px;
+        }
+    }
+    #weibo_list {
+        .one_article {
+            &:only-child,
+            &:last-child {
+                border-bottom: none;
+            }
+            .time {
+                right: 10px;
+            }
+            .tip_menu_area {
+                right: -20px;
+            }
+            .top_tip_menu {
+                right: 10px;
+            }
+        }
+    }
+    .friend_qun_list {
+        width: 640px;
+        margin-left: 0;
+    }
+
+    // 首页上宽栏的关系群*/
+    .qun_tree_container {
+        //margin-left: 45px;
+        width: 570px;
+        height: 150px;
+        overflow: hidden;
+        li {
+            border: solid 1px #ccc;
+            width: 144px;
+            padding: 4px 7px 4px 7px;
+            &.on {
+                border: 1px solid $orange;
+                padding: 4px 7px;
+            }
+            .arrow_right,
+            .arrow_left {
+                display: none;
+            }
+        }
+    }
+    // 查看更多友群的更多按钮*/
+    .subgroup_column_name,
+    .tager_more_box_index {
+        height:30px;
+        line-height: 30px;
+        margin-bottom: 12px;
+        margin-right: 10px;
+        a {
+            color: $grayFontColor;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    // 标题列表*/
+    .weibo_list_txt {
+        line-height: 26px;
+        border-bottom: none;
+        overflow: hidden;
+        &.first {
+            padding-top: 10px;
+        }
+        a {
+            width: 96%;
+            position: relative;
+            padding: 0px 0 0 18px;
+            font-size: 14px;
+            color: $blackFontColor;
+            &:hover,
+            &.on {
+                color: $orange;
+                i {
+                    @include bg_with_retina(list-type-disc-colorful, png, $baseImgRootPath);
+                }
+            }
+            i {
+                border-radius:4px;
+                background: #313131;
+                @include abs-pos(12px, auto, auto, 0);
+                width: 4px;
+                height: 4px;
+            }
+        }
+    }
+}
+.S-xnw_main .main_index_container {
+    width: 660px;
+    padding: 20px 20px 0;
+}
+.channel_container {
+    margin:0 0 20px 0;
+    display: block;
+    .tips,
+    .channel_tips{
+        color: $grayFontColor;
+    }
+    .channel_ch_title {
+        font-size: 18px;
+        font-weight: bold;
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 2px solid $borderGray;
+        position: relative;
+        margin-bottom: 10px;
+        color: $blackFontColor;
+        font-weight: normal;
+        padding: 0 10px 0 0;
+        a {
+            color: $grayFontColor;
+            cursor: pointer;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+        .column_name {
+            color: $blackFontColor;
+            float: left;
+            height: 100%;
+            overflow: hidden;
+        }
+        .setting_btn {
+            text-align: right;
+            float: right;
+            font-size: 12px;
+            a {
+                color: $grayFontColor;
+                &:hover {
+                    color: $darkOrangeFontColor;
+                }
+            }
+            &.marginRight {
+                margin-right: 14px;
+            }
+        }
+        .channel_title_content {
+            position: relative;
+            height: 100%;
+            float: left;
+            max-width: 54%;
+            .white_bg_line,
+            .orange_bg_line {
+                @include abs-pos(auto, auto, -2px, 0);
+                display: block;
+                height: 2px;
+                width: 100%;
+                padding-right: 20px;
+                background-color: $orangeFontColor;
+            }
+            .white_bg_line {
+                background-color: #fff;
+                left: 1px;
+            }
+            .column_name {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.channel_container .channel_ch_title,
+.user_custom_index .channel_title {
+    .manage_relation_qun {
+        @include abs-pos(30px, 0, auto, auto);
+        background-color: #fff;
+        z-index: 100;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+        padding: 5px 0;
+        a {
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+            width: 80px;
+            text-align: center;
+            color: $blackFontColor;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            &:hover,
+            &.on {
+                background-color: $orange;
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+// 图片模式基础样式*/
+.index_pic_mode {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+    &.picTitleCon {
+        .pic_con {
+            width: 540px;
+        }
+    }
+    .pic_con {
+        height: 150px;
+        width: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+        text-align: center;
+        @include rel-pos(auto, auto, auto, -10px);
+    }
+    .switch_pic_box {
+        height:100%;
+        position:absolute;
+        li {
+            float: left;
+        }
+    }
+    .one_pic_item {
+        width: 148px;
+        height: 148px;
+        line-height: 148px;
+        text-align: center;
+        margin: 0 25px;
+        float: left;
+        background-color: $lightGrayBg;
+        border: 1px solid $bodyGray;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+            max-width: 148px;
+            max-height: 148px;
+        }
+    }
+    .prev,
+    .next {
+        width: 20px;
+        height: 100%;
+        cursor: pointer;
+        z-index: 5;
+        &:hover {
+            i {
+                color: $darkOrangeFontColor !important;
+            }
+        }
+        i {
+            color: $grayFontColor;
+            @include rel-pos(45%, auto, auto, 5px);
+        }
+    }
+    .prev {
+        @include abs-pos(0, auto, auto, 0px);
+        i {
+            left: 0;
+        }
+    }
+    .next {
+        @include abs-pos(0, 20px, auto, auto);
+    }
+    &.picTitleNarrow{
+        height: 186px;
+        .pic_con {
+            height: 186px;
+        }
+        .picTittle {
+            width: 208px;
+            height: 186px;
+            margin: 0 auto;
+            .picContent {
+                height: 156px;
+                width: 206px;
+                img {
+                    max-height: 156px;
+                    line-height: 208px;
+                }
+            }
+        }
+    }
+}
+
+// 图片加标题展示形式*/
+.picTittle {
+    width: 120px;
+    height: 150px;
+    text-align: center;
+    margin: 0 7px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    .picContent {
+        height: 118px;
+        width: 118px;
+        overflow: hidden;
+        background-color: $lightGrayBg;
+        border: 1px solid $bodyGray;
+        display: block;
+        img {
+            max-height: 118px;
+            line-height: 118px;
+        }
+    }
+    .title {
+        line-height: 30px;
+        text-align: center;
+        color: $grayFontColor;
+        display: block;
+        @include text-truncate();
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+}
+
+// 首条摘要和侧栏图片样式*/
+.first_summary,
+.index_sidebar {
+    h1 {
+        line-height: 26px;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    .pic_or_video {
+        border: 1px solid $bodyGray;
+        position: relative;
+        float: left;
+        overflow: hidden;
+        background-color: $lightLineGray;
+        text-align: center;
+        margin-bottom: 0;
+        img {
+            vertical-align: middle;
+            text-align: center;
+        }
+    }
+    .show_complete {
+        color: $grayFontColor;
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+        &.show_bg_gray {
+            background: $sideBarGray;
+        }
+        &.show_bg {
+            background: #fff;
+        }
+    }
+    .markdown_img {
+        display: none;
+    }
+}
+
+// 首条摘要样式*/
+.first_summary {
+    position: relative;
+    min-height: 20px;
+    .pic_or_video {
+        width: 224px;
+        height: 126px;
+        margin-right: 10px;
+        .preview_video,
+        .show_video_box {
+            display: block;
+            height: 124px;
+        }
+        img {
+            max-width: 224px;
+            max-height: 124px;
+        }
+    }
+    .text {
+        max-height: 125px;
+        overflow:hidden;
+        line-height: 24px;
+        font-size:14px;
+        color: $blackFontColor;
+    }
+    .network_video {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .show_video_box {
+        width: 100%;
+        .transcodingMsg {
+            bottom: 40%;
+        }
+    }
+    .show_complete {
+        @include abs-pos(auto, 5px, 0, auto);
+        font-size: 12px;
+        color: $grayFontColor;
+        background: #FFF;
+        padding-left: 10px;
+        z-index: 10;
+    }
+    .simditor {
+        border: none;
+        .editorBody {
+            font-size: 14px;
+            min-height: auto;
+            img {
+                height: auto;
+                max-width: 100%;
+            }
+        }
+    }
+    blockquote {
+        margin: 0;
+        padding: 2px 0;
+    }
+}
+
+// 活动*/
+.narrow_infoblock_activity,
+.narrow_summary_activity,
+.summary_activity {
+    .qunActivitiesPoster {
+        overflow: hidden;
+        position: relative;
+        border: 1px solid $bodyGray;
+        .activityPoster {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .activityPosterFlag {
+            @include abs-pos(0, auto, auto, 0);
+            height: 41px;
+            width: 44px;
+            display: block;
+            z-index: 5;
+            @include bg_with_retina(little-activities-flag, png, $versionImgPath);
+        }
+    }
+    .activityTitle {
+        padding: 0;
+        color: $blackFontColor;
+        line-height: 30px;
+        font-family: $genericFontFamily;
+        @include text-truncate();
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+    .activities_time,
+    .activities_address,
+    .activities_member {
+        color: $grayFontColor;
+        .info_title {
+            color: $blackFontColor;
+        }
+        i {
+            @include rel-pos($top: 2px);
+            margin-right: 4px;
+        }
+        .appliedTotal {
+            margin-left: 20px;
+            span {
+                color: $green;
+                padding: 0 2px;
+            }
+        }
+        .applyLimit {
+            span {
+                color: $orange;
+                padding: 0 2px;
+            }
+        }
+    }
+    .activities_address {
+        @include text-truncate();
+    }
+}
+.narrow_summary_activity {
+    position: relative;
+    .activityTitle {
+        @include abs-pos($bottom: 0);
+        color: #fff;
+        background: rgba(0, 0, 0, 0.3);
+        width: 188px;
+        padding: 0 10px;
+    }
+    .activityPoster {
+        max-height: 117px;
+    }
+}
+.summary_activity {
+    .qunActivitiesPoster {
+        float: left;
+        width: 222px;
+        height: 124px;
+        margin-right: 10px;
+    }
+    .activityTitle {
+        display: block;
+        width: 284px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+// 信息块样式*/
+.infoblock {
+    .one_article {
+        padding-left: 0;
+        padding-bottom: 10px;
+        margin-left: 0;
+        h1 {
+            font-size: 18px;
+        }
+        .article_content {
+            padding: 0 !important;
+        }
+        .aside,
+        .article_operation,
+        .section h3,
+        .re_weibo_operation  {
+            display: none;
+        }
+        .add_topic {
+            width: 628px;
+        }
+    }
+    .infoblock_activity {
+        padding: 0;
+        background: none;
+        text-align: center;
+        .activityTitle {
+            padding: 0;
+            display: block;
+            text-align: left;
+            white-space: normal;
+            cursor: auto;
+            margin: 5px 0;
+            &:hover {
+                color: $blackFontColor;
+            }
+        }
+    }
+    .narrow_infoblock_activity  {
+        text-align: center;
+        .qunActivitiesPoster {
+            height: 117px;
+        }
+        .btn-orange {
+            margin-top: 10px;
+        }
+    }
+
+}
+.website_member_list {
+    .user_item {
+        width: 70px;
+    }
+    .get_more_member {
+        padding-right: 10px;
+    }
+}
+// 侧栏中标签特殊的样式样式*/
+.narrow {
+    width: 208px;
+    margin: 0 auto;
+    overflow: hidden;
+    .title_list {
+        padding: 0 0 10px 0;
+        margin-bottom: 10px;
+    }
+    &.relationQunContainer {
+        overflow: visible;
+    }
+    .website_member_list {
+        .user_item {
+            width: 66px;
+        }
+    }
+    .channel_content {
+        padding-left: 0;
+        .friend_qun_list {
+            width: 200px;
+            .qun_item {
+                width: 66px;
+            }
+        }
+        &.qun_notice,
+        &.member_in_sidebar,
+        &.relationQunContainer {
+            padding: 0 0 10px 0;
+            margin-bottom: 10px;
+        }
+
+    }
+    .channel_ch_title .channel_title_content {
+        max-width: 80%;
+        .white_bg_line,
+        .orange_bg_line {
+            display: none;
+        }
+    }
+    .index_pic_mode {
+        .pic_con {
+            width: 208px;
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+    }
+}
+
+.first_summary_vote {
+    position: relative;
+    .vote_container {
+        padding-left: 234px;
+        height: 126px;
+        width: auto;
+        margin: 0;
+        @include border-radius(0);
+        border: none;
+        background: none;
+    }
+    .vote_img {
+        width: 222px;
+        height: 124px;
+        @include abs-pos($top: 0, $left: 0);
+        @include border-radius(0);
+        background-color: $lightGrayBg;
+        border: 1px solid $bodyGray;
+    }
+    .vote_flag {
+        height: 42px;
+        max-height: 42px;
+    }
+    .vote_title {
+        line-height: 22px;
+        font-size: 16px;
+        margin-top: 0;
+        padding-top: 6px;
+    }
+}
+
+.index_sidebar {
+    //background: $lightGrayBg;
+    overflow: hidden;
+    position: relative;
+    min-height: 28px;
+    img {
+        max-width: 100%;
+    }
+    .show_complete {
+        display: none;
+    }
+    .pic_or_video {
+        width: 208px;
+        height: 117px;
+        overflow: hidden;
+        margin: 0;
+        .preview_video,
+        .show_video_box {
+            display: block;
+            height: 117px;
+        }
+        .show_video_box {
+            width: 100%;
+            .transcodingMsg {
+                bottom: 40%
+            }
+        }
+        .network_video {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        img.player {
+            margin-top: -42px;
+        }
+    }
+    &.narrow_summary {
+        .text {
+            padding: 0 10px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.3);
+            @include abs-pos($bottom: 0);
+            a,
+            h1 {
+                color: #fff;
+                @include text-truncate();
+                width: 188px;
+                display: block;
+                line-height: 30px;
+            }
+        }
+    }
+    &.narrow_infoblock {
+        .title {
+            padding: 5px 10px;
+        }
+        .pic_or_video {
+            background: $lightLineGray;
+            .num {
+                @include abs-pos(0, 0, auto, auto);
+                background: $darkOrange;
+                color: #fff;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+        }
+        .text {
+            padding: 10px !important;
+            display: block;
+        }
+        .show_complete {
+            padding: 0 10px 10px 0 !important;
+        }
+        .show_complete_btn {
+            margin-left: 10px !important;
+        }
+    }
+    // 首条摘要 投票*/
+    .first_summary_vote {
+        .vote_container {
+            height: 117px;
+        }
+        .vote_title {
+            width: 90%;
+            padding: 0 10px;
+            margin-top: 0;
+            @include abs-pos(auto, auto, 0, 0);
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            a {
+                height: 30px;
+                color: #fff;
+                &:hover {
+                    color: $darkOrangeFontColor;
+                }
+            }
+        }
+        .vote_user_num,
+        .vote_btn {
+            display: none;
+        }
+    }
+    .infoblock_vote {
+        .vote_container {
+            width: auto;
+            margin: 0;
+            @include border-radius(0);
+            border: none;
+            background: none;
+            height: 220px;
+        }
+        .vote_img {
+            @include abs-pos($top: 0, $left: 0);
+            @include border-radius(0);
+            background-color: $lightGrayBg;
+            width: 208px;
+            height: 117px;
+        }
+        .vote_flag {
+            height: 42px;
+            max-height: 42px;
+        }
+        .vote_title {
+            width: 100%;
+            margin-top: 10px;
+            @include abs-pos(110px, auto, auto, 0);
+            text-align: center
+        }
+        .vote_user_num {
+            width: 100%;
+            text-align: center;
+            @include abs-pos(150px, auto, auto, 0);
+        }
+        .vote_btn {
+            color: #fff !important;
+            @include abs-pos(190px, 65px, auto, auto);
+        }
+    }
+}
+
+// 班级群导出通讯录*/
+.importAddress {
+    text-align: right;
+    margin-bottom: 20px;
+    a {
+        display: inline-block;
+        padding: 0 5px;
+    }
+}

@@ -1,0 +1,415 @@
+@import "global/_variables.scss";
+@import "global/_normalize.scss";
+
+
+@import "global/_mixins.scss";
+@import "global/_extends.scss";
+@import "global/_buttons.scss";
+@import "global/_font_style.scss";
+@import "global/_custom_reset.scss";
+
+.authenticateContainer {
+    width: 940px;
+    margin: 20px auto 0;
+    .infoTitle {
+        font-size: 16px;
+        line-height: 36px;
+        border-bottom: 2px solid $orangeFontColor;
+        margin-bottom: 24px;
+    }
+    .nextStep {
+        border-top: 1px dashed $borderGray;
+        text-align: right;
+        padding: 30px;
+        position: relative;
+        .confirmInfo {
+            float: left;
+        }
+        .printTable,
+        .downloadPDF {
+            display: inline-block;
+            padding: 0 10px;
+            position: relative;
+        }
+        .uploadScanFile {
+            cursor: pointer;
+            position: absolute;
+            right: 60px;
+            opacity: 0;
+        }
+        .printTable {
+            &:after {
+                content: '|';
+                color: $blue;
+                @include abs-pos(0, -4px, auto, auto);
+            }
+        }
+        .changeInfo {
+            float: left;
+        }
+        .agreement {
+            margin-right: 10px;
+            input {
+                margin-right: 4px;
+                height: 12px;
+                width: 12px;
+            }
+        }
+        .sendChatMsg {
+            color: $grayFontColor;
+            @include abs-pos(15px, auto, auto, 30px);
+            .openPchat {
+                color: $grayFontColor;
+                i {
+                    color: $orangeFontColor;
+                    @include rel-pos($top: 1px);
+                }
+                &:hover {
+                    color: $darkOrangeFontColor;
+                }
+            }
+        }
+        .specialButton {
+            width: auto;
+            padding: 0 4px;
+        }
+    }
+}
+.authenticateStep {
+    @include bg_with_retina(guide_step, png, $schoolAuthenticateImgPath);
+    background-position: 0 bottom;
+    margin: 40px 0;
+    height: 90px;
+    .stepItem {
+        float: left;
+        width: 170px;
+        text-align: center;
+        color: $grayFontColor;
+        position: relative;
+        &.on {
+            .currentStep {
+                @include bg_with_retina(current_step, png, $schoolAuthenticateImgPath);
+            }
+        }
+        &.lastStep {
+            .currentStep {
+                left: 62px;
+            }
+        }
+        .currentStep {
+            @include abs-pos(34px, auto, auto, 61px);
+            color: #fff;
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            width: 50px;
+            font-size: 24px;
+            @include border-radius(50px);
+        }
+    }
+    .stepTwo {
+        margin: 0 186px;
+    }
+}
+.authenticateStatus,
+.agreementInfo,
+.contactInfo,
+.authenticateInfo,
+.confirmInfo,
+.schoolInfo {
+    width: 880px;
+    min-height: 800px;
+    padding: 14px 30px 0;
+    background-color: #fff;
+    position: relative;
+    @include border-radius(4px);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.4);
+}
+.authenticateInfo {
+    min-height: initial;
+}
+.infoItem {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+    margin-bottom: 26px;
+    position: relative;
+    &.schoolName {
+        height: auto;
+        .nameInput {
+            width: 612px !important;
+            margin: 20px auto auto 75px;
+        }
+    }
+    .infoName {
+        float: left;
+        margin-right: 10px;
+        font-weight: bold;
+        i {
+            color: #c03;
+            margin-right: 5px;
+        }
+    }
+    .provinceInfo {
+        float: left;
+        height: 30px;
+    }
+    .nameInfo {
+        float: left;
+        position: relative;
+        .nameInput {
+            height: 28px;
+            width: 290px;
+            padding: 0 4px;
+            border: 1px solid $lightLineGray;
+            @include border-radius(4px);
+
+        }
+    }
+    .addressInfo {
+        .addressInput {
+            height: 28px;
+            width: 620px;
+            padding: 0 4px;
+            border: 1px solid $lightLineGray;
+            @include border-radius(4px);
+            &[readonly] {
+                border: none;
+                color: $grayFontColor;
+            }
+            &.count {
+                width: 90px;
+            }
+        }
+    }
+    .mobileInfo {
+        float: left;
+        .replaceMobile {
+            margin-left: 18px;
+        }
+    }
+    .getCodeButton {
+        height: 30px;
+        margin: 0 6px 0 20px;
+    }
+    .textInput {
+        height: 28px;
+        width: 290px;
+        padding: 0 4px;
+        border: 1px solid $lightLineGray;
+        @include border-radius(4px);
+        &.codeInput {
+            width: 102px;
+        }
+        &.mobiInput[readonly] {
+            border: none;
+            color: $grayFontColor;
+        }
+    }
+    .verifyMsg {
+        @include abs-pos(34px, auto, auto, 104px);
+        color: $darkRed;
+        font-size: 12px;
+        line-height: 20px;
+        &.verifyCode {
+            left: 534px;
+        }
+        &.verify_area {
+            top: 31px;
+        }
+        &.verify_schname {
+            top: 80px;
+        }
+    }
+    .schoolYear {
+        display: inline-block;
+    }
+}
+.tableTitle {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.tableNum {
+    text-align: center;
+    font-size: 12px;
+    color: $grayFontColor;
+}
+.confirmTable {
+    margin: 10px auto 30px;
+    width: 820px;
+    border: 1px solid $lineGray;
+    td {
+        border: 1px solid $lineGray;
+    }
+    .schInfoTitle,
+    .contactInfoTitle {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .cellTitle {
+        width: 88px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .cellData {
+        text-align: center;
+        color: $grayFontColor;
+    }
+    .mobileData {
+        color: $grayFontColor;
+        text-indent: 100px;
+    }
+    .contactCellInfo {
+        width: 322px;
+    }
+    .contactDuty {
+        padding: 14px 28px;
+        line-height: 26px;
+    }
+    .signInfo {
+        height: 80px;
+        padding: 15px 0;
+        vertical-align: top;
+        span {
+            display: block;
+            margin-top: 10px;
+            padding: 0 20px 0 12px;
+        }
+        .dateInfo {
+            margin-top: 20px;
+            text-align: right;
+            i {
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+.submitTip {
+    text-align: center;
+    font-size: 14px;
+    line-height: 46px;
+    color: $blackFontColor;
+    border: 1px solid #FEEED4;
+    background-color: #FFFBF4;
+    .ok {
+        color: #7ED321;
+        @include rel-pos($top:2px, $right: 10px);
+    }
+}
+
+.authenticateFile {
+    li {
+        float: left;
+        width: 144px;
+        margin: 80px 40px;
+        text-align: center;
+    }
+    .printArea,
+    .erCodeArea,
+    .uploadFileArea {
+        .pic {
+            width: 136px;
+            height: 136px;
+            margin-bottom: 30px;
+            border: 4px solid #fff;
+            display: block;
+            box-shadow: 0 2px 10px 0 rgba(0,0,0,0.14);
+            @include border-radius(10px);
+        }
+        .text {
+            display: inline-block;
+            text-align: left;
+            margin-top: 30px;
+        }
+    }
+    .printArea {
+        .pic {
+            @include bg_with_retina(auth_waiting, png, $schoolAuthenticateImgPath);
+            background-position: -5px 0;
+            background-color: #4F98ED;
+        }
+    }
+    .arrowArea {
+        height: 100px;
+        margin: 110px 0 0 0;
+        @include bg_with_retina(auth_waiting, png, $schoolAuthenticateImgPath);
+        background-position: 0 -288px;
+    }
+    .erCodeArea {
+        .pic {
+            margin-bottom: 0;
+            img {
+                width: 136px;
+                height: 136px;
+                @include border-radius(10px);
+            }
+        }
+    }
+    .uploadFileArea {
+        .pic {
+            @include bg_with_retina(auth_waiting, png, $schoolAuthenticateImgPath);
+            background-position: -4px -144px;
+            background-color: #FB7E81;
+        }
+    }
+    .or {
+        width: 50px;
+        margin: 80px 0;
+        line-height: 144px;
+        font-size: 24px;
+        color: $grayFontColor;
+    }
+}
+
+.agreementInfo {
+    padding-bottom: 200px;
+    .agreementTitle {
+        font-weight: bold;
+        margin: 12px 0 6px;
+    }
+}
+
+.statusTitle {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 58px;
+}
+.statusInfo {
+    border: 1px solid $lineGray;
+    margin: 0 30px 30px;
+    padding-left: 30px;
+    .statusText {
+        line-height: 42px;
+        margin-top: 8px;
+    }
+    .statusTips {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+    .tipItem {
+        line-height: 28px;
+        font-size: 12px;
+        color: $grayFontColor;
+    }
+    .serviceTel {
+        margin-bottom: 20px;
+    }
+    .tel {
+        color: $orange;
+        margin-left: 5px;
+    }
+}
+.authenticateContainer {
+    @extend %chosenContainerStyle;
+    .chosen-drop {
+        max-width: 600px;
+        &.autocomplete {
+            left: 76px;
+        }
+    }
+}

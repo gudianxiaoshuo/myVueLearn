@@ -1,0 +1,62 @@
+#apply2SubQunLayer {
+    width: 438px;
+    .searchQunContainer {
+        padding-top: 10px;
+    }
+    .qidInput {
+        width: 230px;
+        padding: 0 84px 0 4px;
+        border: 1px solid #ccc;
+        height: 28px;
+        line-height: 28px;
+        @include border-radius(2px);
+    }
+    .qidAearchBtn {
+        height: 30px;
+        width: 80px;
+        text-align: 80px;
+        color: #fff;
+        background: none;
+        background-color: #ffaa33;
+        border: none;
+        margin-left: -80px;
+        @include border-radius(2px);
+    }
+    .qunList {
+        margin-top: 30px;
+    }
+    .qunListItem {
+        width: 220px;
+        padding: 20px 14px 20px 60px;
+        float: left;
+        position: relative;
+        border: 1px solid #e8e8e8;
+    }
+    .qunIcon {
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        @include abs-pos(20px, auto, auto, 14px);
+        .iconImg {
+            height: 40px;
+            width: 40px;
+        }
+    }
+    .qunFullName {
+        line-height: 20px;
+        color: $blackFontColor;
+        display: block;
+        max-width: 196px;
+        @include text-truncate();
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+    .qunCtime {
+        font-size: 12px;
+        color: $grayFontColor;
+    }
+    .qunOperation {
+        @include abs-pos(10px, 10px, auto, auto);
+    }
+}

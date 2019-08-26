@@ -1,0 +1,42 @@
+.weiboRemindersContainer {
+    width: 182px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+    @include abs-pos(100%, auto, auto, 0);
+    .filterUserContainer {
+        margin: 12px 14px;
+        .filterUserInput {
+            height: 24px;
+            width: 140px;
+            padding: 0 4px;
+            border: 1px solid #eee;
+            @include border-radius(100px);
+        }
+    }
+    .userListContainer {
+        max-height: 240px;
+        overflow: auto;
+    }
+    .userItem {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 75px;
+        display: block;
+        color: $grayFontColor;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        @include text-truncate();
+    }
+    .checkUserInput {
+        width: 14px;
+        height: 14px;
+        @include abs-pos(8px, auto, auto, 14px);
+    }
+    .userIcon {
+        height: 30px;
+        width: 30px;
+        @include border-radius(30px);
+        @include abs-pos(0, auto, auto, 38px);
+    }
+}

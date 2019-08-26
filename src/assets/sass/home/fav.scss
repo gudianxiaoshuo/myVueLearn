@@ -1,0 +1,143 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+@import "_home-reset.scss";
+
+#homeFavPage {
+    .littleProfileNav {
+        margin-top: -22px;
+    }
+    .tabArea {
+        .oneTab {
+            height: 34px;
+            line-height: 34px;
+            padding: 0 14px;
+            margin-right: 38px;
+            color: $lightBlackFontColor;
+            display: inline-block;
+            &.on {
+                font-weight: bold;
+                border-bottom: 2px solid $orangeFontColor;
+            }
+        }
+    }
+    .favTagList {
+        margin-top: 0;
+        padding-bottom: 17px;
+        width: 909px;
+    }
+    .search_in_page {
+        top: -7px;
+    }
+    .searchBtn {
+        top: 9px;
+    }
+    .blogListBox {
+        padding: 18px 22px;
+        min-height: 1096px;
+        border: 1px solid #E4EAEE;
+        margin-top: 20px;
+        @include border-radius(4px);
+    }
+    .one_article:last-child {
+        border-bottom: none;
+    }
+    .courseList {
+        margin-top: 20px;
+        padding: 30px 77px;
+        overflow: auto;
+        border: 1px solid #E4EAEE;
+        @include border-radius(4px);
+        .card {
+            float: left;
+            width: 214px;
+            height: 208px;
+            position: relative;
+            border: 1px solid $lightLineGray;
+            margin: auto 40px 36px auto;
+            &:nth-child(4n){
+                margin-right: 0;
+            }
+            &:hover {
+                border: 1px solid $lineGray;
+                box-shadow:1px 1px 2px 1px #ECECEC;
+                .operate {
+                    display: block;
+                }
+            };
+            .courseTypeTag {
+                @include abs-pos(6px, auto, auto, 0);
+            }
+            .operate {
+                display: none;
+                font-size: 12px;
+                color: $orangeFontColor;
+                float: right;
+                margin-right: 6px;
+                @include text-truncate();
+                i {
+                    color: $orangeFontColor;
+                    font-size: 14px;
+                    padding-right: 4px;
+                }
+            }
+            .cover {
+                width: 204px;
+                height: 122px;
+                display: block;
+                margin-top: 6px;
+                margin-left: 5px;
+                img {
+                    width: 204px;
+                    height: 121px;
+                }
+            }
+            .name {
+                margin-top: 12.6px;
+                margin-left: 5px;
+                display: block;
+                line-height: 18px;
+                text-decoration: none;
+                color: $blackFontColor;
+                width: 204px;
+                height: 36px;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+            }
+            .bottom {
+                font-size: 12px;
+                line-height: 34px;
+                margin-left: 5px;
+                width: 204px;
+                height: 34px;
+                .price {
+                    display: block;
+                    font-size: 12px;
+                    color: #F4373B;
+                    float: left;
+                    width: 130px;
+                    height: 34px;
+                    line-height: 34px;
+                    @include text-truncate();
+                    .strike {
+                        color: $grayFontColor;
+                        text-decoration: line-through;
+                    }
+                    b {
+                        display: block;
+                        font-size: 12px;
+                        color: #F4373B;
+                        float: left;
+                        width: 80px;;
+                        height: 34px;
+                        line-height: 34px;
+                        color: $statusGreen;
+                        font-weight: 400;
+                        @include text-truncate();
+                    }
+                }
+            }
+        }
+    }
+}

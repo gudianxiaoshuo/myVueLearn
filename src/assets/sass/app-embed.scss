@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+.hide {
+    display: none;
+}
+
+.headerContainer {
+    position: relative;
+    background: #FF5500;
+    border-bottom: 1px solid #FF5500;
+    .logo {
+        width: 190px;
+        height: 70px;
+    }
+}
+
+.imgContainer {
+    text-align: center;
+    font-size: 16px;
+    img {
+        max-width: 160px;
+    }
+}
+
+.mainContainer {
+    text-align: right;
+    position: relative;
+    height: 100%;
+    img {
+        max-width: 78%;
+        margin-right: 6%;
+    }
+    &.ios {
+        background-color: #000000;
+    }
+    &.android {
+        background-color: #393A3E;
+    }
+}
+
+.qrCodeLoginContainer {
+    .imgContainer {
+        text-align: center;
+        color: #313131;
+        img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 60px auto;
+        }
+        .willLoginTip {
+            text-align: center;
+            font-size: 16px;
+            color: #020202;
+        }
+        .grayLoginTip {
+            text-align: center;
+            font-size: 13px;
+            color: #9b9b9b;
+        }
+    }
+    .okBtn {
+        width: 80%;
+        height: 44px;
+        line-height: 44px;
+        color: #FFFFFF;
+        text-align: center;
+        border-radius: 4px;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 29px auto;
+        font-size: 18px;
+        border: none;
+        background: #FF8B00;
+    }
+}
+
+.schoolAuthContainer {
+    background-color: #393A3E;
+}

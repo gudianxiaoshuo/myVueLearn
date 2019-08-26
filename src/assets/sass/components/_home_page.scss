@@ -1,0 +1,203 @@
+@charset "UTF-8";
+
+.homeQunHeader {
+    background-color: #fff;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    margin: 80px auto 0;
+    position: relative;
+    width: 940px;
+    z-index: 8;
+    .headerImg {
+        height: 300px;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+    }
+}
+.home_page_logo {
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    z-index: 3;
+    border: 2px solid rgba(255, 255, 255, .6);
+    @include border-radius(120px);
+    @include abs-pos(40px, auto, auto, 50%);
+    .member_zone {
+        height: 100%;
+        width: 100%;
+        cursor: default;
+        display: block;
+        background-color: #fff;
+        @include border-radius(120px);
+    }
+    img {
+        height: 100%;
+        width: 100%;
+        @include border-radius(120px);
+    }
+}
+.home_header_infomation {
+    height: 66px;
+    padding-left: 60px;
+    width: 880px;
+    z-index: 2;
+    @include abs-pos(234px, auto, auto, 0);
+    background-color: rgba(0, 0, 0, .3);
+    .home_name_title {
+        font-size: 18px;
+        line-height: 68px;
+        color: #fff;
+    }
+    .home_adress {
+        position: relative;
+        top: -12px;
+        a {
+            color: #fff;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .set_btn {
+        @include abs-pos(20px, 34px, auto, auto);
+        &:hover {
+            span {
+                color: $darkOrangeFontColor;
+            }
+        }
+        span {
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    .add_friend,
+    .btn_black,
+    .go_chat {
+        display: block;
+        height: 26px;
+        line-height: 26px;
+        width: 60px;
+        @include border-radius(4px);
+        background-color: #FF5500;
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .btn_black,
+    .add_friend {
+        padding-left: 5px;
+        width: 55px;
+        @include abs-pos(20px, 102px, auto, auto);
+        i {
+            color: #fff;
+            position: relative;
+            top: 3px;
+        }
+        &.double {
+            width: 75px;
+        }
+    }
+    .go_chat {
+        @include abs-pos(20px, 34px, auto, auto);
+    }
+    .more_set_up {
+        @include abs-pos(23px, 10px, auto, auto);
+    }
+    .home_header_search_box {
+        &.other_page_search {
+            @include abs-pos(20px, 200px, auto, auto);
+        }
+        @include abs-pos(20px, 98px, auto, auto);
+        width: 118px;
+        height: 24px;
+        line-height: normal;
+        input {
+            height: 24px;
+            width: 94px;
+            border: 0;
+            padding-left: 24px;
+            font-size: 12px;
+            @include border-radius(40px);
+        }
+        span {
+            @include abs-pos(5px, auto ,auto, 4px);
+            border: 0;
+            height: 16px;
+            width: 16px;
+            cursor: pointer;
+            i {
+                color: $borderGray;
+            }
+        }
+    }
+    .operation_list {
+        @include abs-pos(50px, 102px, auto, auto);
+    }
+    .group_list {
+        max-height: 160px !important;
+        min-width: 90px;
+        overflow-y: auto;
+    }
+    .feedback_input {
+        @extend %feedback_input;
+    }
+}
+.qun_first_nav {
+    &.disallow_visit_text {
+        padding-bottom: 0;
+        text-align: center;
+        color: $grayFontColor;
+        z-index: 1;
+    }
+}
+
+/*个人主页和个人卡片共用好友分组样式*/
+.home_header_infomation,
+.person_apply {
+    .operation_list {
+        padding: 3px 6px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+        background-color: #fff;
+        a {
+            display: block;
+            height: 22px;
+            line-height: 22px;
+            font-size: 12px;
+            color: $blackFontColor;
+            cursor: pointer;
+            padding: 0 6px;
+            position:relative;
+            margin: 3px 0;
+            &:hover {
+                background: $lightLineGray;
+            }
+            &:last {
+                border-bottom: 0;
+            }
+            i {
+                font-size: 10px;
+            }
+            .boomerang-right {
+                @include abs-pos(6px, 0px, auto, auto);
+                font-weight: bold;
+            }
+        }
+        .friends_group_layer {
+            @include abs-pos(-5px, auto, auto, 86px);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
+            .group_list {
+                max-height: 105px;
+                overflow-y: auto;
+                min-width: 90px;
+            }
+            .tip {
+                border-width: 7px;
+                border-color: transparent  #fff transparent transparent;
+                border-style: solid;
+                @include abs-pos(5px,auto,auto,-14px);
+            }
+        }
+    }
+}

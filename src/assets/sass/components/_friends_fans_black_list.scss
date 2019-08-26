@@ -1,0 +1,513 @@
+#user_list {
+    margin-bottom: 20px;
+}
+.sex_area {
+    .xicon-female {
+        color: #FF90EA;
+    }
+    .xicon-male {
+        color: #4A90E2;
+    }
+}
+
+.friendGroupList,
+.qunGroupList {
+    padding: 10px 0 20px;
+    .groupListItem {
+        float: left;
+        margin: 6px 30px 6px 0;
+        height: 22px;
+        line-height: 22px;
+        padding: 0 10px 0 4px;
+        position: relative;
+        font-size: 12px;
+        border: 1px solid #fff;
+        &:hover {
+            .setUserGroup {
+                visibility: visible;
+            }
+        }
+        &:hover,
+        &.on {
+            height: 22px;
+            line-height: 22px;
+            background-color: #F5F5F5;
+            border: 1px solid #EEEEEE;
+            @include border-radius(100px);
+        }
+        a {
+            color: $grayFontColor;
+            max-width: 260px;
+            @include text-truncate();
+            display: inline-block;
+        }
+        .group_count {
+            display: none;
+        }
+    }
+    .group_color {
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        margin-right: 6px;
+        @include rel-pos($top: 3px);
+        @include border-radius(16px);
+        &.empty_group_circle {
+            width: 14px;
+            height: 14px;
+            @include border-radius(14px);
+            border: 1px solid #9b9b9b;
+        }
+    }
+    .setUserGroup {
+        visibility: hidden;
+        padding-left: 5px;
+        @include abs-pos(3px, -20px, auto, auto);
+        &:hover {
+            visibility: visible;
+        }
+    }
+    .groupIcon {
+        @include rel-pos($top: 3px);
+        margin-right: 6px;
+    }
+}
+.listitem {
+    min-height: 100px;
+    padding: 20px 10px 10px;
+    margin: 20px 0;
+    position: relative;
+    @extend %friendsAndBlackCard;
+    .friends_group {
+        font-size: 12px;
+        position: relative;
+        width: 200px;
+        .f_left {
+            float: left;
+            cursor: pointer;
+            display: block;
+            line-height: 25px;
+        }
+        .group_name{
+            border: 1px solid $lineGray;
+            padding: 0 4px;
+            @include border-radius(5px);
+            background: #fff;
+            line-height: 20px;
+         }
+        .arrow {
+            position: relative;
+            top: 3px;
+        }
+        .def_group_box {
+            min-width: 30px;
+            display: inline-block;
+        }
+    }
+    .photo_info_box {
+        padding: 0 0 0 100px;
+        min-height: 80px;
+        border-radius: 2px 2px 0 0;
+        z-index: 2;
+        color: $grayFontColor;
+    }
+    .btn_black {
+        @include abs-pos(auto,20px,10px,auto);
+        text-align: center;
+        padding:0 15px;
+        height: 23px;
+        line-height: 23px;
+        background: #fff;
+        border: 1px solid $lineGray;
+        color: $grayFontColor;
+        display: block;
+        font-size: 12px;
+        @include border-radius(2px);
+        z-index: 5;
+        cursor: pointer;
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+    .btn_black {
+        &.add_friend {
+            color: $blue;
+            i {
+                position: relative;
+                top: 1px;
+                font-size: 10px;
+                color: #0088cc;
+            }
+        }
+    }
+    .user_icon {
+        @include abs-pos(20px,auto,auto,13px);
+        width: 80px;
+        height: 80px;
+        display: block;
+        .imgIcon {
+            @include abs-pos(auto, 2px, 2px, auto);
+        }
+        .closedAccount {
+            width: 38px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 12px;
+            text-align: center;
+            color: $grayFontColor;
+            display: inline-block;
+            border: 1px solid #bbb;
+            background-color: #fff;
+            @include border-radius(100px);
+            @include abs-pos(auto, -8px, 0, auto);
+        }
+    }
+    img.photo {
+        @include border-radius(80px);
+        @include abs-pos(0,auto,auto,0);
+        width: 80px;
+        height: 80px;
+    }
+    h3 {
+        min-height: 30px;
+        .set_star_friend,
+        .cancel_star_friend {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+        }
+        .cancel_star_friend {
+            color: $starYellow;
+            i {
+                color: $starYellow;
+            }
+        }
+        small {
+            font-weight: normal;
+            a {
+                color: $blackFontColor;
+            }
+        }
+        .verify_icon {
+            i {
+               color: $orange;
+            }
+        }
+        .neverLogin {
+            color: $darkOrangeFontColor;
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .sex_area {
+            font-size: 12px;
+            color: $blue;
+            font-weight: normal;
+            padding-left: 8px;
+        }
+        a {
+            b {
+                color: $blackFontColor;
+            }
+            &.name {
+                b {
+                    margin-right: 6px;
+                }
+                .account {
+                    font-weight: normal;
+                    font-size: 12px;
+                    color: $grayFontColor;
+                }
+            }
+        }
+    }
+    .user_location {
+        font-size: 12px;
+        color: $grayFontColor;
+        word-wrap: break-word;
+        i {
+            position: relative;
+            top: 1px;
+        }
+    }
+    .personal_info {
+        font-size: 12px;
+        color: $grayFontColor;
+        padding: 5px 0;
+        position: relative;
+        .studentInfo,
+        .guardianInfo {
+            color: $grayFontColor;
+            span {
+                color: $grayFontColor;
+            }
+        }
+        span {
+            color: $grayFontColor;
+            font-size: 12px;
+            padding-right: 5px;
+            em {
+                color: $blackFontColor;
+                font-weight: bold;
+                padding: 0 10px 0 5px;
+                &.orange {
+                    color: $orange;
+                    font-weight: bold;
+                    font-size: 16px;
+                    padding-right: 15px;
+                }
+            }
+        }
+        .btn-orange {
+            margin: 0 5px;
+        }
+        .settingTip {
+            @include abs-pos(auto, auto, -30px, 0);
+            i {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    p {
+        height: 30px;
+        margin: 5px 0;
+        font-size: 12px;
+        word-wrap: break-word;
+        @include text-truncate();
+    }
+    .operation_for_qun_owner {
+        @include abs-pos(2px,6px,auto,auto);
+        a {
+            cursor: pointer;
+            font-size: 12px;
+            padding-left: 10px;
+            i {
+                color: $orange;
+            }
+        }
+    }
+    .unfollow_someone,
+    .follow_tip {
+        cursor: pointer;
+        width: 40px;
+        padding: 0 15px;
+        margin: 0;
+        text-align: center;
+        a {
+            color: $darkOrangeFontColor;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+        i {
+            @include rel-pos(1px,auto,auto,auto);
+            font-size: 10px;
+            margin-left: 8px;
+            padding-right: 4px;
+        }
+        &.color_blue {
+            color: $blue;
+            i {
+                color: $blue;
+            }
+        }
+        &.color_green {
+            color: $green;
+            i {
+                color: $green;
+            }
+        }
+    }
+    .follow_someone {
+        width: 40px;
+        padding: 0 15px;
+        margin: 0;
+        color: $grayFontColor;
+        i {
+            @include rel-pos(1px,auto,auto,auto);
+            font-size: 10px;
+            color: $blue;
+            margin-left: 8px;
+            padding-right: 4px;
+        }
+        &.color_blue {
+            color: $blue;
+        }
+        &:hover {
+            color: $darkOrangeFontColor;
+            text-decoration: none;
+            i {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .user_operation {
+        float: right;
+        position: relative;
+        z-index: 1;
+        height: 23px;
+        line-height: 23px;
+        background: #fff;
+        color: $grayFontColor;
+        border: 1px solid $lineGray;
+        @include border-radius(2px);
+        font-size: 12px;
+        margin-right: 10px;
+        .follow_someone {
+            padding: 0 15px;
+        }
+        .unfollow_someone,
+        .follow_tip {
+            width: 40px;
+            padding: 0 15px;
+        }
+        .follow_someone {
+            padding: 0 15px;
+        }
+        .no_border,
+        .send_message {
+            font-weight: normal;
+            padding: 0 15px;
+        }
+        .send_weibo {
+            padding-right: 10px;
+        }
+        a {
+            cursor: pointer;
+            color: $grayFontColor;
+            text-align: center;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+            &.qun_audit_yes {
+                background: #6dc200;
+                width: 370px;
+                margin-left: 5px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                font-weight: bold;
+                position: relative;
+                *top: 4px;
+                border-radius: 2px;
+            }
+            &.qun_audit_not {
+                width: 80px;
+                background: 0;
+                height: 30px;
+                line-height: 30px;
+                color: $grayFontColor;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 2px;
+                &:hover {
+                    color: #d00b0e
+                }
+            }
+        }
+    }
+    .operationList {
+        width: 95px;
+        z-index: 9;
+        background: #fff;
+        @include border-radius(2px);
+        @include abs-pos(20px,0,auto,auto);
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+        border: solid 1px $borderGray \9;
+        color: $grayFontColor;
+        display: none;
+        a {
+            display: block;
+            color: $blackFontColor;
+            &:hover {
+                @include border-radius(2px);
+                background: $orange;
+                color: #fff;
+            }
+        }
+    }
+}
+
+/*好友分组列表样式*/
+.friends_group_layer {
+    position: absolute;
+    top: 33px;
+    left: -4px;
+    width: 75px;
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+    border: solid 1px $borderGray \9;
+    text-align: center;
+    display: none;
+    z-index: 3;
+    .create_group {
+        border: none;
+        border-top: 1px solid $lightLineGray;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        display: block;
+        padding: 0 !important;
+        color: $grayFontColor;
+        &:hover {
+            color: $darkOrangeFontColor;
+            i {
+                color: $darkOrangeFontColor;
+            }
+        }
+        i {
+            @include rel-pos(2px, auto, auto, -2px);
+            font-size: 14px;
+        }
+    }
+    .list_item {
+        max-height: 160px;
+        min-width: 75px;
+        overflow-y: auto;
+    }
+    .one_list_item {
+        height: 24px;
+        line-height: 24px;
+        cursor: pointer;
+        padding: 0 5px;
+        position: relative;
+        font-size: 12px;
+        text-align: center;
+        margin: 2px 0;
+        &.on,
+        &:hover {
+            color: #fff;
+            background: $orangeFontColor;
+            i {
+                color: #fff;
+            }
+        }
+        &.on {
+            i {
+                display: block;
+            }
+        }
+        i {
+            @include abs-pos(6px, auto, auto, 8px);
+            font-size: 14px;
+            display: none;
+        }
+        @include text-truncate(ellipsis);
+        span {
+            height: 16px;
+            width: 16px;
+            @include border-radius(16px);
+            display: block;
+            @include abs-pos(8px, auto, auto, 5px);
+        }
+    }
+    .tip {
+        color: #fff;
+        @include abs-pos(-10px,auto,auto,41px);
+    }
+    .bot_tip {
+        color: $borderGray;
+        @include abs-pos(-11px,auto,auto,40px);
+    }
+}

@@ -1,0 +1,31 @@
+#independentReason {
+    width: 438px;
+    .privacy_message {
+        padding: 0;
+    }
+    .independentTitle {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+        font-weight: normal;
+    }
+    .aplly_info_box {
+        padding: 0 20px;
+    }
+    .applyDesc {
+        width: 388px;
+        height: 80px;
+        padding: 4px;
+        border: 1px solid #ddd;
+        @include border-radius(2px);
+        resize: none;
+    }
+    .descLimit {
+        font-size: 12px;
+        color: $grayFontColor;
+        .count {
+            color: $orangeFontColor;
+            margin: 0 4px;
+        }
+    }
+}

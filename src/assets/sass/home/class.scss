@@ -1,0 +1,201 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+@import "_home-reset.scss";
+
+.homeClassPage {
+    .qunGroupList {
+        border: none;
+        padding-left: 50px;
+        .xicon-dynamic-class {
+            color: #F67A79;
+        }
+        .xicon-dynamic-course {
+            color: #FC9B58;
+        }
+    }
+    .panels {
+        .panel {
+            margin-bottom: 40px;
+            border: none;
+            background: #FFF;
+            position: relative;
+            @include box-shadow(0 2px 10px 0 rgba(35, 21, 0, .1));
+            .title {
+                padding: 15px 0 15px 17px;
+                background: none;
+                font-size: 14px;
+                color: #000;
+                font-weight: 900;
+                & + .content {
+                    border: none;
+                }
+                .titleAnchor {
+                    visibility: hidden;
+                    @include abs-pos(-100px, auto, auto, auto);
+                }
+                a {
+                    padding-right: 26px;
+                    color: #B0ADA7;
+                    font-weight: normal;
+                }
+            }
+            & > .content {
+                padding: 0;
+            }
+        }
+    }
+    .classAndQunList {
+        .qunGroupList {
+            border-bottom: none;
+        }
+        section {
+            width: 136px;
+            height: 187px;
+            margin: 0 26px 20px 26px;
+            background: $headerNavBg;
+            border: 1px solid $lightLineGray;
+            overflow: hidden;
+            @include border-radius(4px);
+            @include box-shadow(0 2px 4px 0 rgba(211, 211, 211, .3));
+            .qunLogo {
+                width: 136px;
+                height: 136px;
+                .qunLogoImg {
+                    width: 136px;
+                    height: 136px;
+                }
+            }
+            .icon {
+                width: 100%;
+            }
+            .name {
+                width: 116px;
+            }
+            .qunName {
+                background: #FFF;
+                a {
+                    background: #FFF;
+                }
+            }
+            .qunLogo .indentityIcon:not(.courseQun) {
+                bottom: 12px;
+            }
+
+        }
+
+    }
+    .more {
+        padding-top: 20px;
+        border-top: 1px solid #E4EAEE;
+        a {
+            display: block;
+            width: 56px;
+            height: 20px;
+            margin: auto;
+            position: relative;
+            &:hover {
+                @include opacity(.8);
+            }
+        }
+        &.down {
+            padding-bottom: 20px;
+            i {
+                @include abs-pos(4px, auto, 0, auto);
+            }
+        }
+    }
+    .classAndCourseGroup {
+        li {
+            float: left;
+            margin-right: 25px;
+            &:first-child {
+                color: $orangeFontColor;
+                margin-right: 10px;
+            }
+            & > a {
+                padding: 0 5px;
+                color: #9B9B9B;
+            }
+
+            &.search {
+                float: right;
+                margin: 4px 0 0;
+                &:hover {
+                    background: none;
+                    border-color: #FFF;
+                }
+                .search_in_page {
+                    display: inline-block;
+                    float: right;
+                    margin-left: 10px;
+                    .searchBtn {
+                        cursor: default;
+                    }
+                }
+                .primary-btn {
+                    font-weight: normal;
+                    color: #FFF;
+                }
+            }
+            &.addCategoryLi {
+                &:hover {
+                    background: none;
+                    border-color: #FFF;
+                }
+                .addCategory {
+                    margin-left: -5px;
+                    font-size: 14px;
+                    color: $orangeFontColor;
+                }
+            }
+            &.searchTotal {
+                display: none;
+                margin-bottom: 20px;
+                color: rgba(0, 0, 0, .4);
+                a, i {
+                    color: $orangeFontColor;
+                    &:hover {
+                        @include opacity(.8);
+                    }
+                }
+                i {
+                    float: left;
+                    margin: 5px -4px 0 0;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .course {
+        .currentGroup {
+            .archive {
+                color: #FF8B00;
+                float: right;
+                font-size: 14px;
+            }
+        }
+    }
+    .class {
+        .currentGroup {
+            display: none;
+        }
+    }
+    &.searching {
+        .more,
+        .qunGroupList,
+        .panel .title a,
+        .classAndCourseGroup li {
+            display: none;
+            &.search {
+                display: block;
+                a {
+                    display: none;
+                }
+            }
+            &.searchTotal {
+                display: block;
+            }
+        }
+    }
+
+}

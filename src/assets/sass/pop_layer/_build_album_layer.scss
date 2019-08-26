@@ -1,0 +1,70 @@
+#bulid_album_layer,
+#modify_album_layer {
+    font-size: 12px;
+    .color_orange {
+        color: $darkOrangeFontColor;
+    }
+    .privacy_message {
+        padding: 20px 0 0 0;
+    }
+    .bulid_album_layer {
+        padding: 0 20px;
+    }
+    p {
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    input ,
+    select {
+        height: 28px;
+        line-height: 28px;
+        border: 1px solid $borderGray;
+        @include border-radius(4px);
+        padding: 0 0 0 5px;
+    }
+    input {
+        background-clip: padding-box;
+        width: 400px;
+    }
+    select {
+        width: 90px;
+        margin-right: 50px;
+    }
+    .power {
+        span {
+            float: left;
+        }
+    }
+    .album_des {
+        width: 400px;
+        height: 100px;
+        border: 1px solid $lineGray;
+        line-height: 25px;
+        @include border-radius(5px);
+        padding: 5px;
+        resize: none;
+    }
+    .desc_tip {
+        padding: 0 0 0 85px;
+        font-weight: normal;
+        font-size: 12px;
+        color: $grayFontColor;
+    }
+    .prohibit_rt {
+        padding: 0 0 0 85px;
+        font-weight: normal;
+        input {
+            position: relative;
+            top: 5px;
+            width: auto;
+            height: 20px;
+            line-height: 20px;
+        }
+    }
+    .newBtnArea {
+        .red {
+            float: left;
+        }
+    }
+}

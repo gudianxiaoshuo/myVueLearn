@@ -1,0 +1,48 @@
+.notice_template_layer {
+    width: 500px;
+    height: 252px;
+    background-color: #fff;
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+    display: none;
+    position: absolute;
+    right: 0;
+    .layer_title {
+        color: $blackFontColor;
+        line-height: 40px;
+        border-bottom: 1px solid $lightLineGray;
+        padding: 0 0 0 20px;
+        position: relative;
+        font-weight: bold;
+        i {
+            @include abs-pos(0, 0, auto, auto);
+            font-size: 14px;
+            cursor: pointer;
+            padding: 10px;
+        }
+    }
+    .template_content {
+        margin: 0 0 0 20px;
+        max-height: 180px;
+        overflow: auto;
+        padding-right: 20px;
+        .one_template {
+            height: 35px;
+            line-height: 35px;
+            border-bottom: 1px solid $lightLineGray;
+            color: $blackFontColor;
+            @include text-truncate();
+            width: 100%;
+            display: block;
+            &:hover {
+                color: $orange;
+            }
+        }
+        .emptyTip {
+            margin: 40px 0;
+            text-align: center;
+            color: $grayFontColor;
+        }
+    }
+}

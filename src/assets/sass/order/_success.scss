@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+.orderSuccess {
+    width: 878px;
+    min-height: 500px;
+    border: 1px solid #E0E0E0;
+    margin: 0 auto;
+    background: #FFF;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-top: none;
+    .successInfo {
+        height: 110px;
+        line-height: 110px;
+        text-align: center;
+        color: #313131;
+        font-size: 18px;
+        .icon {
+            @include bg_with_retina(success, png, $baseImgRootPath);
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+            top: 7px;
+        }
+    }
+    .orderInfo {
+        height: 168px;
+        border-top: 1px dashed #E8E8E8;
+        .topInfo {
+            line-height: 54px;
+            padding-top: 10px;
+            height: 50px;
+            span {
+                margin-right: 30px;
+            }
+        }
+        .bottomInfo {
+            width: 878px;
+            height: 104px;
+            background-color: #F8F8F8;
+            .left {
+                float: left;
+                img {
+                    width: 140px;
+                    height: 84px;
+                    margin: 10px 20px 10px 10px;
+                   
+                }
+            }
+            .right {
+                float: left;
+                width: 650px;
+                a {
+                    width: 680px;
+                    display: block;
+                    margin-top: 12px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #313131;
+                    @include text-truncate();
+                    &:hover {
+                        color: $orangeFontColor;
+                    }
+                }
+                .teacher {
+                    font-size: 12px;
+                    color: #9B9B9B;
+                    margin-top: 10px;
+                    @include block-text-overflow(1);
+                }
+                .payMoney {
+                    .strike {
+                        float: none;
+                        color: #DAD4D2;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+        .payMoney {
+            span {
+                font-size: 14px;
+                color: #F4373B;
+            }
+        }
+    }
+    .redirectMsg {
+        text-align: center;
+        margin: 150px auto 50px;
+    }
+}
+
+#xnw_layer_alert_add_student {
+    width: 558px;
+    height: 258px;
+    .ui-draggable-handle {
+        color: #313131;
+        font-size: 14px;
+        font-weight: 400;
+        border-bottom: 1px solid #eee;
+        .close_layer {
+            top: 10px;
+        }
+    }
+    .privacy_message {
+        padding: 0;
+        span {
+            color: #9B9B9B;
+            margin-left: 30px;
+        }
+        input {
+            width: 160px;
+            height: 30px;
+            text-indent: 10px;
+        }
+        .studentName {
+            margin-top: 12px;
+            margin-bottom: 20px;
+            span {
+                width: 56px;
+                display: inline-block;
+            }
+        }
+        .studentPhone {
+
+        }
+        .newBtnArea { 
+            margin-top: 66px;
+            button {
+                &.noCancel{
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+}

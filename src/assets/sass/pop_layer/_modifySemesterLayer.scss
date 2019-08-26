@@ -1,0 +1,41 @@
+#modifySemesterLayer {
+    width: 558px;
+    .privacy_message {
+        padding: 0;
+    }
+    .title {
+        color: #9b9b9b;
+        margin: 20px 20px 0;
+    }
+    .time {
+        position: relative;
+        margin: 20px;
+        display: inline-block;
+        .dateInput {
+            border: 1px solid #eee;
+            height: 18px;
+            padding: 6px 5px;
+            width: 150px;
+            @include border-radius(2px);
+        }
+        i {
+            @include abs-pos(8px, 5px, auto, auto);
+            cursor: pointer;
+            &:hover {
+                color: #ffaa33;
+            }
+        }
+    }
+    .newBtnArea {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+        button {
+            margin-left: 10px;
+        }
+    }
+}

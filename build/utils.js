@@ -64,6 +64,16 @@ exports.cssLoaders = function (options) {
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
   }
+  // return {
+  //   css: generateLoaders(),
+  //   postcss: generateLoaders(),
+  //   less: generateLoaders('less'),
+  //   sass: generateSassResourceLoader(),
+  //   scss: generateSassResourceLoader(),
+  //   stylus: generateLoaders('stylus'),
+  //   styl: generateLoaders('stylus')
+  // }
+
 }
 
 // Generate loaders for standalone style files (outside of .vue)

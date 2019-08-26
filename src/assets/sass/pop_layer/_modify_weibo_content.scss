@@ -1,0 +1,17 @@
+#modify_weibo_content {
+    &.pop_privacy_mes {
+        width: 680px;
+    }
+    .privacy_message {
+        padding: 0;
+    }
+    .xnw_say_something {
+        background-color: #F7F9F9;
+        .added_tags_box {
+            margin-bottom: 10px;
+        }
+        .upload_something {
+            border-top: 1px solid #DBE9F2;
+        }
+    }
+}

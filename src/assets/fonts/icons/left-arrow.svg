@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="26px" viewBox="0 0 15 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M34.6830481,10.8566875 L22.6099142,22.0000127 L34.6830481,33.1432617 C35.1056506,33.5675654 35.1056506,34.2562049 34.6830481,34.680915 C34.2623813,35.1063617 33.5780467,35.1063617 33.1573046,34.680915 L20.3074467,22.8244395 C20.0830476,22.5976701 19.9868118,22.2963268 20.0014433,22.0000127 C19.9868118,21.7036732 20.0830476,21.4030919 20.3074467,21.1755859 L33.1572794,9.31908502 C33.5780216,8.89363833 34.2623562,8.89363833 34.6830229,9.31908502 C35.1056255,9.74336332 35.1056255,10.4324092 34.6830481,10.8566875 Z" id="path-1"></path>
+        <filter x="-13.3%" y="-7.7%" width="126.7%" height="115.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="直播-web主讲老师--暂停" transform="translate(-20.000000, -9.000000)" fill-rule="nonzero">
+            <g id="Shape">
+                <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,489 @@
+.xnwFramework .mainCourseContent {
+    background-color: transparent;
+    box-shadow: none;
+    width: 700px;
+    padding: 0;
+    position: relative;
+    &.teachers {
+        width: 940px;
+    }
+    .currentXrole {
+        font-size: 12px;
+        text-align: right;
+        color: $lightBlackFontColor;
+        margin: 0 0 14px;
+        padding-right: 20px;
+        position: relative;
+        &.multiXrole {
+            padding-right: 90px;
+        }
+        .currentRole {
+            color: $grayFontColor;
+            line-height: 24px;
+            float: right;
+            max-width: 360px;
+            @include text-truncate;
+        }
+        .switchXrole {
+            color: $blue;
+            @include abs-pos(0, 20px, auto, auto);
+        }
+    }
+    .xTitle {
+        @include abs-pos(0, auto, auto, 0);
+        font-weight: bold;
+        padding-left: 20px;
+        font-size: 14px;
+        .countInfo {
+            color: $lightBlackFontColor;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+    }
+    .xContainer {
+        @extend %mainContainerStyle;
+        .xOperContainer {
+            padding: 20px;
+            &.hasAddressContainer {
+                padding-bottom: 0;
+                padding-top: 10px;
+                margin-bottom: 16px;
+            }
+            &.noAddressContainer {
+                padding-bottom: 0;
+            }
+            .addItemBtn {
+                display: inline-block;
+                width: 76px;
+                height: 26px;
+                line-height: 26px;
+                margin-right: 15px;
+                @include border-radius(2px);
+                background-color: #ffaa33;
+                color: #fff;
+                text-align: center;
+                font-weight: normal;
+            }
+            .addPublisher {
+                width: 100px;
+            }
+        }
+        .xContent {
+            min-height: 800px;
+            padding-bottom: 20px;
+        }
+        .courseListTitle {
+            @extend %mainTitleStyle;
+            .filterInfo {
+                color: $grayFontColor;
+            }
+            .filterCount {
+                float: right;
+                color: $grayFontColor;
+                .count {
+                    padding: 0 2px;
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+    .xTable {
+        @extend %baseTableStyle;
+        @include border-radius(4px 4px 0 0);
+        width: 100%;
+        table-layout: fixed;
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            height: 70px;
+            line-height: 70px;
+        }
+        th {
+            height: 40px;
+            line-height: 40px;
+            background-color: #FFF3DF;
+        }
+        .partnerItem td,
+        .courseItem td,
+        .oneTeacherItem td,
+        .managerItem td {
+            height: 50px;
+            line-height: 50px;
+        }
+        td {
+            .itemContent {
+                display: inline-block;
+                line-height: 24px;
+                overflow: hidden;
+                margin: 4px;
+                vertical-align: middle;
+                word-break: break-all;
+            }
+            .itemNameContent {
+                max-width: 160px;
+            }
+            .itemInfo {
+                text-align: center;
+            }
+            .payDeadLine {
+                font-size: 12px;
+            }
+            .itemAccountContent {
+                max-width: 130px;
+            }
+            .coursePartnerOper {
+                display: block;
+            }
+            .itemOper,
+            .classTimeItem {
+                display: block;
+                line-height: 24px;
+                text-align: center;
+            }
+            .courseOper {
+                padding: 0 6px;
+                &.disabled {
+                    color: $grayFontColor;
+                    cursor: default;
+                }
+            }
+        }
+    }
+    .xSortByInfo {
+        height: 70px;
+        line-height: 70px;
+        margin: 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+        position: relative;
+        .sortItem {
+            margin-right: 28px;
+            color: $grayFontColor;
+            position: relative;
+            &.on {
+                color: $blackFontColor;
+                i {
+                    color: $orangeFontColor;
+                    font-size: 12px;
+                    @include abs-pos(2px, 0, auto, 100%);
+                }
+            }
+        }
+    }
+    .addressList {
+        padding: 0 20px 30px;
+        min-height: 600px;
+        .addressItem {
+            padding: 24px 0;
+            position: relative;
+            border-bottom: 1px dashed #e8e8e8;
+            &:last-child {
+                border: none;
+            }
+        }
+        .infoLine {
+            margin: 0 16px;
+            color: #e8e8e8;
+        }
+        .itemName {
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 32px;
+            padding-right: 50px;
+            @include text-truncate;
+            position: relative;
+            .delItem {
+                @include abs-pos(0, 0, auto, auto);
+                font-size: 12px;
+            }
+        }
+        .itemInfo {
+            line-height: 20px;
+            font-size: 12px;
+            color: $grayFontColor;
+            margin-bottom: 12px;
+        }
+        .itemContact,
+        .itemMobile,
+        .itemDetail {
+            line-height: 22px;
+            font-size: 12px;
+            color: $lightBlackFontColor;
+            padding-right: 86px;
+            @include text-truncate;
+            .infoIcon {
+                @include rel-pos($top: 1px);
+                margin-right: 8px;
+                font-size: 12px;
+                &.contactIcon {
+                    color: $orangeFontColor;
+                }
+                &.emailIcon {
+                    color: #3EBFE5;
+                }
+                &.addressIcon {
+                    color: #3BC475;
+                }
+            }
+        }
+        .primary-btn {
+            @include abs-pos(auto, 0, 30px, auto);
+            display: block;
+        }
+    }
+}
+
+.xcourseNav {
+    .separatedItem {
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        width: 210px;
+        &.teacher {
+            border: none;
+        }
+    }
+    .courseNavItem {
+        @extend %mainLeftNavStyle;
+        &.specialItem {
+            cursor: default;
+            background-color: transparent;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        &.on {
+            span {
+                color: $darkOrangeFontColor;
+            }
+        }
+        &:hover {
+            background-color: #eee;
+        }
+        &.secondNavItem {
+            padding-left: 52px;
+            width: 158px;
+        }
+        .countNum {
+            font-size: 12px;
+            float: right;
+            margin-right: 12px;
+            top: 0;
+        }
+        i {
+            position: relative;
+            top: 2px;
+            margin-right: 26px;
+            color: $blackFontColor;
+        }
+    }
+}
+
+.checkInfoContainer {
+    @extend %mainContainerStyle;
+    width: 900px;
+    min-height: 700px;
+    padding: 0 20px !important;
+    margin: 30px auto 0;
+    .confirmTitle {
+        height: 70px;
+        line-height: 70px;
+        font-size: 14px;
+        margin: 0 0 30px;
+        border-bottom: 1px solid #e8e8e8;
+        .titleFlag {
+            display: inline-block;
+            width: 4px;
+            height: 26px;
+            margin-right: 12px;
+            background-color: #ffaa33;
+            @include rel-pos($top: 9px);
+        }
+    }
+    .obiterdictumTip {
+        padding-left: 96px;
+        color: $grayFontColor;
+        font-size: 12px;
+    }
+    .saveRegisterInfo,
+    .saveStudentExamInfo {
+        width: 76px;
+        height: 28px;
+        line-height: 28px;
+        background-color: #ffaa33;
+        color: #fff;
+        display: inline-block;
+        @include border-radius(2px);
+    }
+    .examInfoDetail {
+        @extend %baseTableStyle;
+        @include border-radius(4px 4px 0 0);
+        th,
+        td {
+            text-align: center;
+            text-indent: 0;
+            height: 70px;
+            line-height: 70px;
+        }
+        th {
+            height: 40px;
+            line-height: 40px;
+            background-color: #FFF3DF;
+        }
+        .itemContent {
+            display: block;
+            line-height: 24px;
+            overflow: hidden;
+            margin: 4px;
+            vertical-align: middle;
+            word-break: break-all;
+        }
+    }
+    .regName {
+        float: left;
+        margin-left: 20px;
+        .regItem {
+            font-weight: normal;
+        }
+    }
+    .regIdcard {
+        float: right;
+        margin-right: 20px;
+        .regItem {
+            font-weight: normal;
+        }
+    }
+    .payTypeTitle {
+        font-size: 14px;
+        height: 70px;
+        line-height: 70px;
+        padding-left: 20px;
+        font-weight: normal;
+    }
+    .payType {
+        height: 106px;
+        line-height: 106px;
+        border-bottom: 1px dashed #e8e8e8;
+        border-top: 1px dashed #e8e8e8;
+        margin: 0 20px 30px;
+    }
+    .typeItem {
+        margin-right: 80px;
+        .typeInput {
+            margin-right: 30px;
+            cursor: pointer;
+        }
+        .payImg {
+            vertical-align: middle;
+        }
+    }
+    .payLink {
+        border-top: 1px solid #FEEED4;
+        border-bottom: 1px solid #FEEED4;
+        background-color: #FFFCF8;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 20px;
+        width: 100%;
+        text-align: center;
+        @include rel-pos($left: -20px);
+        .payCount {
+            @include abs-pos(auto, auto, auto, 20px);
+        }
+        .count {
+            font-size: 18px;
+            color: $orangeFontColor;
+        }
+        .flag {
+            font-size: 12px;
+            color: $orangeFontColor;
+        }
+        .paymentBtn {
+            width: 80px;
+            height: 28px;
+            line-height: 28px;
+            color: #fff;
+            border: 0;
+            background: none;
+            background-color: #ffaa33;
+        }
+    }
+    &.userInfoContainer {
+        @extend %chosenContainerStyle;
+        .chosen-container {
+            margin: 0;
+        }
+        .chosen-container a {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            width: 102px;
+            @include border-radius(2px);
+            div {
+                border: none;
+            }
+        }
+        .chosen-drop {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            width: 125px;
+        }
+        .chosen-container-active.chosen-with-drop .chosen-single {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            div {
+                border: none;
+            }
+        }
+    }
+    .btnArea {
+        padding: 40px 0;
+        border-top: 1px dashed #e8e8e8;
+        margin: 30px 20px 0;
+        text-align: center;
+        .nextStep {
+            width: 76px;
+            height: 28px;
+            line-height: 28px;
+            background-color: #ffaa33;
+            color: #fff;
+            display: inline-block;
+            @include border-radius(2px);
+        }
+    }
+}
+
+.xAttendedExamList {
+    padding: 20px;
+}
+
+.search_in_xcourse {
+    width: 178px;
+    height: 28px;
+    border: 1px solid $lineGray;
+    background-color: #f5f5f5;
+    vertical-align: middle;
+    @include abs-pos(20px, 0, auto, auto);
+    @include border-radius(40px);
+    .searchInput {
+        border: 0;
+        @include border-radius(40px);
+        color: $grayFontColor;
+        height: 28px;
+        width: 148px;
+        float: left;
+        padding-left: 30px;
+        background: none;
+        font-size: 12px;
+    }
+    i,
+    button {
+        background: none;
+        border: 0;
+        @include bg_with_retina(xnw-icons, png, $baseXnwImgPath);
+        background-position: -640px 0;
+        @include abs-pos(5px, auto, auto, 8px);
+        height: 16px;
+        width: 16px;
+        cursor: pointer;
+    }
+}

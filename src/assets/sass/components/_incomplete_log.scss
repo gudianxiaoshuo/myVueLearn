@@ -1,0 +1,346 @@
+@charset "UTF-8";
+
+// 主要用于半高卡片
+.one_article {
+    .content {
+        position: relative;
+    }
+    .incomplete_content,
+    .incomplete_article_content {
+        min-height: 20px;
+        .video_container {
+            p {
+                margin: 10px 0 20px;
+            }
+        }
+    }
+    >.incomplete_article_content {
+        margin-bottom: 20px;
+    }
+}
+
+.incomplete_content {
+    min-height: 50px;
+    position: relative;
+    .content {
+        min-height: 50px;
+        &.no_pic_video {
+            min-height: 20px;
+            .markdown_weibo_content {
+                margin-bottom: 0;
+                .simditor {
+                    border: none;
+                    .editorBody {
+                        font-size: 14px;
+                        min-height: auto;
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+            .p_text {
+                height: 50px;
+            }
+        }
+        &:hover {
+            .show_complete_content {
+                color: $orangeFontColor !important;
+            }
+        }
+        +.add_topic {
+            margin-top: 24px;
+        }
+        +.incomplete_album {
+            margin-top: 20px;
+        }
+    }
+    .incomplete_pic,
+    .incomplete_log_pic {
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        i {
+            background-color: $orangeFontColor;
+            @include abs-pos(0, 0, auto, auto);
+            padding: 0 3px;
+            min-width: 12px;
+            font-size: 12px;
+            text-align: center;
+            height: 18px;
+            line-height: 18px;
+            color: #FFF;
+        }
+    }
+    .incomplete_pic {
+        position: relative;
+        float: left;
+        display: block;
+    }
+    .incomplete_log_pic {
+        @include abs-pos(0, 0, auto, auto);
+        cursor: pointer;
+        .coverImg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .incomplete_video,
+    .incomplete_log_video,
+    .incomplete_video_no_pic {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        overflow: hidden;
+        .player {
+            width: 20px;
+            height: 20px;
+            @include abs-pos(15px, auto, auto, 15px);
+            background-position: -27px -146px;
+        }
+        .video_pic {
+            width: 50px;
+            height: 50px;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    .incomplete_video {
+        position: relative;
+        display: block;
+        float: left;
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+    .incomplete_log_video {
+        @include abs-pos(0, 60px, auto, auto);
+    }
+    .incomplete_video_no_pic {
+        @include abs-pos(0, 0, auto, auto);
+    }
+    .show_pic_and_video,
+    .show_pic_or_video,
+    .show_no_pic_video {
+        font-size: 12px;
+        cursor: pointer;
+        color: $grayFontColor !important;
+    }
+    .show_no_pic_video {
+        @include abs-pos(auto, 0, 3px, auto);
+        &.vote_operation {
+            background: none;
+            z-index: 2;
+            right: 20px;
+        }
+    }
+    .show_pic_and_video {
+        @include abs-pos(auto, 120px, 3px, auto);
+    }
+    .show_pic_or_video {
+        @include abs-pos(auto, 60px, 5px, auto);
+    }
+    .show_bg_gray {
+        background: #f8f8f8;
+    }
+    .show_bg {
+        background: #FFF;
+    }
+    &.rt_weibo {
+        .add_topic {
+            background: #FFF;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            margin-top: 20px;
+            color: $lightBlackFontColor;
+            .re_weibo_operation {
+                display: none;
+            }
+        }
+        .re_weibo_operation {
+            margin-top: 20px;
+        }
+        .img_or_video{
+            width: 480px;
+        }
+        .img_and_video{
+            width: 420px;
+        }
+    }
+    .real_content {
+        margin-bottom: 20px;
+    }
+    /*半高图片专辑*/
+    .incomplete_album {
+        padding: 5px;
+        @extend %baseCardStyle;
+    }
+
+    .incomplete_vote {
+        .vote_title {
+            font-size: 16px;
+            font-weight: normal;
+            @include text-truncate();
+        }
+        .vote_btn {
+            right: auto;
+            bottom: 5px;
+        }
+    }
+    .show_no_pic_video,
+    .show_pic_or_video {
+        &.onlyPicVideo {
+            right: 0;
+        }
+    }
+    .is_3rd_layer {
+        height: 20px;
+        overflow: hidden;
+        h3 {
+            float: left;
+            line-height: normal;
+            @include text-truncate(ellipsis);
+            display: block;
+            margin-bottom: 0;
+            .simplify_id_card {
+                max-width: 100px;
+            }
+            .source {
+                max-width: 380px;
+            }
+            .time,
+            .pubtime {
+                display: none;
+            }
+        }
+    }
+}
+
+.half_card_operation_box {
+    display: block;
+    float: left;
+    line-height: 20px;
+
+    a {
+        font-size: 12px;
+        cursor: pointer;
+        color: $grayFontColor !important;
+        &:hover {
+            color: $orangeFontColor !important;
+        }
+    }
+    .praised_info .praised_icon_item a {
+        padding: 0;
+    }
+    .showAll {
+        margin-left: 20px;
+    }
+}
+
+.operation_mini_for_half_card {
+    display: none;
+    padding-bottom: 0 !important;
+    &.upSort {
+        display: block;
+        float: left;
+    }
+    .xicon-promote-12 {
+        &.plusone {
+            color: $orangeFontColor;
+        }
+        font-size: 12px;
+    }
+    .show_more {
+        a {
+            color: $blackFontColor !important;
+            &:hover,
+            &.on {
+                background-color: $orange;
+                color: #FFF !important;
+            }
+        }
+    }
+
+    .half_card_operation_box .oper_icon {
+        height: 20px;
+        line-height: 20px;
+    }
+}
+
+.one_article:hover .operation_mini_for_half_card {
+    display: block;
+    float: left;
+    padding: 0;
+}
+
+.one_article .add_topic .operation_mini_for_half_card {
+    &.upSort {
+        display: none;
+    }
+}
+.one_article:hover .add_topic .operation_mini_for_half_card {
+    display: none;
+}
+
+.one_article .add_topic:hover .operation_mini_for_half_card {
+    display: block;
+    float: left;
+}
+
+// 提到我的评论
+.rt_rt_weibo {
+    max-height: 20px;
+    padding-left: 10px;
+    @include text-truncate(ellipsis);
+    display: block;
+    line-height: 18px;
+}
+
+.view_full_text {
+    @include abs-pos(0, 0, auto, auto);
+    color: $grayFontColor !important;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 16px;
+    background: #FFF;
+    &:hover {
+        color: $orangeFontColor !important;
+    }
+}
+
+// 显示文本
+.incomplete_text {
+    @include text-truncate(ellipsis);
+    display: block;
+    cursor: pointer;
+}
+
+.img_or_video {
+    width: 510px;
+}
+
+.img_and_video {
+    width: 450px;
+}
+
+.p_text {
+    max-height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.p_text_title {
+    display: block;
+    font-weight: bold;
+    @include text-truncate();
+}
+
+.p_text_title_con {
+    display: block;
+    max-height: 50px;
+    @include text-truncate();
+}
+

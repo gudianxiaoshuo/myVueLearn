@@ -1,0 +1,74 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+@import "_home-reset.scss";
+
+.homeMessage {
+    .noticeChooseQun {
+        .title {
+            text-align: left;
+        }
+    }
+    .S-main_r {
+        width: 820px;
+    }
+    .content {
+        .messageTabs {
+            margin: -10px;
+            li {
+                position: relative;
+                a {
+                    display: block;
+                    height: 55px;
+                    line-height: 55px;
+                    font-size: 14px;
+                    color: #78868F;
+                    text-indent: 20px;
+                    i {
+                        float: right;
+                        margin: 20px 10px 0 0;
+                    }
+                }
+                &:hover{
+                    a {
+                        background: rgba(245, 248, 250, .3);
+                    }
+                }
+                &.selected {
+                    a {
+                        background: #F5F8FA;
+                    }
+                }
+                .messageTotal {
+                    height: 16px;
+                    line-height: 16px;
+                    font-size: 12px;
+                    background-color: $darkOrangeFontColor;
+                    color: #FFF;
+                    text-indent: 0;
+                    padding: 0 5px;
+                    @include abs-pos(20px, 30px, auto, auto);
+                    @include border-radius(16px);
+                    white-space: nowrap;
+                    &:empty {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .search_in_page {
+        width: 180px;
+        height: 40px;
+        float: right;
+        margin-top: -6px;
+        background: $lightGrayBg;
+        border:none;
+        line-height: 40px;
+    }
+    .littleProfileNav {
+        height: 50px;
+        margin-bottom: 20px;
+        padding-top: 10px;
+        line-height: normal;
+    }
+}

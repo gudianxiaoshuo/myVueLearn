@@ -1,0 +1,138 @@
+@import "global/_variables";
+@import "global/_mixins";
+
+.addSellerBox {
+    .userBox {
+        position: relative;
+            .sellerInfo {
+                img {
+                    width: 40px;
+                    height: 40px;
+                    display: block;
+                    margin: 0 auto;
+                }
+                .account {
+                    width: 50px;
+                    display: block;
+                    text-align: center;
+                    @include text-truncate(ellipsis);
+                }
+                z-index: 1;
+                padding: 10px 5px;
+                background-color: #FFFFFF;
+                -webkit-border-radius: 4px;
+                border-radius: 4px;
+                background-clip: border-box;
+                @include abs-pos(40px, auto, auto, 285px);
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
+                .triangleFlag {
+                    width: 0;
+                    border-style: solid;
+                    border-width: 10px;
+                    border-color: #FFFFFF transparent transparent transparent;
+                    @include abs-pos(-15px, auto, auto, 15px);
+                    transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);     /* IE 9 */
+                    -moz-transform: rotate(180deg);    /* Firefox */
+                    -webkit-transform: rotate(180deg); /* Safari 和 Chrome */
+                    -o-transform: rotate(180deg);
+                }
+            }
+    }
+    .sellerInput {
+        width: 300px;
+        height: 26px;
+        line-height: 36px;
+        padding: 5px 10px;
+    }
+    li {
+        margin-top: 5px;
+    }
+    .sellerName {
+        margin-top: 10px;
+    }
+    width: 320px;
+    margin: 0 auto;
+}
+.tableData {
+    .sellerBox {
+        .sellerIcon {
+            width: 40px;
+            height: 40px;
+            margin: 10px 15px 10px 45px;
+            float: left;
+        }
+        td {
+            text-align: center;
+            line-height: 60px;
+            .delSeller {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+.remarkContent, .editBtnBox {
+    float: left;
+}
+.editBtnBox {
+    margin-left: 15px;
+}
+.remarkInput {
+    border: solid 1px #EAEDF1;
+    padding: 0 5px;
+    line-height: 24px;
+    height: 24px;
+}
+.searchSeller {
+    margin-top: 30px;
+    float: right;
+}
+.noSeller {
+    td {
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+        border: 0;
+    }
+}
+.orderRead {
+    .courseSearch {
+        margin-top: 25px;
+        width: 140px;
+        float: right;
+        margin-right: 24px;
+        input {
+            width: 130px;
+        }
+    }
+    .goHistory {
+        float: left;
+        margin-top: 36px;
+    }
+    .statusSearch {
+        float: left;
+        margin: 32px auto auto 32px;
+    }
+    select {
+        height: 28px;
+    }
+}
+#del_seller_layer {
+    .privacy_message {
+        .tips {
+            text-align: center;
+        }
+    }
+}
+.sellerBox {
+    td {
+        line-height: 60px;
+        text-align: center;
+        .delSeller {
+            margin-left: 15px;
+        }
+    }
+}
+#add_seller_layer, #edit_seller_layer, #del_seller_layer {
+    width: 460px;
+}

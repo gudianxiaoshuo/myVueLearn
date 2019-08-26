@@ -1,0 +1,27 @@
+#_classMemberPermsSetting,
+#_memberPermsSettingLayer {
+    width: 438px;
+    .layer_content {
+        padding: 20px 30px;
+    }
+    .settingItem {
+        margin-bottom: 20px;
+    }
+    .settingTitle {
+        width: 84px;
+        color: $grayFontColor;
+        text-align: right;
+        float: left;
+    }
+    @extend %chosenContainerStyle;
+    .chosen-drop {
+        &.autocomplete {
+            left: 110px;
+        }
+    }
+}
+#_classMemberPermsSetting {
+    .settingTitle {
+        width: 130px;
+    }
+}

@@ -1,0 +1,118 @@
+.oneCoursePartner {
+    padding: 30px 20px 0;
+    position: relative;
+    min-height: 150px;
+    &:last-child {
+        .partnerInfo {
+            border-bottom: none;
+        }
+    }
+    .partnerIcon {
+        width: 150px;
+        height: 150px;
+        display: block;
+        @include abs-pos(30px, auto, auto, 20px);
+        .iconImg {
+            height: 150px;
+            width: 150px;
+            display: block;
+            img {
+                height: 150px;
+                width: 150px;
+            }
+        }
+    }
+    .partnerInfo {
+        padding-left: 170px;
+        padding-bottom: 30px;
+        margin: 0;
+        min-height: 150px;
+        border-bottom: 1px dashed #e8e8e8;
+        position: relative;
+    }
+    .partnerName {
+        font-size: 16px;
+        line-height: 32px;
+        padding-right: 26px;
+        @include text-truncate;
+        .partnerExtraInfo {
+            color: $grayFontColor;
+            font-weight: normal;
+        }
+    }
+    .viewNotice {
+        @include abs-pos(0, 0, auto, auto);
+        &:hover {
+            .introIcon {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .infoItem {
+        line-height: 24px;
+        font-size: 12px;
+        color: $grayFontColor;
+        max-width: 385px;
+        @include text-truncate;
+        &.introInfo {
+            height: 24px;
+            max-width: 84%;
+            @include text-truncate;
+        }
+        &.info {
+            color: $lightBlackFontColor;
+        }
+        .infoTitle {
+            color: $lightBlackFontColor;
+            &.title {
+                margin-left: 30px;
+            }
+        }
+        .infoLine {
+            margin: 0 16px;
+            color: #e8e8e8;
+        }
+        .infoIcon {
+            @include rel-pos($top: 1px);
+            margin-right: 8px;
+            font-size: 12px;
+            &.contactIcon {
+                color: $orangeFontColor;
+            }
+            &.phoneIcon {
+                color: #3EBFE5;
+            }
+            &.emailIcon {
+                color: #F68346;
+            }
+            &.addressIcon {
+                color: #3BC475;
+            }
+        }
+    }
+    .partnerOperContainer {
+        @include abs-pos(auto, 0, 60px, auto);
+        &.cooperationOper {
+            bottom: 30px;
+        }
+    }
+    .applyCoursePartner {
+        @include abs-pos(auto, 0, 30px, auto);
+    }
+    .primary-btn {
+        display: block;
+        &.oper {
+            margin-bottom: 20px;
+        }
+        &.disabled {
+            color: $grayFontColor;
+            border-color: #ccc;
+            cursor: default;
+            &:hover {
+                color: $grayFontColor;
+                border-color: #ccc;
+                background-color: #fff;
+            }
+        }
+    }
+}

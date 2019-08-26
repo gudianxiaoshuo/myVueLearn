@@ -1,0 +1,69 @@
+#addEvaluationSchemeBox,
+#modifyCustomEvaluationName,
+#modifyCustomEvaluationDeadline,
+#addEvaluationIndexBox,
+#add_schedule_layer,
+#set_schedule_layer {
+    width: 558px;
+    input {
+        border: 1px solid $lineGray;
+        @include border-radius(2px);
+        padding: 0 4px;
+        width: 314px;
+        height: 30px;
+        margin-right: 20px;
+        &.startDate,
+        &.endDate {
+            width: 142px;
+            margin-right: 0;
+        }
+    }
+    .count {
+        color: $orangeFontColor;
+    }
+}
+/*添加测评方案层*/
+#addEvaluationSchemeBox,
+#add_schedule_layer {
+    width: 558px;
+    .privacy_message {
+        min-height: auto;
+    }
+    dl {
+        margin-top: 20px;
+        position: relative;
+        dt {
+           width: 100px;
+           text-align: right;
+           margin-right: 20px;
+           @include abs-pos(5px, auto, auto, -40px);
+        }
+        dd {
+            margin: 0 0 0 60px;
+        }
+    }
+    .errorMsg {
+        padding-left: 60px;
+        color: red;
+    }
+}
+#modifyCustomEvaluationName,
+#modifyCustomEvaluationDeadline,
+#addEvaluationIndexBox {
+    .privacy_message {
+        min-height: 50px;
+    }
+    .content {
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+}
+
+#set_schedule_layer {
+    .privacy_message {
+        padding: 0;
+    }
+    .classTimeList {
+        padding: 30px 0 10px 20px;
+    }
+}

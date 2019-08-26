@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+@import "global/_variables.scss";
+@import "global/_mixins.scss";
+@import "global/_extends.scss";
+@import "global/_buttons.scss";
+@import "global/_font_style.scss";
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    background-color: #FFF;
+    height: 100%;
+    line-height: 175%;
+    font-size: 14px;
+    color: $blackFontColor;
+}
+
+.orgDetailPage {
+    .basicInfo {
+        padding-bottom: 20px;
+        border-bottom: 2px dashed $middleGrayBg;
+        margin: 60px auto 30px 0;
+        .icon {
+            float: left;
+            height: 122px;
+            img {
+                width: 204px;
+                height: 122px;
+            }
+        }
+        .info {
+            float: left;
+            margin: 8px auto auto 20px;
+            .name {
+                font-size: 20px;
+                height: 24px;
+                line-height: 24px;
+                margin-bottom: 18px;
+                .auth {
+                    width:82px;
+                    height:30px;
+                    float: right;
+                    margin: -3px auto auto 8px;
+                    display:inline-block;
+                    @include bg_with_retina('auth-org', png, $versionImgPath);
+                }
+            }
+            .tel, .address {
+                height: 24px;
+                line-height: 24px;
+                color: #999;
+                span {
+                    color: $lightBlackFontColor
+                }
+            }
+        }
+    }
+    .tab {
+        li {
+            float: left;
+            font-size: 16px;
+            height: 36px;
+            line-heiht: 36px;
+            margin-right: 58px;
+            &.on {
+                border-bottom: 3px solid $orangeFontColor;
+            }
+            a {
+                color: $blackFontColor;
+            }
+        }
+    }
+    .description {
+        margin-top: 30px;
+    }
+}

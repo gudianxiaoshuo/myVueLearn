@@ -1,0 +1,91 @@
+.member_in_sidebar {
+    padding: 0 20px;
+    .sidebar_title {
+        font-weight: normal;
+        position: relative;
+        font-size: 14px;
+        margin: 10px 0;
+        padding-top: 10px;
+        border-top: 1px solid $lineGray;
+        &.userTitle {
+            border: none;
+            margin: 0 0 10px 0;
+            padding: 0;
+        }
+        .members {
+            color: $blackFontColor;
+        }
+        .member_count {
+            color: $darkOrangeFontColor;
+            padding: 0 2px;
+        }
+        .manage_member {
+            @include abs-pos(10px, 0, auto, auto);
+            cursor: pointer;
+            font-size: 12px;
+            color: $grayFontColor;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .member_list {
+        padding: 0 1px;
+    }
+    .user_item {
+        float: left;
+        width: 66px;
+        height: 84px;
+        overflow: hidden;
+        margin-bottom: 10px;
+        list-style: none;
+        .verify_icon {
+            display: none;
+        }
+    }
+    @extend %one_user_item;
+    .user_icon {
+        position: relative;
+        &:hover {
+            .imgIcon {
+                @include abs-pos(auto, 0, 0, auto);
+            }
+        }
+        .imgIcon {
+            @include abs-pos(auto, 3px, 3px, auto);
+        }
+    }
+    .name {
+        padding: 0 2px;
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        color: $blackFontColor;
+        word-break: break-all;
+        max-height: 36px;
+        overflow: hidden;
+        b {
+            font-weight: normal;
+            word-break: break-all;
+        }
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+
+    }
+    .get_more_member {
+        display: block;
+        text-align: right;
+        clear: left;
+        font-size: 12px;
+        color: $grayFontColor;
+        cursor: pointer;
+        margin-bottom: 20px;
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+}
+
+

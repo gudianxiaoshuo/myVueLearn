@@ -1,0 +1,45 @@
+#addMyXnwNavItem {
+    width: 374px;
+    border: none;
+    @include border-radius(0);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    .privacy_message {
+        padding: 0;
+    }
+    .layer_title_40 {
+        display: none;
+    }
+    .myXnwItemList {
+        padding: 18px 15px;
+        width: 344px;
+    }
+    .myXnwItem {
+        margin: 5px 15px;
+        display: inline-block;
+        width: 82px;
+        input {
+            margin-right: 10px;
+            &:checked {
+                background-color: $orangeFontColor;
+            }
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        padding-right: 22px;
+        border-top: 1px solid #DDDDDD;
+        .cancelAddItem,
+        .saveAddItem {
+            padding: 4px 8px;
+            margin-left: 10px;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .cancelAddItem {
+            color: $grayFontColor;
+        }
+    }
+}

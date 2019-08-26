@@ -1,0 +1,32 @@
+@import "global/_variables.scss";
+@import "global/_normalize.scss";
+
+
+@import "global/_mixins.scss";
+@import "global/_extends.scss";
+@import "global/_buttons.scss";
+@import "global/_font_style.scss";
+@import "global/_custom_reset.scss";
+
+@import "login_and_register/_login.scss";
+@import "login_and_register/_register.scss";
+@import "login_and_register/_common.scss";
+@import "login_and_register/_find_password.scss";
+
+/*两栏群首页样式及基础样式*/
+@import "components/_qun_index.scss";
+/*首页自定义模板设置样式*/
+@import "qun/_index_set.scss";
+/*群自定义首页*/
+@import "qun/_index_custom_template.scss";
+/*群设置*/
+@import "qun/_qun_setting.scss";
+@import "qun/_channel_setting.scss";
+@import "qun/_relation_qun_list.scss";
+@import "qun/_qun_xcourse_register_detail.scss";
+
+
+@import "components/_about_music_page.scss";
+@import "components/_about_xnw_page.scss";
+@import "components/_about_vip_page.scss";
+@import "pop_layer/_registerVipTip.scss";

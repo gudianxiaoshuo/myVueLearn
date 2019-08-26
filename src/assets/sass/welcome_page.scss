@@ -1,0 +1,343 @@
+@import "global/_variables.scss";
+@import "global/_normalize.scss";
+
+@import "global/_mixins.scss";
+@import "global/_custom_reset";
+
+.bg_gradient {
+    width: 100%;
+    background: linear-gradient(to bottom, #F8F8F8, #cbcbcb);
+    background-color: #CBCBCB;
+    background-repeat: no-repeat;
+}
+.welcome_container {
+    width: 940px;
+    padding-top: 50px;
+    margin: 0 auto;
+    font-family: $genericFontFamily;
+    .container_height {
+        height: 450px;
+        overflow: hidden;
+    }
+    .describe_title {
+        text-align: center;
+        h2{
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            font-family: $genericFontFamily;
+        }
+        p{
+            line-height: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: $grayFontColor;
+        }
+    }
+}
+.upload_icon_module,
+.qun_list_module {
+    float: left;
+    margin: 0 auto;
+    width: 100%;
+}
+.upload_container,
+.qun_container {
+    background: #FFF;
+    padding: 15px;
+    margin: 0 auto;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.3);
+}
+
+/*上传头像*/
+.upload_icon_module {
+    .upload_module {
+        height: 100%;
+        float: left;
+    }
+    .change_pic {
+        width: 300px;
+        text-align: center;
+        .add_img {
+            position: relative;
+            overflow: hidden;
+            width: 80px;
+            display: inline-block;
+            line-height: 18px;
+            text-align: left;
+            top: 4px;
+            input {
+                @include abs-pos(0, 0, auto, auto);
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+    .upload_container {
+        width: 650px;
+        padding: 18px;
+        .img_upload {
+            width: 328px;
+            float: none !important;
+            .up_img {
+                position: static;
+            }
+        }
+        #upload_img {
+            position: relative;
+            .progress_bar {
+                @include abs-pos(auto, auto, 10px, 0);
+                height: 5px;
+                background-color: $orange;
+                @include border-radius(5px);
+            }
+            button {display: none;}
+        }
+        .xnw_upload_container {
+            width: 92px;
+            margin: 0px auto 120px;
+            padding-top: 90px;
+            text-align: center;
+            display: block;
+            @include bg_with_retina(camera, png, $versionImgPath);
+            &:hover {
+                @include bg_with_retina(camera_hover, png, $versionImgPath);
+            }
+            
+            input {
+                font-size: 100px;
+            }
+        }
+        .show_icon {
+            width: 240px;
+            height: 328px;
+            float: left;
+            padding-left: 40px;
+            text-align: center;
+            padding-top: 15px;
+            .get_pic_size {
+                text-align: center;
+                margin: 6px 0;
+            }
+            .edit_account {
+                text-align: center;
+                margin: 6px 0;
+                height: 40px;
+                position: relative;
+                input {
+                    box-shadow: 0 4px 2px rgba(0,0,0,0.05) inset;
+                    width: 150px;
+                    padding: 0 20px 0 5px;
+                    text-align: center;
+                    height: 30px;
+                    border: 1px solid #D4D4D4;
+                    @include border-radius(2px);
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                }
+                .q_edit {
+                    @include abs-pos(6px, 68px, auto, auto);
+                    display: block;
+                    height: 16px;
+                    width: 16px;
+                    &:hover {
+                        i {
+                            color: $darkOrangeFontColor;
+                        }
+                    }
+                }
+            }
+            .get_user_icon {
+                width: 120px;
+                height: 120px;
+                overflow: hidden;
+                margin: 0 auto;
+                margin-top: 10px;
+                @include border-radius(90px);
+                @include bg_with_retina(large_120, png, $versionImgPath);
+                img {
+                    width: 120px;
+                    height: 120px;
+                    @include border-radius(90px);
+                }
+            }
+            .user_icon {
+                margin: 0 auto;
+                width: 190px;
+            }
+            .user_icon_30,
+            .user_icon_40,
+            .user_icon_50 {
+                float: left;
+                margin-right: 30px;
+                overflow: hidden;
+                border: 1px solid #FFF;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .user_icon_30 {
+                margin-top: 20px;
+                width: 30px;
+                height: 30px;
+                overflow: hidden;
+                @include border-radius(30px);
+                @include bg_with_retina(small_30, png, $versionImgPath);
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .user_icon_40 {
+                margin-top: 10px;
+                width: 40px;
+                height: 40px;
+                @include border-radius(40px);
+                @include bg_with_retina(comment_40, png, $versionImgPath);
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            .user_icon_50 {
+                width: 50px;
+                height: 50px;
+                margin-right: 0;
+                @include border-radius(50px);
+                @include bg_with_retina(weibo_50, png, $versionImgPath);
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .user_icon_size {
+                width: 190px;
+                margin: 0 auto;
+                .get_pic_size30,
+                .get_pic_size40,
+                .get_pic_size50 {
+                    float: left;
+                    margin-top: 5px;
+                    width: 45px;
+                    height: 40px;
+                    text-align: center;
+                    overflow: hidden;
+                }
+                .get_pic_size30 {
+                    margin-right: 26px;
+                    margin-left: -8px;
+                }
+                .get_pic_size40 {
+                    margin-right: 33px;
+                    margin-left: -1px;
+                }
+                .get_pic_size50 {
+                    margin-right: 5px;
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
+}
+
+/*推荐群*/
+.qun_list_module {
+    .qun_container {
+        width: 590px;
+        height: 336px;
+        padding: 15px 20px;
+        overflow: auto;
+        .recommend_qun_item {
+            cursor: pointer;
+            position: relative;
+            width: 140px;
+            float: left;
+            height: 60px;
+            border: 1px solid #F5F5F5;
+            padding: 5px 33px 5px 70px;
+            margin: 6px 20px;
+            overflow: hidden;
+            &.followed{
+                border: 1px solid $borderGray;
+                .follow{
+                    border-left: 1px solid $borderGray;
+                }
+                .checked{
+                    color: $green;
+                }
+            }
+        }
+        .qun_logo {
+            height: 60px;
+            width: 60px;
+            @include abs-pos(5px, auto, auto, 5px);
+            .qun_logo_img {
+                height: 60px;
+                width: 60px;
+            }
+        }
+        .qun_info {
+            overflow: hidden;
+            height: 60px;
+            width: 140px;
+            position: static;
+        }
+        .qun_parent_name,
+        .qun_desc {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .qun_desc {
+            color: $blackFontColor;
+        }
+        .qun_name_title {
+            color: $blackFontColor;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 22px;
+        }
+        .follow {
+            border-left: 1px solid #F5F5F5;
+            width: 28px;
+            height: 100%;
+            display: block;
+            @include abs-pos(0, 0, auto, auto);
+            i {
+                color: $lightLineGray;
+            }
+            .checked {
+                @include abs-pos(28px, auto, auto, 6px);
+            }
+        }
+    }
+}
+
+.pages_controller {
+    width: 100%;
+    margin-top: 30px;
+}
+.page_tip {
+    display: block;
+    margin: 16px auto;
+    text-align: center;
+    .tip_item {
+        margin: 0 10px;
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        @include border-radius(10px);
+        border: 1px solid #FFF;
+        cursor: default;
+        &.on {
+            background-color: #FFF;
+        }
+    }
+}
+
+.next_button {
+    display: block;
+    margin: 0 auto;
+}

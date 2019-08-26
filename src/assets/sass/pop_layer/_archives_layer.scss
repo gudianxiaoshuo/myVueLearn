@@ -1,0 +1,22 @@
+#archives_layer {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    .content {
+        min-height: 50px;
+        padding: 0 20px;
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+        .confirmBtn {
+            margin-left: 16px;
+        }
+    }
+}

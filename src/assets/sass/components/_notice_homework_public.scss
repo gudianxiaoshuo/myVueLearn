@@ -1,0 +1,246 @@
+.notice_modify_prompt,
+.homework_modify_prompt {
+    @include abs-pos(auto, auto, 10px, 0);
+    color: $grayFontColor;
+}
+
+.receiver_group_list {
+    margin-top: 20px;
+    .tips {
+        @include rel-pos($top: -8px);
+        color: $grayFontColor;
+        margin: 0;
+    }
+    .group_list_item {
+        margin-bottom: 20px;
+        width: 100%;
+        position: relative;
+        border: 1px solid #eee;
+        .group_icon {
+            display: block;
+            width: 38px;
+            height: 38px;
+            padding: 2px;
+            border: 1px solid $borderGray;
+            @include abs-pos(19px, auto, auto, 19px);
+            cursor: default;
+            @include border-radius(4px);
+            &.contactImg4 {
+                background-color: $lightLineGray;
+                border: 1px solid #fff;
+                img {
+                    float: left;
+                    height: 16px;
+                    width: 16px;
+                    margin-left: 2px;
+                    margin-top: 2px;
+                    @include border-radius(8px);
+                }
+            }
+            &.contactImg3 {
+                background-color: $lightLineGray;
+                border: 1px solid #fff;
+                img {
+                    height: 16px;
+                    width: 16px;
+                    @include border-radius(8px);
+                }
+                .img1 {
+                    @include abs-pos(2px, auto, auto, 10px);
+                }
+                .img2 {
+                    @include abs-pos(20px, auto, auto, 2px);
+                }
+                .img3 {
+                    @include abs-pos(20px, auto, auto, 20px);
+                }
+            }
+            &.contactImg2 {
+                background-color: $lightLineGray;
+                border: 1px solid #fff;
+                img {
+                    float: left;
+                    height: 16px;
+                    width: 16px;
+                    margin-left: 2px;
+                    margin-top: 11px;
+                    @include border-radius(8px);
+                }
+            }
+            &.contactImg1 {
+                background-color: $lightLineGray;
+                border: 1px solid #fff;
+                img {
+                    height: 30px;
+                    width: 30px;
+                    margin-left: 4px;
+                    margin-top: 4px;
+                    @include border-radius(15px);
+                }
+            }
+        }
+        .group_con {
+            padding:20px 0 40px 70px;
+        }
+        .group_oper {
+            height: 40px;
+            line-height: 40px;
+            background-color: $lightGrayBg;
+            position: relative;
+            padding:0 20px;
+        }
+        .group_title {
+            height: 26px;
+            line-height: 26px;
+            font-size: 14px;
+            font-weight: normal;
+            color: $blackFontColor;
+            padding-right: 20px;
+            position: relative;
+            &.is_edit_status>a,
+            &.is_edit_status>span {
+                top: 0;
+            }
+            &>a,
+            &>span {
+                display: inline-block;
+                position: relative;
+            }
+            .group_name {
+                color: $blackFontColor;
+                text-decoration: none;
+                margin-right: 10px;
+                top: 0;
+                max-width: 256px;
+                @include text-truncate(ellipsis);
+            }
+            .no_editting {
+                border: 0 !important;
+                padding: 3px 5px;
+                @include border-radius(3px);
+                background-clip: padding-box;
+                &.editting {
+                    width: 198px;
+                    border: 1px solid $lineGray !important;
+                    height: 24px;
+                    line-height: 24px;
+                }
+            }
+            .change_group_name {
+                font-size: 12px;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+                top: 2px;
+                i {
+                    color: $blue;
+                }
+            }
+            span {
+                font-size: 12px;
+                color: $grayFontColor;
+            }
+            .name_edit_input {
+                width: 198px;
+                border: 1px solid $lineGray;
+                @include border-radius(2px);
+                height: 24px;
+                line-height: 24px;
+                box-shadow: 0 4px 2px rgba(0,0,0,0.05) inset;
+                position: relative;
+                top: -1px;
+            }
+            .latest_use_time {
+                @include abs-pos(0, 20px, auto, auto);
+            }
+        }
+        .edit_group_item,
+        .del_group_item {
+            color: $grayFontColor;
+            font-size: 12px;
+            cursor: pointer;
+            i {
+                position: relative;
+                top: 3px;
+                margin-right: 5px;
+            }
+            &:hover {
+                color: $darkOrangeFontColor;
+                text-decoration: none;
+                i {
+                    color: $darkOrangeFontColor;
+                }
+
+            }
+        }
+        .edit_group_item {
+            margin-right: 20px;
+        }
+        .member_count {
+            color: $darkOrangeFontColor;
+            text-decoration: none;
+            font-size: 12px;
+            margin-right: 15px;
+            .count {
+                font-weight: bold;
+                font-size: 14px;
+                padding: 0 4px;
+            }
+        }
+    }
+}
+
+//发通知作业选群类型样式
+.noticeChooseQun,
+.homeworkChooseQun {
+    background: #fff;
+    position: relative;
+    padding: 24px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px 0 rgba(42,38,31,0.10);
+    border-radius: 2px;
+    margin-bottom: 20px;
+    .oneQunType {
+        @extend %typeIconStyle;
+    }
+    .tips {
+        color: $grayFontColor;
+        text-align: center;
+        i {
+            color: $orange;
+            margin-right: 5px;
+            position: relative;
+            top: 2px;
+        }
+    }
+    .title {
+        font-size: 14px;
+        font-weight: normal;
+        @include abs-pos(20px, auto, auto, 30px);
+    }
+}
+.homeworkChooseQun {
+    margin-bottom: 30px;
+}
+
+//通知作业筛选
+.utilityChannelTitle {
+    .filterItem {
+        color: $grayFontColor;
+        margin-right: 20px;
+        .filterInput {
+            height: 14px;
+            width: 16px;
+            margin-right: 6px;
+        }
+    }
+}
+
+.pubNotifyLayer {
+    .fancybox-inner {
+        overflow: visible !important;
+    }
+}
+
+
+

@@ -1,0 +1,23 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+.courseTypeTag {
+  display: block;
+  font-size: 10px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFF;
+  padding: 0 5px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  @include abs-pos(0, auto, auto, 0);
+  &.xcourse {
+    background-color: $orangeFontColor;
+  }
+  &.offLineCourse {
+    background-color: #FB7E81;
+  }
+  &.liveCourse {
+    background-color: #3BC475;
+  }
+}

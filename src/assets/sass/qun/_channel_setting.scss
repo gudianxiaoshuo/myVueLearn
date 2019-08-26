@@ -1,0 +1,220 @@
+//群日志标签设置
+.channelManageContainer {
+    padding-bottom: 30px;
+    .utilityChannelTitle {
+        margin-bottom: 10px;
+    }
+    .remindStickTag {
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        color: $grayFontColor;
+        .remindTagInput {
+            height: 14px;
+            width: 14px;
+            margin-right: 8px;
+        }
+    }
+    .channelContainer {
+        width: 640px;
+        border: 1px solid #FEEED4;
+        background-color: #FFFDF8;
+        @include border-radius(4px 4px 0 0);
+        &.homepage {
+            width: 530px;
+        }
+    }
+    .channelItem {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #FEEED4;
+        .operItem {
+            padding-right: 5px;
+        }
+        &:last-child {
+            border: none;
+        }
+    }
+    .nameInfo,
+    .templateInfo,
+    .accessInfo,
+    .writeInfo,
+    .operInfo {
+        float: left;
+        width: 110px;
+        color: #AE9B85;
+        position: relative;
+        text-align: center;
+        border-right: 1px solid #FEEED4;
+    }
+    .nameInfo {
+        width: 160px;
+        @include text-truncate();
+
+    }
+    .templateInfo {
+        width: 146px;
+    }
+    .operInfo {
+        border: none;
+    }
+    .templateText,
+    .writeText,
+    .accessText {
+        cursor: pointer;
+        display: inline-block;
+    }
+    .triangleDown {
+        color: $grayFontColor;
+        cursor: pointer;
+        @include rel-pos($top: 2px);
+    }
+    .templateList,
+    .accessLevelList,
+    .writeLevelList {
+        display: none;
+        width: 110px;
+        padding: 2px 0;
+        @include abs-pos(100%, auto, auto, 0);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .19);
+        background-color: #fff;
+        z-index: 1;
+        .templateItem,
+        .levelItem {
+            height: 30px;
+            line-height: 30px;
+            color: $grayFontColor;
+            padding-left: 15px;
+            display: block;
+            text-align: left;
+            &:hover,
+            &.on {
+                cursor: pointer;
+                color: $blackFontColor;
+                background-color: #f5f5f5;
+            }
+        }
+    }
+    .templateList {
+        width: 146px;
+    }
+}
+
+//群日志标签布局
+.qunLayoutContainer {
+    padding-bottom: 30px;
+    .utilityChannelTitle {
+        text-align: right;
+    }
+    .qunModuleForm {
+        margin-bottom: 20px;
+        border: 1px solid #FEEED4;
+    }
+    .channelSettingColumn {
+        color: #AE9B85;
+        line-height: 40px;
+        border-bottom: solid 1px #FFF3DF;
+        background-color: #FFFAF0;
+        &:hover {
+            .modifyChannelName {
+                visibility: visible;
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .dragColor {
+        background-color: $chatOrange;
+    }
+    .secondChannel {
+        clear: both;
+        height: 40px;
+    }
+    .moveChannelOper {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        float: left;
+        margin: 0 16px;
+        cursor: move;
+        .operIcon {
+            color: $blackFontColor;
+            font-size: 20px;
+            @include rel-pos($top: 2px);
+        }
+        &:hover {
+            text-decoration: none;
+            .operIcon {
+                color: $orangeFontColor;
+            }
+        }
+    }
+
+    .channnelName {
+        line-height: 40px;
+        height: 40px;
+        float: left;
+        overflow: hidden;
+        &:hover {
+            cursor: move;
+        }
+        .line {
+            width: 12px;
+            height: 10px;
+            display: inline-block;
+            margin: 0 5px 0 1px;
+            border-bottom: 1px solid $darkBrownFontColor;
+            border-left: 1px solid $darkBrownFontColor;
+        }
+        .modifyChannelName {
+            margin-left: 10px;
+            visibility: hidden;
+            .modifyIcon {
+                color: $blackFontColor;
+                font-size: 14px;
+                @include rel-pos($top: 2px);
+            }
+            &:hover {
+                .modifyIcon {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+    .channelOpers {
+        height: 40px;
+        line-height: 40px;
+        float: right;
+        margin: 0 10px;
+        .operItem {
+            color: #AE9B85;
+            padding: 0 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+
+    .channelInNav{
+        height: 40px;
+        line-height: 40px;
+        float: right;
+        margin: 0 10px;
+        .hideChannel {
+            color: #AE9B85;
+            padding: 0 5px;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+
+    .addNewNavTag {
+        display: block;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        border: 1px solid #eee;
+        background-color: #f5f5f5;
+        @include border-radius(2px);
+    }
+}

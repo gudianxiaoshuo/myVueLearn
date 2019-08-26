@@ -1,0 +1,494 @@
+@charset "UTF-8";
+
+// 我的学校 样式*/
+.blackMySchool {
+    width: 980px;
+    margin: 20px auto 0;
+    display: block;
+}
+.mySchool {
+    margin-top: 40px;
+    &.branchSchool {
+        margin-top: 0;
+    }
+    .currentQun {
+        line-height: 40px;
+    }
+    .authenticationSchoolTip,
+    .schoolManageTip,
+    .subSchoolTip {
+        width: 475px;
+        margin: 30px auto 0;
+        height: 60px;
+    }
+    .authenticationSchoolTip {
+        @include bg_with_retina(authenticationSchoolTip, png, $schoolIconPath);
+        background-position: center;
+    }
+    .schoolManageTip {
+        @include bg_with_retina(schoolManageTip, png, $schoolIconPath);
+        background-position: center;
+    }
+    .subSchoolTip {
+        @include bg_with_retina(subSchoolNullTip, png, $schoolIconPath);
+        background-position: center;
+    }
+    .curriculumManageTips {
+        @include bg_with_retina(curriculumManageTip, png, $schoolIconPath);
+        background-position: center;
+    }
+    .createQunBtn {
+        @include abs-pos(20px, 30px, auto, auto);
+        display: block;
+        text-align: center;
+    }
+    .shoolManage {
+        margin: 20px 0;
+        a {
+            color: $blackFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .titleStatus {
+        border-left: 4px #ffaa33 solid;
+        padding-left: 14px;
+        line-height: 14px;
+        margin: 30px 0;
+        color: $blackFontColor;
+    }
+    .gradeQunList {
+        .gradeQunName {
+            @include border-radius(3px);
+            border: 1px solid #FEEED4;
+            background: #FFFBF4;
+            height: 40px;
+            line-height: 40px;
+            position: relative;
+            padding: 0 10px;
+            margin-bottom: 16px;
+            .arrow {
+                @include abs-pos($top:8px, $right:8px);
+                color: #ffaa33;
+                padding: 5px;
+                cursor: pointer;
+            }
+        }
+        .gradeList {
+            margin: 0;
+        }
+    }
+    .oneQun {
+        width: 212px;
+        height: 80px;
+        position: relative;
+        background: #FFFFFF;
+        box-shadow: 0 2px 18px 0 rgba(0,0,0,0.08);
+        margin: 4px 0 20px 85px;
+        padding-left: 96px;
+        display: inline-block;
+        .qunIcon {
+            width: 80px;
+            height: 80px;
+            @include abs-pos($top:0, $left: 0);
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .qunInfo {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .qunName {
+            @include text-truncate();
+            line-height: 30px;
+            width: 210px;
+            font-size: 14px;
+            color: $blackFontColor;
+            display: inline-block;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .qunAlias {
+            @include text-truncate();
+            width: 210px;
+            color: $grayFontColor;
+        }
+        &:nth-child(3n-2) {
+            margin-left: 20px;
+        }
+    }
+    .createSchoolQun {
+        text-align: center;
+        line-height: 40px;
+        background: #f5f5f5;
+        border: 1px solid #EEEEEE;
+    }
+
+    //学校管理标
+    .schoolManageArea {
+        .label{
+            margin-top: 30px;
+            color: $blackFontColor;
+            text-align: center;
+            display: inline-block;
+            @extend %typeIconStyle;
+            .typeIcon {
+                margin: 0 28px 10px;
+            }
+            &:hover {
+                .typeIcon {
+                    &.evaluation {
+                        background-position: -5px -5px;
+                    }
+                    &.attendance {
+                        background-position: -105px -5px;
+                    }
+                    &.data {
+                        background-position: -205px -5px;
+                    }
+                    &.subSchool {
+                        background-position: -305px -5px;
+                    }
+                    &.chooseClass {
+                        background-position: -405px -5px;
+                    }
+                    &.curriculumManage {
+                        background-position: -505px -5px;
+                    }
+                }
+            }
+        }
+        .typeIcon {
+            @include bg_with_retina(mySchoolIcon, png, $schoolIconPath);
+            &.evaluation {
+                background-position: 0 0;
+            }
+            &.attendance {
+                background-position: -100px 0;
+            }
+            &.data {
+                background-position: -200px 0;
+            }
+            &.subSchool {
+                background-position: -300px 0;
+            }
+            &.chooseClass {
+                background-position: -400px 0;
+            }
+            &.curriculumManage {
+                background-position: -500px 0;
+            }
+        }
+    }
+
+    //选课统计
+    .classTab {
+        .item {
+            color: $grayFontColor;
+            font-weight: 600;
+            padding-bottom: 2px;
+            line-height: 30px;
+            display: inline-block;
+            margin: 0 20px 20px 0;
+            cursor: pointer;
+            &.on {
+                color: $blackFontColor;
+                border-bottom: 2px solid #ffaa33;
+            }
+        }
+    }
+    .chooseTerm {
+        line-height: 30px;
+        margin-bottom: 20px;
+        position: relative;
+        .term {
+            line-height: 28px;
+            border: 1px solid #FEEED4;
+            background: #FFFAF0;
+            position: relative;
+            padding: 0 20px 0 5px;
+            display: inline-block;
+            width: 53px;
+            @include border-radius(2px);
+            cursor: pointer;
+            .arrow {
+                @include abs-pos($top: 6px, $right: 2px);
+                color: #8A7762;
+            }
+        }
+        .termBox {
+            background: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.20);
+            color: $blackFontColor;
+            @include abs-pos($top:30px, $left:45px);
+            .item {
+                width: 50px;
+                padding-left: 30px;
+                position: relative;
+                display: block;
+                color: $blackFontColor;
+                .ok {
+                    display: none;
+                    font-size: 14px;
+                    color: #3BC475;
+                    @include abs-pos($top: 8px, $left: 10px);
+                }
+                &.on {
+                    .ok {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+    }
+    .dataTable {
+        td {
+            line-height: 20px;
+        }
+        .minTd {
+            min-width: 65px;
+        }
+        &.chooseClass {
+            margin-bottom: 30px;
+            th {
+                white-space: nowrap;
+            }
+        }
+    }
+    .loadingTip {
+        line-height: 100px;
+        width: 100%;
+        text-align: center;
+        color: #ffaa33;
+        margin-top: 30px;
+    }
+    &.oneClassDetail {
+        background: #fff;
+        .className {
+            line-height: 60px;
+            border-bottom: 1px solid #eee;
+            padding: 0 20px;
+            color: $blackFontColor;
+        }
+        .classContent {
+            padding: 20px;
+        }
+    }
+    .download {
+        float: right;
+        &.xxb {
+            margin: 10px 20px;
+        }
+    }
+    .schoolNull {
+        @include bg_with_retina(nullTips, png, $versionImgPath);
+    }
+}
+/*我的学校 样式*/
+.mySchool,
+.qunDataStats {
+    .title {
+        font-size: 14px;
+        color: $blackFontColor;
+        border-left: 2px solid $orangeFontColor;
+        line-height: 14px;
+        padding-left: 10px;
+        margin: 30px 0;
+        .gray {
+            color: $grayFontColor;
+        }
+        &.borderLeftNone {
+            border-left: none;
+            padding-left: 0;
+            margin: 20px 0;
+        }
+    }
+    .dataTable {
+        @extend %baseTableStyle;
+        th,
+        td {
+            text-indent: 0;
+            text-align: center;
+        }
+    }
+    .exportData {
+        float: right;
+    }
+    .chooseTime {
+        margin: 20px 0;
+        .timeInput {
+            @include border-radius(2px);
+            height: 18px;
+            line-height: 18px;
+            padding: 5px 10px;
+            border: 1px solid #eee;
+            margin: 0 5px;
+            width: 100px;
+            cursor: pointer;
+        }
+    }
+    .dataTip {
+        color: $grayFontColor;
+        padding: 20px 0;
+    }
+    .userAnalyze {
+        width: 100%;
+        height: 400px;
+        .text {
+            line-height: 400px;
+            width: 100%;
+            text-align: center;
+            color: #ffaa33;
+        }
+    }
+}
+//群内数据统计
+.qunDataStats {
+    .inactiveFamily {
+        width: 85px;
+        padding: 10px 5px 10px 50px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 18px 0 rgba(0,0,0,0.08);
+        position: relative;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        &:nth-child(4n) {
+            margin-right: 0;
+        }
+        .userIcon {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            @include abs-pos(10px, auto, auto, 10px);
+            img {
+                width: 30px;
+                height: 30px;
+                @include border-radius(100%);
+            }
+        }
+        .name {
+            color: $blackFontColor;
+            @include text-truncate();
+            line-height: 30px;
+            display: block;
+        }
+    }
+}
+// 课程表时间管理
+.curriculumManage {
+    .addCurriculumBtn {
+        margin-left: 30px;
+    }
+    .oneCurriculum{
+        padding: 20px;
+        margin-bottom: 20px;
+        color: $grayFontColor;
+        border: 1px solid $borderOrange;
+        background: $bgOrange;
+        .name {
+            display: inline-block;
+            margin-right: 20px;
+            color: $blue;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .editScheduleItem {
+            color: $blue;
+            font-size: 12px;
+        }
+    }
+}
+
+.curriculumDetail {
+    margin-top: 0;
+    background: none;
+    box-shadow: none;
+    .blackNav {
+        height: 54px;
+        line-height: 54px;
+        a {
+            color: $blackFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .curriculumContent {
+        background: #FFF;
+        padding: 20px;
+        .littleCrumbs {
+            height: 60px;
+            font-size: 16px;
+            line-height: 60px;
+            text-align: center;
+        }
+        .warnTip {
+            color: #9B9B9B;
+            font-size: 10px;
+            padding-bottom: 15px;
+        }
+        .tableDetail {
+            @extend %baseTableStyle;
+            th,
+            td {
+                text-align: center;
+            }
+            .removeLesson {
+                margin-left: 10px;
+                &.disabled {
+                    cursor: auto;
+                    color: $grayFontColor;
+                }
+            }
+        }
+    }
+    .addLesson {
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: 1px solid $borderOrange;
+        background: $bgOrange;
+    }
+    .save {
+        width: 100%;
+        text-align: center;
+    }
+    .timeProgramTable{
+        background-color: #FFFCF8;
+        width: 100%;
+        border: 1px solid #FEEED4;
+            tr{
+                height: 46px;
+                line-height: 46px;
+                background-color: #FFFAF1;
+                color: #AE9B85;
+                th,td{
+                    border: 1px solid #FEEED4;
+                    a.entryDetail{
+                        font-size:14px;
+                        font-weight: bold;
+                        color:#333;
+                    }
+                    a.editScheduleItem{
+                        font-size:14px;
+                    }
+                    label{
+                        font-size:14px;
+                        color:#333;
+                    }
+                }
+            }
+
+    }
+
+}

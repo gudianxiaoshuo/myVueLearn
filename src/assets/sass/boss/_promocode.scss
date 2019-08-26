@@ -1,0 +1,478 @@
+@charset "UTF-8";
+
+.promoCode {
+    width: 500px;
+    height: 430px;
+    position: relative;
+    .removePopup {
+        width: 580px;
+        height: 490px;
+        z-index: 190;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .searchOrg {
+        display: none;
+        width: 181px;
+        min-height: 35px;
+        height: auto;
+        position: absolute;
+        left: 80px;
+        top: 130px;
+        background: #FFFFFF;
+        box-shadow: 0 2px 6px 0 #EEEEEE;
+        border-radius: 2px;
+        z-index: 99999;
+        .filterBox {
+            margin-top: 10px;
+            width: 162px;
+            height: 25px;
+            border: 1px solid #E2E7EC;
+            border-radius: 12px;
+            margin-left: 8px;
+            color: #B8BBC4;
+            i {
+                position: absolute;
+                margin: 0;
+                left: 17px;
+                top: 17px;
+            }
+            .filterInput {
+                color: #B8BBC4;
+                width: 130px;
+                padding-left: 27px;
+                border: none;
+                outline: none;
+                font-size: 12px;
+                height: 22px;
+                line-height: 23px;
+                margin-top: 1px;
+                border-radius: 11px;
+            }
+        }
+        .orgList {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            width: 100%;
+            min-height: 50px;
+            height: auto;
+            max-height: 150px;
+            overflow: auto;
+            background-color: #FFFFFF;
+            li {
+                height: 30px;
+                color: #838798;
+                font-size: 12px;
+                line-height: 30px;
+                padding-left: 27px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                &:hover {
+                    cursor: pointer;
+                    background: #FAFAFA;
+                    color: #7B7DE5;
+                }
+            }
+        }
+    }
+    .promoCodeList {
+        position: absolute;
+        left: 80px;
+        top: 0;
+        width: 380px;
+        z-index: 200;
+        margin: 0 auto;
+        line-height: 100%;
+        .promoText {
+            width: 100%;
+            font-size: 12px;
+            color: #838798;
+            height: 12px;
+            line-height: 12px;
+            margin-bottom: 8px;
+            .must {
+                color: #B8BBC4;
+            }
+        }
+        .promoInput {
+            width: 100%;
+            height: 36px;
+            margin-bottom: 16px;
+            border: 1px solid #E2E7EC;
+            border-radius: 2px;
+            .promoName {
+                color: #4E546C;
+                width: 368px;
+                height: 34px;
+                padding-left: 12px;
+                font-size: 12px;
+                border: none;
+            }
+        }
+        .cheap {
+            margin-top: 10px;
+        }
+        .errPromoTime {
+            height: 12px;
+            clear: both;
+        }
+        .errMsg {
+            font-size: 12px;
+            color: #FF3E43;
+            margin-bottom: 15px;
+            position: relative;
+            .optionnalCourse {
+                position: absolute;
+                left: 200px;
+            }
+        }
+        .hide {
+            display: none;
+        }
+        .promoOrg {
+            width: 100%;
+            height: 12px;
+            .promoOrgLeft {
+                width: 180px;
+                height: 12px;
+                float: left;
+            }
+            .promoOrgRight {
+                width: 180px;
+                height: 12px;
+                float: left;
+                margin-left: 20px;
+            }
+        }
+        .promoOrgInput {
+            width: 100%;
+            height: 36px;
+            margin-bottom: 16px;
+            position: relative;
+            .promoOrgInputLeft, 
+            .promoOrgInputRight {
+                width: 178px;
+                height: 34px;
+                float: left;
+                border: 1px solid #E2E7EC;
+                border-radius: 2px;
+                background: linear-gradient(#FAFBFB, #F2F2F2);
+                .orgInput {
+                    height: 34px;
+                    width: 138px;
+                    float: left;
+                    font-size: 12px;
+                    padding-left: 12px;
+                    line-height: 34px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    color: #4E546C;
+                    background: linear-gradient(#FAFBFB, #F2F2F2);
+                }
+                i {
+                    float: right;
+                    font-size: 9px;
+                    margin-right: 12px;
+                    margin-top: 10px;
+                    color: #4E546C;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .promoOrgInputRight {
+                margin-left: 20px;
+                position: relative;
+                .searchClass {
+                    display: none;
+                    width: 178px;
+                    min-height: 35px;
+                    height: auto;
+                    position: absolute;
+                    left: 0;
+                    top: 35px;
+                    background: #FFFFFF;
+                    box-shadow: 0 2px 6px 0 #EEEEEE;
+                    border-radius: 2px;
+                    z-index: 10;
+                    .classList {
+                        height: auto;
+                        line-height: 30px;
+                        max-height: 150px;
+                        overflow: auto;
+                        .lists {
+                            height: 30px;
+                            color: #838798;
+                            &:hover {
+                                cursor: pointer;
+                                background: #FAFAFA;
+                                color: #7B7DE5;
+                            }
+                            .lessonName,
+                            .lessonPrice {
+                                height: 30px;
+                                width: auto;
+                                display: block;
+                                font-size: 12px;
+                                line-height: 30px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .lessonName {
+                                float: left;
+                                margin-left: 10px;
+                                max-width: 84px;
+                            }
+                            .lessonPrice {
+                                float: right;
+                                max-width: 59px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+                .orgInput {
+                    .orgClassName,
+                    .orgClassPrice {
+                        width: auto;
+                        height: 34px;
+                        max-width: 75px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        float: left;
+                    }
+                }
+            }
+        }
+        .discountAmount {
+            width: 178px;
+            height: 36px;
+            border: 1px solid #E2E7EC;
+            border-radius: 2px;
+            .discountAmountInput {
+                width: 138px;
+                height: 34px;
+                float: left;
+                padding-left: 12px;
+                border: none;
+                outline: none;
+            }
+            .promoMoney {
+                float: right;
+                font-size: 12px;
+                line-height: 36px;
+                margin-right: 9px;
+                color: #4E546C;
+            }
+        }
+        .prompt {
+            width: 100%;
+            height: 12px;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            .promptText {
+                height: 12px;
+                color: #F7B441;
+                font-size: 12px;
+            }
+        }
+        .promoTime {
+            width: 100%;
+            height: 34px;
+            line-height: 34px;
+            float: left;
+            border: 1px solid #E2E7EC;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            color: #4E546C;
+            background: linear-gradient(#FAFBFB, #F2F2F2);
+            .timeInput {
+                width: 100%;
+                height: 34px;
+                .selectTime {
+                    color: #48576A;
+                    width: 100px;
+                    height: 34px;
+                    display: block;
+                    border: none;
+                    outline: none;
+                    float: left;
+                    margin-left: 20px;
+                    cursor: pointer;
+                    background: linear-gradient(#FAFBFB, #F2F2F2);
+                }
+                .linkTime {
+                    width: 8px;
+                    height: 2px;
+                    float: left;
+                    display: block;
+                    margin-top: 16px;
+                    background-color: #E2E7EC;
+                }
+            }
+        }
+        .classSell {
+            position: relative;
+            font-size: 12px;
+            color: #838898;
+            clear: both;
+            height: 12px;
+            .msgContent {
+                display: none;
+                color: #FF3E43;
+                margin-left: 20px;
+            }
+            .must {
+                color: #CCCCCC;
+            }
+            .userTeam {
+                display: none;
+                z-index: 99999;
+                position: absolute;
+                top: 66px;
+                left: 20px;
+                width: 230px;
+                max-height: 130px;
+                overflow: auto;
+                background-color: #FFFFFF;
+                border: 1px solid #EEEEEE;
+                box-shadow: 0 2px 10px 0 #EEEEEE;
+                border-radius: 4px;
+                .userListMsg {
+                    margin-top: 16px;
+                    height: 40px;
+                    width: 100%;
+                    .checkoutInput {
+                        margin-top: 12px;
+                        width: 16px;
+                        height: 16px;
+                        display: block;
+                        float: left;
+                        margin-left: 24px;
+                        border-radius: 2px;
+                        border: 1px solid #B0BBC6;
+                        color: #FFFFFF;
+                        text-align: center;
+                        .addPerson {
+                            font-size: 8px;
+                            color: #FFFFFF;
+                            line-height: 16px;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .on {
+                        font-size: 8px;
+                        color: #FFFFFF;
+                        background: #7B7DE5;
+                        border-color: #FFFFFF;
+                    }
+                    .userHade {
+                        margin-left: 10px;
+                        float: left;
+                        width: 40px;
+                        height: 40px;
+                        display: block;
+                        border-radius: 20px;
+                    }
+                    .userMsg {
+                        float: left;
+                        margin-left: 11px;
+                        display: block;
+                        width: 110px;
+                        height: 40px;
+                        .userName,
+                        .userPhone {
+                            display: block;
+                            width: 110px;
+                            height: 20px;
+                            font-size: 12px;
+                            line-height: 20px;
+                            color: #4E546C;
+                        }
+                        .userName {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+        .selleUser {
+            width: 100%;
+            height: 150px;
+            position: relative;
+            overflow-x: hidden;
+            .addCourseSales {
+                margin-top: 16px;
+                width: 34px;
+                height: 34px;
+                display: block;
+                float: left;
+                margin-left: 25px;
+                border-radius: 17px;
+                border: 1px dashed #7B7DE5;
+                text-align: center;
+                line-height: 34px;
+                i {
+                    font-size: 12px;
+                    color: #7B7DE5;
+                }
+            }
+            .promoUser {
+                margin-top: 16px;
+                width: 36px;
+                height: 36px;
+                display: block;
+                float: left;
+                margin-left: 25px;
+                border-radius: 18px;
+                border: 1px dashed #7B7DE5;
+                text-align: center;
+                line-height: 36px;
+                .userList {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 17px;
+                    position: relative;
+                    display: block;
+                    border: none;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 17px;
+                    }
+                    .delUser {
+                        width: 14px;
+                        height: 14px;
+                        position: absolute;
+                        right: -7px;
+                        top: -7px;
+                        background-color: #7B7DE5;
+                        display: block;
+                        line-height: 14px;
+                        border-radius: 7px;
+                        .delete {
+                            font-size: 8px;
+                            color: #FFFFFF;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .noBorder {
+                border: none;
+            }
+            .addUser {
+                cursor: pointer;
+            }
+        }
+    }
+}

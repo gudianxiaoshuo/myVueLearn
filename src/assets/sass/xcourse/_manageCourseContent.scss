@@ -1,0 +1,224 @@
+.manageCourseContent {
+    .manageNav {
+        .creatCourse {
+            height: 28px;
+            padding: 0 12px;
+            line-height: 28px;
+            @include border-radius(2px);
+            margin-right: 18px;
+            background-color: #FFAA33;
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            &.hide {
+                display: none;
+            }
+        }
+        .improveCourse {
+            color: $blue;
+        }
+    }
+
+    .courseSource {
+        background-color: #f5f5f5;
+        background-color: rgba(245, 245, 245 ,0.5);
+        @include border-radius(4px);
+        margin: 0 20px 20px;
+        dt {
+            float: left;
+        }
+        dd {
+            width: 595px;
+            margin: 0;
+            float: right;
+            padding-bottom: 10px;
+            position: relative;
+        }
+        .sourceItem {
+            display: inline-block;
+            padding: 0 8px;
+            height: 22px;
+            line-height: 22px;
+            color: $grayFontColor;
+            margin: 10px 10px 0 10px;
+            &.on,
+            &:hover {
+                color: $orangeFontColor;
+            }
+            &.titleItem {
+                margin-right: 0;
+                padding-right: 0;
+                color: $blackFontColor;
+            }
+        }
+    }
+    .manageCourseList {
+        margin: 0 20px;
+        .noCountLink {
+            color: $grayFontColor;
+            cursor: default;
+        }
+        .searchTips {
+            color: #9B9B9B;
+            margin-bottom: 20px;
+            .count {
+                color: $orangeFontColor;
+            }
+            .back {
+                margin-left: 10px;
+            }
+        }
+    }
+    .oneCourseClassInfo {
+        border: 1px solid #eee;
+        background-color: #f5f5f5;
+        margin-bottom: 15px;
+        dt {
+            height: 50px;
+            padding: 10px;
+            line-height: 50px;
+            border-bottom: 1px solid #eee;
+            &.noCourse {
+                border-bottom: none;
+            }
+            .courseIcon {
+                width: 66px;
+                height: 50px;
+                float: left;
+                img {
+                    width: 66px;
+                    height: 50px;
+                }
+            }
+            .courseName {
+                padding: 0 10px;
+                line-height: 50px;
+                max-width: 380px;
+                @include text-truncate();
+            }
+            .courseNameAndPrice {
+                float: left;
+                &.hasPrice {
+                    line-height: 25px;
+                    .courseName {
+                        line-height: 25px;
+                    }
+                    .coursePrice {
+                        display: block;
+                    }
+                }
+            }
+            .coursePrice {
+                display: none;
+                color: #F50;
+                line-height: 25px;
+                text-indent: 10px;
+            }
+            .courseOper {
+                float: right;
+                a {
+                    margin-right: 10px;
+                    line-height: 20px;
+                    border-right: 1px solid #ddd;
+                    padding-right: 15px;
+                    &.disabled {
+                        color: $grayFontColor;
+                        cursor: default;
+                    }
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        dd {
+            color: $grayFontColor;
+            margin: 10px;
+            padding: 8px 0 8px 5px;
+            font-size: 12px;
+            background-color: #fff;
+            a {
+                color: $grayFontColor;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+            &:last-child {
+                border: none;
+            }
+            .name,
+            .teacher,
+            .classStatus,
+            .count,
+            .detail{
+                height: 40px;
+                width: 60px;
+                line-height: 40px;
+                float: left;
+                padding: 0 5px;
+                overflow: hidden;
+                .text {
+                    line-height: 20px;
+                    display: inline-block;
+                    word-break: break-word;
+                }
+            }
+            .name,
+            .classStatus {
+                width: 170px;
+            }
+            .teacher {
+                width: 80px;
+                .first {
+                    float: left;
+                    max-width: 60px;
+                    display: block;
+                    @include text-truncate();
+                }
+                .wrapLayer {
+                    .teacherItem {
+                        max-width: none;
+                    }
+                }
+            }
+            .count{
+                width: 80px;
+            }
+            .teacher .viewFullTeacherList{
+                vertical-align: middle;
+                cursor: pointer;
+            }
+            .total,
+            .finish {
+                color: #bbb;
+            }
+            .application{
+                color: #3BC475;
+            }
+            .applicationCount {
+                color: $orangeFontColor;
+            }
+
+        }
+    }
+    .searchCourse {
+        float: right;
+        position: relative;
+        .searchInput {
+            width: 110px;
+            height: 18px;
+            padding: 5px 5px 5px 36px;
+            border: 1px solid #ddd;
+            @include border-radius(20px);
+        }
+        .searchBtn {
+            border: none;
+            cursor: pointer;
+            height: 16px;
+            width: 16px;
+            @include bg_with_retina(xnw-icons, png, $baseXnwImgPath);
+            background-position: -640px 0;
+            @include abs-pos(7px, auto, auto, 10px);
+        }
+    }
+}

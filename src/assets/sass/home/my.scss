@@ -1,0 +1,155 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+@import "_home-reset.scss";
+
+//未开启首页的个人主页
+
+.homeMyPage {
+    .cover {
+        .homeQunHeader {
+            width: 100%;
+            margin-bottom: 15px;
+            @include border-radius(0);
+            .headerImg {
+                text-align: center;
+                img {
+                    width: 100% !important;
+                    min-height: 100%;
+                }
+            }
+            .pageSetting {
+                color: #FFF;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.60);
+                @include abs-pos(7px, 10px, auto, auto);
+                i {
+                    color: #FFF;
+                }
+                span {
+                    float: right;
+                    margin: -2px 0 0 2px;
+                }
+            }
+        }
+    }
+    .littleProfileNav {
+        margin-top: -1px;
+    }
+    .profileRightNav {
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        .search_in_page {
+            top: -4px;
+            .searchBtn {
+                top: 10px;
+            }
+        }
+    }
+    .notice {
+        color: $lightBlackFontColor;
+        cursor: default;
+        &:hover {
+            @include opacity(1);
+        }
+
+    }
+    .panelLeft {
+        width: 880px;
+        margin-right: auto;
+        .panel {
+            border: none;
+            &>.content {
+                padding: 10px 20px 10px 0px;
+            }
+        }
+    }
+    .panelRight {
+        width: 248px;
+        .panel {
+            border: none;
+            background: #FFF;
+            padding: 0 10px;
+            @include border-radius(2px);
+            @include box-shadow(0 2px 8px 0 rgba(42, 38, 31, .1));
+            .title {
+                height: 40px;
+                background: none;
+                text-indent: 0;
+                line-height: 40px;
+                font-size: 16px;
+                color: #000;
+                a {
+                    padding: 0;
+                }
+            }
+            .content {
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .panelInfo {
+        .content {
+            color: $blackFontColor;
+            div {
+                &+p {
+                    color: $blackFontColor;
+                }
+            }
+            p {
+                padding-top: 10px;
+                font-size: 12px;
+                line-height: 18px;
+                color: $grayFontColor;
+            }
+        }
+    }
+
+    .panelStatistics {
+        .title {
+            height: 30px;
+            padding: 0;
+            background: #F5F8FA;
+            font-size: 14px;
+            color: #78868F;
+            line-height: 32px;
+            text-indent: 10px;
+        }
+        .content {
+            .statistics {
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .panelUserQun {
+        .content {
+            ul {
+                li {
+                    &:nth-child(n) {
+                        margin-left: 29px;
+                    }
+                    &:nth-child(3n + 1) {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+    }
+    .panelVisitors {
+        .content {
+            ul {
+                li {
+                    margin-right: 21px;
+                    &:nth-child(3n) {
+                        margin-right: 21px;
+                    }
+                    &:nth-child(4n) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}

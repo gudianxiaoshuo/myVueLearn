@@ -1,0 +1,193 @@
+.multilevel_qun_layer {
+    height: 100%;
+    width: 100%;
+    min-height: 80px;
+    background: rgba(0, 0, 0 , .85)!important;
+    background-color: #000;
+    filter: Alpha(opacity=60);
+    z-index: 131;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    a.close_qun_tree{
+        cursor: pointer;
+        width: 40px;
+        height: 33px;
+        padding-top: 7px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 2px;
+        @include abs-pos($right:20px, $top:10px);
+    }
+    .xicon-album-close {
+        font-size: 26px;
+        color: #000;
+    }
+    .multilevel_qun_title {
+        height: 50px;
+        line-height: 50px;
+        color: #fff;
+        font: bold 18px/50px '';
+        width: 80%;
+        @include abs-pos($left:50%, $top:0px);
+        margin-left: -40%;
+        label {
+            font-size: 14px;
+        }
+    }
+}
+.qun_tree_container_area {
+    margin: 0 auto;
+    overflow: auto;
+    height: 76%;
+    width: 88%;
+    text-align: center;
+}
+/*群树：-- 用于弹出关系群层 + 群首页主栏 */
+.qun_tree_container {
+    position: relative;
+    white-space: nowrap;
+    ul {
+        width: 160px;
+        min-height: 60px;
+        margin-right: 40px;
+        display: inline-block;
+        vertical-align: top;
+        &:first-child li:first-child em,
+        &:first-child li:first-child span {
+            display: none;
+        }
+    }
+    li {
+        padding: 4px 7px;
+        margin-bottom: 10px;
+        width: 144px;
+        height: 30px;
+        position: relative;
+        background-color:#fff;
+        border: 1px solid #fff;
+        em {
+            display: none;
+        }
+        &:nth-child(2) em{
+            background: $lineGray;
+            width: 3px;
+            height: 3px;
+            border: 1px $borderGray solid;
+            display: block;
+            @include border-radius(3px);
+            @include abs-pos($left:-24px, $top:-32px);
+        }
+        span {
+            width: 20px;
+            height: 51px;
+            display: block;
+            border-left: solid 1px $borderGray;
+            border-bottom: solid 1px $borderGray;
+            @include abs-pos(-30px, auto, auto, -22px);
+        }
+        &.unfollow_qun:first-child span,
+        &:first-child span {
+            width: 44px;
+            height: 10px;
+            border: 0;
+            border-top: solid 1px $borderGray;
+            @include abs-pos(20px, auto, auto, -45px);
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .qun_photo {
+            display: block;
+            float: left;
+            height: 30px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        img {
+            width: 30px;
+            height: 30px;
+        }
+        p {
+            width: 100px;
+            height: 30px;
+            padding-left: 8px;
+            float:left;
+            overflow: hidden;
+            line-height: 15px;
+            a {
+                color: $grayFontColor;
+                line-height: 30px;
+            }
+            &.small_word {
+                line-height: 14px;
+                a {
+                    font-size:12px;
+                    line-height: 14px;
+                    width: 100px;
+                    height: 30px;
+                    white-space: normal;
+                }
+            }
+        }
+        .arrow_right_area,
+        .arrow_left_area {
+            width: 8px;
+            height: 32px;
+            padding-top: 8px;
+            cursor: pointer;
+            &:hover{
+                    background: $lightLineGray;
+            }
+        }
+
+        &.unfollow_qun{
+            background: rgba(0, 0, 0, 0.5);
+            color:#fff;
+            border:dashed 1px #fff;
+            padding:4px 7px;
+            span {
+                width: 21px;
+                height: 51px;
+                left: -22px;
+                top: -32px;
+            }
+            a {
+                color:#fff;
+            }
+        }
+        &.on {
+            background-color: $orange;
+            border: 1px solid $orange;
+            a{
+                color:#fff;
+            }
+            .arrow_left{
+                border-color:transparent #fff transparent transparent;
+            }
+            .arrow_right {
+                border-color:transparent transparent transparent #fff;
+            }
+
+            .arrow_right_area,
+            .arrow_left_area {
+                &:hover{
+                    background: $orangeFontColor;
+                }
+            }
+        }
+        .arrow_left_area {
+            @include abs-pos($left:0, $top:0);
+        }
+        .arrow_right_area {
+            @include abs-pos($right:0, $top:0);
+        }
+        .arrow_left{
+            margin-left: -5px;
+        }
+        .arrow_right {
+            margin-left: 2px;
+        }
+    }
+}
+

@@ -1,0 +1,13 @@
+/*请出家长提示层*/
+#_tickoutStudentLayer {
+    width: 478px;
+    .privacy_message {
+        padding: 0;
+    }
+    .newBtnArea {
+        clear: both;
+        button {
+            margin-left: 10px;
+        }
+    }
+}

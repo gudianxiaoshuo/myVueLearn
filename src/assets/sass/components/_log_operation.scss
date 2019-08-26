@@ -1,0 +1,251 @@
+.weibo_comment_operation,
+.re_weibo_operation,
+.article_operation,
+.comment_oper,
+.operation_mini_for_half_card {
+    clear: both;
+    position: relative;
+    padding: 0 0 20px 0;
+    height: 20px;
+    line-height: 20px;
+    .come {
+        font-size: 12px;
+        color: $grayFontColor;
+        height: 20px;
+        line-height: 20px;
+        float: left;
+        a {
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .dividing_line {
+            font-weight: normal;
+            color: #EEEEEE;
+            margin: 0 8px;
+            float: none;
+        }
+        .footprint {
+            cursor: default;
+            display: inline-block;
+            height: 20px;
+            line-height: 20px;
+            .readUserIcon {
+                position: relative;
+                display: inline-block;
+                width: 44px;
+                img {
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid #FFFFFF;
+                    @include border-radius(16px);
+                    position: absolute;
+                    top: -14px;
+                    &.user0 {
+                        left: 0px;
+                    }
+                    &.user1 {
+                        left: 13px;
+                    }
+                    &.user2 {
+                        left: 26px;
+                    }
+                }
+
+            }
+        }
+    }
+    .show_more {
+        position: absolute;
+        background-color: #FFFFFF;
+        z-index: 100;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4);
+        padding: 5px 0;
+        a {
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+            width: 100%;
+            text-align: center;
+            color: $blackFontColor;
+            text-decoration: none;
+            display: block;
+            width: 90px;
+            padding: 0 0 0 15px;
+            text-align: left;
+            cursor: pointer;
+            &:hover,
+            &.on {
+                background-color: #ffaa33;
+                color: #fff;
+            }
+        }
+    }
+    .oper_icon {
+        height: 20px;
+        line-height: 20px;
+        float: left;
+        font-size: 12px !important;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 16px;
+        text-decoration: none;
+        color: $grayFontColor;
+        cursor:  pointer;
+        &:hover {
+            color: $orangeFontColor;
+            span,
+            em {
+                color: $orangeFontColor;
+            }
+        }
+        &.more_oper {
+            padding-right: 0;
+            color: $grayFontColor;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+        .plusone {
+            color: $orangeFontColor;
+        }
+        i {
+            float:left;
+            font-size: 12px;
+            position: relative;
+            top: 4px;
+        }
+        em {
+            margin-left: 6px;
+            font-style: normal;
+            overflow: hidden;
+            white-space: nowrap;
+            cursor: pointer;
+            color: $grayFontColor;
+        }
+        .no_margin {
+            margin-left:0;
+        }
+    }
+
+    .dividing_line {
+        float: left;
+        color: #E8E8E8;
+        line-height: 12px;
+        padding-top: 3px;
+        font-size: 12px;
+    }
+}
+.re_weibo_operation {
+    padding-left: 0;
+    padding-bottom: 0;
+    a.oper_icon {
+        color: $grayFontColor;
+    }
+}
+.weibo_oper {
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+}
+.publishDraft {
+    @include rel-pos($top: -3px);
+}
+.praised_info {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4);
+    padding: 5px 0 5px 10px;
+    top: 20px;
+    right: auto;
+    bottom: auto;
+    position: absolute;
+    z-index: 11;
+    max-width: 492px;
+    color: $blackFontColor;
+
+    &.readUserList {
+        @include abs-pos(auto, auto, auto, 10px);
+    }
+    &.hide {
+        display: none;
+    }
+    .praised_icon_item,
+    .praised_more {
+        float: left;
+        width: 40px;
+        height: 40px;
+        @include border-radius(40px);
+    }
+    .praised_more {
+        text-align: center;
+        line-height: 40px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #313131;
+    }
+    input {
+        margin: 0 5px 0 10px;
+    }
+    .praised_icon_list{
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    .null_tips {
+        padding: 10px;
+    }
+    .praised_icon_item {
+        height: 82px;
+        width: 50px;
+        margin: 10px 5px 0 0;
+        img {
+            width: 40px;
+            height: 40px;
+            @include border-radius(40px);
+        }
+        a {
+            width: 48px;
+            display: inline-block;
+            color: $blackFontColor;
+            text-align: center;
+        }
+        .name {
+            padding: 0 2px;
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            line-height: 18px;
+            color: $blackFontColor;
+            word-break: break-all;
+            max-height: 36px;
+            overflow: hidden;
+            white-space: normal;
+            b {
+                font-weight: normal;
+                word-break: break-all;
+            }
+            &:hover {
+                color: #ffaa33;
+            }
+        }
+    }
+    .student_read {
+        border-bottom: 1px solid $lightLineGray;
+        line-height: 30px;
+        text-align: right;
+        display: block;
+        cursor: pointer;
+        margin: 0 14px 0 4px;
+        input {
+            margin-right: 5px;
+            margin-left: 0;
+        }
+    }
+    .tab_read {
+        line-height: 30px;
+        display: block;
+        label {
+            cursor: pointer;
+        }
+    }
+}

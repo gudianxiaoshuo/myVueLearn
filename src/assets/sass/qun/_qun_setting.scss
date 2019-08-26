@@ -1,0 +1,1435 @@
+.mainQunSetting {
+    width: 940px;
+    margin: 80px auto 0;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, .18);
+    .backToPrevPage {
+        @include abs-pos(-34px, auto, auto, 0);
+        .backToPrevBtn {
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+                .backIcon {
+                    color: $orangeFontColor;
+                }
+            }
+            .backIcon {
+                @include rel-pos($top: 2px);
+                margin-right: 4px;
+            }
+        }
+    }
+    .settingTitle {
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        font-weight: normal;
+        font-family: $specialFontFamily;
+        padding-left: 20px;
+        background-color: #f8f8f8;
+    }
+    .oneSettingItem {
+        padding: 0 56px 0 184px;
+        position: relative;
+        &:last-child {
+            .previewInfo {
+                border-bottom: none;
+            }
+        }
+        .itemTitle {
+            height: 55px;
+            line-height: 55px;
+            color: $lightBlackFontColor;
+            @include abs-pos(0, auto, auto, 56px);
+        }
+        .itemContent {
+            margin: 0;
+        }
+        .previewInfo {
+            height: 55px;
+            line-height: 55px;
+            color: $grayFontColor;
+            border-bottom: 1px dashed #e8e8e8;
+            position: relative;
+            .editItem {
+                @include abs-pos(0, 0, auto, auto);
+                &:hover {
+                    .slideIcon {
+                        color: $orangeFontColor;
+                    }
+                }
+                .enableQunIndex {
+                    margin-right: 6px;
+                }
+            }
+            .slideIcon {
+                color: #0088cc;
+                @include rel-pos($top: 2px);
+            }
+        }
+    }
+    .saveSettingBtn {
+        text-align: center;
+        padding: 40px 0;
+    }
+    //群头像设置
+    .iconInfoContainer {
+        padding: 20px 0;
+        border-bottom: 1px dashed #e8e8e8;
+        .selectQunlogoArea {
+            height: 278px;
+            width: 278px;
+            float: left;
+            margin: 0 60px 0 56px;
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            @include border-radius(2px);
+        }
+        .previewLogo {
+            height: 118px;
+            width: 118px;
+            float: left;
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            @include border-radius(2px);
+            overflow: hidden;
+        }
+        .iconAreaSelectBox {
+            img {
+                max-width: 278px;
+                max-height: 278px;
+            }
+        }
+        .qunLogoPreview {
+            height: 118px;
+            width: 118px;
+        }
+        .chooseImgBtnBox {
+            text-align: center;
+            margin-top: 100px;
+            .imgHint {
+                color: $grayFontColor;
+            }
+        }
+        .reloadImg {
+            float: left;
+            margin-top: 140px;
+            margin-left: -105px;
+        }
+        .addImgButton {
+            width: 84px;
+            height: 24px;
+            line-height: 24px;
+            color: $orangeFontColor;
+            text-align: center;
+            display: inline-block;
+            @include border-radius(2px);
+            border: 1px solid #ffaa33;
+        }
+        .reSelectButton {
+            width: 86px;
+            height: 26px;
+            line-height: 26px;
+            color: #fff;
+            text-align: center;
+            display: block;
+            background-color: #ffaa33;
+            @include border-radius(2px);
+            &.hide {
+                display: none;
+            }
+        }
+    }
+    .backQunContainer {
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        border-top: 1px solid #eee;
+        margin: 8px 30px 0;
+    }
+    .backQunBtn {
+        height: 40px;
+        line-height: 40px;
+        margin-top: 30px;
+        &:hover {
+            background-color: #f8f8f8;
+        }
+        .theBackBtn {
+            color: $orangeFontColor;
+            margin: 30px 0;
+        }
+    }
+    .remindMemberContainer {
+        padding: 22px 0;
+        border-bottom: 1px dashed #e8e8e8;
+        .remindLabel {
+            margin-left: 40px;
+            line-height: 30px;
+        }
+        .remindTitle {
+            line-height: 30px;
+        }
+        .remindCheckbox {
+            margin-right: 6px;
+        }
+    }
+    //群首页设置
+    .qunIndexSwitch {
+        padding: 20px 0;
+        border-bottom: 1px dashed #e8e8e8;
+        .editItem,
+        .indexSettingUri {
+            margin-left: 30px;
+        }
+    }
+    @extend %chosenContainerStyle;
+    .chosen-drop {
+        &.autocomplete {
+            left: 110px;
+        }
+    }
+    //群头图设置
+    .bannerInfoContainer {
+        border-bottom: 1px dashed #e8e8e8;
+    }
+    .qunBannerTitle {
+        line-height: 38px;
+        margin-top: 18px;
+    }
+    .qunBannerContainer {
+        height: 224px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        .waterMarkName {
+            color: #fff;
+            @include opacity(.7);
+            @include abs-pos(15px, auto, auto, 20px);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+            z-index: 1;
+            .cqunParentLink {
+                font-size: 14px;
+                line-height: 24px;
+                .parentLink {
+                    color: #fff;
+                    opacity: .7;
+                    &:hover {
+                        color: $orangeFontColor;
+                        opacity: 1;
+                    }
+                }
+            }
+            .cqunName {
+                font-size: 18px;
+                line-height: 28px;
+                display: inline-block;
+                height: auto;
+                text-align: left;
+            }
+        }
+    }
+    .recommendBannerList {
+        width: 710px;
+        margin-left: -5px;
+        .recommendQunBanner {
+            width: 132px;
+            height: 42px;
+            margin: 5px;
+            float: left;
+        }
+    }
+    .uploadQunBanner {
+        margin: 10px auto 0;
+        .xnw_upload_container {
+            float: left;
+            margin-right: 18px;
+        }
+        .uploadTip {
+            float: left;
+            font-size: 12px;
+        }
+    }
+    .bannerStatus {
+        padding-top: 10px;
+        font-size: 12px;
+        .statusTitle {
+            font-size: 12px;
+            display: inline-block;
+            width: 90px;
+            margin-right: 15px;
+        }
+        .statusInput {
+            margin-right: 6px;
+        }
+        .bannerLabel {
+            margin-right: 20px;
+        }
+    }
+    //群背景设置
+    .qunBgTitle {
+        line-height: 38px;
+        margin-top: 18px;
+    }
+    .bgPicBox {
+        width: 370px;
+        height: 260px;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+    .bgStatusContainer {
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .statusItem {
+        float: left;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 24px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.bgStatus {
+            font-size: 12px;
+            color: $grayFontColor;
+        }
+        .statusTitle {
+            color: $blackFontColor;
+        }
+        .statusInput {
+            margin: 0 6px;
+        }
+    }
+    .recommendBgContainer {
+        .recommendBgList {
+            width: 710px;
+            margin-left: -5px;
+        }
+        .recommendBgItem {
+            width: 132px;
+            height: 78px;
+            margin: 5px;
+            float: left;
+        }
+    }
+    //班牌设置
+    .contactClassCard {
+        border-top: 1px dashed #E8E8E8;
+        padding-top: 22px;
+        margin-bottom: 32px;
+        .remindItem {
+            line-height: 30px;
+            .titleCard {
+                font-size: 12px;
+                margin-top: -10px;
+                margin-bottom: 10px;
+                color: #9B9B9B;
+            }
+            .formatInput {
+                font-size: 12px;
+                color: #FF0000;
+                text-align: center;
+                width: 430px;
+            }
+            .hide {
+                display: none;
+            }
+        }
+        .remindTitle {
+            width: 60px;
+            display: inline-block;
+            margin-left: 40px;
+        }
+        .editItem {
+            margin-left: 6px;
+        }
+        .contactInput {
+            height: 25px;
+            border: 1px solid #DDDDDD;
+            width: 202px;
+            padding: 0 4px;
+            margin-right: 18px;
+            text-transform: uppercase;
+            ime-mode: disabled;
+            @include border-radius(5px);
+            &[readonly] {
+                background-color: #F8D8D8;
+            }
+        }
+    }
+    //群名片设置
+    .contactInfoContainer {
+        padding-top: 30px;
+        border-bottom: 1px dashed #e8e8e8;
+        .contactItem {
+            height: 34px;
+            line-height: 34px;
+            margin-bottom: 20px;
+            padding-left: 45px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .contactInput {
+            height: 32px;
+            border: 1px solid #ddd;
+            width: 422px;
+            padding: 0 4px;
+            margin-left: 10px;
+            @include border-radius(5px);
+            &[readonly] {
+                background-color: #f8f8f8;
+            }
+        }
+    }
+    //群提醒消息设置
+    .reminderContainer {
+        border-top: 1px dashed #e8e8e8;
+        padding-top: 22px;
+        margin-bottom: 32px;
+        .remindItem {
+            line-height: 30px;
+            line-height: 30px;
+        }
+        .remindTitle {
+            width: 88px;
+            display: inline-block;
+            margin-right: 40px;
+        }
+        .enableRemind {
+            margin-right: 6px;
+        }
+    }
+    //群权限设置
+    .permsInfoContainer {
+        padding-top: 24px;
+        border-bottom: 1px dashed #e8e8e8;
+    }
+    .permsInfoItem {
+        margin-bottom: 18px;
+        color: $grayFontColor;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .permsInfoTitle {
+            line-height: 26px;
+            color: $blackFontColor;
+        }
+        .permsLabel {
+            line-height: 24px;
+            font-size: 12px;
+            display: inline-block;
+            min-width: 160px;
+        }
+        .permsInput {
+            margin-right: 8px;
+        }
+        .passTitle {
+            font-size: 12px;
+            line-height: 24px;
+        }
+        .permsPwInput {
+            width: 120px;
+            height: 22px;
+            border: 1px solid #ddd;
+            @include border-radius(2px);
+            margin-right: 30px;
+        }
+        .permsPwTip {
+            font-size: 12px;
+            line-height: 24px;
+            .tip {
+                color: $orangeFontColor;
+            }
+        }
+        .qunIdInput {
+            width: 228px;
+            height: 24px;
+            padding: 0 64px 0 4px;
+            border: 1px solid #ddd;
+            @include border-radius(2px);
+            margin-right: 0;
+        }
+        .searchQunId {
+            height: 26px;
+            background: none;
+            background-color: #ffaa33;
+            color: #fff;
+            margin-left: -60px;
+            width: 60px;
+            border: none;
+            @include border-radius(0 2px 2px 0);
+        }
+        .searchQunContainer {
+            padding-top: 15px;
+        }
+        .searchResultQunList {
+            .qunItem {
+                width: 240px;
+                height: 50px;
+                padding: 10px 10px 10px 70px;
+                border: 1px solid $borderGray;
+                position: relative;
+                background-color: #fff;
+                margin-top: 10px;
+                .qunIcon {
+                    width: 50px;
+                    height: 50px;
+                    @include border-radius(25px);
+                    @include abs-pos(10px, auto, auto, 10px);
+                }
+                .iconImg {
+                    height: 50px;
+                    width: 50px;
+                }
+                .qunFullName {
+                    display: inline-block;
+                    max-width: 210px;
+                    max-height: 50px;
+                    overflow: hidden;
+                }
+                .qunOperation {
+                    @include abs-pos(0, 0, auto, auto);
+                    padding: 6px 10px;
+                }
+            }
+        }
+        .observerInfoContainer {
+        }
+        .qunSpyCard {
+            width: 240px;
+            height: 50px;
+            padding: 10px 10px 10px 70px;
+            border: 1px solid $borderGray;
+            position: relative;
+            background-color: #fff;
+            margin-top: 10px;
+            .userIcon {
+                width: 50px;
+                height: 50px;
+                @include border-radius(25px);
+                @include abs-pos(10px, auto, auto, 10px);
+            }
+            .delSpy {
+                @include abs-pos(0, 0, auto, auto);
+                padding: 6px 10px;
+            }
+        }
+        .qun_spy_list {
+            border: 1px solid $borderGray;
+            border-bottom: none;
+            width: 410px;
+            background-color: #fff;
+            margin-top: 15px;
+            &.only_show_user {
+                width: 240px;
+            }
+            .spy_item {
+                &.spy_item_title {
+                    background-color: $lightGrayBg;
+                    &:hover {
+                        .qun_name,
+                        .user_name {
+                            color: $blackFontColor;
+                        }
+                    }
+                }
+                height: 24px;
+                line-height: 24px;
+                border-bottom: 1px solid $borderGray;
+            }
+            .qun_name {
+                float: left;
+                text-align: center;
+                width: 204px;
+                border-right: 1px solid $borderGray;
+                color: $blackFontColor;
+                &:hover {
+                    color: $darkOrangeFontColor;
+                }
+            }
+            .user_name {
+                float: left;
+                text-align: center;
+                width: 204px;
+                color: $blackFontColor;
+                &:hover {
+                    color: $darkOrangeFontColor;
+                }
+            }
+    }
+    }
+    //群基本信息设置
+    .basicInfoContainer {
+        border-bottom: 1px dashed #e8e8e8;
+    }
+    .baseQunInfo {
+        padding-top: 22px;
+        .baseInfoItem {
+            position: relative;
+            padding-left: 110px;
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.hasSubItem {
+                padding: 0;
+                .infoHint {
+                    padding-left: 110px;
+                }
+            }
+        }
+        .itemName {
+            width: 110px;
+            display: inline-block;
+            text-align: right;
+            line-height: 30px;
+            height: 30px;
+            @include abs-pos(0, 0, 0, 0);
+        }
+        .infoItem {
+            float: left;
+            padding-left: 110px;
+            position: relative;
+        }
+        .readOnlyInfo {
+            line-height: 30px;
+            color: $grayFontColor;
+        }
+        .graduatedLabel {
+            line-height: 30px;
+            input {
+                margin-right: 6px;
+                height: 14px;
+                width: 14px;
+            }
+        }
+        .transferHeadteacher {
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            display: inline-block;
+            i {
+                color: $darkOrangeFontColor;
+                @include rel-pos($top: 2px);
+            }
+        }
+        .listContainer {
+            @include abs-pos(20px, auto, auto, 100%);
+            width: 120px;
+            @extend %yearDropListStyle;
+            padding: 5px 0;
+            li {
+                padding: 0 4px;
+                color: $blackFontColor;
+                cursor: pointer;
+                height: 24px;
+                line-height: 24px;
+                @include text-truncate;
+                &:hover {
+                    background-color: $lightGrayBg;
+                }
+                &.tip {
+                    color: $grayFontColor;
+                    padding: 0 4px 0 0;
+                    &:hover {
+                        background-color: #FFF;
+                    }
+                }
+            }
+            .noTeacherTip {
+                color: $darkOrangeFontColor;
+                padding-left: 5px;
+            }
+        }
+        .infoHint {
+            font-size:12px;
+            color: $grayFontColor;
+            clear: both;
+        }
+        .dropdownBox {
+            @include abs-pos(auto, auto, auto, 112px);
+            width: 108px;
+            @extend %yearDropListStyle;
+        }
+        .qunRelationDes,
+        .qunRelationInfo {
+            border: solid 1px $lineGray;
+            width: 420px;
+            padding: 0 5px;
+            height: 26px;
+            @include border-radius(2px);
+        }
+        .qunRelationInfo {
+            &.yearInfo,
+            &.gradeInfo {
+                width: 100px;
+            }
+            &.classInfo {
+                width: 66px;
+            }
+            &.readonly {
+                background: #f5f5f5;
+            }
+        }
+        .infoValue {
+            display: inline-block;
+            line-height: 30px;
+        }
+        .qunRelationDes {
+            padding: 5px;
+            height: 80px;
+            resize: none;
+        }
+        .noticeCharcounter,
+        .desCharcounter {
+            color: $darkOrangeFontColor;
+            padding: 0 2px;
+        }
+        @extend %chosenContainerStyle;
+        .chosen-drop {
+            &.autocomplete {
+                left: 110px;
+            }
+        }
+        .sendChatMsg {
+            text-align: center;
+            font-size: 12px;
+            color: $grayFontColor;
+            .openPchat {
+                color: $grayFontColor;
+                &:hover {
+                    color: $darkOrangeFontColor;
+                }
+                i {
+                    color: $orangeFontColor;
+                    @include rel-pos($top: 2px);
+                }
+            }
+        }
+    }
+
+    .discussionInfoContainer {
+        padding: 10px 0 20px;
+        border-bottom: 1px dashed #e8e8e8;
+        .fixedGroupContainer {
+            height: 34px;
+            line-height: 34px;
+            .fixedGroupTitle {
+                color: $lightBlackFontColor;
+                margin-right: 20px;
+            }
+            .fixedGroupItem {
+                margin-right: 20px;
+                .enableGroupInput {
+                    margin-right: 10px;
+                }
+            }
+            .fixedGroupTip {
+                font-size: 12px;
+                color: $grayFontColor;
+            }
+        }
+        .discussionTitle {
+            color: $grayFontColor;
+            line-height: 34px;
+        }
+        .discussionListContainer {
+        }
+        .discussionItem {
+            width: 188px;
+            height: 68px;
+            padding: 5px 0 5px 90px;
+            margin: 10px 20px 10px 0;
+            @include border-radius(2px);
+            border: 1px solid #ddd;
+            position: relative;
+            float: left;
+        }
+        .discussionInfo {
+            font-size: 12px;
+            line-height: 22px;
+            color: $grayFontColor;
+            &.nameInfo {
+                color: $blackFontColor;
+                margin-bottom: 4px;
+            }
+        }
+        .delDiscussion {
+            font-size: 12px;
+            padding: 0 5px;
+            line-height: 22px;
+            color: $blackFontColor;
+            @include abs-pos(auto, 5px, 5px, auto);
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .contect_img {
+            height: 78px;
+            width: 78px;
+            display: block;
+            @include abs-pos(0, auto, auto, 0);
+            &.contactImg4 {
+                background-color: #f8f8f8;
+                border-right: 1px solid #ddd;
+                img {
+                    float: left;
+                    height: 24px;
+                    width: 24px;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    @include border-radius(12px);
+                }
+            }
+            &.contactImg3 {
+                background-color: #f8f8f8;
+                border-right: 1px solid #ddd;
+                img {
+                    height: 24px;
+                    width: 24px;
+                    @include border-radius(12px);
+                }
+                .img1 {
+                    @include abs-pos(10px, auto, auto, 27px);
+                }
+                .img2 {
+                    @include abs-pos(44px, auto, auto, 10px);
+                }
+                .img3 {
+                    @include abs-pos(44px, auto, auto, 44px);
+                }
+            }
+            &.contactImg2 {
+                background-color: #f8f8f8;
+                border-right: 1px solid #ddd;
+                img {
+                    float: left;
+                    height: 24px;
+                    width: 24px;
+                    margin-left: 10px;
+                    margin-top: 27px;
+                    @include border-radius(12px);
+                }
+            }
+            &.contactImg1 {
+                background-color: #f8f8f8;
+                border-right: 1px solid #ddd;
+                img {
+                    height: 42px;
+                    width: 42px;
+                    margin-left: 18px;
+                    margin-top: 18px;
+                    @include border-radius(21px);
+                }
+            }
+        }
+    }
+    .editGroupBtn {
+        display: inline-block;
+        &.hide {
+            display: none;
+        }
+        .editButton {
+            margin-right: 16px;
+        }
+    }
+    .groupNameInput {
+        width: 520px;
+        height: 28px;
+        padding: 0 5px;
+        margin-right: 20px;
+        @include border-radius(2px);
+        border: 1px solid #ddd;
+    }
+    .groupUserList {
+        .userItem {
+            height: 82px;
+            width: 52px;
+            margin: 0 5px 10px 0;
+            position: relative;
+            float: left;
+        }
+        .userIcon {
+            width: 52px;
+            height: 40px;
+            text-align: center;
+            display: block;
+            cursor: default;
+        }
+        .userIconImg {
+            height: 40px;
+            width: 40px;
+            @include border-radius(40px);
+        }
+        .userAccount {
+            padding: 0 2px;
+            display: inline-block;
+            text-align: center;
+            font-size: 12px;
+            line-height: 18px;
+            color: $blackFontColor;
+            width: 48px;
+            word-break: break-all;
+            max-height: 36px;
+            overflow: hidden;
+            white-space: normal;
+            cursor: default;
+            b {
+                font-weight: normal;
+                word-break: break-all;
+            }
+            &:hover {
+                color: #ffaa33;
+            }
+        }
+        .delUserItem {
+            @include abs-pos(-4px, -2px, auto, auto);
+            &:hover {
+                .delIcon {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .addUserBtn {
+            width: 38px;
+            height: 38px;
+            text-align: center;
+            line-height: 40px;
+            display: block;
+            border: 1px dotted #ccc;
+            @include border-radius(20px);
+        }
+    }
+    .disSettingContainer {
+        min-height: 300px;
+    }
+    .discussionSettingTitle {
+        margin-bottom: 65px;
+    }
+    .discussionSetting {
+        padding-left: 138px;
+        margin-bottom: 30px;
+        .itemTitle {
+            height: 30px;
+            line-height: 30px;
+            left: 80px;
+        }
+        .exitTip {
+            line-height: 30px;
+        }
+    }
+
+    //普通群进群须知
+    .requirementContainer {
+        border-bottom: 1px dashed #e8e8e8;
+        .requirementStatus {
+            height: 56px;
+            line-height: 56px;
+            .checkInput {
+                margin-right: 10px;
+            }
+            .statusTip {
+                color: $grayFontColor;
+                margin-left: 10px;
+            }
+        }
+        .requirementContent {
+
+        }
+        .requirementTextarea {
+            height: 70px;
+            width: 678px;
+            padding: 10px;
+            font-size: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            background-color: #f8f8f8;
+            @include border-radius(4px);
+            resize: none;
+        }
+        .requirementTip {
+            font-size: 12px;
+            line-height: 12px;
+            color: $grayFontColor;
+            .count {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    
+    //班级空间板块样式
+    .setClassCard {
+        .save {
+            float: right;
+            margin-right: 20px;
+            margin-top: -38px;
+        }
+        .tabContentControl {
+            padding: 0 36px;
+            margin-top: -10px;
+            min-height: 600px;
+            .tabTitle {
+                height: 74px;
+                margin-bottom: 30px;
+                border-bottom: 1px solid #EEEEEE;
+                .tabTitleOne {
+                    margin: 0 30px;
+                    height: 30px;
+                    padding: 20px 10px;
+                    line-height: 90px;  
+                    cursor: pointer; 
+                    margin-left: 10px;   
+                    .tabTitleOne {
+                        font-size: 14px;
+                        color: #313131;
+                    } 
+                }
+                .current {
+                    color: #FFAA33;
+                    border-bottom: 2px solid #FFAA33;
+                }
+            }
+            .templatecur {
+                .template {
+                    display: none;
+                    .switchBtn {
+                        input[type=radio] {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 20px;
+                            height: 20px;
+                            margin-left: 5px;
+                            -webkit-appearance: none;
+                            background-color: transparent;
+                            border: 0;
+                            outline: 0 !important;
+                            line-height: 20px;
+                            color: #D8D8D8;
+                        }
+                        input[type=radio]:after {
+                            content: "";
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 14px;
+                            font-size: 16px;
+                            color: #FFF;
+                            border: 2px solid #DDD;
+                            background-color: #FFF;
+                            box-sizing: border-box;
+                        }
+                        input[type=radio]:checked:after {
+                            content: "\2022";
+                            font-size: 30px;
+                            transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+                            -webkit-transform: matrix(-0.766044, -0.642788, -0.642788, 0.766044, 0, 0);
+                            border-color: #4F98ED;
+                            background-color: #4F98ED;
+                        }    
+                    }
+                    .panelSwitch {
+                        margin: 20px 40px;
+                        .info {
+                            color: #9B9B9B;
+                            margin: 15px -38px;
+                            width: 868px;
+                        }
+                        .plateType {
+                            margin-bottom:230px;
+                            display: block;
+                            .plate, .plateSpace {
+                                display: block;
+                                float: left;
+                                width: 129px;
+                                padding: 20px 34px;
+                                text-align: center;
+                                color: #313131;
+                                img {
+                                    background-color: #DDD;
+                                }
+                            }
+                            .current {
+                                img {
+                                    background-color: #FFAA33;
+                                }
+                            }
+                        }
+                        .panelContentClass {
+                            clear: both;
+                            margin: 35px;
+                            height: 420px;
+                            border: 1px solid #EEEEEE;
+                            box-shadow: 0 0px 8px 0 rgba(0, 0, 0, .19);
+                            .plateContent, .spaceContent {
+                                margin: 10px;
+                                display: none;
+                                height: 315px;
+                                padding: 40px 60px;
+                                .timeBg {
+                                    float: left;
+                                }
+                                .plateInfo, .spaceInfo {
+                                    float: right;
+                                    font-size: 12px;
+                                    .channel {
+                                        float: left;
+                                        width: 164px;
+                                        height: 80px;
+                                        border: 1px solid #FFF;
+                                        position: relative;
+                                        &:hover {
+                                            cursor: pointer;
+                                            border: 1px solid #FF8B00;
+                                        }
+                                        .classLabel {
+                                            position: absolute;
+                                            top: 4px;
+                                            left: 9px;
+                                        }
+                                        .classLabelLeft {
+                                            left: 87px;
+                                        }
+                                    }
+                                    .channelContent {
+                                        height: 93px;
+                                        width: 354px;
+                                        border: 1px solid #FFF;
+                                        position: relative;
+                                        &:hover {
+                                            cursor: pointer;
+                                            border: 1px solid #FF8B00;
+                                        }
+                                        .classLabel {
+                                            position: absolute;
+                                            top: 6px;
+                                            left: 194px;
+                                        }
+                                    }
+                                    .imgtext {
+                                        width: 183px;
+                                        margin-right: 6px;
+                                    }
+                                    .columnTwo {
+                                        width: 358px;
+                                        height: 80px;
+                                    }
+                                    .mid {
+                                        margin: 10px 0;
+                                    }
+                                }
+                                .txtTitle {
+                                    margin-left: 222px;
+                                    margin-bottom: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    //相册
+    .qunAlbumList {
+        .info {
+            color: #9B9B9B;
+            margin: 15px 13px;
+            width: 868px;      
+        }
+        .albumItem {
+            width: 195px;
+            margin: 10px;
+            float: left;
+            text-align: center;
+            border: 1px solid $middleGrayBg;
+            background-color: $lightGrayBg;
+            position: relative;
+            .albumPicContainer {
+                width: 188px;
+                height: 128px;
+                margin: 6px auto;
+                overflow: hidden;
+                position: relative;
+            }
+            .albumPic {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                display: block;
+                cursor: pointer;
+                background: #fff;
+                &.no_pic {
+                    background: url(/images/version/no_pic.png) no-repeat center;
+                    background-size: cover;
+                }
+                .img {
+                    width: 185px;
+                    max-width: 100%;
+                    max-height: 100%;
+                    vertical-align: middle;
+                }
+            }
+            .albumInfo {
+                text-align: left;
+                display: block;
+                max-width: 115px;
+                color: $blackFontColor;
+                height: 30px;
+                float: left;
+                overflow: hidden;
+                line-height: 30px;
+                padding: 7px 12px 6px 12px;
+                border-top: 1px solid $middleGrayBg;
+                @include text-truncate;
+                color: $blackFontColor;
+            }
+            .numInfo {
+                float: left;
+                margin-top: 11px;
+                color: #9B9B9B;
+            }
+            input[type=checkbox] 
+            {
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 20px;
+                float: right;
+                margin-right: 2px;
+                margin-left: 5px;
+                margin-top: 15px;
+                -webkit-appearance: none;
+                background-color: transparent;
+                border: 0;
+                outline: 0 !important;
+                line-height: 20px;
+                color: #d8d8d8;
+            }
+            input[type=checkbox]:after {
+                content: "\2713";
+                display: block;
+                width: 18px;
+                height: 18px;
+                text-align: center;
+                line-height: 16px;
+                font-size: 20px;
+                color: #fff;
+                border: 2px solid #ddd;
+                background-color: #fff;
+                box-sizing: border-box;
+            }
+
+            input[type=checkbox]:checked:after {
+                border: 1px solid #ddd;
+                background-color: #FFAA33;
+            }
+        }
+        .albumContent {
+            margin: 0 auto;
+            text-align: center;
+            min-height: 500px;
+            margin-top: 200px;
+            vertical-align: middle;
+        }
+    }
+}
+
+//转让群主弹层的样式
+.selectOwnerContainer {
+    .selectTitle {
+        line-height: 28px;
+        padding-left: 20px;
+        margin-right: 15px;
+        float: left;
+    }
+    .selectList {
+        margin-left: 20px;
+        float: left;
+    }
+    @extend %chosenContainerStyle;
+    .chosen-container {
+        float: left;
+    }
+    .chosen-drop {
+        &.autocomplete {
+            left: 110px;
+        }
+    }
+}
+
+//群应用设置
+.S-xnw_main {
+    .utilityManageContainer {
+        padding-bottom: 20px;
+        background-color: transparent;
+    }
+}
+.utilityManage {
+    .oneChannel {
+        height: 60px;
+        line-height: 60px;
+        background-color: #fff;
+        margin-bottom: 14px;
+        padding: 0 22px 0 20px;
+        position: relative;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .10);
+        .chatTip {
+            color: $grayFontColor;
+            margin-left: 10px;
+        }
+        .zpTextTip {
+            color: $grayFontColor;
+            display: inline-block;
+        }
+    }
+    .channelName {
+        width: 84px;
+        margin-right: 40px;
+        float: left;
+    }
+    .channelLevel {
+        width: 180px;
+        height: 100%;
+        float: left;
+        &.disabledChannel,
+        &.disallowChangedWrite,
+        &.disallowChangedRead {
+            color: $grayFontColor;
+            .triangleDown {
+                display: none;
+            }
+            .writeLevel,
+            .accessLevel {
+                cursor: default;
+            }
+        }
+        .writeLevel,
+        .accessLevel {
+            cursor: pointer;
+            display: inline-block;
+        }
+        .triangleDown {
+            color: $orangeFontColor;
+            cursor: pointer;
+            @include rel-pos($top: 2px);
+        }
+        .accessLevelList,
+        .writeLevelList {
+            display: none;
+            width: 90px;
+            padding: 2px 0;
+            @include abs-pos(45px, auto, auto, 215px);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .19);
+            background-color: #fff;
+            z-index: 1;
+            .levelItem {
+                height: 30px;
+                line-height: 30px;
+                color: $grayFontColor;
+                padding-left: 15px;
+                display: block;
+                &:hover,
+                &.on {
+                    cursor: pointer;
+                    color: $blackFontColor;
+                    background-color: #f5f5f5;
+                }
+            }
+        }
+        .accessLevelList {
+            left: 395px;
+        }
+    }
+    .channelStatus {
+        float: right;
+        .enableChannel {
+            height: 14px;
+            width: 14px;
+            margin-right: 6px;
+            border: 1px solid #eee;
+        }
+    }
+}
+//班牌设置-班牌绑定弹出层
+#classCardBind, #classCardUnBind, #setClassCard {
+    .newBtnLayer {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+        text-align: right;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: $lightGrayBg;
+        button {
+            margin-left: 16px;
+        }
+        .xnwbtn-orange {
+            margin-right: 20px;
+        }
+    }
+}
+//班牌设置-选择标签弹出层
+#layer-channellist-choose {
+    width: 440px;
+    height: auto;
+    @include border-radius(6px 6px 0 0);
+    .layer_title_40 {
+        text-align: center;
+        background: #F8F8F8;
+        border-bottom: 1px solid #EBEBEB;
+    }
+    .privacy_message {
+        padding: 10px 20px;
+    }
+    .channelListContainer {
+        .canChooseＬabel,.unChooseＬabel {
+            padding: 10px 20px;
+            h4 {
+                padding: 15px 0;
+            }
+            .channeList {
+                .allTag {
+                    float: left;
+                    margin: 8px;
+                    padding: 4px 8px;
+                    border-radius: 2px;
+                    
+                }
+                .channelItem {
+                    border: 1px solid #FEEDD4;
+                    border-radius: 2px;
+                    background-color: #FFFBF5;
+                    color: #FDA83C;
+                    &:hover { 
+                        cursor: pointer;
+                    }
+                }
+                .selectedItem {
+                    border: 1px solid #DDDDDD;
+                    border-radius: 2px;
+                    background-color: #F2F2F3;
+                    color: #9E9E9E;
+                }
+            }
+        }
+        .clearTagTitle {
+            width: 100px;
+            height: 30px;
+            padding: 5px 7px;
+            text-align: center;
+            background: #FFFFFF;
+            border: 1px solid #FFAA33;
+            border-radius: 2px;
+            font-size: 14px;
+            line-height: 30px;
+            color: #FFAA33;
+            margin: 36px auto 10px;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,139 @@
+.publish_target_list {
+    float: left;
+}
+
+.qun_list_filter {
+    @extend %qun_list_pop_layer;
+    @include abs-pos(0, auto, auto, 0);
+    z-index: 1;
+    &.retweetTargetListContainer {
+        z-index: inherit;
+        .filterItem {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            position: relative;
+            background: $lightGrayBg;
+            label {
+                cursor: pointer;
+                margin-left: 20px;
+            }
+            .checkboxContainer {
+                top: 3px;
+            }
+        }
+        .list_item_container {
+            .list_item {
+                padding-left: 90px;
+            }
+            .qun_logo {
+                margin-left: 30px;
+            }
+            .qun_name_block {
+                margin-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        .checkboxContainer {
+            display: block;
+            margin: 8px 16px 8px 2px;
+            @include css3(box-sizing, border-box);
+            @include abs-pos($top: 6px, $left: 15px);
+        }
+        .checkboxIcon {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            background: #FFF;
+            border: 1px solid #D8D8D8;
+            @include border-radius(2px);
+        }
+        .selected {
+            .checkboxIcon {
+                border: none;
+                background: $orangeFontColor;
+                .checkboxInner {
+                    width: 4px;
+                    height: 8px;
+                    border: 1px solid #FFF;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    @include abs-pos($top: 2px, $left: 6px);
+                    @include css3(transform, rotate(45deg));
+                }
+            }
+        }
+    }
+    .hyq_group {
+        @include abs-pos($left: 100%, $top: 0);
+        margin-left: 2px;
+    }
+}
+
+.list_item_container {
+    @extend %list_in_qun_list;
+    margin-top: 8px;
+    .list_item {
+        cursor: pointer;
+        &:hover {
+            background-color: $lightLineGray;
+        }
+        &.selected {
+            .qun_name {
+                color: $orange;
+            }
+            .selected_flag {
+                @include abs-pos(0, 0, auto, auto);
+                display: block;
+                width: 30px;
+                text-align: center;
+                line-height: 50px;
+                i {
+                    color: $green;
+                }
+            }
+        }
+        .hyq_name {
+            display: inline-block;
+            width: 100%;
+        }
+        .qun_name_block {
+            padding-right: 30px;
+        }
+    }
+}
+
+.send_who {
+    margin: 10px 0;
+    padding: 10px;
+    @include border-radius(2px);
+    background: #FFF;
+    .target_label {
+        @extend %label;
+        background-color: $orangeFontColor;
+        font-size: 14px;
+        line-height: 26px;
+        color: #fff;
+        padding: 0 26px 0 10px;
+        margin: 4px 5px;
+        max-width: 576px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        @include border-radius(40px);
+        &:hover {
+            background-color: $labelOrange;
+            .del_target i {
+                @include opacity(1);
+            }
+        }
+        .del_target {
+            cursor: pointer;
+            @include abs-pos(0, 3px, auto, auto);
+            i {
+                color: #fff;
+                @include opacity(.5);
+                @include rel-pos(2px, auto, auto, auto);
+            }
+        }
+    }
+}

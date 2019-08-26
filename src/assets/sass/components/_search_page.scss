@@ -1,0 +1,416 @@
+//全站的搜索界面和群内的搜索界面
+.search_main {
+    //width: 100%;
+    //padding-left: 67px;
+    //padding-bottom: 50px;
+    //padding-top: 70px;
+    //margin-bottom: -50px;
+    //box-sizing: border-box;
+    //border: none;
+    //box-shadow: none;
+    //background: #fff;
+    .search_left {
+        float: left;
+        width: 879px;
+        min-height: 800px;
+        padding: 0;
+    }
+    .search_area {
+        height: 42px;
+        line-height: 42px;
+        margin-top: 20px;
+        .searchPageSearchBox {
+            @extend %mainSearchStyle;
+            float: left;
+            margin: 0;
+            input {
+                height: 44px;
+                width: 568px;
+                @include border-radius(6px);
+                padding: 0 76px 0 10px;
+                border: 1px solid #ccc;
+            }
+            .search_btn {
+                @include abs-pos(0, 0, auto, auto);
+                background: none;
+                @extend %button;
+                height: 46px;
+                width: 120px;
+                font-size: 20px;
+                line-height: 36px;
+                border: none;
+                background-color: #ffaa33;
+                text-indent: 35px;
+                @include border-radius(0 6px 6px 0);
+                i {
+                    font-size: 20px;
+                    color: #FFF;
+                }
+            }
+            .searchIcon {
+                @include abs-pos(13px, auto, auto, -10px);
+            }
+        }
+    }
+    .search_nav_box {
+        height: 50px;
+        margin-top: 50px;
+        .navItem {
+            font-size: 14px;
+            font-weight: normal;
+            color: $lightBlackFontColor;
+            padding: 0 20px;
+            margin: auto 20px;
+            line-height: 30px;
+            display: inline-block;
+            &.on,
+            &:hover {
+                color: $orangeFontColor;
+                border-bottom: 2px solid $orangeFontColor;
+            }
+            .count {
+                margin-left: 6px;
+                color: $lightBlackFontColor;
+            }
+        }
+    }
+    .search_result_container {
+        width: 879px;
+        padding-top: 5px;
+        .request_tip {
+            margin: 10px 0 20px 0;
+            font-size: 14px;
+            color: $grayFontColor;
+            span {
+                color: $orangeFontColor;
+                padding: 0 2px;
+            }
+        }
+        .searchmsg {
+            color: $blackFontColor;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 30px;
+            position: relative;
+            border-bottom: 1px dashed $lineGray;
+            .more_info {
+                float: right;
+                margin-top: 5px;
+                height: 20px;
+                font-size: 12px;
+                line-height: 20px;
+                cursor: pointer;
+                color: $grayFontColor;
+                i {
+                    float: right;
+                    margin-top: 2px;
+                }
+                &:hover {
+                    i {
+                        color: $grayFontColor;
+                    }
+                }
+            }
+        }
+    }
+    .search_result_content {
+        &.search_user_result,
+        &.search_qun_result {
+            padding: 5px 1px 0;
+        }
+        &.search_qun_result {
+            padding-bottom: 1px;
+        }
+    }
+    .little_user_item {
+        float: left;
+        width: 102px;
+        height: 80px;
+        padding-left: 94px;
+        position: relative;
+        margin: 0 8px 20px;
+        .user_photo {
+            @include abs-pos(0, auto, auto, 0);
+            display: block;
+            width: 80px;
+            height: 80px;
+            @include border-radius(80px);
+            .photo {
+                height: 80px;
+                width: 80px;
+                @include border-radius(80px);
+            }
+        }
+        .user_information {
+            height: 80px;
+            overflow: hidden;
+            .simplify_id_card .name {
+                font-size: 14px;
+                line-height: 30px;
+                display: block;
+                color: $blackFontColor;
+                padding-right: 4px;
+                @include text-truncate;
+            }
+            .verify_icon {
+                display: inline-block;
+                height: 16px;
+                margin: 2px 0;
+            }
+            span {
+                display: block;
+                font-size: 12px;
+                color: $grayFontColor;
+                line-height: 12px;
+                @include text-truncate;
+            }
+        }
+    }
+    //course页面样式
+    .little_course_item {
+        display: inline-block;
+        width: 399px;
+        height: 100px;
+        margin-right: 14px;
+        margin-bottom: 13px;
+        padding: 9px 19px 9px 9px;
+        border: 1px solid #efefef;
+        border-radius: 4px;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+        .course_icon {
+            float: left;
+            position: relative;
+            border-radius: 4px;
+            height: 100px;
+            .course_logo {
+                width: 166px;
+                height: 100px;
+                border-radius: 5px;
+            }
+            .live_course {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 54px;
+                height: 20px;
+                line-height: 21px;
+                background: rgba(0, 0, 0, .39);
+                font-size: 12px;
+                color: #fff;
+                text-align: center;
+                border-radius: 100px;
+            }
+        }
+        .course_infomation {
+            float: left;
+            position: relative;
+            height: 100px;
+            padding-left: 11px; 
+            .course_name {
+                font-size: 16px;
+                color: #313131;
+                &:hover {
+                    color: #ff8b00;
+                }
+                .subject {
+                    padding-left: 3px;
+                    padding-right: 3px;
+                    margin-right: 6px;
+                    font-size: 13px;
+                    color: #ff8b00;
+                    border: 1px solid #ff8b00;
+                    border-radius: 2px;
+                }
+                .course_detail {
+                    width: 222px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .current_course_info {
+                margin-top: 20px;
+                width: 222px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 14px;
+                color: #999;
+            }
+            .current_price {
+                position: absolute;
+                bottom: 0;
+                font-size: 14px;
+                .price_red {
+                    color: #f00;
+                    font-size: 22px;
+                    em {
+                        font-size: 14px;
+                    }
+                }
+                .real_price {
+                    margin-left: -3px;
+                    color: #999;
+                    text-decoration: line-through;
+                    em {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    @extend %qunCardListStyle;
+    .little_qun_item {
+        float: left;
+        width: 300px;
+        margin: 0 20px 20px 0;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+    .search_right {
+        float: left;
+        width: 234px;
+        margin-left: 27px;
+        min-height: 740px;
+        margin-top: 165px;
+        &>div {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid $lineGray2;
+            @include border-radius(4px);
+        }
+        .search_right_title {
+            position: relative;
+            padding-bottom: 10px;
+            font-size: 16px;
+            font-weight: normal;
+            border-bottom: 1px solid $lineGray2;
+            span {
+                display: block;
+                width: 40px;
+                height: 20px;
+                background: $darkOrangeFontColor;
+                font-size: 12px;
+                line-height: 22px;
+                color: #FFF;
+                text-align: center;
+                @include border-radius(2px);
+                @include abs-pos(3px, auto, auto, 75px);
+                i {
+                    color: $darkOrangeFontColor;
+                    @include abs-pos(3px, auto, auto, -10px);
+                }
+            }
+        }
+        .recent_search_key,
+        .hot_search_key {
+            li {
+                height: 30px;
+                line-height: 30px;
+                border-bottom: 1px dashed $lineGray2;
+                font-size: 14px;
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    color: $lightBlueFontColor;
+                }
+                @include text-truncate;
+                span {
+                    font-size: 12px;
+                    color: $grayFontColor;
+                }
+            }
+        }
+    }
+}
+
+//我的班级群搜索界面
+.searchClassQun {
+    @extend %mainSearchStyle;
+    margin: 30px 0 15px;
+    float: none;
+    input {
+        height: 34px;
+        width: 528px;
+        @include border-radius(100px);
+        padding: 0 76px 0 34px;
+        border: 1px solid #e8e8e8;
+    }
+    .search_btn {
+        @include abs-pos(0, 0, auto, auto);
+        background: none;
+        @extend %button;
+        height: 36px;
+        width: 76px;
+        line-height: 36px;
+        border: none;
+        background-color: #ffaa33;
+        @include border-radius(0 100px 100px 0);
+    }
+    .searchIcon {
+        @include abs-pos(10px, auto, auto, 14px);
+    }
+}
+.myClassQunList,
+.searchClassQunList {
+    .classQunTitle {
+        font-size: 14px;
+        line-height: 46px;
+        font-weight: normal;
+        border-bottom: 1px solid #e8e8e8;
+    }.count {
+        color: $orangeFontColor;
+        margin: 0 4px;
+    }
+    .backLink {
+        color: $orangeFontColor;
+        margin-left: 20px;
+    }
+    .cQunList {
+        padding-top: 15px;
+    }
+    @extend %qunCardListStyle;
+    .little_qun_item {
+        margin-top: 30px;
+    }
+}
+.noClassQunList {
+    width: 100%;
+    height: 90px;
+    margin: 100px auto;
+    display: inline-block;
+    @include bg_with_retina('classQunTip', png, $versionImgPath);
+    background-position: center top;
+}
+
+.searchResultTitle {
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+.searchMyFav {
+    margin-bottom: 30px;
+}
+.searchResultTitle,
+.searchMyFav {
+    .backToLogList {
+        color: $orangeFontColor;
+    }
+    .rightIcon {
+        font-size: 14px;
+        color: $lightBlackFontColor;
+        margin-left: 10px;
+        @include rel-pos($top: 1px);
+    }
+    .resultLogNum {
+        color: $orangeFontColor;
+        margin: 0 4px;
+    }
+}
+

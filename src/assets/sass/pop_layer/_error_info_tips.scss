@@ -1,0 +1,21 @@
+#error_info_tips {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+        p {
+            padding: 20px;
+        }
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+        button {
+            margin-left: 10px;
+        }
+    }
+}

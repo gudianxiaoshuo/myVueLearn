@@ -1,0 +1,127 @@
+.hyq_title {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 10px 20px;
+    padding-top: 10px;
+    border-top: 1px solid $lineGray;
+    position: relative;
+    &.information_title,
+    &.hy_group_title {
+        border: 0;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .set_btn {
+        @include abs-pos(0, 0, auto, auto);
+        color: $grayFontColor;
+        font-size: 12px;
+        font-weight: normal;
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+}
+
+.friend_group_list {
+    white-space: nowrap;
+    .group_list_item {
+        height: 34px;
+        line-height: 34px;
+        position: relative;
+        padding:0 20px;
+        &.on {
+            .item {
+                color: $darkOrangeFontColor;
+            }
+        }
+        &:hover {
+            background-color: $lightLineGray;
+        }
+        .item {
+            padding-left: 30px;
+            display: block;
+            position: relative;
+            color: $blackFontColor;
+            &.star_friend {
+                i {
+                    color: $starYellow;
+                }
+            }
+        }
+        .item_name {
+            display: block;
+            @include text-truncate;
+            max-width: 150px;
+        }
+        .item_color {
+            height: 16px;
+            width: 16px;
+            line-height: normal;
+            @include border-radius(16px);
+            display: block;
+            @include abs-pos(9px, auto, auto, 0);
+            &.empty_color_circle {
+                height: 14px;
+                width: 14px;
+                @include border-radius(14px);
+                border: 1px solid $grayFontColor;
+            }
+        }
+        .item_count {
+            @include abs-pos(0, 0, auto, auto);
+        }
+    }
+}
+.friend_list,
+.fans_list {
+    padding: 0 8px;
+    @extend %one_user_item;
+    .user_list_item {
+        width: 74px;
+        height: 80px;
+        float: left;
+        margin-bottom: 8px;
+    }
+
+    .more_user_link {
+        display: block;
+        text-align: right;
+        clear: both;
+        color: $grayFontColor;
+        font-size: 12px;
+        padding-right: 12px;
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+}
+.user_public_info {
+    padding: 0 20px;
+    li {
+        line-height: 30px;
+        color: $grayFontColor;
+        .info_title {
+            float: left;
+            width: 28%;
+        }
+        .info {
+        }
+    }
+}
+
+.recommend_qun_list {
+    padding: 0 9px;
+    @extend %commonQunListStyle;
+    .more_user_link {
+        height: 40px;
+        line-height: 40px;
+        clear: both;
+        text-align: right;
+        a {
+            color: $grayFontColor;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+}

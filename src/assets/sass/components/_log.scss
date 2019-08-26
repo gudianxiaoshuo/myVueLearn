@@ -1,0 +1,1282 @@
+@charset "UTF-8";
+
+.one_article {
+    position: relative;
+    border-bottom: 1px solid $lightLineGray;
+    margin-bottom: 23px;
+    min-height: 55px;
+    margin-left: 74px;
+    .title {
+        line-height: 150%;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    &.bg_hl {
+        border: 5px solid $orangeFontColor;
+        @include rel-pos(-10px,auto,auto,-10px);
+        padding: 5px;
+        position: relative;
+    }
+    &:hover {
+        .section .tip_menu {
+            visibility: visible;
+        }
+    }
+    .article_content {
+        position: relative;
+        min-height: 90px;
+    }
+    .aside {
+        padding: 0 0 20px 0;
+        @include abs-pos(0, auto, auto, -74px);
+        .user_photo {
+            display: block;
+            height: 44px;
+            width: 44px;
+            position: relative;
+        }
+        .roleFlag {
+            width: 36px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 12px;
+            text-align: center;
+            color: #009FEE;
+            display: inline-block;
+            border: 1px solid #40A2D3;
+            background-color: #E6F7FF;
+            @include border-radius(100px);
+            @include abs-pos(auto, -8px, 0, auto);
+        }
+        .closedAccount {
+            width: 38px;
+            height: 16px;
+            line-height: 16px;
+            font-size: 12px;
+            text-align: center;
+            color: $grayFontColor;
+            display: inline-block;
+            border: 1px solid #bbb;
+            background-color: #fff;
+            @include border-radius(100px);
+            @include abs-pos(auto, -8px, 0, auto);
+        }
+        img {
+            width: 44px;
+            height: 44px;
+            @include border-radius(44px);
+            &.small {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    .section {
+        position: relative;
+        .logTitle {
+            position: relative;
+            line-height: 16px;
+            margin-bottom: 18px;
+            font-size: 14px;
+            z-index: 2;
+            font-weight: bold;
+            a {
+                color: $grayFontColor;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+                &.pubtime {
+                    color: $grayFontColor;
+                }
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+            .verify_icon {
+                vertical-align: top;
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+                float: left;
+            }
+            .simplify_id_card {
+                display: inline-block;
+                max-width: 200px;
+                overflow: hidden;
+                float: left;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-weight: normal;
+                .roleFlag {
+                    width: 36px;
+                    height: 16px;
+                    line-height: 16px;
+                    font-size: 12px;
+                    text-align: center;
+                    color: #009FEE;
+                    display: inline-block;
+                    border: 1px solid #40A2D3;
+                    background-color: #E6F7FF;
+                    @include border-radius(100px);
+                }
+                .name {
+                    color: $blackFontColor;
+                    b {
+                        font-weight: normal;
+                    }
+                    &:hover {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+            b.to_account {
+                color: $blackFontColor;
+                &:hover {
+                    color: $blackFontColor;
+                }
+            }
+            .read_only {
+                font-size: 12px;
+                font-weight: normal;
+                //color: $grayFontColor;
+                cursor: pointer;
+                float: left;
+                padding-left: 5px;
+                //line-height: 18px;
+            }
+            .time {
+                font-weight: normal;
+                color: $grayFontColor;
+                font-size: 12px;
+                @include abs-pos(0, 0, auto, auto);
+                .no_link {
+                    cursor: default;
+                }
+                .evaluationTip,
+                .essenceTip,
+                .weiboPerfect {
+                    &+ .pubtime {
+                        margin-left: 8px;
+                    }
+                }
+            }
+            .share_log_info {
+                font-size: 12px;
+                font-weight: normal;
+                color: $grayFontColor;
+                padding-left: 5px;
+                i {
+                    margin-left: 6px;
+                    cursor: default;
+                    position: absolute;
+                }
+            }
+            .source {
+                font-size: 12px;
+                font-weight: normal;
+                display: block;
+                max-width: 250px;
+                float: left;
+                margin: 0 6px;
+                line-height: 16px;
+                color: $grayFontColor;
+                @include text-truncate();
+            }
+        }
+        .tip_menu_area {
+            @include abs-pos(-8px, -30px, auto, auto);
+            height: 34px;
+            width: 26px;
+            z-index: 1;
+            padding: 0 10px;
+            &:hover .tip_menu{
+                visibility: visible;
+            }
+        }
+        .tip_menu {
+            padding: 5px;
+            visibility: hidden;
+            &:hover {
+                visibility: visible;
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .top_tip_menu {
+            @include abs-pos(10px, 0, auto, auto);
+            width: 100px;
+            background-color: #fff;
+            z-index: 2;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+            padding: 5px 0;
+            a {
+                font-size: 12px;
+                height: 30px;
+                line-height: 30px;
+                width: 100%;
+                text-align: center;
+                color: $blackFontColor;
+                text-decoration: none;
+                font-weight: normal;
+                padding: 0;
+                border: 0;
+                cursor: pointer;
+            }
+            a:hover,
+            a.on {
+                background-color: #ffaa33;
+                color: #fff;
+                border: 0;
+            }
+            &.re_op_tip_menu {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            a {
+                position: static;
+                display: block;
+                width: 85px;
+                padding: 0 0 0 15px;
+                text-align: left;
+                &:hover,
+                &.on {
+                    background-color: #ffaa33;
+                    color: #fff;
+                    border: 0}
+                &.show {
+                    display: block;
+                }
+                &.hide {
+                    display: none;
+                }
+            }
+        }
+        .audio_container,
+        .attach_container {
+            margin-bottom: 20px;
+        }
+        .feedbackVersion {
+            color: #9b9b9b;
+            font-size: 12px;
+        }
+    }
+    .stickyTip,
+    .printWeiboPerfect {
+        width: 52px;
+        height: 32px;
+        z-index: 1;
+        text-indent: -9999px;
+        @include bg_with_retina(up-perfect, png, $versionImgPath);
+    }
+    .stickyTip {
+        background-position: 0 0;
+        @include abs-pos(-2px, 145px, auto, auto);
+    }
+    .printWeiboPerfect {
+        @include abs-pos(-2px, 95px, auto, auto);
+        background-position: 0 -40px;
+    }
+    .get_more_or_less {
+        height: 110px;
+        margin-top: -100px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        top: 0;
+        -webkit-transition: height .2s ease 0s,padding-top .2s ease 0s;
+        -moz-transition: height .2s ease 0s,padding-top .2s ease 0s;
+        -o-transition: height .2s ease 0s,padding-top .2s ease 0s;
+        -ms-transition: height .2s ease 0s,padding-top .2s ease 0s;
+        transition: height .2s ease 0s,padding-top .2s ease 0s;
+        &:hover {
+            height: 100px;
+            padding-top: 10px;
+            overflow: hidden;
+            .icon_D_arrow_G {
+                background-position: -401px -40px;
+            }
+        }
+        &.up {
+            margin-top: 0;
+            height: 30px;
+            transition: none;
+            padding-top: 0;
+        }
+        .gradient_white_bg {
+            display: block;
+            height: 70px;
+            width: 100%;
+            @include bg_with_retina(gradient-white, png, $baseImgRootPath);
+            background-repeat:repeat-x;
+        }
+        .get_less_article,
+        .get_more_article {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: #fff;
+            .icon_D_arrow_G,
+            .icon_U_arrow_G {
+                margin-top: 8px;
+                position: relative;
+                left: -33px;
+                background-position: -441px 0;
+            }
+            &:hover {
+                .icon_D_arrow_G {
+                    background-position: -401px -40px;
+                }
+                .icon_U_arrow_G {
+                    background-position:-441px -40px;
+                }
+            }
+        }
+    }
+    .weibo_buoy {
+        width: 84px;
+        height: 40px;
+        position: fixed;
+        bottom: 0;
+        margin-left: 163px;
+        display: block;
+        z-index: 2;
+        @include bg_with_retina(twit-handle-colllapse, png, $baseImgRootPath);
+        background-position: -3px -2px;
+        i {
+            margin-top: 16px;
+            margin-left: 28px;
+            background-position: -441px 0;
+        }
+        &.re_weibo_buoy {
+            background-position: -133px -2px;
+            margin-left: 193px;
+        }
+    }
+    /*无头像日志列表*/
+    &.no_user_photo {
+        margin-left: 0;
+        .aside {
+            display: none;
+        }
+        .article_content {
+            padding: 0;
+        }
+        .article_operation {
+            padding-left: 0;
+        }
+        .xnw_inner_rt_box,
+        .xnw_say_something {
+            margin-left: 0;
+            .talk_area_textarea {
+                width: 588px;
+            }
+            .upload_something {
+                width: 580px;
+            }
+        }
+        .xnw_inner_rt_box {
+            .rt_log_list {
+                .one_article {
+                    width: auto;
+                }
+            }
+            .ke-container-qq {
+                width: 596px !important;
+            }
+        }
+        .comment_list_content {
+            margin-left: 0;
+        }
+        .publish_comment {
+            .comment_textarea {
+                width: 608px;
+            }
+            .icon_container {
+                width: 538px;
+            }
+            .upload_something {
+                width: 600px;
+            }
+        }
+        .add_topic {
+            width: 100%;
+        }
+    }
+    .wb_add_img {
+        .thumbnail_img {
+            height: 182px;
+            line-height: 182px;
+            width: 182px;
+        }
+        .noMargin {
+            margin-right: 0;
+        }
+    }
+    .referUserList {
+        font-size: 12px;
+        line-height: 30px;
+        color: $grayFontColor;
+        margin-bottom: 10px;
+        .reminderIcon {
+            font-size: 12px;
+            margin-right: 8px;
+            @include rel-pos($top: 1px);
+        }
+    }
+
+    /*两条评论*/
+    .briefComment {
+        width: calc(100% - 32px);
+        padding-left: 16px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 2px;
+            @inclue border-radius(2px);
+            display: block;
+            background: $lightGrayBg;
+            height: 100%;
+            @include abs-pos(0, auto, auto, 0);
+        }
+        .item {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 32px;
+            .userPhoto {
+                width: 24px;
+                height: 24px;
+                @include border-radius(100%);
+                padding-right: 8px;
+                @include abs-pos(3px, auto, auto, 0);
+                img {
+                    width: 24px;
+                    height: 24px;
+                    @include border-radius(100%);
+                }
+            }
+            .userName {
+                max-width: 80px;
+                display: inline-block;
+                @include text-truncate();
+                vertical-align: middle;
+                .author {
+                    color: $orangeFontColor;
+                }
+            }
+            .content {
+                display: inline-block;
+                background: $lightGrayBg;
+                @include border-radius(4px);
+                line-height: 30px;
+                height: 30px;
+                margin-left: 15px;
+                width: calc(100% - 35px);
+                padding: 0 10px;
+                position: relative;
+                &:before {
+                    content: '';
+                    border-right-color: #f5f5f5;
+                    border-top: 0;
+                    border-left: 0;
+                    border-bottom-color: transparent;
+                    border-bottom-width: 12px;
+                    border-right-width: 14px;
+                    display: block;
+                    position: absolute;
+                    border-style: solid;
+                    top: 9px;
+                    left: -14px;
+                }
+                i {
+                    position: relative;
+                    top: 3px;
+                }
+                time {
+                    color: $grayFontColor;
+                    display: inline-block;
+                    vertical-align: middle;
+                    position: relative;
+                    margin-left: 25px;
+                    &:before {
+                        content: '';
+                        width: 4px;
+                        height: 4px;
+                        @include border-radius(100%);
+                        background: $grayFontColor;
+                        display: inline-block;
+                        @include abs-pos(14px, auto, auto, -15px);
+                    }
+
+                }
+                .text {
+                    vertical-align: middle;
+                    @include text-truncate();
+                    display: inline-block;
+                    max-width: calc(100% - 105px - 100px - 32px); //评论内容 = 100% - 用户名的宽度 - 评论日期的宽度 - 多媒体的宽度
+                }
+            }
+
+        }
+
+    }
+}
+
+.multi_media_title {
+    font-weight: normal;
+    color: $darkOrangeFontColor;
+    font-size: 12px;
+    margin-bottom: 20px;
+    p.media_title {
+        padding-right: 10px;
+        color: $blackFontColor !important;
+        margin: 0;
+        line-height: 14px;
+        overflow: hidden;
+        span {
+            background-color: $orangeFontColor;
+            padding-left: 2px;
+            margin-right: 10px;
+        }
+        em {
+            color: $grayFontColor;
+            padding: 0 4px;
+            font-style: normal;
+        }
+    }
+}
+
+.weibo_attach {
+    span {
+        color: $grayFontColor;
+        margin-left: 20px;
+    }
+}
+.backNav {
+    margin: 20px auto 0;
+    width: 940px;
+    background-color: $bodyBg;
+    a {
+        color: $grayFontColor;
+    }
+}
+.wb_add_img {
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 1;
+    img {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    a {
+        background: url('/images/version/defaultPic.png') no-repeat center;
+    }
+
+    a.thumbnail_img {
+        position: relative;
+        text-align: center;
+        margin: 0 10px 10px 0;
+        float: left;
+        overflow: hidden;
+    }
+    a.special_margin_right {
+        margin-right: 160px;
+    }
+    a.thumbnail_img .img_width {
+        max-width: 100%;
+        max-height: auto;
+        height: auto;
+    }
+    a.thumbnail_img .img_height {
+        max-height: 182px;
+        width: auto;
+    }
+    a.normal_image {
+        max-width: 100%;
+        max-height: 400px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        vertical-align: middle;
+        line-height: normal;
+        img {
+            max-width: 100%;
+            max-height: 400px;
+        }
+    }
+    a.bigger_width {
+        max-height: 200px;
+        margin: 0 auto;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        vertical-align: middle;
+        line-height: normal;
+        img {
+            height: auto !important;
+            max-height: 200px;
+        }
+    }
+    a.bigger_height {
+        max-width: 200px;
+        height: 500px;
+        display: block;
+        overflow: hidden;
+        margin: 0 auto;
+        text-align: center;
+        vertical-align: middle;
+        line-height: normal;
+        img {
+            width: auto !important;
+            max-width: 200px;
+        }
+    }
+    .img_loading {
+        display: none;
+        position: relative;
+        left: -16px;
+    }
+    .small,
+    .thumbnail_img{
+        &:hover {
+            cursor: url(/images/big.cur),
+                    url(/images/big.png),auto;
+        }
+    }
+    // deprecated
+    .shrink_arrow{
+        cursor: url(/images/small.cur),
+                url(/images/small.png),auto;
+        text-align: center;
+    }
+    .left_arrow {
+        cursor: url(/images/pic_prev.cur),auto;
+    }
+    .right_arrow {
+        cursor: url(/images/pic_next.cur),auto;
+    }
+    .left_arrow,
+    .right_arrow {
+        display: block;
+        background: #fff;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .picGtTwelve {
+        @include abs-pos(0, auto, auto, 0);
+        background: rgba( 0, 0, 0, 0.3);
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-size: 50px;
+        z-index: 1;
+        i {
+            color: #fff;
+            font-size: 40px;
+            @include abs-pos(50%, 8px, auto, auto);
+            margin-top: -20px;
+        }
+    }
+}
+
+.label_list {
+    .remove_qun_tag,
+    .add_fav_tag_btn {
+        @extend %tag_item;
+        .tag_icon {
+            @include bg_with_retina(g-tag, png, $versionImgPath);
+        }
+        .tag_name {
+            background-color: $lightGrayBg;
+            border: 1px solid $lightGrayBg;
+        }
+    }
+    .remove_weibo_tag {
+        display: inline-block;
+        vertical-align: middle;
+        @include rel-pos($top: 2px, $right: -4px);
+        i {
+            color: $tagBlue;
+        }
+    }
+    .oneTag {
+        color: $orangeFontColor !important;
+        background-color: $bgOrange;
+        padding-right: 18px;
+        margin: 0 12px 10px 0;
+        &.noRemove{
+            padding-right: 6px;
+        }
+        &:hover,
+        &.on {
+            border: 1px solid $borderOrange;
+        }
+        &:last-child {
+            margin-bottom: 20px;
+        }
+    }
+    .remove_channel {
+        @include abs-pos(0, 0, auto, auto);
+        width: 20px;
+        text-align: center;
+        cursor: pointer;
+        i {
+            color: $orangeFontColor;
+        }
+    }
+
+    .addFavTag {
+        height: 20px;
+        line-height: 20px;
+        padding: 0 4px;
+        font-size: 12px;
+        background-color: #ECECEC;
+        color: #9B9B9B !important;
+        display: inline-block;
+        margin: 0 7px 20px 7px;
+        @include border-radius(2px);
+        &:hover {
+            color: #FFFFFF !important;
+            background-color: #AEAEAE;
+        }
+    }
+
+    .favTagItem {
+        height: 20px;
+        line-height: 20px;
+        padding: 0 4px;
+        font-size: 12px;
+        background-color: #DBF0FF;
+        color: $lightBlueFontColor;
+        display: inline-block;
+        margin: 0 7px 7px 7px;
+        @include border-radius(2px);
+        &:hover {
+            color: #FFFFFF;
+            background-color: #3CA9F7;
+            i {
+                color: #FFFFFF;
+            }
+        }
+        .removeFavTag {
+        }
+        i {
+            color: $lightBlueFontColor;
+            @include rel-pos($top: 2px);
+        }
+    }
+}
+.markdown_log {
+    word-break: break-all;
+}
+
+//活动日志卡片的样式
+.vote_card {
+    height: 138px;
+    margin-bottom: 20px;
+    position: relative;
+    @extend %baseCardStyle;
+    .textColor {
+        color: $grayFontColor;
+    }
+}
+.vote_container {
+    padding-left: 154px;
+    z-index: 1;
+    .vote_title {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 6px;
+        padding-right: 10px;
+        &.card {
+            @include text-truncate();
+        }
+    }
+    .vote_img {
+        @include abs-pos($top: 5px, $left: 5px);
+        width: 128px;
+        height: 128px;
+        display: block;
+        cursor: default;
+        @include bg_with_retina(vote_icon, png, $versionImgPath);
+        background-color: #fff;;
+        background-position: center center;
+    }
+    .vote_flag {
+        height: 42px;
+        width: 50px;
+        display: block;
+        cursor: default;
+        @include abs-pos($top: 8px, $left: 8px);
+        @include bg_with_retina(vote-ended, png, $versionImgPath);
+    }
+    .votedInfo {
+        @include abs-pos($bottom: 6px, $left: 124px);
+        &.normalVotedInfo {
+            @include abs-pos($bottom: 10px, $right: 10px);
+        }
+    }
+    .vote_user_num {
+        color: $grayFontColor;
+        font-size: 12px;
+        margin-right: 20px;
+        .votedCount {
+            color: $orangeFontColor;
+        }
+    }
+    .vote_btn {
+        color: #fff !important;
+    }
+    .voteOpts {
+        @include text-truncate();
+        padding-right: 10px;
+        input {
+            margin: 0 10px 0 2px;
+        }
+    }
+}
+.activityContent {
+    @extend %baseCardStyle;
+    padding: 300px 20px 15px;
+    width: 452px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    position: relative;
+    .activityPosterFlag {
+        z-index: 1;
+    }
+    .activityPoster {
+        @include abs-pos(0, auto, auto, 0);
+        width: 100%;
+        height: 300px;
+    }
+    .show_complete_content  {
+        display: none;
+    }
+    .activityTitle{
+        margin-top: 20px;
+    }
+    .activityInfo,
+    .activityAddress,
+    .activityTime {
+        font-size: 12px;
+    }
+    .activityDetailBtn {
+        display: block;
+        color: #fff !important;
+        @include abs-pos(auto, 10px, 10px, auto);
+    }
+}
+.questionContent {
+    @extend %baseCardStyle;
+    padding: 6px 10px 6px 154px;
+    width: 400px;
+    height: 128px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    position: relative;
+    .questionPoster {
+        @include abs-pos(6px, auto, auto, 6px);
+        width: 128px;
+        height: 128px;
+        @include bg_with_retina(questionnaire_poster, png , $versionImgPath);
+    }
+    .question_flag {
+        height: 42px;
+        width: 50px;
+        display: block;
+        cursor: default;
+        z-index: 2;
+        @include abs-pos($top: 8px, $left: 8px);
+        @include bg_with_retina(question-ended, png, $versionImgPath);
+    }
+    .show_complete_content  {
+        display: none;
+    }
+    .questionTitle{
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 30px;
+    }
+    .questionTime {
+        font-size: 12px;
+        line-height: 24px;
+        color: $grayFontColor;
+    }
+    .questionUserCount {
+        font-size: 12px;
+        line-height: 24px;
+        color: $grayFontColor;
+        .userCount {
+            color: $orangeFontColor;
+        }
+    }
+    .viewDetailBtn {
+        display: block;
+        color: #fff !important;
+        @include abs-pos(auto, 10px, 10px, auto);
+    }
+}
+.incomplete_activity_content,
+.incomplete_question_content,
+.incomplete_vote .vote_container {
+    height: 98px;
+    @extend %baseCardStyle;
+    padding: 5px 20px 5px 124px !important;
+    position: relative;
+    line-height: 22px;
+    .show_no_pic_video {
+        right: 20px !important;
+    }
+}
+.incomplete_activity_content {
+    .activityPoster {
+        height: 98px;
+        width: 98px;
+        @include abs-pos($top: 5px, $left: 5px);
+    }
+    .activity_area {
+        max-height: 90px;
+        display: inline-block;
+        overflow: hidden;
+    }
+    h3 {
+        max-height: 62px;
+        overflow: hidden;
+        font-weight: normal;
+        font-size: 16px;
+        color: $blackFontColor;
+        line-height: 24px;
+        margin-top: 6px;
+    }
+    .color_darkgray {
+        margin-top: 4px;
+        color: $lightBlackFontColor;
+        min-height: 70px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}
+.incomplete_question_content {
+    .questionPoster {
+        height: 98px;
+        width: 98px;
+        @include abs-pos($top: 5px, $left: 5px);
+        @include bg_with_retina(s_questionnaire_poster, png, $versionImgPath);
+    }
+    .question_flag {
+        height: 29px;
+        width: 34px;
+        display: block;
+        cursor: default;
+        z-index: 2;
+        @include abs-pos($top: 6px, $left: 6px);
+        @include bg_with_retina(s-question-ended, png, $versionImgPath);
+    }
+    .question_area {
+        max-height: 90px;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .questionTitle {
+        max-height: 62px;
+        overflow: hidden;
+        font-weight: normal;
+        font-size: 16px;
+        color: $blackFontColor;
+        line-height: 24px;
+        margin-top: 6px;
+    }
+    .questionTime {
+        font-size: 12px;
+        color: $grayFontColor;
+        margin-bottom: 10px;
+    }
+    .viewDetailBtn {
+        margin-top: 18px;
+    }
+}
+.incomplete_vote {
+    .vote_container {
+        width: auto;
+        margin-top: 0;
+        @include border-radius(0);
+    }
+    .vote_img {
+        width: 98px;
+        height: 98px;
+        @include border-radius(0);
+        background-color: #fff;
+    }
+}
+
+//日志新的标题列表模式样式 start
+.oneArticleTitle {
+    padding: 10px 0;
+    border-bottom: 1px solid $lightLineGray;
+    position: relative;
+    &:hover {
+        .tip_menu {
+            visibility: visible;
+        }
+    }
+    .pubInfo {
+        margin-bottom:10px;
+        .profile {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            float:left;
+            img {
+                width: 24px;
+                height: 24px;
+                @include border-radius(100%);
+            }
+        }
+        .name {
+            float: left;
+            display: inline-block;
+            color: $blackFontColor;
+            margin: auto 12px auto 10px;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .time {
+            float: right;
+            color: $grayFontColor;
+            font-size: 12px;
+            display: inline-block;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .aside {
+        width: 160px;
+        height: 96px;
+        overflow: hidden;
+        margin-left: 20px;
+        float: right;
+        position: relative;
+        img {
+            max-width: 100%;
+        }
+        .videoIcon {
+            @include abs-pos(20px, auto, auto, 50px);
+            font-size: 60px;
+            color: #fff;
+        }
+        .voteImg {
+            @include bg_with_retina(vote_icon, png, $versionImgPath);
+            background-color: $lightGrayBg;
+        }
+        .questionPoster {
+            @include bg_with_retina(questionnaire_poster, png , $versionImgPath);
+            background-color: #ff7473;
+        }
+        .voteImg,
+        .questionPoster {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-position: center center;
+        }
+        .activityPoster {
+            width: 100%;
+        }
+    }
+    .tip_menu {
+        padding: 5px;
+        visibility: hidden;
+        &:hover {
+            visibility: visible;
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .tip_menu_area {
+        @include abs-pos(0, -30px, auto, auto);
+        height: 34px;
+        width: 26px;
+        z-index: 1;
+        padding: 0 10px;
+        &:hover .tip_menu{
+            visibility: visible;
+        }
+    }
+    .top_tip_menu {
+        @include abs-pos(10px, 0, auto, auto);
+        width: 100px;
+        z-index: 2;
+        @extend %weiboMenuLayer;
+        &.re_op_tip_menu {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        a {
+            &.show {
+                display: block;
+            }
+            &.hide {
+                display: none;
+            }
+        }
+    }
+    .section {
+        position: relative;
+        float: left;
+        width: 100%;
+        &.havePic {
+            width: 70%;
+        }
+
+        h3 {
+            font-size: 16px;
+            color: $blackFontColor;
+            margin-bottom: 8px;
+            max-width: 100%;
+            @include text-truncate();
+        }
+    }
+    .bottomArea {
+        position: relative;
+        margin-top: 12px;
+        font-size: 12px;
+        display: block;
+        word-spacing: -4px;
+        .activityStatusIcon {
+            color: #FFAA33;
+            position: relative;
+            top: 2px;
+        }
+        .activityStatus {
+            color: #FFAA33;
+            font-size: 12px;
+            margin-right: 20px;
+            margin-left: 5px;
+        }
+        .stickyTip,
+        .weiboPerfect,
+        .essenceTip,
+        .evaluationTip{
+            & +.icon {
+                margin-left: 10px;
+            }
+        }
+
+        .icon {
+            color: $lightBlackFontColor;
+            margin-right: 15px;
+            i {
+                color: $lightBlackFontColor;
+                padding-right: 3px;
+                position: relative;
+                top: 3px;
+                font-size: 14px;
+            }
+        }
+        .tip {
+            color: $grayFontColor;
+            margin-right: 16px;
+        }
+        .moreOper {
+            position: relative;
+            display: inline-block;
+            width: 30px;
+        }
+        .show_more {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            z-index: 100;
+            @extend %weiboMenuLayer;
+        }
+    }
+    .mainContent {
+        color: $lightBlackFontColor;
+        line-height: 22px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        &.haveTitle {
+            -webkit-line-clamp: 2;
+        }
+        .rt, .rtFrom, .rtContent {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .rt {
+            max-width: 640px;
+            @include text-truncate();
+            &.haveAside {
+                max-width: 380px;
+            }
+        }
+        .rtFrom {
+            color: $blueFontColor;
+            max-width: 140px;
+            @include text-truncate();
+        }
+        i {
+            vertical-align: middle;
+        }
+    }
+    .activityDate {
+        color: #5B5B5B;
+    }
+    .stickyTip{
+        @extend %markedTip;
+        color: #80C334;
+        border: 1px solid #80C334;
+        &:before {
+            content: '顶';
+        }
+        &.hide {
+            display: none;
+        }
+    }
+    .voteTip {
+        @extend %typeTip;
+        background-color: #FB7E81;
+    }
+    .questionnaireTip {
+        @extend %typeTip;
+        background-color: #67C597;
+    }
+    .activityTip {
+        @extend %typeTip;
+        background-color: #FC9B58;
+    }
+}
+//日志新的标题列表模式样式 end
+
+.oneArticleTitle + .one_article {
+    margin-top: 20px;
+}
+
+.pubHtmlWeiboNav {
+    margin-top: 10px;
+}
+.htmlWeiboMain {
+    margin-top: 10px;
+    .say_something_container {
+        margin: 18px 18px 68px 18px;
+    }
+}
+.theme {
+    font-size: 16px;
+    width: 940px;
+    padding-left: 5px;
+    margin: 10px auto 0;
+    color: $blackFontColor;
+    background-color: $bodyBg;
+}

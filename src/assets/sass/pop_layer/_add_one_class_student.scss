@@ -1,0 +1,117 @@
+#addOneClassStudent {
+    width: 575px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    z-index: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+    }
+    .cancelAddStudent {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border: none;
+        background: none;
+        background-color: #ccc;
+        @include border-radius(2px);
+    }
+    .addStudentItem {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border: none;
+        background: none;
+        background-color: #ffaa33;
+        margin-left: 16px;
+        @include border-radius(2px);
+        &.disabled {
+            background-color: #ccc;
+        }
+    }
+    .content {
+        padding-top: 30px;
+    }
+    .relationInfo {
+        margin-top: 14px;
+        padding-top: 26px;
+        position: relative;
+        border-top: 1px solid #e8e8e8;
+        .relationTitle {
+            padding: 0 20px;
+            background-color: #fff;
+            @include abs-pos(-12px, auto, auto, 0);
+
+        }
+    }
+    .infoItem {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 20px;
+        padding-left: 15px;
+        float: left;
+    }
+    .infoInput {
+        height: 28px;
+        border: 1px solid #ddd;
+        width: 150px;
+        padding: 0 4px;
+    }
+    .infoTitle {
+        width: 70px;
+        display: inline-block;
+        text-align: right;
+        color: $grayFontColor;
+        position: relative;
+        &.mobileInput {
+            margin-left: 76px;
+        }
+        .infoFlag {
+            color: $darkOrangeFontColor;
+            @include abs-pos(0, auto, auto, 15px);
+        }
+        &.mobileOrUid {
+            width: 115px;
+        }
+    }
+    .relationItem {
+        margin-bottom: 20px;
+        padding-left: 30px;
+    }
+    .addStudentTip {
+        font-size: 12px;
+        color: $grayFontColor;
+        padding-left: 20px;
+        .tip {
+            color: $orangeFontColor;
+            margin: 0 2px;
+        }
+    }
+    @extend %chosenContainerStyle;
+    .chosen-drop {
+        &.autocomplete {
+            left: 110px;
+        }
+    }
+}

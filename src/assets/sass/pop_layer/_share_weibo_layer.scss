@@ -1,0 +1,16 @@
+#share_weibo_layer {
+    &.pop_privacy_mes {
+        width: 680px;
+    }
+    .privacy_message {
+        padding: 0;
+        z-index: 11;
+    }
+    .xnw_say_something {
+        @include border-radius(0);
+        background-color: #F7F9F9;
+        .upload_something {
+            border-top: 1px solid #DBE9F2;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+/**第三出版方添加课程班模板群**/
+#_addQunModelLayer {
+    width: 438px;
+    .privacy_message {
+        color: $grayFontColor;
+        padding: 20px 0 0 0;
+    }
+    .content {
+        padding: 0 20px;
+    }
+    .qunInput {
+        @include border-radius(2px);
+        border: 1px solid #ddd;
+        line-height: 18px;
+        padding: 3px;
+        margin: 20px 0 0;
+        width: 280px;
+    }
+    .errMsg {
+        color: #F61313;
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        padding: 0 20px;
+        background-color: #f5f5f5;
+    }
+}

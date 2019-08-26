@@ -1,0 +1,225 @@
+@charset "UTF-8";
+.classPerformance,
+.addClassPerformanceRecord {
+    .colorBlock {
+        width: 13px;
+        height: 13px;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: 5px;
+        @include border-radius(2px);
+        background-color: #FADF04;
+        &.level1 {
+            background-color: #FB7E81;
+        }
+        &.level0 {
+            background-color: #FADF04;
+        }
+        &.level2 {
+            background-color: #B6DD49;
+        }
+        &.level3 {
+            background-color: #E590C2;
+        }
+        &.level4 {
+            background-color: #86CAFB;
+        }
+        &.levelNull {
+            background-color: #BBB;
+        }
+    }
+}
+// 课堂表现
+.classPerformanceItem {
+    .userAccount {
+        height: 24px;
+    }
+
+    .statusFlag {
+        display: block;
+        @include abs-pos(0, 0, auto, auto);
+        @include border-radius(0 2px 0 0);
+        border-style: solid;
+        border-width: 15px;
+        border-color: #FADF04 #FADF04 transparent  transparent;
+        &.flag0 {
+            border-color: #FADF04 #FADF04 transparent  transparent;
+        }
+        &.flag1 {
+            border-color: #FB7E81 #FB7E81 transparent  transparent;
+        }
+        &.flag2 {
+            border-color: #B6DD49 #B6DD49 transparent  transparent;
+        }
+        &.flag3 {
+            border-color: #E590C2 #E590C2 transparent  transparent;
+        }
+        &.flag4 {
+            border-color: #86CAFB #86CAFB transparent  transparent;
+        }
+        &.flagNull {
+            border-color: #BBB #BBB transparent  transparent;
+        }
+    }
+    .viewComment {
+        font-size: 12px;
+        top: -6px;
+        position: relative;
+        cursor: default;
+    }
+    .commentPopLayer {
+        position: absolute;
+        z-index: 1;
+        left: -15px;
+        width: 150px;
+        padding: 5px;
+        background: #FFFFFF;
+        border: 1px solid #EEEEEE;
+        @include border-radius(5px);
+        @include box-shadow(0 4px 8px 0 rgba(0, 0, 0, .19));
+        .status {
+            width: 80px;
+            height: 82px;
+            margin: 0 auto;
+            display: block;
+            @include bg_with_retina(commentStatus, png, $evaluationImgPath);
+            &.status1,
+            &.status401 {
+                background-position: 5px center;
+            }
+            &.status0,
+            &.status403 {
+                background-position: -115px center;
+            }
+            &.status2,
+            &.status402 {
+                background-position: -235px center;
+            }
+            &.status3,
+            &.status404 {
+                background-position: -355px center;
+            }
+            &.status4,
+            &.status408 {
+                background-position: -475px center;
+            }
+        }
+        &.havePic {
+            width: 300px;
+        }
+        .triangleIcon {
+            width: 0;
+            color: #EEEEEE;
+            border-width: 10px;
+            border-style: solid;
+            @include abs-pos(-20px, auto, auto, 70px);
+            border-color: transparent transparent #FFFFFF transparent;
+        }
+        .commentTxt {
+            display: block;
+            margin: 5px 10px;
+        }
+
+        .picContainer {
+            width: 220px;
+            margin: 0 auto;
+            .imgWrap {
+                display: inline-block;
+                width: 96px;
+                height: 80px;
+                &:first-child {
+                    margin-right: 20px;
+                }
+                img {
+                    max-width: 96px;
+                    max-height: 80px;
+                }
+            }
+
+        }
+    }
+}
+
+.modifyClassPerformance {
+    padding-bottom: 20px;
+    line-height: 175%;
+    min-height: 0;
+    .viewComment {
+        color: #0088CC;
+    }
+}
+
+.classPerformanceLayer {
+    .privacy_message {
+        padding: 0;
+    }
+    .newBtnArea {
+        margin-top: 0;
+    }
+    .setPerformanceContainer {
+        .content {
+            width: 280px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .commentArea {
+            resize: none;
+            width: 320px;
+            height: 50px;
+            padding: 10px;
+            margin: 0 19px;
+            border: 1px solid #EEEEEE;
+            @include border-radius(2px);
+        }
+    }
+    .uploadBox {
+        width: 473px;
+        margin-left: 65px;
+        text-align: left;
+        .upload_something {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .multi_media_area {
+            border: 1px solid $lightLineGray;
+            padding: 0;
+        }
+        .media_title {
+            .count {
+                color: #009FEE;
+            }
+            .block {
+                background: #009FEE;
+            }
+        }
+        .log_one_pic {
+            margin-bottom: 10px;
+        }
+    }
+    .uploadPic {
+        background-color: $lightLineGray;
+        @include border-radius(0 0 2px 2px);
+        background-clip: border-box;
+        width: 100%;
+        height: 30px;
+        .uploadBtn {
+            position: relative;
+            overflow: hidden;
+            padding: 5px 5px 0 10px;
+            display: block;
+            width: 20px;
+            &:hover {
+                i {
+                    color: $lightBlackFontColor;
+                }
+            }
+            input {
+                @include abs-pos($top: 5px, $right: 0);
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

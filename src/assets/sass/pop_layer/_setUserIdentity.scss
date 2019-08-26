@@ -1,0 +1,96 @@
+#setUserIdentity {
+    width: 680px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    .title {
+        height: 60px;
+        line-height: 60px;
+        text-indent: -100%;
+        @include bg_with_retina(set_identity_bg, png, $versionImgPath);
+        .closeBtn {
+            display: none;
+        }
+    }
+    .userIdentityList {
+        padding: 60px 0;
+    }
+    .userIdentityItem {
+        width: 154px;
+        padding-top: 150px;
+        margin: 0 36px;
+        float: left;
+        @include bg_with_retina(identity_bg, png, $versionImgPath);
+        &.studentRole {
+            background-position: 0 0;
+        }
+        &.guardianRole {
+            background-position: -228px 0;
+        }
+        &.teacherRole {
+            background-position: -456px 0;
+        }
+    }
+    .identityItem {
+        width: 72px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        border: 1px solid #ffaa33;
+        display: block;
+        margin: 20px auto;
+        color: $orangeFontColor;
+        @include border-radius(100px);
+        box-shadow: 0 0 4px 2px rgba(255, 170, 51, .15);
+        &:hover {
+            color: #fff;
+            background-color: #ffaa33;
+        }
+    }
+}
+#chooseTeacherIdentity {
+    width: 680px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    .title {
+        height: 60px;
+        line-height: 60px;
+        text-indent: -100%;
+        @include bg_with_retina(set_teacher_bg, png, $versionImgPath);
+        .closeBtn {
+            display: none;
+        }
+    }
+    .teacherIdentityList {
+        padding: 60px 0;
+        text-align: center;
+    }
+    .teacherIdentityItem {
+        width: 154px;
+        padding-top: 150px;
+        margin: 0 36px;
+        display: inline-block;
+        @include bg_with_retina(identity_bg, png, $versionImgPath);
+        &.headTeacher {
+            background-position: -684px 0;
+        }
+        &.teacher {
+            background-position: -912px 0;
+        }
+    }
+    .identityItem {
+        width: 74px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        border: 1px solid #ffaa33;
+        display: block;
+        margin: 20px auto;
+        color: $orangeFontColor;
+        @include border-radius(100px);
+        box-shadow: 0 0 4px 2px rgba(255, 170, 51, .15);
+        &:hover {
+            color: #fff;
+            background-color: #ffaa33;
+        }
+    }
+}

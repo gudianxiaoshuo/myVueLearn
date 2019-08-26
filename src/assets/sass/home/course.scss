@@ -1,0 +1,100 @@
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+@import "_home-reset.scss";
+
+#homeCoursePage {
+    margin-top: 34px;
+    .tabArea {
+        margin-bottom: 30px;
+        .oneTab {
+            height: 26px;
+            line-height: 26px;
+            margin-right: 38px;
+            color: $lightBlackFontColor;
+            display: inline-block;
+            &:hover {
+                color: $orangeFontColor;
+            }
+            &.on {
+                color: $orangeFontColor;
+                border-bottom: 2px solid $orangeFontColor;
+            }
+        }
+    }
+    .myCourseTable {
+        color: $blackFontColor;
+        width: 100%;
+        border: 1px solid #E4EAEE;
+        @include border-radius(2px);
+        tr {
+            border-bottom: 1px solid #E4EAEE;
+            &.header {
+                height: 30px;
+                line-height: 30px;
+                background: #F5F8FA;
+                color: #78868F;
+                th {
+                    font-weight: normal;
+                    &:first-child {
+                        text-indent: 30px;
+                        text-align: left;
+                    }
+                }
+            }
+            &.oneCourse {
+                td {
+                    padding: 10px 0;
+                    text-align: center;
+                    &.baseInfo {
+                        text-align: left;
+                        line-height: 36px;
+                        position: relative;
+                        a {
+                            color: $blackFontColor;
+                            .cover {
+                                @include abs-pos(auto, auto, auto, 30px);
+                                display: inline-block;
+                                img {
+                                    width: 100px;
+                                    height:70px;
+                                }
+                            }
+                            .info {
+                                margin-left: 150px;
+                                display:inline-block;
+                                span {
+                                    display: block;
+                                }
+                                .courseName {
+                                    font-family: STHeitiSC-Medium;
+                                }
+                                .period {
+                                    font-size: 12px;
+                                    color: $grayFontColor;
+                                }
+                            }
+                        }
+                    }
+                    &.teacher {
+                    }
+                    &.times:not(.current) {
+                        color: $grayFontColor;
+                    }
+                    &.nextClass {
+                        color: $grayFontColor;
+                        .startTime, .classHours {
+                            height: 28px;
+                            line-height: 28px;
+                        }
+                        .startTime {
+                            color: $blackFontColor;
+                        }
+                    }
+                    .detailLink {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

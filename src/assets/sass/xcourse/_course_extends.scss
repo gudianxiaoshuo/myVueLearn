@@ -1,0 +1,79 @@
+%mainContainerStyle {
+    @include border-radius(2px);
+    box-shadow: 0 2px 4px 0 rgba(211, 211, 211,0.3);
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+%mainTitleStyle {
+    font-size: 14px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+%oneUnit {
+    position: relative;
+    .unitName,
+    .sectionName {
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #FEEED4;
+        color: $orangeFontColor;
+        @include text-truncate();
+        @include border-radius(2px);
+        cursor: pointer;
+        i {
+            color: $orangeFontColor;
+        }
+        &:hover{
+            background-color: #FEEED4;
+        }
+        .del {
+            @include abs-pos(12px, 10px, auto, auto);
+            cursor: pointer;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .unitName {
+        padding: 0 60px 0 30px;
+        position: relative;
+        background-color: #fff;
+        z-index: 2;
+        &.on {
+            background-color: #FEEED4;
+        }
+        .arrow {
+            @include abs-pos(12px, auto, auto, 10px);
+        }
+        .add {
+            @include abs-pos(12px, 40px, auto, auto);
+            cursor: pointer;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .oneSection {
+        padding-left: 30px;
+        margin: 14px 0 0 20px;
+        position: relative;
+        &.on {
+            .sectionName {
+                background-color: #FEEED4;
+            }
+        }
+        .sectionName {
+            padding: 0 20px 0 10px;
+        }
+    }
+}
+%workInfoBox {
+    color: $lightBlackFontColor;
+    h4 {
+        color: $orangeFontColor;
+        margin: 15px 0;
+    }
+}

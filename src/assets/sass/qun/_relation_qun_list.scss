@@ -1,0 +1,152 @@
+.relationQunContainer {
+    margin-top: 15px;
+    .relationTitle {
+        height: 38px;
+        line-height: 38px;
+        font-weight: normal;
+        position: relative;
+        font-size: 14px;
+        margin: 0 10px 8px;
+        padding: 18px 16px 0;
+        border-top: 1px solid #e8e8e8;
+    }
+    .relationInQun {
+        padding: 0 9px;
+    }
+    .tree_view {
+        @include abs-pos(10px, 42px, auto, auto);
+        cursor: pointer;
+        &.only_tree_view {
+            @include abs-pos(10px, 0, auto, auto);
+        }
+        i {
+            @include rel-pos(2px, auto, auto, auto);
+        }
+        &:hover {
+            i {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .manageRelationQun {
+        @include abs-pos(18px, 16px, auto, auto);
+        cursor: pointer;
+        font-size: 12px;
+        color: $grayFontColor;
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+    .manage_relation_qun {
+        @include abs-pos(50px, 16px, auto, auto);
+        background-color: #fff;
+        z-index: 100;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+        padding: 5px 0;
+        a {
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+            width: 80px;
+            text-align: center;
+            color: $blackFontColor;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            &:hover,
+            &.on {
+                background-color: #ffaa33;
+                color: #fff;
+            }
+        }
+    }
+    @extend %commonQunListStyle;
+    .qun_item {
+        &.on {
+            .indentityIcon {
+                border: none;
+            }
+        }
+    }
+    .qun_name {
+        padding: 4px 7px 0;
+    }
+    .relation_qun_list {
+        .qun_item {
+            width: 74px;
+            float: none;
+            position: relative;
+            span {
+                display: block;
+                width: 17px;
+                height:85px;
+                border-left:solid 1px $borderGray;
+                border-bottom:solid 1px $borderGray;
+                @include abs-pos($left: 0, $top:-64px);
+            }
+            em {
+                display: none;
+            }
+            &:nth-child(2) em {
+                display: block;
+                background: $borderGray;
+                width: 3px;
+                height: 3px;
+                border: 1px $borderGray solid;
+                @include border-radius(3px);
+                @include abs-pos($left: -2px, $top:-65px);
+            }
+            &:first-child span {
+                width: 34px;
+                border: 0;
+                border-top: solid 1px $borderGray;
+                height: 10px;
+                @include abs-pos($left: -17px, $top:21px);
+            }
+        }
+        &:first-child .qun_item:first-child span {
+            display: none;
+        }
+    }
+    .show_more_qun_layer {
+        display: block;
+        text-align: right;
+        clear: left;
+        font-size: 12px;
+        color: $blackFontColor;
+        cursor: pointer;
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+    .subgroup_column_name,
+    .tager_more_box {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 12px;
+        a {
+            color: $grayFontColor;
+            font-size: 12px;
+            margin-right: 16px;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}
+
+.index_relation_qun_list {
+    .relation_qun_list {
+        .qun_item {
+            width: 66px;
+            &:first-child span {
+                width: 26px;
+                left: -13px;
+            }
+            span {
+                width: 13px;
+            }
+        }
+    }
+}
+

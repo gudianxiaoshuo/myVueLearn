@@ -1,0 +1,163 @@
+@chartset "UTF-8";
+
+.headTeacherGuide {
+    background-color: #FFFFFF;
+    .teacherGuideTitle {
+        @extend  %guideTitle;
+    }
+    .baseQunInfo {
+        margin: 0 30px;
+        padding: 40px 0 12px;
+        border-top: 1px dashed #eee;
+    }
+    .baseInfoItem {
+        margin-bottom: 28px;
+        position: relative;
+        .infoItem {
+            display: inline-block;
+        }
+        .subInfoItem {
+            margin-left: 30px;
+        }
+        .itemName {
+            display: inline-block;
+            text-align: right;
+            width: 210px;
+        }
+        .subItemName {
+            margin-left: 30px;
+        }
+        .oneRadioLabel {
+            margin-right: 40px;
+            .oneRadio {
+                margin-right: 10px;
+            }
+        }
+        .mobileTip {
+            font-size: 12px;
+            color: $grayFontColor;
+            padding-left: 212px;
+        }
+        .verifyMsg {
+            font-size: 12px;
+            color: #F61313;
+            @include abs-pos(30px, auto, auto, 214px);
+            &.eduSchemeMsg {
+                left: 422px;
+            }
+            &.gradeMsg {
+                left: 414px;
+            }
+            &.classMsg {
+                left: 560px;
+            }
+        }
+    }
+    .provinceCitySelection {
+        display: inline-block;
+        &.hide {
+            display: none;
+        }
+    }
+    .nextStep {
+        height: 116px;
+        line-height: 116px;
+        text-align: center;
+        border-top: 1px dashed #eee;
+    }
+    .prevStep {
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: 40px;
+    }
+    .qunRelationInfo {
+        height: 28px;
+        padding: 0 4px;
+        border: 1px solid #eee;
+        @include border-radius(5px);
+        width: 102px;
+        &.longText {
+            width: 430px;
+        }
+        &[readonly] {
+            border: none;
+        }
+    }
+    .nextStepButton {
+        height: 36px;
+        line-height: 36px;
+        width: 270px;
+        text-align: center;
+        background: none;
+        border: none;
+        background-color: #ffaa33;
+        color: #fff;
+        display: inline-block;
+        @include border-radius(5px);
+        &[disabled] {
+            background-color: #ccc;
+        }
+    }
+    .toAddStudent {
+        width: 268px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        border: 1px solid #ffaa33;
+        display: block;
+        margin: 20px auto 40px;
+        color: $orangeFontColor;
+        @include border-radius(100px);
+        box-shadow: 0 0 4px 2px rgba(255, 170, 51, .15);
+        &:hover {
+            color: #fff;
+            background-color: #ffaa33;
+        }
+    }
+    .successTip {
+        text-align: center;
+    }
+    .successImg {
+        width: 290px;
+        height: 260px;
+        margin: 36px 0;
+        @include bg_with_retina(success_img, png, $versionImgPath);
+    }
+    @extend %chosenContainerStyle;
+    .chosen-container,
+    .chosen-container-active.chosen-with-drop {
+        margin-right: 10px;
+        .chosen-single {
+            font-size: 14px;
+            span {
+                font-size: 12px;
+            }
+            div {
+                border: none;
+            }
+        }
+    }
+    .chosen-drop {
+        background: #fff;
+        border: none;
+        padding-top: 4px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+        @include border-radius(0);
+        &.autocomplete {
+            left: 215px;
+        }
+        .chosen-results {
+            margin: 0;
+            padding: 0;
+        }
+        .active-result {
+            padding: 0 0 0 5px;
+            line-height: 24px;
+            font-size: 12px;
+            &.highlighted {
+                color: $blackFontColor;
+                background-color: #f5f5f5;
+            }
+        }
+    }
+}

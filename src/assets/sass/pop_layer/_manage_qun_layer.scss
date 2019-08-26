@@ -1,0 +1,143 @@
+#manageRelationQun {
+    width: 440px;
+    .privacy_message {
+        padding: 0;
+        min-height: 160px;
+    }
+    .switch_realtion_tap {
+        padding: 10px 20px 0;
+        height: 34px;
+        line-height: 34px;
+        border-bottom: 1px solid $lineGray;
+        a {
+            margin-right: 30px;
+            padding: 0 6px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            color: $blackFontColor;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+            &.on {
+                border-bottom: solid 3px $orange;
+                padding-bottom: 0;
+            }
+        }
+    }
+    .add_relation_qun {
+        position: relative;
+    }
+    .childqun_search {
+        @include abs-pos(-38px, 20px, auto, auto);
+    }
+    #search_relation_qun {
+        padding: 2px 0 2px 30px;
+        color: $grayFontColor;
+        height: 18px;
+        width: 138px;
+        font-size: 12px;
+        @include border-radius(40px);
+        border: 1px solid $lineGray;
+    }
+    #search_relation_qun_btn {
+        @include abs-pos(0, auto, auto, 3px);
+        background: 0;
+        border: 0;
+        @include bg_with_retina(xnw-icons, png, $baseXnwImgPath);
+        background-position: -640px 0;
+        height: 16px;
+        width: 16px;
+        cursor: pointer;
+        margin: 6px 0 6px 6px;
+    }
+    #search_relation_qun_list,
+    .manage_relation_qun {
+        .title {
+            margin-bottom: 6px;
+            font-size: 12px;
+            padding: 0 20px;
+        }
+        ul {
+            margin: 10px 0;
+            padding: 0 20px;
+            min-height: 70px;
+        }
+        li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+            img {
+                height: 40px;
+                width: 40px;
+                display: block;
+                margin: 0 auto;
+            }
+            .image_bg {
+                height: 40px;
+                width: 40px;
+                display: block;
+                cursor: pointer;
+                @include abs-pos(0, auto, auto, 30px);
+                background: rgba(0,0,0,0.5);
+                &.hide {
+                    display: none;
+                }
+                &.is_select {
+                    display: block;
+                    i {
+                        @include bg_with_retina(little_icon, png, $baseXnwImgPath);
+                        background-position: -60px -60px;
+                        height: 20px;
+                        width: 20px;
+                        @include abs-pos(auto, 0, 0, auto);
+                    }
+                }
+                &.is_selected {
+                    display: block;
+                    i {
+                        @include bg_with_retina(little_icon, png, $baseXnwImgPath);
+                        background-position: -120px -60px;
+                        height: 20px;
+                        width: 20px;
+                        @include abs-pos(auto, 0, 0, auto);
+                    }
+                }
+            }
+            span {
+                display: block;
+                line-height: 150%;
+                text-align: center;
+                font-size: 12px;
+                &.already_friend_qun {
+                    background-color: $borderGray;
+                    width: 60px;
+                    margin: 0 auto;
+                    color: #fff;
+                }
+            }
+            time {
+                display: block;
+                font-size: 12px;
+                color: $grayFontColor;
+                line-height: 18px;
+                text-align: center;
+            }
+        }
+        .loading_in {
+            text-align: center;
+        }
+    }
+    #search_relation_qun_list li {height: auto;}
+    .btn_area {
+        background-color: $lightGrayBg;
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        margin: 0;
+        clear: left;
+        padding-right: 20px;
+    }
+}

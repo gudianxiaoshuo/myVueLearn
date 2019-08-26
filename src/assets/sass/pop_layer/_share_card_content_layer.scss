@@ -1,0 +1,46 @@
+#share_card_content_layer {
+    width: 320px;
+    .privacy_message {
+        padding: 12px 12px 0;
+    }
+    .layer_title_40 {
+        display: none;
+    }
+    .share_card_title {
+        height: 30px;
+        line-height: 30px;
+        font-weight: normal;
+        text-align: center;
+    }
+    .share_card_content {
+        padding-top: 8px;
+        .share_card_icon {
+            height: 50px;
+            width: 50px;
+            display: block;
+            margin: 0 auto;
+            cursor: auto;
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        }
+        .share_card_name {
+            text-align: center;
+            line-height: 26px;
+            display: block;
+            cursor: auto;
+            color: $blackFontColor;
+        }
+    }
+    .share_card_button {
+        margin-top: 10px;
+        border-top: 1px solid $lineGray;
+        height: 48px;
+        text-align: center;
+        line-height: 48px;
+        .submit_share {
+            margin-left: 26px;
+        }
+    }
+}

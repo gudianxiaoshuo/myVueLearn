@@ -1,0 +1,915 @@
+.S-xnw_main {
+    .qunAlbumList {
+        width: 660px;
+        padding: 20px 20px 0;
+    }
+}
+.qunAlbumList {
+    .albumItem {
+        width: 198px;
+        margin: 10px;
+        float: left;
+        text-align: center;
+        border: 1px solid $middleGrayBg;
+        background-color: $lightGrayBg;
+        position: relative;
+        &:hover {
+            .albumOper {
+                .delAlbum,
+                .rtAlbum,
+                .modifyAlbum {
+                    display: inline-block;
+                }
+            }
+        }
+        .albumPicContainer {
+            width: 188px;
+            height: 128px;
+            margin: 6px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .albumOper {
+            width: 178px;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 5px;
+            text-align: left;
+            @include abs-pos(auto, auto, 0, 0);
+            background-color: rgba(49, 49, 49, .5);
+            .delAlbum,
+            .rtAlbum,
+            .modifyAlbum {
+                width: 16px;
+                height: 16px;
+                margin: 0 5px;
+                display: none;
+                i {
+                    color: #fff;
+                    @include rel-pos($top: 2px);
+                }
+                &:hover {
+                    i{
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+            .numInfo {
+                color: #fff;
+                float: right;
+            }
+        }
+        .albumPic {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: block;
+            cursor: pointer;
+            background: #fff;
+            &.no_pic {
+                background: url(/images/version/no_pic.png) no-repeat center;
+                background-size: cover;
+            }
+            .img {
+                max-width: 100%;
+                max-height: 100%;
+                vertical-align: middle;
+            }
+        }
+        .albumInfo {
+            text-align: left;
+            display: block;
+            color: $blackFontColor;
+            height: 30px;
+            overflow: hidden;
+            line-height: 30px;
+            padding: 7px 12px 6px 12px;
+            border-top: 1px solid $middleGrayBg;
+            @include text-truncate;
+            color: $blackFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+}
+.f_right {
+    float: right;
+}
+.f_left {
+    float: left;
+}
+.album_wrap {
+    box-shadow: none;
+    margin-top: 20px;
+}
+/*查看图片黑色遮罩层*/
+.fancybox-image {
+    background: #fff;
+}
+.fancybox-lock {
+    height: auto !important;
+}
+/*日志图片模式样式*/
+.wb_pic_mode_list {
+    min-height: 500px;
+    .fluid_item {
+        float: left;
+        margin: 4px;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        background-color: $lightGrayBg;
+        img {
+            max-height: 100%;
+        }
+        &:hover {
+            .operation {
+                display: block;
+            }
+        }
+        .operList {
+            height: 100%;
+            width: 100%;
+            @include abs-pos(0, auto, auto, 0);
+        }
+        .operation {
+            height: 32px;
+            line-height: 32px;
+            text-align: left;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+            @include abs-pos(auto, auto, 0, 0);
+            background-color: rgba(49, 49, 49, .6);
+            display: none;
+            .cover {
+                padding-right: 10px;
+            }
+        }
+        .downPic,
+        .cover,
+        .delPic {
+            i {
+                height: 16px;
+                width: 16px;
+                color: #fff;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+}
+.picLogModeList,
+.xnwgallery_album_list {
+    width: 880px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+
+    /*------日志，图片，标题 切换样式-------*/
+    .bg_gray {
+        width: 934px;
+        .switching_mode_nav {
+            margin: 10px 30px 0 0;
+        }
+    }
+    .fluid_col {
+        img {
+            max-width: 218px;
+            min-height: 75px;
+            margin: 0 auto;
+            margin-left: 1px;
+            box-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        .fluid_item {
+            position: relative;
+            display: block;
+            line-height: normal;
+            .down_pic_ico,
+            .cover_ico,
+            .del_one_pic {
+                @include border-radius(24px);
+                background-color: #313131;
+                background-color: rgba(0, 0, 0, .6);
+                width: 24px;
+                height: 20px;
+                padding-top: 4px;
+                text-align: center;
+                display: none;
+                i {
+                    color: #fff;
+                }
+                &:hover {
+                    i {
+                        color: $darkOrangeFontColor;
+                    }
+                }
+            }
+            &:hover {
+                .down_pic_ico,
+                .cover_ico,
+                .del_one_pic {
+                    display: inline-block;
+                }
+            }
+            .down_pic_ico {
+                @include abs-pos(auto, 10px, 20px, auto);
+            }
+            .cover_ico {
+                @include abs-pos(auto, 40px, 20px, auto);
+            }
+            .del_one_pic {
+                @include abs-pos(20px, 10px, auto, auto);
+            }
+        }
+    }
+    .profile_topic_list {
+        padding: 0 0 30px 0;
+    }
+}
+.S-xnw_main {
+    .picLogModeList {
+        width: 660px;
+        margin-left: -10px;
+        padding: 0 20px 20px;
+        .bg_gray {
+            width: 640px;
+            margin-left: 10px;
+        }
+        .switching_mode_nav {
+            height: 70px;
+            line-height: 70px;
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid $middleGrayBg;
+        }
+        .fluid_col {
+            img {
+                max-width: 198px;
+            }
+        }
+        .uploadPicListItem {
+            float: left;
+            height: 26px;
+            line-height: 26px;
+            width: 76px;
+            text-align: center;
+            color: #fff;
+            margin-top: 22px;
+            background-color: #ffaa33;
+            @include border-radius(2px);
+        }
+        .picCount {
+            display: inline-block;
+            float: left;
+            margin-left: 20px;
+            color: $grayFontColor;
+        }
+    }
+}
+.albumDetail {
+    position: relative;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid $lightLineGray;
+    .albumCrumbs {
+        color: $grayFontColor;
+        width: 100px;
+        i {
+            @include rel-pos(2px, auto, auto, -4px);
+            font-size: 14px;
+        }
+        &:hover {
+            color: $orangeFontColor;
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .bulid_album_txt {
+        @include abs-pos(-6px, 6px, auto, auto);
+        font-size: 14px;
+        color: $darkOrangeFontColor;
+        i {
+            position: relative;
+            top: 2px;
+            color: $darkOrangeFontColor !important;
+        }
+    }
+    &.parent_crumbs{
+        height: 54px;
+        line-height: 54px;
+        margin: 0 15px 15px 15px;
+        .albumCrumbs {
+            @include abs-pos(auto, auto, auto, 6px);
+        }
+        .bulid_album_txt {
+            @include abs-pos(auto, 6px, auto, auto);
+        }
+    }
+    .album_create_info {
+        span {
+            color: $grayFontColor;
+            padding: 0 2px;
+        }
+    }
+    .bulid_upload_album {
+        @include abs-pos(6px, 14px, auto, auto);
+    }
+    .photos {
+        padding: 0 0 6px 0;
+        .album_name{
+            font-size: 16px;
+            margin-right: 10px;
+            font-weight: bold ;
+        }
+        .del_album {
+            padding-left: 10px;
+            i {
+                position: relative;
+                top: 2px;
+            }
+            &:hover {
+                i {
+                    color: $darkOrangeFontColor;
+                }
+            }
+        }
+    }
+}
+/*****自定义查看图片的样式 日志查看图片*********/
+.fancybox-wrap,
+.xnw_img_wrap {
+    /*左右切换箭头*/
+    .left_arrow {
+        cursor: url(/images/pic_prev.cur),auto;
+    }
+    .right_arrow {
+        cursor: url(/images/pic_next.cur),auto;
+    }
+    .left_arrow,
+    .right_arrow {
+        display: block;
+        background: #fff;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .fancybox-outer {
+        &:hover {
+            .fancybox-summary {
+                display: block;
+            }
+        }
+    }
+    .fancybox-outer {
+        padding-bottom: 60px;
+    }
+    /*图片描述信息*/
+    .fancybox-summary,
+    .fancybox-title-outside-wrap{
+        word-break: break-all;
+        background: none;
+        width: 600px;
+        margin: 0 auto;
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        max-height: 40px;
+        overflow: hidden;
+        color: #fff;
+        line-height: 22px;
+    }
+    .fancybox-title-outside-wrap {
+        //position: static !important;
+        margin-bottom: 20px;
+    }
+    .fancybox-error {
+        @include bg_with_retina(error,png,$versionImgPath);
+        background-position: left center;
+        color: #fff;
+        width: 140px;
+        padding: 50px 0 50px 80px;
+        margin: 0 auto;
+        height: 28px;
+        line-height: 28px;
+    }
+    .fancybox-summary {
+        text-indent: -72px;
+        padding-left: 72px;
+        margin-top: 20px;
+        position: relative;
+        height: 40px;
+        z-index: 8020;
+        display: none;
+        a {
+            @include abs-pos(auto, 0, -4px, auto);
+            text-align: right;
+            color: #fff;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .fancybox-nav {
+        position: fixed;
+        width: 35%;
+        z-index: 1;
+    }
+    .fancybox-next {
+        right: 100px;
+    }
+    .fancybox-prev {
+        left: 140px;
+    }
+    .fancybox-margin {
+        margin-right: 0;
+    }
+    .fancybox-close {
+        @include fix-pos(10px, 20px, auto, auto);
+        width: 40px;
+        height: 40px;
+        background: #FFF;
+        @include border-radius(2px);
+        i {
+            color: #000;
+            font-size: 26px;
+            @include rel-pos(7px, auto, auto, 7px);
+        }
+    }
+    .fancybox-view-source,
+    .fancybox-rotateleft,
+    .fancybox-rotateright,
+    .fancybox-del,
+    .fancybox-correct{
+        display: block;
+        height: 28px;
+        line-height: 28px;
+        background-color: rgba( 0, 0, 0, 0.64);
+        color: #fff;
+        text-align: center;
+        visibility: visible;
+        z-index: 8050;
+        cursor: pointer;
+        @include border-radius(2px);
+        i {
+            color: #fff;
+            position: relative;
+            top: 2px;
+        }
+    }
+    .fancybox-view-source {
+        @include fix-pos(80px, 90px, auto, auto);
+        width: 80px;
+        font-size: 12px;
+    }
+    .fancybox-rotateleft {
+        @include fix-pos(80px, 212px, auto, auto);
+        width: 28px;
+    }
+    .fancybox-rotateright {
+        @include fix-pos(80px, 180px, auto, auto);
+        width: 28px;
+    }
+    .fancybox-del {
+        padding: 0 8px;
+        @include fix-pos(80px, 48px, auto, auto);
+    }
+    .fancybox-correct {
+        width: 40px;
+        background: $orangeFontColor;
+        font-size: 12px;
+        @include fix-pos(80px, 250px, auto, auto);
+    }
+}
+
+.xnw_img_wrap {
+    min-width: 600px;
+    .fancybox-inner {
+        min-width: 600px;
+    }
+}
+/*日志查看图片的缩略图*/
+/*****/
+#fancybox-xnwthumbs {
+    @include fix-pos(0, auto, auto, 0);
+    height: 100%;
+    z-index: 8050;
+    background: #313131;
+    &.left {
+        left : -110px;
+    }
+    &.right {
+        right : -110px;
+    }
+    .septal_line {
+        height: 100% !important;
+        width: 9px;
+        top: 0 !important;
+        left: 0;
+        position: fixed;
+        z-index: 8060;
+        border-right: 1px solid #4d4d4d;
+        background:-webkit-linear-gradient(to right, #343434, #3b3b3b);
+        background:-moz-linear-gradient(to right, #343434, #3b3b3b);
+        background:-ms-linear-gradient(to right, #343434, #3b3b3b);
+        background:linear-gradient(to right, #343434, #3b3b3b);
+        filter:progid:DXImageTransform.Microsoft.Gradient(gradientType='1', startColorStr='#343434', endColorStr='#3b3b3b');
+    }
+    .show_thumb {
+        height: 70px !important;
+        width: 13px;
+        top: 45% !important;
+        left: 9px;
+        position: fixed;
+        cursor: pointer;
+        z-index: 8069;
+        background: url(/images/version/show_thumb.png) no-repeat;
+        i {
+            @include rel-pos(25px, 4px, auto, auto);
+            color: #fff;
+            z-index: 8070;
+        }
+    }
+    .up,
+    .down {
+        position: fixed;
+        cursor: pointer;
+        i {
+            font-size: 30px;
+            color: $grayFontColor;
+        }
+        &:hover {
+            color: $darkOrangeFontColor;
+            i {
+                color: #fff;
+            }
+        }
+    }
+    .up {
+        top: 30px !important;
+    }
+    .down {
+        bottom: 30px;
+    }
+    .sidebar-thumbs {
+        overflow: hidden;
+    }
+    ul {
+        position: relative;
+        li {
+            padding: 10px 20px;
+            opacity: 0.5;
+            &.active {
+                opacity: 0.9;
+                padding: 9px 19px;
+                position: relative;
+                a {
+                    border: 2px solid $blue;
+                    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+                }
+            }
+            &:hover {
+                opacity: 1;
+            }
+            a {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                border: 1px solid $grayFontColor;
+            }
+            img {
+                display: block;
+                position: relative;
+                border: 0;
+                padding: 0;
+                max-width: none;
+            }
+        }
+    }
+}
+
+/*图片专辑样式*/
+.album_special,
+.rt_album_layer,
+.incomplete_album,
+.rt_album_weibo {
+    position: relative;
+    .pic_total{
+        color: $grayFontColor;
+        padding-left: 20px;
+        font-weight: normal;
+        font-size: 14px;
+    }
+    .pic {
+        //float: left;
+        border: 1px solid $lightLineGray;
+        padding: 3px;
+        background: #fff;
+        position: absolute;
+        a {
+            display: block;
+            overflow: hidden;
+        }
+        &.no_pic {
+            background: #fff url(/images/version/no_pic.png) no-repeat center;
+            background-size: cover;
+        }
+        img {
+            vertical-align: middle;
+        }
+        .total {
+            line-height: 20px;
+            color: #fff;
+            @include abs-pos(auto, 8px, 5px, auto);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+        }
+        .album_label {
+            @include abs-pos(0, auto, auto, 0);
+        }
+    }
+    .text {
+        .album_title {
+            font-size: 16px;
+            line-height: 16px;
+            margin-right: 5px;
+            display: inline-block;
+            @include text-truncate();
+            //width: 100%;
+            text-align: left;
+            color: $blackFontColor;
+            margin-top: 10px;
+        }
+        .time,
+        .user_source {
+            color: $grayFontColor;
+            font-size: 12px;
+            line-height: 20px;
+            b {
+                font-weight: normal;
+            }
+        }
+        .c_lightgray {
+            color: $grayFontColor
+        }
+        .operation_area {
+            margin-top: 10px;
+            position: absolute;
+            bottom: 20px;
+            .uploadAlbumPic {
+                float: left;
+                margin-right: 20px;
+            }
+            .rt_btn {
+                float: left;
+                color: $grayFontColor;
+                i {
+                    position:relative;
+                    top: 3px;
+                    margin-right: 5px;
+                }
+                &:hover {
+                    color: $orangeFontColor;
+                    i {
+                        color: $orangeFontColor;
+                    }
+                }
+            }
+        }
+        .source {
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 16px;
+            color: $grayFontColor;
+            .qun_name {
+                margin: 0 3px;
+            }
+        }
+    }
+}
+
+.incomplete_album,
+.rt_album_layer{
+    height: 98px;
+    .pic {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        a {
+            width: 90px;
+            height: 90px;
+        }
+        img {
+            max-width: 90px;
+            max-height: 90px;
+        }
+        .album_label {
+            @include bg_with_retina(album_small, png, $versionImgPath);
+            width: 32px;
+            height: 32px;
+        }
+    }
+    .text {
+        padding-left: 118px;
+        h3 {
+            line-height: 24px;
+        }
+        .qun_name {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 230px;
+            display: table-cell;
+        }
+        .desc {
+            max-height: 50px;
+            line-height: 22px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+/*图片专辑标签样式*/
+.album_special {
+    height: 100px;
+    padding-bottom: 20px;
+    margin: 20px 0 10px 0;
+    border-bottom: 1px solid $lightLineGray;
+    .pic {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        border: none;
+        padding: 0;
+        overflow: hidden;
+        background-color: $lightGrayBg;
+        a {
+            width: 100px;
+            height: 100px;
+            cursor: auto;
+        }
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+        .album_label {
+            display: none;
+        }
+    }
+    &.from_weibo {
+        padding-top: 30px;
+        .pic .album_label {
+            display: block;
+            @include bg_with_retina(album_big, png, $versionImgPath);
+            width: 60px;
+            height: 60px;
+        }
+    }
+    .text {
+        padding-left: 130px;
+        .albumTitle {
+            cursor: auto;
+            font-size: 16px;
+            &.hide {
+                display: none;
+            }
+        }
+        .editAlbumTitle {
+            font-size: 16px;
+            padding: 0 4px;
+            height: 28px;
+            line-height: 28px;
+            width: 170px;
+            @include border-radius(2px);
+            border: 1px solid $lightLineGray;
+        }
+        .albumInfo {
+            line-height: 24px;
+            margin: 8px 0 15px 0;
+            color: $grayFontColor;
+            padding-left: 5px;
+        }
+        .pic_total {
+            line-height: 30px;
+        }
+        .albumLimit {
+            font-size: 12px;
+            margin-top: 10px;
+            color: $grayFontColor;
+            i {
+                position: relative;
+                top: 3px;
+            }
+            .line {
+                padding: 0 5px;
+            }
+        }
+    }
+}
+.albumInfoLayer {
+    min-width: 184px;
+    max-width: 254px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(#000, 0.6);
+    z-index: 2;
+    padding: 10px;
+    .desc {
+        em {
+            color: $blackFontColor;
+        }
+        color: $grayFontColor;
+        font-size: 12px;
+    }
+    .delAlbum,
+    .modifyAlbum {
+        display: block;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+}
+/*转发到微博列表的样式*/
+.rt_album_weibo {
+    padding: 5px 20px 5px 5px;
+    margin-bottom: 20px;
+    @extend %baseCardStyle;
+    &.bg_white {
+        background: #fff;
+    }
+    .pic {
+        width: 162px;
+        height: 120px;
+        line-height: 120px;
+        background: #fff;
+        a {
+            width: 162px;
+            height: 120px;
+        }
+        img {
+            max-width: 162px;
+            max-height: 120px;
+        }
+        .album_label {
+            @include bg_with_retina(album_normal, png, $versionImgPath);
+            width: 50px;
+            height: 46px;
+        }
+    }
+    .text {
+        padding-left: 190px;
+        height: 128px;
+        .desc {
+            height: 70px;
+            overflow: hidden;
+            padding-top: 8px;
+            line-height: 22px;
+        }
+    }
+}
+
+.picLogfilmSlide{
+    background: rgba(0, 0, 0, .9) !important;
+}
+//日志图片模式幻灯片按钮样式
+#fancybox-buttons.filmSlide {
+    ul {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: none;
+        width: 156px;
+    }
+    li {
+        background-color: #313131;
+        width: 66px;
+        height: 44px;
+        line-height: 44px;
+        @include border-radius(5px);
+        margin: 0 6px;
+        text-align: center;
+    }
+    .btnPlay,
+    .btnPlayOn {
+        width: 66px;
+        height: 44px;
+        line-height: 44px;
+        @include bg_with_retina('filmslideIcon', png, $versionImgPath);
+    }
+    .btnPlay {
+        background-position: 0 0;
+    }
+    .btnPlayOn {
+        background-position: 0 -44px;
+    }
+    .btnClose {
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        width: 66px;
+    }
+
+}

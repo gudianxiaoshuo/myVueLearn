@@ -1,0 +1,42 @@
+#add_contact_layer {
+    //width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    .qun_contect_style {
+        padding: 0 20px;
+        li {
+            clear: none;
+            height: 35px;
+            line-height: 24px;
+            padding: 3px;
+            margin-bottom: 8px;
+            float: left;
+            width: 272px;
+            position: relative;
+        }
+        em {
+            @include abs-pos(-10px, auto, auto, 15px);
+            background: $bodyGray;
+            text-decoration: none;
+            padding: 0 8px;
+            height: 18px;
+            color: $grayFontColor;
+        }
+        input {
+            border: 1px solid $lineGray;
+            height: 24px;
+            margin-left: 5px;
+            padding: 6px 5px 0 13px;
+        }
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+    }
+}

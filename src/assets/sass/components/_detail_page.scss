@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+.crumbs {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    color: $lightBlackFontColor;
+    a {
+        color: $grayFontColor;
+    }
+    .blue {
+        color: $blue;
+    }
+    a,
+    .blue {
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+}
+
+// 日志详情
+.isDetailPage {
+    width: 940px;
+    padding: 30px 0;
+    margin: 46px auto 0 auto;
+    background-color: #fff;
+    position: relative;
+    &:hover {
+        .tip_menu {
+            visibility: visible;
+        }
+    }
+    .tip_menu {
+        padding: 5px;
+        visibility: hidden;
+        &:hover {
+            visibility: visible;
+            i {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .tip_menu_area {
+        @include abs-pos($top:40px, $right: 30px);
+        height: 34px;
+        width: 26px;
+        z-index: 1;
+        padding: 0 10px;
+        &:hover .tip_menu{
+            visibility: visible;
+        }
+    }
+    .top_tip_menu {
+        @include abs-pos($top:40px, $right: 30px);
+        width: 100px;
+        z-index: 2;
+        @extend %weiboMenuLayer;
+        a {
+            &.show {
+                display: block;
+            }
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    .crumbs {
+        margin-bottom: 30px;
+    }
+    .title,
+    .weiboInfo {
+        text-align: center;
+    }
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 150%;
+    }
+    .weiboInfo {
+        color: $grayFontColor;
+        margin: 0 auto;
+        width: 880px;
+        padding: 5px 0 30px;
+        border-bottom: 1px dashed $lineGray;
+        .name {
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .verify_icon {
+            position: relative;
+            top: 3px;
+            margin-right: 20px;
+        }
+    }
+    .oneArticle {
+        width: 830px;
+        margin: 30px auto 20px;
+        .wb_add_img {
+            .thumbnail_img {
+                height: 200px;
+                line-height: 200px;
+                width: 200px;
+                &.twoPic {
+                    height: 407px;
+                    line-height: 407px;
+                    width: 407px;
+                }
+                &.threePic {
+                    height: 269px;
+                    line-height: 269px;
+                    width: 269px;
+                }
+                .img_height {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    .add_topic {
+        .wb_add_img {
+            .thumbnail_img {
+                width: 188px;
+                height: 188px;
+                &.twoPic {
+                    height: 386px;
+                    line-height: 386px;
+                    width: 386px;
+                }
+                &.threePic {
+                    height: 254px;
+                    line-height: 254px;
+                    width: 254px;
+                }
+                .img_height {
+                    max-height: 100%;
+                }
+            }
+        }
+        .mp3_player .jp-type-single .jp-progress {
+            width: 514px;
+        }
+    }
+    .audio_container {
+        width: 566px;
+    }
+    .one_article {
+        border-bottom: none;
+        margin: 30px auto 20px;
+    }
+    .favSupportArea {
+        text-align: center;
+        margin: 50px auto;
+        .favSupport {
+            display: inline-block;
+            font-size: 12px;
+            color: $grayFontColor;
+            margin: 0 40px;
+        }
+        .operIcon {
+            border: 1px solid $orangeFontColor;
+            @include border-radius(100%);
+            width: 48px;
+            height: 48px;
+            display: block;
+            text-align: center;
+            line-height: 48px;
+            i {
+                font-size: 22px;
+                position: relative;
+                top: 6px;
+                color: $orangeFontColor;
+            }
+            &:hover {
+                opacity: 0.8;
+            }
+            &.on {
+                border-color: $orangeFontColor;
+                background: $orangeFontColor;
+                i {
+                    color: #FFF;
+                }
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .footprint {
+        i {
+            position: relative;
+            top: 3px;
+            margin-right: 5px;
+        }
+        .plusone {
+            font-size: 14px;
+            top: 2px;
+        }
+    }
+    .oper_icon {
+        &:hover {
+            color: $grayFontColor;
+            em {
+                color: $grayFontColor;
+            }
+        }
+        i {
+            font-size: 14px;
+            margin-right: 5px;
+            top: 3px;
+        }
+        em {
+            margin-left: 0;
+        }
+    }
+    .upload_something {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .one_comment {
+        .one_comment_content {
+            .thumbnail_img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}

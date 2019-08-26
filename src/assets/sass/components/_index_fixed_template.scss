@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+// 活动固定模板 */
+.fixedTemplate,
+.fixedTemplateSet {
+    .activityOneLine {
+        .large_column {
+            height: 288px;
+            .focus_pic {
+                overflow: hidden;
+            }
+            &.fixedTemplateTips {
+                @include bg_with_retina(fixed_no_content_tip, png, $qunIndexSetImgPath);
+                background-color: #fff;
+                background-position: center;
+            }
+        }
+    }
+    .show_complete {
+        right: 10px !important;
+    }
+    .activityTwoLine {
+        .channel_content {
+            height: 126px;
+            min-height: 126px;
+            overflow: hidden;
+        }
+        .normal_column {
+            margin-right: 12px;
+        }
+        .small_column {
+            margin-right: 0;
+        }
+
+    }
+    .activityThreeLine {
+        .channel_content {
+            height: 180px;
+            overflow: hidden;
+            .no_channel_tip {
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .small_column {
+            .preview_video,
+            .network_video,
+            .show_video_box {
+                width: 100%;
+                display: block;
+                height: 180px;
+                .transcodingMsg {
+                    bottom: 40%;
+                }
+            }
+            .pic_or_video {
+                width: auto;
+                display: block;
+                overflow: hidden;
+                vertical-align: middle;
+                max-height: 180px;
+            }
+        }
+    }
+    .activityFourLine {
+        .channel_content {
+            height: 170px;
+            overflow: hidden;
+            &.fixed_infoblock {
+                line-height: 22px;
+                h1 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .activityThreeLine .small_column,
+    .activityFiveLine {
+        .prev,
+        .next {
+            display: none;
+        }
+    }
+    .activityThreeLine,
+    .activityFourLine {
+        .small_column {
+            margin-right: 12px;
+            margin-left: 0;
+        }
+    }
+    .setFoucsPic {
+        width: 900px;
+        height: 288px;
+        background: $lineGray url(#{$qunIndexSetImgPath}fixed_img.png) center center no-repeat;
+    }
+    .scrollPic {
+        width: 510px;
+        padding: 0 40px;
+        position: relative;
+        .leftArrow{
+            @include abs-pos(75px, auto, auto, 5px);
+        }
+        .rightArrow{
+            @include abs-pos(75px, 15px, auto, auto);
+        }
+
+    }
+    .autoScrollPic {
+        width: 900px;
+    }
+    .scrollPic,
+    .autoScrollPic{
+        .onePic {
+            width: 150px;
+            height: 150px;
+            background: $lineGray url(#{$qunIndexSetImgPath}fixed_img.png) center center no-repeat;
+            margin: 10px;
+            float: left;
+        }
+    }
+}
+.fixedTemplate {
+    .channel_content {
+        overflow: hidden;
+    }
+    .channel_title {
+        .setting_btn {
+            //display: none;
+        }
+    }
+    .activityOneLine {
+        .channel_title {
+            display: none;
+        }
+    }
+}
+
+// 固定模板样式*/
+.fixedTemplateSet {
+    .channel_title {
+        .accessMaster {
+            @include abs-pos(5px, 46px, auto, auto);
+            padding: 2px 2px 3px 3px;
+            background: $blue;
+            color: #fff;
+            @include border-radius(4px);
+        }
+        .setting_btn {
+            color: $blue;
+            &:hover {
+                color: $darkOrangeFontColor;
+            }
+        }
+    }
+    .activityOneLine {
+        position: relative;
+        .channel_title {
+            @include abs-pos(0, auto, auto, 0);
+            width: 886px;
+            z-index: 2;
+            background-color: rgba(134,202,251,0.7);
+        }
+    }
+}
+
+.fixedTemplateTips {
+    @include bg_with_retina(fixed_no_content_tip, png, $qunIndexSetImgPath);
+    background-position: center;
+    .prev,
+    .next {
+        display: none;
+    }
+}
+
+// 固定模板选标签层样式*/
+#fixedTplSetLabelLayer {
+    .privacy_message {
+        padding-bottom: 20px !important;
+    }
+    .tagItem {
+        float: left;
+        position: relative;
+    }
+    .childTagList {
+        display: none;
+        @include abs-pos(28px, auto, auto, 0);
+        min-width: 100px;
+        background-color: #fff;
+        z-index: 10;
+        box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+        .childTagItem {
+            float: none;
+            font-size: 12px;
+            padding: 0 10px;
+            display: block;
+            max-width: 176px;
+            line-height: 28px;
+            color: $blackFontColor;
+            white-space: nowrap;
+            &.on,
+            &:hover {
+                background-color: $lightLineGray;
+            }
+        }
+    }
+    .child_list .one_channel input {
+        left: 1px !important;
+    }
+}

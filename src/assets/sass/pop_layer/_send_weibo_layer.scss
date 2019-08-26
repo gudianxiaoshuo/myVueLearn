@@ -1,0 +1,25 @@
+#send_weibo_layer {
+    background-color: $lightGrayBg;
+    .privacy_message {
+        padding: 0;
+    }
+    .layer_title_40 {
+        border: 0;
+        height: 50px;
+        line-height: 50px;
+        font-weight: normal;
+        .destination {
+            color: $grayFontColor;
+            float: left;
+        }
+        .the_qun_info {
+            float: left;
+            margin: 0 10px;
+            max-width: 440px;
+            @include text-truncate();
+        }
+    }
+    .xnw_say_something {
+        padding-top: 0;
+    }
+}

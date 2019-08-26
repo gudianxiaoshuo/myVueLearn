@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+#addCourseLayer,
+#modifyCourseLayer,
+#addChapterWorkLayer,
+#modifyChapterWorkLayer {
+    width: 780px;
+    background-color: #fff;
+    @include border-radius(4px);
+    overflow: hidden;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+        .closeBtn  {
+            float: right;
+            padding: 0 5px;
+            margin-right: -5px;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        padding: 0 20px;
+        background-color: #f5f5f5;
+        margin-top: 30px;
+        .isOnline {
+            margin-right: 16px;
+            color: $grayFontColor;
+            .onlineCheckbox {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+.addChapterWorkLayer,
+.addCourseLayer {
+    padding-left: 12px;
+    margin: 20px;
+    margin-bottom: 0;
+    .log_one_file {
+         .file_name {
+             span {
+                background-color: #FFAA33;
+             }
+         }
+    }
+    .courseItem {
+        margin-bottom: 20px;
+    }
+    .courseItemPrice {
+        line-height: 30px;
+    }
+    .itemTitle {
+        color: $lightBlackFontColor;
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        position: relative;
+        width: 80px;
+        float: left;
+        .itemFlag {
+            @include abs-pos(0, auto, auto, -12px);
+            color: $darkOrangeFontColor;
+        }
+    }
+    .cTimeInput,
+    .cNameInput,
+    .coursePriceInput{
+        border: 1px solid #e8e8e8;
+        height: 28px;
+        @include border-radius(2px);
+        width: 630px;
+        padding: 0 4px;
+    }
+    .coursePriceInput {
+        width: 47px;
+    }
+    .cTimeInput {
+        width: 196px;
+        margin-right: 6px;
+        cursor: auto !important;
+    }
+    .addCustomType {
+        display: block;
+        margin: 10px 0;
+        width: 115px;
+    }
+    .courseCoverContainer {
+        display: inline-block;
+        height: 180px;
+        width: 240px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #e8e8e8;
+        .uploadCover {
+            width: 68px;
+            height: 24px;
+            line-height: 24px;
+            display: inline-block;
+            @include abs-pos(auto, auto, 12px, 50%);
+            margin-left: -34px;
+            background-color: #ffaa33;
+            color: #fff;
+            text-align: center;
+            @include border-radius(2px);
+        }
+        .courseCover {
+            height: 180px;
+            width: 240px;
+        }
+    }
+    .typeItemBox {
+        margin-left: 80px;
+        padding-top: 4px;
+    }
+    .typeItem {
+        margin-right: 20px;
+        font-size: 12px;
+        color: $grayFontColor;
+        cursor: pointer;
+        input {
+            width: 13px;
+            height: 13px;
+            margin-right: 10px;
+            vertical-align: middle;
+            @include border-radius(13px);
+        }
+    }
+    .customTypeItem {
+        display: inline-block;
+        position: relative;
+        padding-right: 0px;
+        .editCustomType {
+            position: absolute;
+            right: -2px;
+            top: -3px;
+            z-index: 200;
+            width: 35px;
+            padding-left: 10px;
+            padding-top: 3px;
+            margin-top: 4px;
+            .xicon-v-cog {
+                padding-left: 18px;
+            }
+            .operateCustom {
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+                padding: 5px 12px;
+                background: #fff;
+                width: 30px;
+            }
+        }
+    }
+    .cDesc {
+        width: 618px;
+        height: 100px;
+        padding: 5px 10px;
+        border: 1px solid #e8e8e8;
+        resize: none;
+        @include border-radius(2px);
+    }
+    .cDescNum {
+        font-size: 12px;
+        color: $grayFontColor;
+        padding-left: 80px;
+        .totalDescCount {
+            color: $orangeFontColor;
+            margin: 0 2px;
+        }
+    }
+    .errMsg {
+        font-size: 12px;
+        color: $darkOrangeFontColor;
+        padding-left: 80px;
+    }
+    .cContentContainer {
+        width: 638px;
+        border: 1px solid #e8e8e8;
+        @include border-radius(2px);
+        overflow: hidden;
+        .simditor {
+            border: 1px solid #DBE9F2;
+            .simditor-body {
+                font-size: 14px;
+                img {
+                    max-width: 500px;
+                }
+            }
+            .simditor-wrapper .simditor-placeholder {
+                font-size: 14px;
+            }
+            .simditor-toolbar {
+                border-bottom: 1px solid #DBE9F2;
+                .toolbar-menu {
+                    z-index: 20;
+                    &:before {
+                        display: none;
+                    }
+                    ul > li .menu-item {
+                        font-size: 14px;
+                    }
+                }
+                & > ul {
+                    &:after {
+                        content: '';
+                        clear: both;
+                        display: table;
+                    }
+                    & > li {
+                        float: left;
+                        display: list-item;
+                        font-size: inherit;
+                        &.menu-on {
+                            .toolbar-item {
+                                z-index: 21;
+                                @include box-shadow(rgba(0, 0, 0, .3) 0 -1px 1px);
+                            }
+                        }
+                        span.separator {
+                            margin: 11px 13px;
+                        }
+                        .toolbar-item {
+                            width: 35px;
+                            float: left;
+                            display: block;
+                            color: $blackFontColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cContentArea {
+        width: 618px;
+        padding: 10px;
+        height: 70px;
+        border: 0;
+        resize: none;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .cUploadContainer {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 12px;
+        .uploadItem {
+            text-indent: 0;
+            overflow: hidden;
+            margin-right: 24px;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+
+            input {
+                @include abs-pos(0, 0);
+                @include opacity(0);
+                font-size: 100px;
+                cursor: pointer;
+            }
+        }
+        .uploadIcon {
+            @include rel-pos($top: 2px);
+        }
+    }
+    .courseMediaBox {
+        border-top: 1px solid #e8e8e8;
+        .mediaTitle {
+            height: 48px;
+            line-height: 48px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .mediaFlag {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ffaa33;
+            @include abs-pos(18px, auto, auto, 12px);
+        }
+        .cPicListBox {
+            width: auto;
+            padding: 0 10px;
+        }
+        .upload_error {
+            color: $darkRed;
+            font-size: 12px;
+            line-height: 20px;
+            @include abs-pos(0, auto, auto, 70px);
+        }
+        .log_one_file {
+            margin: 0 0 20px 20px;
+        }
+    }
+}
+#addCourseLayer,
+#modifyCourseLayer {
+    .addCourseLayer {
+        padding: 30px 20px 0 20px;
+    }
+}

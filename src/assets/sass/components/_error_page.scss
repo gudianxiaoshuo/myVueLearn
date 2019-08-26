@@ -1,0 +1,89 @@
+/*400和500错误页面的样式文件*/
+.errorPage {
+    background: #fff;
+}
+.errorPageContainer {
+    background: #fff;
+    .pageContent {
+        width: 800px;
+        margin: 0 auto;
+        padding-top: 135px;
+        padding-bottom: 220px;
+        text-align: center;
+    }
+    .errorText {
+        font-size: 18px;
+        font-weight: normal;
+        color: #697080;
+        p {
+            font-size: 12px;
+        }
+    }
+    .errorImage {
+        height: 145px;
+        width: 100%;
+        margin-bottom: 60px;
+        @include bg_with_retina(error-image, png, $versionImgPath);
+        background-position: 45% 0;
+    }
+    .backToIndex {
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin: 0 auto;
+        @include border-radius(100px);
+        background-color: #ffaa33;
+        color: #fff;
+    }
+}
+.main_concent {
+    width: 400px;
+    margin: 80px auto 135px;
+    min-height: 80px;
+    padding: 40px 0 50px 198px;
+    position: relative;
+    border: solid 1px $borderGray;
+    background: #fff;
+    @include border-radius(5px);
+
+    .icon_face_dizzy {
+        width: 90px;
+        height: 80px;
+        @include bg_with_retina(xf-emotion, png, $baseImgRootPath);
+        @include abs-pos(45px, auto, auto, 55px);
+    }
+    .icon_face_dizzy {
+        background-position: 0 -140px;
+    }
+
+    h2 {
+        color: $darkOrangeFontColor;
+        font-size: 20px;
+        font-family: MicrosoftYaHei,'微软雅黑',Arial,Tahoma,Helvetica,Georgia,Sans-serif,'STXihei','华文黑体',Hei,'Hiragino Kaku Gothic Pro',SimSun;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 12px;
+        color: $blackFontColor;
+        &.gray {
+            color: $grayFontColor;
+        }
+    }
+    .back_index {
+        color: $blue;
+        @include abs-pos(auto, 10px, -30px, auto);
+    }
+}
+//删除日志成功提示页
+.delWeiboPage {
+    color: #697080;
+    font-size: 18px;
+    padding-top: 205px;
+    margin: 200px 0;
+    text-align: center;
+    width: 100%;
+    @include bg_with_retina(del-weibo, png, $versionImgPath);
+    background-position: 45% 0;
+}

@@ -1,0 +1,371 @@
+.openedClassList {
+    padding-top: 20px;
+}
+.courseMainInfo {
+    height: 34px;
+    line-height: 34px;
+    color: #8A7762;
+    font-size: 12px;
+    @include border-radius(2px);
+    background-color: #FEEED4;
+    margin: 0 20px;
+    padding: 0 10px;
+    .infoItem {
+        margin-right: 20px;
+        float: left;
+        &.originPublisherInfo {
+            max-width: 136px;
+            @include text-truncate;
+        }
+    }
+    .numInfo {
+        float: right;
+    }
+}
+.oneCourse {
+    padding: 30px 20px 0;
+    position: relative;
+    min-height: 128px;
+    &:last-child {
+        .courseInfo {
+            border: none;
+        }
+    }
+    &:hover {
+        .courseDetail {
+            .cancelCourse {
+                visibility: visible;
+            }
+        }
+    }
+    .coursePoster {
+        width: 170px;
+        height: 128px;
+        z-index: 1;
+        @include abs-pos(30px, auto, auto,  20px);
+    }
+    .posterLink {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .poster {
+        width: 100%;
+        height: 100%;
+    }
+    .courseClassName,
+    .coursePublisherName {
+        height: 26px;
+        line-height: 26px;
+        padding: 0 10px;
+        color: #fff;
+        font-size: 12px;
+        display: block;
+        width: 150px;
+        @include abs-pos(auto, auto, 0, 0);
+        background-color: rgba(0, 0, 0, .5);
+        @include text-truncate;
+    }
+    .classStatusFlag {
+        width: 60px;
+        height: 62px;
+        @include abs-pos(0, auto, auto, 0);
+        z-index: 1;
+        &.status1 {
+            @include bg_with_retina(reg_status_coming, png, $versionImgPath);
+        }
+        &.status2 {
+            @include bg_with_retina(reg_status_reg, png, $versionImgPath);
+        }
+        &.status3 {
+            @include bg_with_retina(reg_status_end, png, $versionImgPath);
+        }
+        &.status4 {
+            @include bg_with_retina(class_started, png, $versionImgPath);
+        }
+        &.status5 {
+            @include bg_with_retina(class_finished, png, $versionImgPath);
+        }
+        &.status6 {
+            @include bg_with_retina(class_failed, png, $versionImgPath);
+        }
+    }
+}
+.courseInfo {
+    padding: 0 0 30px 190px;
+    margin: 0;
+    min-height: 128px;
+    border-bottom: 1px dashed #e8e8e8;
+    position: relative;
+    &.courseClassInfo {
+        //padding-right: 90px;
+        width: 470px;
+    }
+    &.hasOperInfo {
+        padding-right: 106px;
+        width: 364px;
+    }
+    .courseTitle {
+        font-size: 14px;
+        line-height: 32px;
+        padding-right: 28px;
+        @include text-truncate;
+        &.courseClassTitle {
+            line-height: 16px;
+            margin-bottom: 4px;
+            font-weight: normal;
+        }
+        .courseType {
+            color: $grayFontColor;
+            margin-left: 8px;
+            font-weight: normal;
+        }
+        .courseName {
+            color: $blackFontColor;
+            &:hover {
+                color: #08c;
+            }
+        }
+        .courseDetailLink {
+            margin-left: 6px;
+            font-weight: normal;
+            &:hover {
+                color: #08c;
+            }
+        }
+        .unfavCourseClass {
+            font-size: 12px;
+            font-weight: normal;
+            color: $grayFontColor;
+            @include abs-pos(0, 0, auto, auto);
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .infoLine {
+        margin: 0 16px;
+        color: #e8e8e8;
+    }
+    .viewNotice {
+        @include abs-pos(0, 0, auto, auto);
+    }
+    .courseNum {
+        line-height: 25px;
+        font-size: 12px;
+        color: $grayFontColor;
+        &.num {
+            margin-bottom: 8px;
+        }
+    }
+    .courseClassOper {
+        @include abs-pos(auto, 0, 30px, auto);
+        font-size: 12px;
+        &.thirdCourseOper {
+            bottom: 60px;
+        }
+        .primary-btn {
+            display: block;
+        }
+        .switchItem {
+            margin-bottom: 20px;
+        }
+        .detailBtn {
+            color: $grayFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .classNumber {
+        @include abs-pos(62px, 0, auto, auto);
+        font-size: 16px;
+        color: $orangeFontColor;
+        i{
+            padding: 0 1px;
+        }
+    }
+    .regTypeName {
+        @include abs-pos(80px, 0, auto, auto);
+        font-size: 12px;
+        color: $grayFontColor;
+    }
+
+    .courseDesc {
+        line-height: 24px;
+        color: $lightBlackFontColor;
+        max-height: 70px;
+        overflow: hidden;
+    }
+    .courseClassInfo {
+        font-size: 12px;
+        line-height: 22px;
+        color: $lightBlackFontColor;
+        max-width: 364px;
+        @include text-truncate;
+        .infoIcon {
+            @include rel-pos($top: 1px);
+            margin-right: 8px;
+            font-size: 12px;
+            &.addressIcon {
+                color: #3BC475;
+            }
+            &.timeIcon {
+                color: #FF8800;
+            }
+            &.dateIcon {
+                color: #FB7E81;
+            }
+        }
+        &.courseTimeInfo,
+        &.courseTeacherInfo {
+            line-height: 24px;
+            color: $grayFontColor;
+            max-width: 420px;
+        }
+        &.courseTeacherInfo {
+            line-height: 22px;
+            margin-bottom: 2px;
+        }
+        &.thirdCourseInfo {
+            line-height: 24px;
+            color: $grayFontColor;
+            margin-bottom: 5px;
+        }
+        .infoLine {
+            margin: 0 16px;
+            color: #e8e8e8;
+        }
+        .viewFullTeacherList,
+        .viewFullTimeList {
+            color: $orangeFontColor;
+            cursor: pointer;
+            @include rel-pos($top: 2px);
+        }
+    }
+    .toDetailLink {
+        height: 22px;
+        width: 74px;
+        line-height: 22px;
+        border: 1px solid #ffaa33;
+        @include border-radius(2px);
+        text-align: center;
+        color: $orangeFontColor;
+        @include abs-pos(auto, 0, 30px, auto);
+        &:hover {
+            background-color: #ffaa33;
+            color: #fff;
+        }
+        &.importLink {
+            background-color: #ffaa33;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .courseFailedTip {
+        @include abs-pos(auto, auto, 30px, 190px);
+        color: $darkOrangeFontColor;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .coursePrice {
+        color: #F50;
+        font-size: 24px;
+        @include abs-pos(0, 0, auto, auto);
+    }
+    .courseDetail {
+        @include abs-pos(auto, 0, 10px, auto);
+        width: 80px;
+        height: 78px;
+        margin-top: -12px;
+        &.teacherRole {
+            width: auto;
+            text-align: right;
+            .detailNum {
+                text-align: right;
+                margin-bottom: 20px;
+            }
+            .total {
+                color: #bbb;
+                font-size: 14px;
+            }
+            .showDetail,
+            .checkinQun {
+                color: $grayFontColor;
+                font-size: 12px;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+            .checkinQun {
+                border-right: 1px solid #9B9B9B;
+                padding-right: 10px;
+                margin-right: 8px;
+                line-height: 12px;
+                height: 12px;
+            }
+        }
+        .detailNum,
+        .viewDetail,
+        .qunLink,
+        .cancelCourse {
+            display: inline-block;
+        }
+        .cancelCourse {
+            visibility: hidden;
+        }
+        .detailNum {
+            margin-top: 10px;
+            font-size: 14px;
+            color: $orangeFontColor;
+            text-align: center;
+            width: 100%;
+            font-family: $sansSerifFontFamily;
+            span {
+                color: #999;
+            }
+        }
+        .viewDetail {
+            color: $blue;
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            &.disabled {
+                color: $grayFontColor;
+                cursor: default;
+            }
+        }
+        .money,
+        .count {
+            display: block;
+            text-align: center;
+        }
+        .oper,
+        .joinCourseClass,
+        .qunLink,
+        .cancelCourse {
+            @extend %button;
+            width: 74px;
+            height: 22px;
+            line-height: 22px;
+            font-weight: normal;
+            color: $orangeFontColor;
+            @include border-radius(2px);
+            border: 1px solid #ffaa33;
+            &:hover {
+                background-color: #ffaa33;;
+                color: #fff;
+            }
+        }
+        .numFull {
+            width: 74px;
+            height: 22px;
+            line-height: 22px;
+            font-weight: normal;
+            color: $orangeFontColor;
+        }
+    }
+}

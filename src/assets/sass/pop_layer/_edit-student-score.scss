@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.editStudentScoreLayer {
+    font-size: 14px;
+    line-height: 40px;
+    background: #FFF;
+    width: 558px;
+    @include border-radius(3px);
+    .title {
+        padding: 0 20px;
+        font: bold 16px/40px $genericFontFamily;
+        border-bottom: 1px solid $borderGray;
+        .closeBtn {
+            float: right;
+        }
+    }
+
+    .content {
+        .container {
+            .info {
+                padding: 5px 80px;
+                [class^="xicon-"] {
+                    color: $orange;
+                }
+            }
+            .inner {
+                padding: 5px 80px;
+                .item {
+                    margin: 20px auto;
+                    .nameContainer {
+                        height: 40px;
+                        width: 50%;
+                        float: left;
+                        text-align: center;
+                        .courseName {
+                            height: 20px;
+                            line-height: 20px;
+                            @include text-truncate();
+                        }
+                        .courseScoreType {
+                            height: 20px;
+                            line-height: 20px;
+                            color: #CCCCCC;
+                        }
+                    }
+                    .delimiter {
+                        width: 10px;
+                        float: left;
+                        margin: auto 10px;
+                    }
+                }
+
+                .markInput {
+                    height: 38px;
+                    width: 40%;
+                    padding-left: 4px;
+                    border: 1px solid $lineGray;
+                    @include border-radius(2px);
+                    &:focus {
+                        border: 1px solid $orange;
+                    }
+                    &.text {
+                        color: $orange;
+                    }
+                }
+            }
+            .newBtnArea {
+                height: 50px;
+                line-height: 50px;
+                padding-right: 20px;
+                margin-top: 20px;
+                text-align: right;
+                background-color: $lightGrayBg;
+                @include border-radius(0 0 3px 3px);
+                button {
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+}

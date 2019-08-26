@@ -1,0 +1,57 @@
+.senior_options {
+    z-index: 2;
+    padding-top: 10px;
+    .submit_button,
+    .btn-small {
+        float: right;
+        margin-left: 10px;
+    }
+}
+.submit_box {
+    min-height: 24px;
+    padding: 12px 0 0 0;
+    position: relative;
+    z-index: 1;
+    clear: both;
+    &.submit_hyq_box {
+        @include abs-pos($right: 180px, $bottom: 22px);
+    }
+    .submit_button {
+        width: 80px;
+        float: right;
+    }
+    .btn_box {
+        float: left;
+        position: relative;
+        .choose_share_place {
+            color: $blue;
+            float: left;
+            cursor: pointer;
+            &:hover {
+                color: $darkOrangeFontColor;
+                i {
+                    color: $darkOrangeFontColor;
+                }
+            }
+            i {
+                color: $blue;
+                @include rel-pos(2px, auto, auto, auto);
+            }
+        }
+    }
+}
+.saveBtnContainer {
+    float: right;
+    .saveDraft {
+        font-size: 12px;
+        margin-right: 20px;
+    }
+}
+.blueXeditor {
+    .saveDraft {
+        color: #678DA1;
+        &:hover {
+            color: #406B81;
+        }
+    }
+}

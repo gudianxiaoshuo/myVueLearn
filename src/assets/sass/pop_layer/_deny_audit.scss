@@ -1,0 +1,21 @@
+#deny_audit {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    textarea {
+        border: 1px solid $lineGray;
+        width: 388px;
+        margin: 0 20px;
+        padding: 5px;
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+    }
+}

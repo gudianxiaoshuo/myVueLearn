@@ -1,0 +1,1056 @@
+@import "_font-variables";
+
+@font-face {
+  font-family: 'xiconfont';
+  src: url('#{$icomoon-font-path}/xiconfont.eot?y3o60v20171030');
+  src: url('#{$icomoon-font-path}/xiconfont.eot?y3o60v#iefix20171030') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/xiconfont.ttf?y3o60v20171030') format('truetype'),
+    url('#{$icomoon-font-path}/xiconfont.woff?y3o60v20171030') format('woff'),
+    url('#{$icomoon-font-path}/xiconfont.svg?y3o60v#xiconfont20171030') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="xicon-"],
+[class*=" xicon-"],
+.xicon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'xiconfont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.xicon-full-screen {
+  &:before {
+    content: $xicon-full-screen;
+  }
+}
+.xicon-my-comment {
+  &:before {
+    content: $xicon-my-comment;
+  }
+}
+.xicon-compose {
+  &:before {
+    content: $xicon-compose;
+  }
+}
+.xicon-friend-group {
+  &:before {
+    content: $xicon-friend-group;
+  }
+}
+.xicon-album-bookmark {
+  &:before {
+    content: $xicon-album-bookmark;
+  }
+}
+.xicon-album-close {
+  &:before {
+    content: $xicon-album-close;
+  }
+}
+.xicon-attach {
+  &:before {
+    content: $xicon-attach;
+  }
+}
+.xicon-boomerang-down {
+  &:before {
+    content: $xicon-boomerang-down;
+  }
+}
+.xicon-boomerang-left {
+  &:before {
+    content: $xicon-boomerang-left;
+  }
+}
+.xicon-boomerang-right {
+  &:before {
+    content: $xicon-boomerang-right;
+  }
+}
+.xicon-boomerang-up {
+  &:before {
+    content: $xicon-boomerang-up;
+  }
+}
+.xicon-chat-add-friend {
+  &:before {
+    content: $xicon-chat-add-friend;
+  }
+}
+.xicon-chat-add-user {
+  &:before {
+    content: $xicon-chat-add-user;
+  }
+}
+.xicon-chat-buble {
+  &:before {
+    content: $xicon-chat-buble;
+  }
+}
+.xicon-chat-contact {
+  &:before {
+    content: $xicon-chat-contact;
+  }
+}
+.xicon-circle-arrow-down {
+  &:before {
+    content: $xicon-circle-arrow-down;
+  }
+}
+.xicon-circle-arrow-up {
+  &:before {
+    content: $xicon-circle-arrow-up;
+  }
+}
+.xicon-circle-plus {
+  &:before {
+    content: $xicon-circle-plus;
+  }
+}
+.xicon-cog {
+  &:before {
+    content: $xicon-cog;
+  }
+}
+.xicon-collaspe-close {
+  &:before {
+    content: $xicon-collaspe-close;
+  }
+}
+.xicon-compass {
+  &:before {
+    content: $xicon-compass;
+  }
+}
+.xicon-double-arrow-left {
+  &:before {
+    content: $xicon-double-arrow-left;
+  }
+}
+.xicon-double-arrow-right {
+  &:before {
+    content: $xicon-double-arrow-right;
+  }
+}
+.xicon-download {
+  &:before {
+    content: $xicon-download;
+  }
+}
+.xicon-edit {
+  &:before {
+    content: $xicon-edit;
+  }
+}
+.xicon-ellipsis {
+  &:before {
+    content: $xicon-ellipsis;
+  }
+}
+.xicon-foward {
+  &:before {
+    content: $xicon-foward;
+  }
+}
+.xicon-grid-4 {
+  &:before {
+    content: $xicon-grid-4;
+  }
+}
+.xicon-grid-9 {
+  &:before {
+    content: $xicon-grid-9;
+  }
+}
+.xicon-group-of-add {
+  &:before {
+    content: $xicon-group-of-add;
+  }
+}
+.xicon-help-bubble {
+  &:before {
+    content: $xicon-help-bubble;
+  }
+}
+.xicon-info {
+  &:before {
+    content: $xicon-info;
+  }
+}
+.xicon-location {
+  &:before {
+    content: $xicon-location;
+  }
+}
+.xicon-locker-locked {
+  &:before {
+    content: $xicon-locker-locked;
+  }
+}
+.xicon-locker-unlock {
+  &:before {
+    content: $xicon-locker-unlock;
+  }
+}
+.xicon-media {
+  &:before {
+    content: $xicon-media;
+  }
+}
+.xicon-my-block {
+  &:before {
+    content: $xicon-my-block;
+  }
+}
+.xicon-my-favorite {
+  &:before {
+    content: $xicon-my-favorite;
+  }
+}
+.xicon-my-follower {
+  &:before {
+    content: $xicon-my-follower;
+  }
+}
+.xicon-my-friend {
+  &:before {
+    content: $xicon-my-friend;
+  }
+}
+.xicon-my-home {
+  &:before {
+    content: $xicon-my-home;
+  }
+}
+.xicon-my-photo {
+  &:before {
+    content: $xicon-my-photo;
+  }
+}
+.xicon-my-post {
+  &:before {
+    content: $xicon-my-post;
+  }
+}
+.xicon-ok {
+  &:before {
+    content: $xicon-ok;
+  }
+}
+.xicon-personal-record {
+  &:before {
+    content: $xicon-personal-record;
+  }
+}
+.xicon-plus {
+  &:before {
+    content: $xicon-plus;
+  }
+}
+.xicon-posts {
+  &:before {
+    content: $xicon-posts;
+  }
+}
+.xicon-promote-12 {
+  &:before {
+    content: $xicon-promote-12;
+  }
+}
+.xicon-prompt-info {
+  &:before {
+    content: $xicon-prompt-info;
+  }
+}
+.xicon-receive-a-case {
+  &:before {
+    content: $xicon-receive-a-case;
+  }
+}
+.xicon-reminder-user-group {
+  &:before {
+    content: $xicon-reminder-user-group;
+  }
+}
+.xicon-rotate-left {
+  &:before {
+    content: $xicon-rotate-left;
+  }
+}
+.xicon-rotate-right {
+  &:before {
+    content: $xicon-rotate-right;
+  }
+}
+.xicon-search {
+  &:before {
+    content: $xicon-search;
+  }
+}
+.xicon-female {
+  &:before {
+    content: $xicon-female;
+  }
+}
+.xicon-male {
+  &:before {
+    content: $xicon-male;
+  }
+}
+.xicon-smile {
+  &:before {
+    content: $xicon-smile;
+  }
+}
+.xicon-tag {
+  &:before {
+    content: $xicon-tag;
+  }
+}
+.xicon-template {
+  &:before {
+    content: $xicon-template;
+  }
+}
+.xicon-to-top {
+  &:before {
+    content: $xicon-to-top;
+  }
+}
+.xicon-user-add {
+  &:before {
+    content: $xicon-user-add;
+  }
+}
+.xicon-user-group {
+  &:before {
+    content: $xicon-user-group;
+  }
+}
+.xicon-user {
+  &:before {
+    content: $xicon-user;
+  }
+}
+.xicon-verified-group {
+  &:before {
+    content: $xicon-verified-group;
+  }
+}
+.xicon-voice-left {
+  &:before {
+    content: $xicon-voice-left;
+  }
+}
+.xicon-voice-right {
+  &:before {
+    content: $xicon-voice-right;
+  }
+}
+.xicon-x-circle {
+  &:before {
+    content: $xicon-x-circle;
+  }
+}
+.xicon-x-small {
+  &:before {
+    content: $xicon-x-small;
+  }
+}
+.xicon-zoom {
+  &:before {
+    content: $xicon-zoom;
+  }
+}
+.xicon-chat-add-group {
+  &:before {
+    content: $xicon-chat-add-group;
+  }
+}
+.xicon-end-time {
+  &:before {
+    content: $xicon-end-time;
+  }
+}
+.xicon-public {
+  &:before {
+    content: $xicon-public;
+  }
+}
+.xicon-align-left {
+  &:before {
+    content: $xicon-align-left;
+  }
+}
+.xicon-align-right {
+  &:before {
+    content: $xicon-align-right;
+  }
+}
+.xicon-private {
+  &:before {
+    content: $xicon-private;
+  }
+}
+.xicon-mobile-phone {
+  &:before {
+    content: $xicon-mobile-phone;
+  }
+}
+.xicon-link {
+  &:before {
+    content: $xicon-link;
+  }
+}
+.xicon-file {
+  &:before {
+    content: $xicon-file;
+  }
+}
+.xicon-log-list {
+  &:before {
+    content: $xicon-log-list;
+  }
+}
+.xicon-service {
+  &:before {
+    content: $xicon-service;
+  }
+}
+.xicon-warning-tip {
+  &:before {
+    content: $xicon-warning-tip;
+  }
+}
+.xicon-Android {
+  &:before {
+    content: $xicon-Android;
+  }
+}
+.xicon-iPhone {
+  &:before {
+    content: $xicon-iPhone;
+  }
+}
+.xicon-add-icon {
+  &:before {
+    content: $xicon-add-icon;
+  }
+}
+.xicon-at-me {
+  &:before {
+    content: $xicon-at-me;
+  }
+}
+.xicon-chat-icon {
+  &:before {
+    content: $xicon-chat-icon;
+  }
+}
+.xicon-circle-arrow-left {
+  &:before {
+    content: $xicon-circle-arrow-left;
+  }
+}
+.xicon-circle-arrow-right {
+  &:before {
+    content: $xicon-circle-arrow-right;
+  }
+}
+.xicon-friend-circle {
+  &:before {
+    content: $xicon-friend-circle;
+  }
+}
+.xicon-grid-4-circle {
+  &:before {
+    content: $xicon-grid-4-circle;
+  }
+}
+.xicon-help {
+  &:before {
+    content: $xicon-help;
+  }
+}
+.xicon-new-chat {
+  &:before {
+    content: $xicon-new-chat;
+  }
+}
+.xicon-pic-list {
+  &:before {
+    content: $xicon-pic-list;
+  }
+}
+.xicon-new-log {
+  &:before {
+    content: $xicon-new-log;
+  }
+}
+.xicon-v-reminder {
+  &:before {
+    content: $xicon-v-reminder;
+  }
+}
+.xicon-v-block {
+  &:before {
+    content: $xicon-v-block;
+  }
+}
+.xicon-v-certify {
+  &:before {
+    content: $xicon-v-certify;
+  }
+}
+.xicon-v-clock {
+  &:before {
+    content: $xicon-v-clock;
+  }
+}
+.xicon-v-cog {
+  &:before {
+    content: $xicon-v-cog;
+  }
+}
+.xicon-v-comment {
+  &:before {
+    content: $xicon-v-comment;
+  }
+}
+.xicon-v-draft {
+  &:before {
+    content: $xicon-v-draft;
+  }
+}
+.xicon-v-follower {
+  &:before {
+    content: $xicon-v-follower;
+  }
+}
+.xicon-v-friend {
+  &:before {
+    content: $xicon-v-friend;
+  }
+}
+.xicon-v-post {
+  &:before {
+    content: $xicon-v-post;
+  }
+}
+.xicon-v-record {
+  &:before {
+    content: $xicon-v-record;
+  }
+}
+.xicon-v-star {
+  &:before {
+    content: $xicon-v-star;
+  }
+}
+.xicon-trash {
+  &:before {
+    content: $xicon-trash;
+  }
+}
+.xicon-course-admin {
+  &:before {
+    content: $xicon-course-admin;
+  }
+}
+.xicon-course-class {
+  &:before {
+    content: $xicon-course-class;
+  }
+}
+.xicon-course-manage {
+  &:before {
+    content: $xicon-course-manage;
+  }
+}
+.xicon-course-partner {
+  &:before {
+    content: $xicon-course-partner;
+  }
+}
+.xicon-course-teacher {
+  &:before {
+    content: $xicon-course-teacher;
+  }
+}
+.xicon-school-info {
+  &:before {
+    content: $xicon-school-info;
+  }
+}
+.xicon-teacher-training {
+  &:before {
+    content: $xicon-teacher-training;
+  }
+}
+.xicon-address {
+  &:before {
+    content: $xicon-address;
+  }
+}
+.xicon-exit-full-screen {
+  &:before {
+    content: $xicon-exit-full-screen;
+  }
+}
+.xicon-class {
+  &:before {
+    content: $xicon-class;
+  }
+}
+.xicon-contact {
+  &:before {
+    content: $xicon-contact;
+  }
+}
+.xicon-course {
+  &:before {
+    content: $xicon-course;
+  }
+}
+.xicon-date {
+  &:before {
+    content: $xicon-date;
+  }
+}
+.xicon-email {
+  &:before {
+    content: $xicon-email;
+  }
+}
+.xicon-fav-course {
+  &:before {
+    content: $xicon-fav-course;
+  }
+}
+.xicon-money {
+  &:before {
+    content: $xicon-money;
+  }
+}
+.xicon-training {
+  &:before {
+    content: $xicon-training;
+  }
+}
+.xicon-selected {
+  &:before {
+    content: $xicon-selected;
+  }
+}
+.xicon-arrow-down {
+  &:before {
+    content: $xicon-arrow-down;
+  }
+}
+.xicon-email2 {
+  &:before {
+    content: $xicon-email2;
+  }
+}
+.xicon-exam-point {
+  &:before {
+    content: $xicon-exam-point;
+  }
+}
+.xicon-partner-pending {
+  &:before {
+    content: $xicon-partner-pending;
+  }
+}
+.xicon-publisher-info {
+  &:before {
+    content: $xicon-publisher-info;
+  }
+}
+.xicon-publisher-manage {
+  &:before {
+    content: $xicon-publisher-manage;
+  }
+}
+.xicon-school-manage {
+  &:before {
+    content: $xicon-school-manage;
+  }
+}
+.xicon-training-address {
+  &:before {
+    content: $xicon-training-address;
+  }
+}
+.xicon-training-plan {
+  &:before {
+    content: $xicon-training-plan;
+  }
+}
+.xicon-intro {
+  &:before {
+    content: $xicon-intro;
+  }
+}
+.xicon-my-clock {
+  &:before {
+    content: $xicon-my-clock;
+  }
+}
+.xicon-arrow {
+  &:before {
+    content: $xicon-arrow;
+  }
+}
+.xicon-slide-down {
+  &:before {
+    content: $xicon-slide-down;
+  }
+}
+.xicon-slide-up {
+  &:before {
+    content: $xicon-slide-up;
+  }
+}
+.xicon-title-list {
+  &:before {
+    content: $xicon-title-list;
+  }
+}
+.xicon-activity-icon {
+  &:before {
+    content: $xicon-activity-icon;
+  }
+}
+.xicon-album-icon {
+  &:before {
+    content: $xicon-album-icon;
+  }
+}
+.xicon-attendance-icon {
+  &:before {
+    content: $xicon-attendance-icon;
+  }
+}
+.xicon-star-in {
+  &:before {
+    content: $xicon-star-in;
+  }
+}
+.xicon-course-icon {
+  &:before {
+    content: $xicon-course-icon;
+  }
+}
+.xicon-evaluation-icon {
+  &:before {
+    content: $xicon-evaluation-icon;
+  }
+}
+.xicon-exam_report-icon {
+  &:before {
+    content: $xicon-exam_report-icon;
+  }
+}
+.xicon-log-out {
+  &:before {
+    content: $xicon-log-out;
+  }
+}
+.xicon-relation-icon {
+  &:before {
+    content: $xicon-relation-icon;
+  }
+}
+.xicon-vote-icon {
+  &:before {
+    content: $xicon-vote-icon;
+  }
+}
+.xicon-work-icon {
+  &:before {
+    content: $xicon-work-icon;
+  }
+}
+.xicon-add-channel {
+  &:before {
+    content: $xicon-add-channel;
+  }
+}
+.xicon-change-2-first {
+  &:before {
+    content: $xicon-change-2-first;
+  }
+}
+.xicon-change-2-second {
+  &:before {
+    content: $xicon-change-2-second;
+  }
+}
+.xicon-del-channel {
+  &:before {
+    content: $xicon-del-channel;
+  }
+}
+.xicon-move-channel {
+  &:before {
+    content: $xicon-move-channel;
+  }
+}
+.xicon-album-retweet {
+  &:before {
+    content: $xicon-album-retweet;
+  }
+}
+.xicon-my-class {
+  &:before {
+    content: $xicon-my-class;
+  }
+}
+.xicon-xcourse_register {
+  &:before {
+    content: $xicon-xcourse_register;
+  }
+}
+.xicon-triangle-down {
+  &:before {
+    content: $xicon-triangle-down;
+  }
+}
+.xicon-triangle-left {
+  &:before {
+    content: $xicon-triangle-left;
+  }
+}
+.xicon-triangle-right {
+  &:before {
+    content: $xicon-triangle-right;
+  }
+}
+.xicon-triangle-up {
+  &:before {
+    content: $xicon-triangle-up;
+  }
+}
+.xicon-muted {
+  &:before {
+    content: $xicon-muted;
+  }
+}
+.xicon-notify-icon {
+  &:before {
+    content: $xicon-notify-icon;
+  }
+}
+.xicon-silent {
+  &:before {
+    content: $xicon-silent;
+  }
+}
+.xicon-sound {
+  &:before {
+    content: $xicon-sound;
+  }
+}
+.xicon-schedule-icon {
+  &:before {
+    content: $xicon-schedule-icon;
+  }
+}
+.xicon-my-school {
+  &:before {
+    content: $xicon-my-school;
+  }
+}
+.xicon-reminder-icon {
+  &:before {
+    content: $xicon-reminder-icon;
+  }
+}
+.xicon-slide-view {
+  &:before {
+    content: $xicon-slide-view;
+  }
+}
+.xicon-statistics-icon {
+  &:before {
+    content: $xicon-statistics-icon;
+  }
+}
+.xicon-arrow-tool {
+  &:before {
+    content: $xicon-arrow-tool;
+  }
+}
+.xicon-bold-rotate-left {
+  &:before {
+    content: $xicon-bold-rotate-left;
+  }
+}
+.xicon-bold-rotate-right {
+  &:before {
+    content: $xicon-bold-rotate-right;
+  }
+}
+.xicon-brush {
+  &:before {
+    content: $xicon-brush;
+  }
+}
+.xicon-font {
+  &:before {
+    content: $xicon-font;
+  }
+}
+.xicon-undo {
+  &:before {
+    content: $xicon-undo;
+  }
+}
+.xicon-zoom-in {
+  &:before {
+    content: $xicon-zoom-in;
+  }
+}
+.xicon-zoom-out {
+  &:before {
+    content: $xicon-zoom-out;
+  }
+}
+.xicon-new-setting {
+  &:before {
+    content: $xicon-new-setting;
+  }
+}
+.xicon-star-out {
+  &:before {
+    content: $xicon-star-out;
+  }
+}
+.xicon-zan {
+  &:before {
+    content: $xicon-zan;
+  }
+}
+.xicon-class_perform-icon {
+  &:before {
+    content: $xicon-class_perform-icon;
+  }
+}
+.xicon-order {
+  &:before {
+    content: $xicon-order;
+  }
+}
+.xicon-live-in {
+  &:before {
+    content: $xicon-live-in;
+  }
+}
+.xicon-shrink {
+  &:before {
+    content: $xicon-shrink;
+  }
+}
+.xicon-enlarge {
+  &:before {
+    content: $xicon-enlarge;
+  }
+}
+.xicon-record-on {
+  &:before {
+    content: $xicon-record-on;
+  }
+}
+.xicon-record-off {
+  &:before {
+    content: $xicon-record-off;
+  }
+}
+.xicon-attachment {
+  &:before {
+    content: $xicon-attachment;
+  }
+}
+.xicon-picture {
+  &:before {
+    content: $xicon-picture;
+  }
+}
+.xicon-video {
+  &:before {
+    content: $xicon-video;
+  }
+}
+.xicon-audio {
+  &:before {
+    content: $xicon-audio;
+  }
+}
+.xicon-no-public {
+  &:before {
+    content: $xicon-no-public;
+  }
+}
+.xicon-allow-chat {
+  &:before {
+    content: $xicon-allow-chat;
+  }
+}
+.xicon-live-exercises {
+  &:before {
+    content: $xicon-live-exercises;
+  }
+}
+.xicon-no-chat {
+  &:before {
+    content: $xicon-no-chat;
+  }
+}
+.xicon-add-tl {
+  &:before {
+    content: $xicon-add-tl;
+  }
+}
+.xicon-down {
+  &:before {
+    content: $xicon-down;
+  }
+}
+.xicon-up {
+  &:before {
+    content: $xicon-up;
+  }
+}
+.xicon-eye-read {
+  &:before {
+    content: $xicon-eye-read;
+  }
+}
+.xicon-hint-info {
+  &:before {
+    content: $xicon-hint-info;
+  }
+}
+.xicon-live-full-screen {
+  &:before {
+    content: $xicon-live-full-screen;
+  }
+}
+.xicon-change {
+  &:before {
+    content: $xicon-change;
+  }
+}
+

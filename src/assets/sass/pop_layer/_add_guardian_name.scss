@@ -1,0 +1,66 @@
+#addGuardianName {
+    width: 438px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+    }
+    .cancelAddGuardian {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border: none;
+        background: none;
+        background-color: #ccc;
+        @include border-radius(2px);
+    }
+    .submitAddGuardian {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border: none;
+        background: none;
+        background-color: #ffaa33;
+        margin-left: 16px;
+        @include border-radius(2px);
+        &.disabled {
+            background-color: #ccc;
+        }
+    }
+    .layer_content {
+        padding: 30px 0 0;
+    }
+    .addGuardianItem {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    .guardianInput {
+        height: 28px;
+        border: 1px solid #ddd;
+        width: 150px;
+        padding: 0 4px;
+        margin-right: 10px;
+    }
+}

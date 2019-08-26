@@ -1,0 +1,43 @@
+#xnw_layer_alert {
+    width: 438px;
+    .privacy_message {
+        padding: 0;
+    }
+    .layer_content {
+        min-height: 0;
+    }
+    .tips {
+        margin: 30px 20px;
+        .warningTip {
+            @include rel-pos($top: 2px);
+            color: $orangeFontColor;
+            margin-right: 6px;
+        }
+    }
+    .ok {
+        color: #32C572;
+        padding-right: 5px;
+        font-size: 14px;
+        position: relative;
+        top: 2px;
+    }
+    .txtCenter {
+        text-align: center;
+    }
+}
+#disableAddMemberTip {
+    width: 478px;
+    .privacy_message {
+        padding: 0;
+    }
+    .tip {
+        margin: 30px 20px;
+        text-align: center;
+        i {
+            @include rel-pos($top: 2px);
+            color: $orangeFontColor;
+            margin-right: 6px;
+        }
+    }
+}
+

@@ -1,0 +1,82 @@
+#questionSetting {
+    width: 438px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+        border-top: 1px solid #ddd;
+    }
+    .record_content {
+        padding: 70px 20px;
+        position: relative;
+    }
+    .multiselectSet {
+        @include abs-pos(30px, auto, auto, 20px);
+        .optionInput {
+            width: 30px;
+            height: 24px;
+            margin: 0 8px;
+            padding: 0 4px;
+            text-align: center;
+            @include border-radius(2px);
+            border: 1px solid #ddd;
+        }
+    }
+    .confirmBtn {
+        margin-left: 16px;
+    }
+    .questionLable {
+        .mustAnswer {
+            margin-right: 10px;
+        }
+    }
+}
+#removeQuestionTip {
+    width: 438px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    overflow: hidden;
+    @include border-radius(4px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .19);
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #eee;
+        .closeBtn {
+            float: right;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        background-color: #f5f5f5;
+        padding: 0 20px;
+        text-align: right;
+        margin: 0;
+        border-top: 1px solid #ddd;
+    }
+    .layer_content {
+        padding: 0;
+    }
+    .tips {
+        padding: 70px 0 60px;
+        text-align: center;
+        margin: 0 20px;
+    }
+}

@@ -1,0 +1,20 @@
+#blank_input_tips_layer {
+    width: 438px;
+    font-size: 12px;
+    z-index: 8888 !important;
+    .privacy_message {
+        padding: 0;
+    }
+    .content {
+        padding: 20px;
+        line-height: 28px;
+        .no_receiver {
+            width: 100px;
+            height: 16px;
+            border: 2px solid $lightRed;
+            display: inline-block;
+            margin: 0 10px;
+            @include rel-pos($top: 5px);
+        }
+    }
+}

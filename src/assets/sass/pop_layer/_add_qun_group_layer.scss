@@ -1,0 +1,68 @@
+
+/*档案的标签弹层样式*/
+#set_record_label_layer,
+#set_archive_tag_layer,
+#set_archive_label_layer,
+/*建分组弹层样式*/
+#add_user_group_layer,
+#set_user_group_layer,
+#set_qun_group_layer,
+#add_qun_group_layer {
+    width: 478px;
+    .privacy_message {
+        padding: 0;
+    }
+    .create_group {
+        padding: 20px 30px 0;
+    }
+    .group_title {
+        line-height: 30px;
+        margin-bottom: 10px;
+        span {
+            color: $darkOrangeFontColor;
+            margin-left: -4px;
+            margin-right: 4px;
+        }
+    }
+    .group_name {
+        width: 296px;
+        height: 28px;
+        float: left;
+        padding: 2px 2px 2px 8px;
+        @include border-radius(5px);
+        border: 1px solid $lineGray;
+    }
+    .col_group,
+    .col_user_group {
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin: 10px 0 0 -26px;
+        @include border-radius(16px);
+        cursor: pointer;
+    }
+    .color_group {
+        @include abs-pos(92px, 85px, auto, auto);
+        width: 104px;
+        padding: 8px;
+    }
+    .del_group {
+        height: 34px;
+        line-height: 34px;
+        float: left;
+        display: block;
+        color: $borderGray;
+        cursor: pointer;
+        width: 60px;
+        text-align: center;
+        &:hover {
+            color: $darkOrangeFontColor;
+        }
+    }
+    .newBtnArea {
+        clear: both;
+        button {
+            margin-left: 10px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/*存档的创建标签样式*/
+#set_archive_label_layer,
+#set_archive_tag_layer,
+#set_record_label_layer {
+    .group_name {
+        width: 196px;
+        height: 28px;
+        float: none;
+        margin: 0 5px;
+    }
+}

@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+.onlineExamName {
+    width: 880px;
+    margin: 20px auto;
+    a {
+        color: $blackFontColor;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+}
+.onlineExam {
+    .filter {
+        margin: 20px 0;
+    }
+    .filterBox {
+        position: relative;
+        display: inline-block;
+        .current {
+            padding: 5px 25px 5px 8px;
+            min-width: 100px;
+            display: inline-block;
+            color: $grayFontColor;
+            margin: 0 20px 0 10px;
+            cursor: pointer;
+            border: 1px solid $lightLineGray;
+            @include border-radius(2px);
+            position: relative;
+            &.disabled {
+                background: $borderGray;
+                cursor: auto
+            }
+            i {
+                @include abs-pos(8px, 5px, auto, auto);
+            }
+        }
+        .list {
+            background: #fff;
+            max-height: 210px;
+            overflow-y: auto;
+            display: none;
+            @include abs-pos(30px, auto, auto, 10px);
+            box-shadow: 0 2px 4px 0 rgba(#000, .19);
+            .item {
+                cursor: pointer;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 20px;
+                width: 120px;
+                @include text-truncate();
+                color: $grayFontColor;
+                &:hover,
+                &.on {
+                    color: $blackFontColor;
+                    background: $lightGrayBg;
+                }
+            }
+        }
+    }
+    .importScore {
+        margin: 20px 0;
+        .importBtn {
+            width: 120px;
+        }
+    }
+    .studentScoreTitle {
+        font: 14px/70px normal;
+        border-bottom: 1px solid $lightLineGray;
+    }
+    .studentInfo {
+        margin: 20px 0 30px;
+        span {
+            margin-right: 60px;
+        }
+    }
+    .addSubjective {
+        position: relative;
+        input {
+            border: 1px solid $orangeFontColor;
+            padding: 5px;
+            width: 100px
+        }
+        a {
+            margin: 0 5px;
+            &.disabled {
+                color: $grayFontColor;
+                cursor: auto;
+            }
+        }
+        .modify {
+            line-height: 46px;
+            display: block;
+            @include abs-pos(0, 20px, auto, auto);
+        }
+    }
+    .uploadGuideTitle {
+        @extend %guideTitle;
+        border-bottom: 1px dashed $lightLineGray;
+        &.fixedTitle {
+            position: fixed;
+            width: 940px;
+            background: #fff;
+            margin: 0 auto;
+            top: 60px;
+            left: 50%;
+            margin-left: -470px;
+            box-shadow: 0 2px 4px 1px rgba(#000, .2);
+            text-align: right;
+            border: none;
+            .btn {
+                margin-right: 20px;
+            }
+        }
+    }
+    .table {
+        @extend %baseTableStyle;
+        th,
+        td {
+            text-align: center;
+        }
+        .setting {
+            position: relative;
+            .excellent {
+                @include abs-pos(0, 10px, auto, auto);
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+    }
+    .scoreTitle {
+        margin: 40px 0 20px;
+    }
+    .tips {
+        margin: 30px 0;
+        span {
+            color: $orangeFontColor;
+        }
+    }
+    .uploadBtnArea {
+        border-top: 1px dashed $lightLineGray;
+        margin-top: 20px;
+        padding: 20px 0;
+        text-align: center;
+        .finished {
+            margin-left: 10px;
+        }
+    }
+    .answerArea {
+        background-color: $lightGrayBg;
+        padding: 10px 10px 10px 130px;
+        min-height: 80px;
+        position: relative;
+        margin-top: 30px;
+        .aside {
+            width: 100px;
+            height: 100px;
+            background-color: $orangeFontColor;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            overflow: hidden;
+            text-shadow: 0 2px 4px rgba(#000, .16);
+            @include abs-pos(-10px, auto, auto, 10px);
+            @include border-radius(5px 5px 0 0);
+            .mark {
+                @include abs-pos(10px, auto, auto, -20px);
+                opacity: .2;
+                font-size: 110px;
+                position: absolute;
+                text-shadow: none;
+            }
+            .num {
+                font-size: 24px;
+                margin: 0 5px;
+            }
+        }
+        .proportion {
+            float: left;
+            width: 400px;
+            .ratioInfo {
+                margin-top: 10px;
+            }
+            .ratioNum {
+                display: inline-block;
+                width: 40px;
+            }
+            .ratio {
+                margin: 0 20px;
+                height: 12px;
+                max-width: 220px;
+                display: inline-block;
+                @include border-radius(2px);
+                &.right {
+                    background-color: $green;
+                }
+                &.error {
+                    background-color: $darkOrange;
+                }
+            }
+            .right {
+                color: $green;
+            }
+            .error {
+                color: $darkOrange;
+            }
+        }
+        .answer {
+            float: left;
+            text-align: right;
+            width: 300px;
+            margin-top: 10px;
+            .option {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                background-color: #fff;
+                color: $grayFontColor;
+                margin-right: 4px;
+                display: inline-block;
+                vertical-align: top;
+            }
+            .analysis {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+            .circle {
+                width: 22px;
+                height: 22px;
+                clip: rect(0, 11px, 22px, 0);
+                @include border-radius(100%);
+                position: absolute;
+                display: block;
+                &.big {
+                    width: 100px;
+                    height: 100px;
+                    clip: rect(0, 50px, 100px, 0);
+                    .sector {
+                        width: 100px;
+                        height: 100px;
+                        clip: rect(0, 50px, 100px, 0);
+                    }
+                }
+                &.one {
+                    transform: rotate(120deg);
+                    .sector {
+                        background-color: #F77935;
+                    }
+                }
+                &.two {
+                    transform: rotate(0deg);
+                    .sector {
+                        background-color: #FFDB56;
+                    }
+                }
+                &.three {
+                    transform: rotate(240deg);
+                    .sector {
+                        background-color: #3FC8F2
+                    }
+                }
+                .sector {
+                    position: absolute;
+                    width: 22px;
+                    height: 22px;
+                    display: block;
+                    clip: rect(0, 11px, 22px, 0);
+                    transform: rotate(60deg);
+                    @include border-radius(100%);
+                }
+            }
+            .ratioLayer {
+                padding: 10px;
+                width: 200px;
+                background-color: #fff;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.19);
+                text-align: center;
+                margin-left: -110px;
+                @include abs-pos(auto, auto, 15px, 50%);
+                color: $grayFontColor;
+                .arrow {
+                    @include abs-pos(auto, auto, -20px, 107px);
+                    position: absolute;
+                    font-size: 30px;
+                    color: #fff;
+                }
+                .ratioPic {
+                    width: 100px;
+                    height: 100px;
+                    margin: 30px auto;
+                }
+            }
+        }
+        &.subjective {
+            padding-left: 10px;
+            .title {
+                height: 90px;
+                padding-left: 120px;
+                overflow: hidden;
+            }
+            .scoreAnalysis {
+                background-color: #fff;
+                min-height: 60px;
+                text-align: center;
+                padding: 10px;
+                color: $grayFontColor;
+            }
+        }
+    }
+}
+.uploadScoreDemo {
+    @extend %uploadScoreDemo;
+}
+.setExcellentLineLayer {
+    width: 400px;
+    .closeBtn {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        padding: 0 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .content {
+        .inner {
+            margin: 15px 30px;
+            .scoreInput {
+                height: 24px;
+                border: 1px solid #FFAA33;
+                @include border-radius(3px);
+            }
+        }
+    }
+}

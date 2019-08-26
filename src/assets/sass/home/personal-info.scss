@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@import "global/_mixins.scss";
+@import "global/_variables.scss";
+
+//个人信息卡片
+.panelRight {
+    float: right;
+    width: 248px;
+    .panel {
+        border: none;
+        background: #FFF;
+        padding: 0 10px;
+        @include border-radius(2px);
+        @include box-shadow(0 2px 8px 0 rgba(42, 38, 31, .1));
+        .title {
+            height: 40px;
+            background: none;
+            text-indent: 0;
+            line-height: 40px;
+            font-size: 16px;
+            color: #000;
+            a {
+                padding: 0;
+            }
+        }
+        .content {
+            padding: 10px 0;
+        }
+    }
+    .panelInfo {
+        .content {
+            color: $blackFontColor;
+            div {
+                &+p {
+                    color: $blackFontColor;
+                }
+            }
+            p {
+                padding-top: 10px;
+                font-size: 12px;
+                line-height: 18px;
+                color: $grayFontColor;
+            }
+        }
+    }
+}

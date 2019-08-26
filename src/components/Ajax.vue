@@ -1,6 +1,12 @@
 <template>
+<!--    0、  -->
     <div>
-        {{info}}
+        <div>
+            {{info}}
+        </div>
+       <div v-for="site in info">
+         {{site.name}}
+       </div>
     </div>
     
 </template>
@@ -15,7 +21,7 @@
         },
         mounted(){
             this.$axios
-                .get('https://www.runoob.com/try/ajax/json_demo.json')
+                .post('https://www.runoob.com/try/ajax/demo_axios_post.php')
                 .then(response=>(this.info=response))
                 .catch(function(error){
                     console.log(error);

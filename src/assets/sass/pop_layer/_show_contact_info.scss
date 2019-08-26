@@ -1,0 +1,134 @@
+#show_contact_info {
+    width: 600px;
+    .layer_content {
+        padding: 20px 0 20px;
+        position:relative;
+        z-index:11;
+        p {
+            position:absolute;
+            left:80px;
+            top:-32px;
+            a {
+                margin-right:20px;
+            }
+        }
+    }
+    .qun_contect_style {
+        padding: 0 20px;
+        .cardInfoItem {
+            width: 50%;
+            height: 54px;
+            float: left;
+            margin-bottom: 15px;
+        }
+        .cardInfoTitle {
+            display: block;
+        }
+        input {
+            height: 28px;
+            width: 240px;
+            padding: 0 4px;
+            border: 1px solid #eee;
+        }
+        .mobileInfo {
+            display: inline-block;
+            line-height: 30px;
+        }
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+    }
+}
+#classMemberCard {
+    width: 558px;
+    .layer_content {
+        padding: 0;
+    }
+    .memberCardContent {
+        padding: 40px 0 0;
+        min-height: 100px;
+    }
+    .cardInfo {
+        float: left;
+        width: auto;
+        height: 30px;
+        line-height: 30px;
+        margin: 0 20px 20px;
+        &.cardRelationInfo {
+            height: auto;
+        }
+        .editGuardianInfo {
+            margin-left: 60px;
+        }
+    }
+    .memberPage {
+        clear: both;
+        padding-left: 30px;
+    }
+    .guardianInfoItem {
+        padding-left: 60px;
+        .relationInfo {
+            margin-right: 60px;
+        }
+    }
+    .cardInfoTip {
+        color: $grayFontColor;
+        font-size: 12px;
+        clear: both;
+        padding-top: 10px;
+    }
+    .infoTitle {
+        margin-right: 10px;
+        color: $grayFontColor;
+    }
+    .changeMobile {
+        margin-left: 20px;
+    }
+    .readInfo {
+        width: 150px;
+        height: 28px;
+        padding: 0 4px;
+        display: inline-block;
+    }
+    .infoInput {
+        width: 150px;
+        height: 28px;
+        padding: 0 4px;
+        border: 1px solid $lineGray;
+    }
+    .cancelModify {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border: none;
+        background: none;
+        background-color: #ccc;
+        @include border-radius(2px);
+    }
+    .saveModify {
+        width: 76px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        color: #fff;
+        display: inline-block;
+        border: none;
+        background: none;
+        background-color: #ffaa33;
+        margin-left: 16px;
+        @include border-radius(2px);
+        &.disabled {
+            background-color: #ccc;
+        }
+    }
+    @extend %chosenContainerStyle;
+}

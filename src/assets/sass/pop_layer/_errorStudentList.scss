@@ -1,0 +1,33 @@
+//学生学号不匹配的样式,重新上传成绩单层样式
+#uploadScoreErrStudents,
+#_reUploadRemindLayer,
+#_noStudentRemindLayer,
+#_delScoreTypeRemindLayer,
+#_delScoreTypeTipLayer {
+    width: 438px;
+    .privacy_message {
+        padding: 20px 0 0;
+    }
+    .newBtnArea {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+        a {
+            font-weight: normal;
+        }
+        .reUploadBtn {
+            float: right;
+            margin: 11px 0 0 20px;
+        }
+    }
+}
+#_delScoreTypeRemindLayer,
+#_delScoreTypeTipLayer {
+    p {
+        margin: 20px;
+    }
+}

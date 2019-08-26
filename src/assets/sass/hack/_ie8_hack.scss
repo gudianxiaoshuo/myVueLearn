@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+// 注册页面的提示文案phTips位置
+.xnw_register_inner,
+.xnw_login_form {
+    .text_input {
+        line-height: normal;
+        .text {
+            line-height: 25px;
+        }
+    }
+}
+input {
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+}
+// 主导航上搜索框的样式/
+#do_global_search {
+    .phTips {
+        position: relative;
+        top: 7px !important;
+    }
+}
+
+// 图片模式边框/
+.xnwgallery_album_list,
+.S-xnw_main {
+    border: 1px solid $lineGray;
+}
+// 图片模式样式/
+.album_wrap {
+    background-color: none;
+    &.S-xnw_main {
+        background-color: none;
+        border: none;
+    }
+}
+
+// 群卡片页面/
+#xnw_qun_list {
+    border: none;
+}
+
+.myqun_list {
+    margin: 10px 9px;
+    border: 1px solid $lineGray;
+    h3 {
+        overflow: hidden;
+    }
+}
+
+// 消息下拉信息/
+.show_message_layer {
+    border: 1px solid $lineGray;
+    overflow: hidden;
+}
+
+// 我的下拉菜单样式/
+.xnwHeaderNav {
+    .nav_menu_my {
+        border: 1px solid $lineGray;
+    }
+}
+// 更多菜单/
+.weibo_comment_operation .show_more,
+.re_weibo_operation .show_more,
+.article_operation .show_more {
+    border: 1px solid $lineGray;
+}
+
+// 群头部和个人主页透明背景的样式/
+.home_header_infomation,
+.club_header_infomation {
+    background-image: url(/images/version/opacity40_bg.png);
+    background-repeat: repeat;
+}
+
+// IE8下写日志上传附件处的样式/
+.xnw_say_something .icon_container .icon_icon {
+    position: relative;
+    .up_container {
+        @include abs-pos(0, 0, auto, auto);
+        visibility: visible;
+        width: 105px;
+        height: 40px;
+        cursor: pointer;
+        @include opacity(0);
+        input {
+            height: 40px;
+            cursor: pointer;
+            float: right;
+            width: 110px;
+            font-size: 50px;
+        }
+    }
+}
+
+
+// 日志管理员操作区弹层样式/
+.one_article {
+    .section{
+        .top_tip_menu {
+            border: 1px solid $lineGray;
+        }
+    }
+}
+
+/* 写日志好友圈input和归类到标签层input/
+ * 上传图片弹层/
+ * 归类标签层input样式/
+ * 添加标签input样式 */
+.xnw_say_something .hyq_group_container,
+#add_album_layer  .pointer ,
+#setup_channel .table_four_cell {
+    input {
+        height: auto;
+        line-height: auto;
+    }
+}
+.footer .inner {
+    background: $lightGrayBg;
+}
+
+// 相关群组弹层/
+.multilevel_qun_layer {
+    filter: Alpha(opacity=98);
+    a.close_qun_tree{
+        background: #fff;
+        z-index: 105;
+    }
+}
+.qun_tree_container {
+    ul {
+        width: 155px;
+    }
+    li {
+        width: 140px;
+    }
+}
+
+//  发成绩 /
+.exam_report,
+.xnw_score_wrap,
+.match_layer {
+    .report_table {
+        .table_avg_tr {
+            background: none !important;
+            td {
+                border: none !important;
+                background: none;
+                height: 50px;
+            }
+        }
+    }
+}
+
+// 好友分组设置样式/
+.more_set_up {
+    .set_up_layer {
+        border: 1px solid $lineGray;
+    }
+}
+
+// 群自定义首页样式/
+.user_custom_index {
+    .channel_title {
+        background-color: #daefff;
+    }
+}
+// 标题列表/
+.weibo_list_txt {
+    height: 30px;
+    overflow: hidden;
+}
+// 写长日志层/
+.long_write_log {
+    .footer_box {
+        .attach_content {
+            .add_attach input {
+                filter: alpha(opacity=0);
+            }
+        }
+    }
+}
+
+// 未读通知
+#publish_notify_layer,
+#modify_notice_layer,
+#publish_homework_layer,
+#modify_homework_layer {
+    .fixedGroup {
+        input {
+            float: left;
+        }
+    }
+}
+.noReadNotify {
+    .showCompleteNotifyBtn {
+        i {
+            background-color:  none;
+            background: url(#{$versionImgPath}show.png?#{$imgVer}) no-repeat scroll 0 0 transparent;
+            font-weight: normal;
+        }
+    }
+}

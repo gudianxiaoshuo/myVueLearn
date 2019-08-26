@@ -1,0 +1,199 @@
+.xnw_register_container {
+    width: 100%;
+    padding: 32px 0;
+    background: #D6B997 url(#{$loginModuleImgPath}register-page-bg.png?#{$imgVer}) no-repeat center 0;
+    background-size: cover;
+}
+.xnw_register_bg {
+    padding: 16px;
+    width: 748px;
+    height: 494px;
+    margin: 0 auto;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .38);
+    @include border-radius(10px);
+}
+.xnw_register_inner {
+    width: 748px;
+    height: 494px;
+    margin: 0 auto;
+    background-color: #fff;
+    position: relative;
+    @include border-radius(10px);
+    .xnw_register_type {
+        width: 688px;
+        height: 90px;
+        line-height: 90px;
+        font-size: 20px;
+        font-weight: normal;
+        margin: 0 auto;
+        text-align: center;
+        border-bottom: 2px solid #EEEEEE;
+        .type_item {
+            display: inline-block;
+            width: 136px;
+            text-align: center;
+            color: $blackFontColor;
+            position: relative;
+            margin: 0 34px;
+            &.on {
+                color: $orangeFontColor;
+                .highlight_line {
+                    visibility: visible;
+                }
+            }
+        }
+        .highlight_line {
+            height: 2px;
+            width: 100%;
+            display: block;
+            background-color: #ffaa33;
+            visibility: hidden;
+            @include abs-pos(auto, auto, -2px, 0);
+        }
+    }
+    .register_type {
+        width: 688px;
+        padding-top: 70px;
+        margin: 0 auto;
+    }
+    .text_input {
+        height: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        &.service_agreement {
+            font-size: 12px;
+            margin-bottom: 0;
+            margin-top: -24px;
+            .agreement_link {
+                display: inline-block;
+                width: 380px;
+                text-align: left;
+                color: $grayFontColor;
+            }
+        }
+        &.submit_register_btn {
+            margin-top: 40px;
+        }
+        .selectCountryWrap {
+            display: inline-block;
+            position: relative;
+            .selectCountry {
+                display: inline-block;
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                box-sizing: border-box;
+                text-indent: 12px;
+                border: 1px solid #DDDDDD;
+                cursor: pointer;
+            }
+            .xicon-boomerang-down {
+                position: absolute;
+                top: 11px;
+                right: 10px;
+            }
+        }
+        .countryOption {
+            text-align: center;
+            position: relative;
+            z-index: 9;
+            background-color: #FFF;
+            width: 377px;
+            margin-left: 212px;
+            margin-top: 10px;
+            box-shadow: 0 0 8px 0 #D8D8D8;
+            border: 1px solid #EEEEEE;
+            .countryList {
+                width: 377px;
+                height: 36px;
+                text-align: left;
+                line-height: 36px;
+                font-size: 12px;
+                border-bottom: 1px solid #EEE;
+                color: #9B9B9B;
+                cursor: pointer;
+                &:hover {
+                    background-color: #F8F8F8;
+                    color: #313131;
+                }
+                .countryNo {
+                    display: inline-block;
+                    width: 45px;
+                    text-align: center;
+                }
+            }
+        }
+        .text_tag {
+            width: 100px;
+            font-size: 16px;
+            line-height: 40px;
+            color: $grayFontColor;
+            display: inline-block;
+            text-align: right;
+            margin-right: 10px;
+        }
+        .text {
+            width: 370px;
+            padding: 0 5px;
+            height: 38px;
+            border: 1px solid $lineGray;
+            font-size: 14px;
+            &.phone {
+                width: 260px;
+            }
+            @include border-radius(1px);
+            &.focus_status,
+            &:focus {
+                border: 1px solid #ffaa33;
+            }
+            &.verify_text {
+                padding-right: 90px;
+                width: 280px;
+            }
+        }
+        .get-verifycode-btn {
+            width: 80px;
+            height: 40px;
+            margin-left: -83px;
+            @include border-radius(0 1px 1px 0);
+            &[disabled] {
+                background-color: #ddd;
+                @include opacity(1);
+            }
+        }
+        .resend_code {
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .notice,
+        .error {
+            height: 20px;
+            line-height: 20px;
+            text-align: left;
+            padding-left: 210px;
+            color: $darkRed;
+            span {
+                display: inline-block;
+                font-size: 12px;
+                line-height: 16px;
+                vertical-align: middle;
+            }
+        }
+        .notice {
+            color: $blue;
+        }
+        .agreement {
+            color: $blueFontColor;
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+    }
+    .btn_register {
+        width: 380px;
+        height: 40px !important;
+        font-size: 18px;
+    }
+}

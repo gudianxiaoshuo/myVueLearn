@@ -1,0 +1,480 @@
+.xnw_login_container {
+    width: 100%;
+    background-color: #F5F5F5;
+    .container_inner {
+        position: relative;
+        width: 940px;
+        height: 547px;
+        margin: 0 auto;
+        @include bg_with_retina(iPhone, png, $loginModuleImgPath);
+        background-position: 0 0;
+    }
+    .login_module {
+        background-color: rgba(255, 255, 255, .27);
+        @include border-radius(10px 10px 0 0);
+        padding: 12px 12px 0;
+        width: 386px;
+        @include abs-pos(auto, 0, 0, auto);
+        .inner_module {
+            position: relative;
+            height: 434px;
+            padding: 0 48px;
+            @include border-radius(10px 0 0 0);
+            background-color: #fff;
+        }
+        .switch {
+            display: block;
+            @include abs-pos(0, 0, auto, auto);
+            width: 48px;
+            height: 48px;
+            @include bg_with_retina('account_login_bg', 'png', $loginModuleImgPath);
+            cursor: pointer;
+            &.account_btn {
+                @include bg_with_retina('qr_login_bg', 'png', $loginModuleImgPath);
+            }
+        }
+    }
+}
+.xnw_account_login {
+    .overseasTitle {
+        display: none;
+    }
+    .inner_title {
+        height: 20px;
+        font-size: 16px;
+        padding: 25px 0;
+        @include border-radius(10px 10px 0 0);
+        border-bottom: 1px solid $lightLineGray;
+        li {
+            float: left;
+            width: 134px;
+            color: #9B9B9B;
+            cursor: pointer;
+            &.last {
+                border-left: 1px solid #eee;
+                text-align: right;
+            }
+            &.on {
+                color: #fa3;
+            }
+        }
+    }
+    .inner_body {
+        padding-top: 30px;
+        .text_input {
+            margin-bottom: 24px;
+            height: 32px;
+            position: relative;
+            .error_msg {
+                @include abs-pos(-22px, auto, auto, 0);
+                color: $darkRed;
+                font-size: 12px;
+                &.bottom_msg {
+                    @include abs-pos(100%, auto, auto, 0);
+                }
+            }
+            .text {
+                height: 30px;
+                font-size: 14px;
+                width: 256px;
+                padding-left: 32px;
+                border: 1px solid $lineGray;
+                @include border-radius(2px);
+                &.focus_status,
+                &:focus {
+                    border: 1px solid $orangeFontColor;
+                }
+            }
+            .forget_paw {
+                color: $orangeFontColor;
+                &:hover {
+                    color: $darkOrangeFontColor;
+                }
+            }
+            .icon {
+                @include abs-pos(8px, auto, auto, 8px);
+                cursor: default;
+                z-index: 5;
+            }
+            .forgetPassword {
+                font-size: 12px;
+                color: $grayFontColor;
+                @include abs-pos(5px, 12px, auto, auto);
+                &:hover {
+                    color: $orangeFontColor;
+                }
+            }
+            .verifyCode {
+                @include border-radius(0 2px 2px 0);
+                @include abs-pos(0, 0, auto, auto);
+                font-size: 12px;
+                background: #ffaa33;
+                color: #fff;
+                width: 80px;
+                line-height: 32px;
+                height: 32px;
+                text-align: center;
+                &.gray {
+                    background: #ddd;
+                    color: $grayFontColor;
+                    cursor: default;
+                }
+            }
+            .textCode {
+                width: 122px;
+                padding-left: 12px;
+            }
+            .imgCode {
+                display: inline-block;
+                vertical-align: bottom;
+                border: 1px solid #ddd;
+                @include border-radius(2px);
+            }
+            .changeCode {
+                padding-left: 5px;
+                text-decoration: underline;
+                font-size: 12px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .remeber_me {
+            input {
+                float: left;
+                margin: 6px 6px 0 0;
+            }
+        }
+        .btn-darkorange {
+            width: 100%;
+            height: 36px;
+            font-size: 16px;
+            font-weight: normal;
+            background-color: $orangeFontColor;
+            border-color: $orangeFontColor;
+        }
+        .go_to_register {
+            padding: 24px 0 19px 0;
+            font-size: 12px;
+            line-height: 16px;
+            color: $grayFontColor;
+            .marginStyle {
+                margin-left: 37px;
+            }
+            .f_left {
+                color: #FFAA33;
+                font-weight: 200;
+            }
+        }
+    }
+    .the_other_account {
+        background: #f8f8f8;
+        padding: 18px 23px;
+        position: relative;
+        margin: 0 -58px;
+        i {
+            @include abs-pos(-14px, 100px, auto, auto);
+            color: #f8f8f8;
+            font-size: 22px;
+        }
+        .third_icon {
+            float: left;
+            height: 34px;
+            width: 34px;
+            display: block;
+            margin: 0 17px;
+            &.qq {
+                @include bg_with_retina(QQ, png, $loginModuleImgPath);
+            }
+            &.sina {
+                @include bg_with_retina(Sina-weibo-icon, png, $loginModuleImgPath);
+            }
+            &.tx {
+                @include bg_with_retina(weixin, png, $loginModuleImgPath);
+            }
+            &.edu {
+                @include bg_with_retina(Education-cloud-icon, png, $loginModuleImgPath);
+            }
+            &.fujian {
+                @include bg_with_retina(fujian-education-cloud, png, $loginModuleImgPath);
+            }
+        }
+    }
+
+    &.overseasWrap {
+        #overseasInput {
+            width: 188px;
+            padding-left: 12px;
+        }
+        .inner_title {
+            display: none;
+        }
+        .xicon-user {
+            display: none;
+        }
+        .overseasTitle {
+            display: inline-block;
+            .title {
+                height: 70px;
+                line-height: 70px;
+                font-size: 16px;
+                font-weight: 400;
+                width: 290px;
+                text-align: center;
+                border-bottom: 1px solid #EEEEEE;
+            }
+        }
+        .accountLogin {
+            display: none;
+        }
+        .phoneLogin {
+            display: block;
+            .text_input {
+                .countryNoLabel {
+                    display: inline-block;
+                    position: relative;
+                    width: 80px;
+                    .selectCountry {
+                        height: 30px;
+                        font-size: 14px;
+                        width: 80px;
+                        text-indent: 20px;
+                        border: 1px solid #ddd;
+                        border-radius: 2px;
+                        background-clip: border-box;
+                        cursor: pointer;
+                    }
+                    .xicon-boomerang-down {
+                        position: absolute;
+                        right: 12px;
+                        top: 8px;
+                    }
+                }
+                .countryOption {
+                    text-align: center;
+                    position: relative;
+                    z-index: 9;
+                    background-color: #FFF;
+                    width: 290px;
+                    margin-top: 10px;
+                    box-shadow: 0 0 8px 0 #D8D8D8;
+                    border: 1px solid #EEEEEE;
+                    .countryList {
+                        width: 290px;
+                        height: 36px;
+                        text-align: left;
+                        line-height: 36px;
+                        font-size: 12px;
+                        border-bottom: 1px solid #EEE;
+                        color: #9B9B9B;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: #F8F8F8;
+                            color: #313131;
+                        }
+                        .countryNo {
+                            display: inline-block;
+                            width: 45px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.xnw_qr_code_login {
+    .qr_code_tips {
+        float: right;
+        width: 129px;
+        height: 20px;
+        margin-top: 10px;
+        @include bg_with_retina(qr_code_tips, png, $loginModuleImgPath);
+    }
+    .inner_title {
+        padding: 60px 0 20px;
+        font-size: 16px;
+        line-height: 20px;
+        color: #313131;
+        text-align: center;
+    }
+    .inner_body {
+        width: 182px;
+        height: 182px;
+        margin: 0 auto;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .inner_foot {
+        width: 98px;
+        padding-left: 54px;
+        margin: 14px auto 30px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #9B9B9B;
+        @include bg_with_retina(scan_qr_code, png, $loginModuleImgPath);
+        background-position: 0 8px;
+    }
+    .lightorange {
+        color: $orangeFontColor;
+    }
+    .go_to_register {
+        text-align: center;
+    }
+}
+.intro_container {
+    width: 1000px;
+    height: 680px;
+    margin: 0 auto;
+    &.teacher_list {
+        height: 660px;
+    }
+    .intro_title {
+        font-size: 36px;
+        line-height: 36px;
+        font-weight: normal;
+        text-align: center;
+        padding: 70px 0 54px;
+    }
+    .intro_list {
+        text-align: center;
+    }
+    .intro_item {
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 24px;
+        color: $grayFontColor;
+        display: inline-block;
+        margin: 0 25px;
+        padding-left: 32px;
+        position: relative;
+    }
+    .item_pointer {
+        display: block;
+        height: 14px;
+        width: 14px;
+        @include abs-pos(5px, auto, auto, 0);
+        &.pointer-1 {
+            @include bg_with_retina(list-pointer-1, png, $loginModuleImgPath);
+        }
+        &.pointer-2 {
+            @include bg_with_retina(list-pointer-2, png, $loginModuleImgPath);
+        }
+        &.pointer-3 {
+            @include bg_with_retina(list-pointer-3, png, $loginModuleImgPath);
+        }
+        &.pointer-4 {
+            @include bg_with_retina(list-pointer-4, png, $loginModuleImgPath);
+        }
+        &.pointer-5 {
+            @include bg_with_retina(list-pointer-5, png, $loginModuleImgPath);
+        }
+        &.pointer-6 {
+            @include bg_with_retina(list-pointer-6, png, $loginModuleImgPath);
+        }
+        &.pointer-7 {
+            @include bg_with_retina(list-pointer-7, png, $loginModuleImgPath);
+        }
+    }
+}
+.for_teacher_intro {
+    background-color: #fff;
+    .intro_container {
+        @include bg_with_retina(The-teacher-bg, png, $loginModuleImgPath);
+        background-position: bottom center;
+    }
+}
+.for_parents_intro {
+    background: url(#{$loginModuleImgPath}for_parents_intro_bg.png?#{$imgVer}) repeat 0 0;
+    .intro_container {
+        @include bg_with_retina(parents-bg, png, $loginModuleImgPath);
+        background-position: bottom center;
+    }
+}
+.for_students_intro {
+    background-color: #fff;
+    padding-bottom: 100px;
+    .intro_container {
+        height: 540px;
+        @include bg_with_retina(students-bg, png, $loginModuleImgPath);
+        background-position: bottom center;
+    }
+}
+
+/*修改初始密码*/
+.initialPassword {
+    background: none !important;
+    .initialPasswordArea {
+        width: 408px;
+        text-align: center;
+        background: #fff;
+        margin: 18% auto auto;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4);
+        border: 1px solid $lineGray;
+        @include border-radius(4px);
+    }
+    .title {
+        text-align: left;
+        position: relative;
+        padding: 0 20px;
+        @include border-radius(4px 4px 0 0);
+        background-clip: border-box;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        border-bottom: 1px solid $borderGray;
+        border-top: 1px solid #fff;
+        i {
+            @include abs-pos(15px, 10px, auto, auto);
+        }
+    }
+    .tips {
+        height: 24px;
+        line-height: 24px;
+        color: $orangeFontColor;
+        border: 1px solid $borderOrange;
+        background-color: rgba(254,238,212,0.4);
+        margin: 20px;
+        text-align: center;
+    }
+    .label {
+        padding: 10px;
+        display: block;
+        span {
+            display: inline-block;
+            text-align: right;
+            width: 70px;
+        }
+        input {
+            height: 27px;
+            line-height: 27px;
+            border: solid 1px $borderGray;
+            width: 220px;
+            padding-left: 8px;
+            @include border-radius(3px);
+        }
+    }
+
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        padding-right: 20px;
+        margin-top: 20px;
+        text-align: right;
+        background-color: $lightGrayBg;
+        @include border-radius(0 0 5px 5px);
+        button {
+            margin-left: 10px;
+        }
+    }
+}
+
+// 创新教育登录
+#chuangxinLogin {
+    width: 310px;
+    .inner_body {
+        padding-top: 0;
+    }
+}

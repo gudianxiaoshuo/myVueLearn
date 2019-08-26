@@ -1,0 +1,54 @@
+#conflict_contacts_layer {
+    .privacy_message,
+    .layer_content,
+    .conflict_content {
+        padding: 20px 0 0;
+    }
+    .member_contacts {
+        width: 93%;
+        border-collapse: collapse;
+        margin: 15px auto;
+        th,
+        td {
+            border: solid 1px $borderGray;
+            text-align: center;
+            padding: 3px 0;
+        }
+        .contact_old th {
+            background: url(/images/table_old.png) no-repeat 5px 5px;
+            padding-left: 25px;
+        }
+        .contact_new th {
+            background: url(/images/table_new.png) no-repeat 5px 5px;
+            padding-left: 25px;
+        }
+    }
+    .warning {
+        margin: 0 20px;
+        margin-bottom: 10px;
+        color: $blackFontColor;
+        padding: 5px 15px;
+        font-size: 12px;
+        background-color: #fffdf0;
+        border: solid 1px #f2daac;
+        border-radius: 2px;
+        i {
+            font-weight: bolder;
+            color: #f00;
+        }
+    }
+    .button_area {
+        height: 48px;
+        line-height: 48px;
+        background-color: $lightGrayBg;
+        text-align: right;
+        padding: 0 20px 0 0;
+        margin-top: 10px;
+        text-align: right;
+        input[type='button'] {
+            width: 120px ;
+        }
+    }
+}
+
+

@@ -1,0 +1,27 @@
+.weibo_list_txt {
+    color: $grayFontColor;
+    line-height: 46px;
+    border-bottom: 1px dashed $lightLineGray;
+    a {
+        color: $grayFontColor;
+        width: 80%;
+        display: block;
+        @include text-truncate(ellipsis);
+        float: left;
+        &:hover {
+            color: $darkOrangeFontColor;
+            i {
+              color: $darkOrangeFontColor;
+            }
+        }
+        i {
+            margin-right: 5px;
+        }
+    }
+    span {
+        float: right;
+    }
+    &.last {
+        border-bottom: 0;
+    }
+}

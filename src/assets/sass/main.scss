@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: #FFF;
+    font-family: "SF Pro SC", "HanHei SC", "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: #313131;
+}
+ul,li {
+    list-style: none;
+}
+a,
+button,
+input {
+    outline: none;
+    &:focus {
+        outline: none;
+    }
+}
+button {
+    background: transparent;
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: #313131;
+    &:focus {
+        outline: none;
+    }
+}
+._xnw-main {
+    width: 1140px;
+    min-height: 800px;
+    margin: 0 auto;
+}

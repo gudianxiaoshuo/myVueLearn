@@ -1,0 +1,49 @@
+.login_or_register_page {
+    .unlogin_index_nav {
+        float: right;
+        height: 100%;
+        line-height: 60px;
+        width: 725px;
+        text-align: right;
+        color: #FEEED4;
+        .turn_to_login {
+            color: #FFFFFF;
+            margin-right: 20px;
+            padding: 0 10px;
+            text-decoration: none;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+    .footer {
+        margin-top:0;
+        border: none;
+        background-color: $lightGrayBg;
+        .inner {
+            border: none;
+            background-color: $lightGrayBg;
+        }
+        a,
+        span,
+        p {
+            color: $grayFontColor;
+            text-shadow: none;
+        }
+        a {
+            &:hover {
+                color: $orangeFontColor;
+            }
+        }
+        .customServiceHotLine {
+            background-position: -117px 3px;
+            color: $grayFontColor;
+        }
+    }
+    @media screen and (min-width: 1920px) {
+        .xnw_login_container,
+        .xnw_register_container {
+            background-size: cover;
+        }
+    }
+}

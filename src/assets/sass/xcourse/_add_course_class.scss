@@ -1,0 +1,456 @@
+#addCourseClass {
+    width: 835px;
+    background-color: #fff;
+    @include border-radius(4px);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    .title {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .closeBtn {
+        float: right;
+        padding: 0 8px;
+        margin-right: -8px;
+    }
+    .createCrouseClass {
+        width: 722px;
+        padding: 20px 20px 20px 38px;
+        background-color: #fff;
+        .classItem {
+            margin-bottom: 20px;
+            position: relative;
+            .timeIcon {
+                @include rel-pos($top: 2px, $left: -22px);
+                cursor: pointer;
+                &:hover {
+                    color: $orangeFontColor;
+                }
+                &.disabled {
+                    cursor: default;
+                    color: $grayFontColor;
+                }
+            }
+        }
+        .chooseType {
+            height: 30px;
+            line-height: 30px;
+            margin-right: 20px;
+            .radioInput {
+                margin-right: 5px;
+            }
+        }
+        .itemTitle {
+            color: $lightBlackFontColor;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            width: 70px;
+            text-align: right;
+            float: left;
+            position: relative;
+        }
+        .itemFlag {
+            @include abs-pos(0, auto, auto, -12px);
+            color: $darkOrangeFontColor;
+        }
+        .extraTitle {
+            @include abs-pos(70%, 22px, auto, auto);
+        }
+        .triangleIcon {
+            @include abs-pos(6px, auto, auto, 182px);
+            cursor: pointer;
+        }
+        .classNotice {
+            width: 500px;
+            height: 100px;
+            padding: 5px 10px;
+            border: 1px solid #e8e8e8;
+            resize: none;
+            @include border-radius(2px);
+        }
+        .teacherList,
+        .scoreInput,
+        .timeInput,
+        .personCount {
+            border: 1px solid #e8e8e8;
+            height: 28px;
+            @include border-radius(2px);
+            width: 200px;
+            padding: 0 4px;
+        }
+        .timeInput:disabled {
+            background-color: #fff;
+            color: $grayFontColor;
+        }
+        .trainingName {
+            width: 622px;
+            margin-right: 0;
+        }
+        .startTime,
+        .teacherList {
+            cursor: pointer;
+        }
+        .teacherList {
+            color: $blackFontColor;
+            width: 120px;
+            font-size: 12px;
+        }
+        .scoreInput{
+            width:120px;
+        }
+        .startTime,
+        .endTime,
+        .courseCount,
+        .coursePeriod,
+        .personCount {
+            width: 60px;
+            padding: 0 4px;
+            margin-right: 5px;
+        }
+        .startTime {
+            margin-left: 10px;
+            margin-right: 12px;
+        }
+        .coursePeriod {
+            margin-left: 4px;
+        }
+        .endDate,
+        .endTime,
+        .regEndTime {
+            margin-left: 12px;
+        }
+        .addressInput {
+            border: 1px solid #e8e8e8;
+            height: 28px;
+            width: 500px;
+            padding: 0 4px;
+            @include border-radius(2px);
+        }
+        .gradeClassBox,
+        .classTimeListContainer {
+            float: right;
+            width: 652px;
+        }
+        .gradeClassList,
+        .classTimeList {
+            margin-bottom: 20px;
+        }
+        .gradeClassItem {
+            height: 30px;
+        }
+        .delTarget {
+            padding: 6px;
+            @include rel-pos($top: 2px, $left: 2px);
+            i {
+                @include rel-pos($top: 2px);
+            }
+            &:hover {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .delClassTime {
+            cursor: pointer;
+            padding-left: 5px;
+            i {
+                @include rel-pos($top: 2px);
+            }
+            &:hover {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .gradeList,
+        .classList {
+            float: left;
+        }
+        .freeCheck {
+            margin: 0 6px 0 10px;
+        }
+        .classList {
+            border: 1px solid #e8e8e8;
+            height: 28px;
+            line-height: 28px;
+            width: 200px;
+            padding: 0 4px;
+            position: relative;
+            @include border-radius(2px);
+            margin-left: 30px;
+            .className {
+                z-index: 1;
+                @include abs-pos(100%, auto, auto, 0);
+                width: 100%;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .18);
+                background-color: #fff;
+                max-height: 170px;
+                overflow: auto;
+            }
+            .classItem {
+                padding: 0 10px;
+                margin: 4px 0;
+                font-size: 12px;
+                line-height: 24px;
+                color: $lightBlackFontColor;
+                cursor: pointer;
+                @include  text-truncate;
+                &:hover {
+                    background-color: #f5f5f5;
+                }
+                &.disabled {
+                    cursor: default;
+                }
+                input {
+                    height: 13px;
+                    width: 13px;
+                    margin-right: 6px;
+                }
+            }
+            .listTitle {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                cursor: pointer;
+                font-size: 12px;
+                @include rel-pos($top: -1px, $left: 2px);
+                .triangleIcon {
+                    @include abs-pos(5px, 0, auto, auto);
+                }
+                &.disabled {
+                    opacity: 0.5;
+                    cursor: default;
+                }
+            }
+        }
+        .tip {
+            font-size: 12px;
+            color: $grayFontColor;
+            line-height: 30px;
+            padding-left: 70px;
+            .count {
+                color: $darkOrangeFontColor;
+                margin: 0 2px;
+            }
+        }
+        .choiceListBox {
+            width: 460px;
+            background-color: #f5f5f5;
+            clear: both;
+            padding: 14px 6px;
+            margin-top: 20px;
+            .listTitle {
+                display: inline-block;
+                line-height: 22px;
+                padding-left: 8px;
+            }
+            li {
+                border: 1px solid #FFAA33;
+                color: $orangeFontColor;
+                height: 20px;
+                font-size: 12px;
+                line-height: 20px;
+                margin: 8px 10px;
+                padding: 0 4px;
+                background-color: #fff;
+                float: left;
+                @include border-radius(2px);
+                &:hover {
+                    .delIcon {
+                        color: $orangeFontColor;
+                    }
+                }
+                .closeChoice {
+                    margin-left: 10px;
+                    &.disabled {
+                        .delIcon {
+                            cursor: default;
+                            color: $grayFontColor;
+                        }
+                    }
+                    .delIcon {
+                        @include rel-pos($top: 2px);
+                    }
+                }
+            }
+        }
+        @extend %chosenContainerStyle;
+        .chosen-container a {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            width: 187px;
+            @include border-radius(2px);
+            div{
+                border: none;
+            }
+        }
+        .chosen-drop {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            width: 210px;
+        }
+        .chosen-container-active.chosen-with-drop .chosen-single {
+            border: 1px solid #e8e8e8;
+            background-color: #fff;
+            div {
+                border: none;
+            }
+        }
+    }
+    .trainingClassName {
+        .chosen-container a {
+            width: 608px;
+        }
+        .chosen-drop {
+            max-width: 631px;
+            width: 631px;
+        }
+    }
+    .teacherListBox {
+        padding: 0 10px;
+        @include abs-pos(32px, auto, auto, 70px);
+        z-index: 1;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .18);
+        background-color: #fff;
+        max-width: 512px;
+        max-height: 412px;
+        overflow-y: auto;
+    }
+    .teacherListCandidate {
+        padding: 0 10px 0 70px;
+        background-color: #fff;
+        max-width: 512px;
+    }
+    .teacherItem {
+        width: 60px;
+        padding-top: 12px;
+        text-align: center;
+        position: relative;
+        float: left;
+        margin: 0 2px;
+        &:hover {
+            .selectedTeacher {
+                visibility: visible;
+            }
+        }
+        &.on {
+            .itemIcon {
+                border-color:#ffaa33;
+            }
+            .selectedTeacher {
+                visibility: visible;
+            }
+            .selectedTeacher,
+            .delTeacher {
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .addTeacher {
+            display: block;
+            text-align: center;
+            line-height: 36px;
+            width: 36px;
+            height: 36px;
+            @include border-radius(36px);
+            margin: 0 auto;
+            margin-bottom: 7px;
+            border: 1px solid #bbb;
+            i {
+                position: relative;
+                top: 4px;
+                font-size: 20px;
+                color: #bbb;
+            }
+            &:hover {
+                 border: 1px solid #ffaa33;
+                i {
+                    color: $orangeFontColor;
+                }
+            }
+        }
+        .selectedTeacher,
+        .delTeacher {
+            @include abs-pos(34px, 12px, auto, auto);
+            i {
+                font-size: 12px;
+            }
+        }
+        .selectedTeacher {
+            visibility: hidden;
+        }
+        .itemIcon {
+            width: 38px;
+            height: 38px;
+            @include border-radius(38px);
+            border: 1px solid #fff;
+        }
+        .itemName {
+            display: inline-block;
+            font-size: 12px;
+            color: $grayFontColor;
+            line-height: 16px;
+            height: 30px;
+            word-wrap: break-word;
+            word-break: break-all;
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+    .addrListBox {
+        padding: 5px 10px;
+        @include abs-pos(32px, auto, auto, 70px);
+        z-index: 1;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .18);
+        background-color: #fff;
+        width: 450px;
+        &.hide {
+            display: none;
+        }
+    }
+    .addrList {}
+    .addrItem {
+        font-size: 12px;
+        color: $lightBlackFontColor;
+        line-height: 24px;
+        max-width: 100%;
+        cursor: pointer;
+        @include text-truncate;
+        &:hover {
+            color: $orangeFontColor;
+        }
+    }
+
+    .hyphen {
+        margin: 0 6px;
+    }
+    .errorMsg {
+        padding-left: 70px;
+        color: $darkRed;
+        font-size: 12px;
+        &.courseTimeError {
+            padding-left: 0;
+            margin-top: -20px;
+        }
+    }
+    .newBtnArea {
+        height: 50px;
+        line-height: 50px;
+        text-align: right;
+        padding: 0 20px;
+        background-color: #f5f5f5;
+        .isOnline {
+            .onlineCheckbox {
+                margin-right: 6px;
+            }
+            margin-right: 10px;
+        }
+    }
+    #_addNewTime{
+        font-size: 13px;
+    }
+}

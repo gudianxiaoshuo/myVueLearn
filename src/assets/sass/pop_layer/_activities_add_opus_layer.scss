@@ -1,0 +1,27 @@
+/*活动上传作品层*/
+#addOpusLayer,
+#modifyOpusLayer {
+    &.pop_privacy_mes {
+        width: 678px;
+    }
+    .layer_title_40 {
+        border: none;
+        background: $lightGrayBg;
+    }
+    .privacy_message {
+        padding: 0 20px;
+        background: $lightGrayBg;
+    }
+    .xnw_say_something {
+        padding: 0;
+        .talk_area_textarea {
+            width: 628px;
+        }
+    }
+    .button_area {
+        padding: 10px 0;
+        .btn-orange {
+            float: right;
+        }
+    }
+}
