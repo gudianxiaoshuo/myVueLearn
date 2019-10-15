@@ -9,7 +9,7 @@ import Ajax from '@/components/Ajax'
 import Baidu from '@/components/Baidu'
 import HandoutTest from '@/components/HandoutTest'
 import RoomHandout from '@/components/room_handout'
-
+import CEF from '@/components/CEF'
 
 
 Vue.use(Router)
@@ -17,7 +17,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/HelloWorld',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -61,5 +61,11 @@ export default new Router({
           name: 'RoomHandout',
           component: RoomHandout
       }
+    ,
+    {
+      path: '/',
+      name: 'CEF',
+      component: CEF
+    }
   ]
 })
