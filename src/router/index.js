@@ -10,7 +10,7 @@ import Baidu from '@/components/Baidu'
 import HandoutTest from '@/components/HandoutTest'
 import RoomHandout from '@/components/room_handout'
 import CEF from '@/components/CEF'
-
+import Load from '@/components/Load'
 
 Vue.use(Router)
 
@@ -63,9 +63,15 @@ export default new Router({
       }
     ,
     {
-      path: '/',
+      path: '/CEF',
       name: 'CEF',
       component: CEF
+    }
+    ,
+    {
+      path: '/',
+      name: 'Load',
+      component: Load
     }
   ]
 })
