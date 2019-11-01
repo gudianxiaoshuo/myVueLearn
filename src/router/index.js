@@ -9,9 +9,9 @@ import Ajax from '@/components/Ajax'
 import Baidu from '@/components/Baidu'
 import HandoutTest from '@/components/HandoutTest'
 import RoomHandout from '@/components/room_handout'
-import CEF from '@/components/CEF'
+import Img from '@/components/Img'
 import Load from '@/components/Load'
-
+import Student from '@/components/Student'
 Vue.use(Router)
 
 export default new Router({
@@ -63,15 +63,21 @@ export default new Router({
       }
     ,
     {
-      path: '/CEF',
-      name: 'CEF',
-      component: CEF
+      path: '/Img',
+      name: 'Img',
+      component: Img
+    }
+    ,
+    {
+      path: '/Load',
+      name: 'Load',
+      component: Load
     }
     ,
     {
       path: '/',
-      name: 'Load',
-      component: Load
+      name: 'Student',
+      component: Student
     }
   ]
 })

@@ -2,9 +2,20 @@
     <div>
         <el-row>
             <el-col :span="24" >
-                <div  style="text-align: left;margin-left:20px">
+                <div  style="text-align: center;margin-left:20px">
                     <el-input v-model="input" placeholder="请输入内容" style="width:300px"></el-input>
                     <el-button v-on:click="callCpp">调用C++中的函数，输入框中，输入的为传递给C++的参数</el-button>
+                </div>
+            </el-col>
+        </el-row>
+        <el-row height="20px">
+            <el-col :span="24">
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="24">
+                <div>
+                    <img :src="base64">
                 </div>
             </el-col>
         </el-row>
@@ -19,7 +30,8 @@
         },
         data(){
             return {
-                input:""
+                input:"",
+                base64:""
             }
         },
         methods:{
@@ -28,9 +40,12 @@
  * param[in] callback C++执行JS函数后的，回调信息
  */
             RegistJs:function(){
-                NimCefWebInstance.register('CefJsFunc', (myPrams) => {
-                    console.log(myPrams);
-                    this.msg= "收到来自C++的消息:" + JSON.stringify(myPrams);
+                NimCefWebInstance.register('CefJsFunc', (myJson) => {
+                    console.log(myJson);//json对象
+                   // var myJsonStr= JSON.stringify(myJson);
+                   // console.log(myJsonStr);
+                    this.base64=myJson.src;
+                 //   console.log(this.base64);
                     return {
                         message: 'showJs function was executed, this message return by JavaScript.'
                     }
